@@ -3,17 +3,138 @@
 <head>
 <style>
 body {
-	background-color: #75542b;
+	background-color: silver;
 }
 h1 {
-	color: gold;
+	color: #cd7f32;
 	text-align: center;
+	background-color: black;
 }
+td {
+	background-color: #2e2e2e; 
+	border-style: solid; 
+	border-color: #cd7f32; 
+	color: white;
+	border-width: 2px;
+	font-size: 12px;
+	font-family: Arial;
+}
+hr {
+	border-color: #cd7f32;
+	size: 2px;
+}
+.table-align {
+	height: 448px;
+	width: 192px;
+}
+.objectborder {
+	background-color: black;
+	border-style: solid;
+	border-color: #cd7f32;
+	color: white;
+	border-radius: 5px;
+	border-width: 1px;
+	font-size: 11px;
+	padding: 1px;
+}
+.inputborder {
+	background-color: black;
+	border-style: solid;
+	border-color: #cd7f32;
+	color: white;
+	border-radius: 5px;
+	border-width: 1px;
+	font-size: 11px;
+}
+#selectalb {
+	color: red;
+}
+#selecthib {
+	color: green;
+}
+#selectmid {
+	color: blue;
+}
+
 </style>
+<title>Dark Age of Camelot Character Planner</title>
 </head>
 <body>
 
 <h1>Dark Age of Camelot Character Planner</h1>
+
+
+<table>
+	<caption>
+		Realm: 
+		<label id="selectalb"><input type="radio" name="realm" value="albion" checked>Albion </label> 
+		<label id="selecthib"><input type="radio" name="realm" value="hibernia">Hibernia </label>
+		<label id="selectmid"><input type="radio" name="realm" value="midguard">Midguard </label>
+	</caption>
+		<tr>
+			<th>Attributes</th>
+			<th>Inventory</th>
+			<th>Specialization</th>
+			<th>Combat Styles</th>
+			<th>Magic Spells</th>
+			<th> TBD </th>
+		</tr>
+		<tr>
+			<td class="table-align"><!-- Attributes page-->
+				<!-- Insert character name here--><br />
+				Level <input type="number"  class="inputborder" value="level" min="1" max="50"> 
+				Realm Points <input type="number"  class="inputborder" value="realmpoints" min="0" max="999999999"><br />
+				WeapSkill <input type="number"  class="inputborder" value="weaponskill"  min="1" max="9999" readonly> 
+				Hit Points <input type="number"  class="inputborder" value="hitpoints" min="1" max="99999" readonly><br />
+				WeapDam <input type="number"  class="inputborder" value="weapondamage" min="1" max="9999" readonly> 
+				ArmorFact <input type="number"  class="inputborder" value="armorfactor" min="1" max="9999" readonly><br />
+				<hr />
+				<input type="number" class="inputborder" name="attribute" value="strength" min="1" max="9999" readonly>Strength 
+				<input type="number" class="inputborder" name="attribute" value="intelligence" min="1" max="9999" readonly>Intelligence<br />
+				<input type="number" class="inputborder" name="attribute" value="constitution" min="1" max="9999" readonly>Constitution 
+				<input type="number" class="inputborder" name="attribute" value="empathy" min="1" max="9999" readonly>Empathy<br />
+				<input type="number" class="inputborder" name="attribute" value="dexterity" min="1" max="9999" readonly>Dexterity 
+				<input type="number" class="inputborder" name="attribute" value="piety" min="1" max="9999" readonly>Piety<br />
+				<input type="number" class="inputborder" name="attribute" value="quickness" min="1" max="9999" readonly>Quickness 
+				<input type="number" class="inputborder" name="attribute" value="charisma" min="1" max="9999" readonly>Charisma<br />
+				<hr />
+				<label class="objectborder">Resists </label>
+				<input type="number" class="inputborder" name="resists" id="coldtot" min="0" max="100" readonly>Cold<br />
+				<input type="number" class="inputborder" name="resists" id="thrusttot" min="0" max="100" readonly>Thrust 
+				<input type="number" class="inputborder" name="resists" id="mattertot" min="0" max="100" readonly>Matter<br />
+				<input type="number" class="inputborder" name="resists" id="crushtot" min="0" max="100" readonly>Crush 
+				<input type="number" class="inputborder" name="resists" id="energytot" min="0" max="100" readonly>Energy<br />
+				<input type="number" class="inputborder" name="resists" id="slashtot" min="0" max="100" readonly>Slash 
+				<input type="number" class="inputborder" name="resists" id="spirittot" min="0" max="100" readonly>Spirit<br />
+				<input type="number" class="inputborder" name="resists" id="heattot" min="0" max="100" readonly>Heat 
+				<input type="number" class="inputborder" name="resists" id="bodytot" min="0" max="100" readonly>Body<br />
+				<hr />
+				Player holder text for character description
+			</td>
+			<td class="table-align"><!-- Inventory page -->
+			
+			</td>
+			<td class="table-align"><!-- Specializations page -->
+				<label class="objectborder">Specializations </label>  <label class="objectborder">Points:<input type="number" class="inputborder" value="specpoints" readonly></label><br />
+				<!-- Selected Class trainable specializations, can scroll --><br />
+				<label class="objectborder">Abilities</label><br />
+				<!-- Class and realm rank abilities, can scroll --><br />
+				<label class="objectborder">Tradeskills</label><br />
+				<!-- Scroll window -->
+			</td>
+			<td class="table-align"><!-- Combat styles page -->
+				Combat<br />
+				<!-- Selected Class trianed styles -->
+			</td>
+			<td class="table-align"><!-- Magic Spells page -->
+				Magic<br />
+				<!-- Selected Class spells, both naturally learned and trained -->
+			</td>
+			<td class="table-align"><!-- "Group page" will display selectable character builds -->
+			</td>
+		</tr>
+</table>
+	
 
 </body>
 </html>
