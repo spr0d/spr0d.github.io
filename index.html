@@ -6,45 +6,54 @@ body {
 	background-color: silver;
 }
 h1 {
-	color: #cd7f32;
+	color: #745C42;
 	text-align: center;
-	background-color: black;
+	background-color: #000000;
 }
 td {
-	background-color: #2e2e2e; 
+	background-color: #0A0A0A; 
 	border-style: solid; 
-	border-color: #cd7f32; 
+	border-color: #745C42; 
 	color: white;
-	border-width: 2px;
+	border-width: 3px;
 	font-size: 12px;
 	font-family: Arial;
 }
 hr {
-	border-color: #cd7f32;
-	size: 2px;
+	border-color: #745C42;
+	size: 3px;
 }
 .table-align {
 	height: 448px;
-	width: 192px;
+	width: 250px;
 }
 .objectborder {
-	background-color: black;
+	background-color: #000000;
 	border-style: solid;
-	border-color: #cd7f32;
+	border-color: #745C42;
 	color: white;
 	border-radius: 5px;
 	border-width: 1px;
-	font-size: 11px;
-	padding: 1px;
+	font-size: 12px;
+	padding: 2px;
 }
 .inputborder {
-	background-color: black;
+	background-color: #000000;
 	border-style: solid;
-	border-color: #cd7f32;
+	border-color: #745C42;
 	color: white;
 	border-radius: 5px;
 	border-width: 1px;
-	font-size: 11px;
+	font-size: 12px;
+}
+.selectinputborder {
+	background-color: #000000;
+	border-style: solid;
+	border-color: #000000;
+	color: white;
+	border-radius: 5px;
+	border-width: 1px;
+	font-size: 12px;
 }
 #selectalb {
 	color: red;
@@ -115,7 +124,8 @@ hr {
 			
 			</td>
 			<td class="table-align"><!-- Specializations page -->
-				<label class="objectborder">Specializations </label>  <label class="objectborder">Points:<input type="number" class="inputborder" value="specpoints" readonly></label><br />
+				<label class="objectborder">Specializations </label>  
+				<label class="objectborder">Points:<input type="number" class="selectinputborder" value="specpoints" min="0" max="9999" readonly></label><br />
 				<!-- Selected Class trainable specializations, can scroll --><br />
 				<label class="objectborder">Abilities</label><br />
 				<!-- Class and realm rank abilities, can scroll --><br />
