@@ -29,56 +29,158 @@
 		<tr>
 			<td class="table-align"><!-- Attributes page-->
 				<!-- Insert character name here--><br />
-				Level <input type="number"  class="inputborder" value="level" min="1" max="50"> 
-				Realm Points <input type="number"  class="inputborder" value="realmpoints" min="0" max="999999999"><br />
-				WeapSkill <input type="number"  class="inputborder" value="weaponskill"  min="1" max="9999" readonly> 
-				Hit Points <input type="number"  class="inputborder" value="hitpoints" min="1" max="99999" readonly><br />
-				WeapDam <input type="number"  class="inputborder" value="weapondamage" min="1" max="9999" readonly> 
-				ArmorFact <input type="number"  class="inputborder" value="armorfactor" min="1" max="9999" readonly><br />
-				<hr />
-				<input type="number" class="inputborder" name="attribute" value="strength" min="1" max="9999" readonly>Strength 
-				<input type="number" class="inputborder" name="attribute" value="intelligence" min="1" max="9999" readonly>Intelligence<br />
-				<input type="number" class="inputborder" name="attribute" value="constitution" min="1" max="9999" readonly>Constitution 
-				<input type="number" class="inputborder" name="attribute" value="empathy" min="1" max="9999" readonly>Empathy<br />
-				<input type="number" class="inputborder" name="attribute" value="dexterity" min="1" max="9999" readonly>Dexterity 
-				<input type="number" class="inputborder" name="attribute" value="piety" min="1" max="9999" readonly>Piety<br />
-				<input type="number" class="inputborder" name="attribute" value="quickness" min="1" max="9999" readonly>Quickness 
-				<input type="number" class="inputborder" name="attribute" value="charisma" min="1" max="9999" readonly>Charisma<br />
-				<hr />
-				<label class="objectborder">Resists </label>
-				<input type="number" class="inputborder" name="resists" id="coldtot" min="0" max="100" readonly>Cold<br />
-				<input type="number" class="inputborder" name="resists" id="thrusttot" min="0" max="100" readonly>Thrust 
-				<input type="number" class="inputborder" name="resists" id="mattertot" min="0" max="100" readonly>Matter<br />
-				<input type="number" class="inputborder" name="resists" id="crushtot" min="0" max="100" readonly>Crush 
-				<input type="number" class="inputborder" name="resists" id="energytot" min="0" max="100" readonly>Energy<br />
-				<input type="number" class="inputborder" name="resists" id="slashtot" min="0" max="100" readonly>Slash 
-				<input type="number" class="inputborder" name="resists" id="spirittot" min="0" max="100" readonly>Spirit<br />
-				<input type="number" class="inputborder" name="resists" id="heattot" min="0" max="100" readonly>Heat 
-				<input type="number" class="inputborder" name="resists" id="bodytot" min="0" max="100" readonly>Body<br />
-				<hr />
-				Player holder text for character description
+				Level <input type="number"  class="inputborder" value="level" id="charLevel" min="1" max="50" style="width: 28px; margin-right: 15px; margin-left: 2px;"> 
+				Realm Points <input type="number"  class="inputborder" value="realmpoints" min="0" max="999999999" style="width: 80px; margin-top: 2px; margin-bottom:2px;"><br />
+				WeapSkill <input type="number"  class="inputborder inputspaceone" value="weaponskill"  min="1" max="9999" style="margin-right: 41px; margin-left: 6px;" readonly> 
+				Hit Points <input type="number"  class="inputborder inputspaceone" value="hitpoints" min="1" max="99999" readonly><br />
+				WeapDam <input type="number"  class="inputborder inputspaceone" value="weapondamage" min="1" max="9999" style="margin-right: 38px;" readonly> 
+				ArmorFact <input type="number"  class="inputborder inputspaceone" value="armorfactor" min="1" max="9999" readonly><br />
+				<div style="background: black;">
+					<hr />
+					<input type="number" class="inputborder inputspacetwo" name="attribute" value="strength" min="1" max="9999" readonly>Strength 
+					<input type="number" class="inputborder inputspacetwo" style="margin-left: 39px;" name="attribute" value="intelligence" min="1" max="9999" readonly>Intelligence<br />
+					<input type="number" class="inputborder inputspacetwo" name="attribute" value="constitution" min="1" max="9999" readonly>Constitution 
+					<input type="number" class="inputborder inputspacetwo" style="margin-left: 21px;" name="attribute" value="empathy" min="1" max="9999" readonly>Empathy<br />
+					<input type="number" class="inputborder inputspacetwo" name="attribute" value="dexterity" min="1" max="9999" readonly>Dexterity 
+					<input type="number" class="inputborder inputspacetwo" style="margin-left: 37px;" name="attribute" value="piety" min="1" max="9999" readonly>Piety<br />
+					<input type="number" class="inputborder inputspacetwo" name="attribute" value="quickness" min="1" max="9999" readonly>Quickness 
+					<input type="number" class="inputborder inputspacetwo" style="margin-left: 29px;" name="attribute" value="charisma" min="1" max="9999" readonly>Charisma<br />
+					<hr />
+				</div>
+				<label class="objectborder" style="padding-right:20%; margin-left: 2px;">Resists </label>
+				<input type="number" class="inputborder inputspacethree" style="margin-left: 22px;" name="resists" id="coldtot" min="0" max="1000" placeholder="+0%" readonly>Cold<br />
+				<input type="number" class="inputborder inputspacethree" name="resists" id="thrusttot" min="0" max="1000" placeholder="+0%" readonly>Thrust 
+				<input type="number" class="inputborder inputspacethree" style="margin-left: 35px;" name="resists" id="mattertot" min="0" max="1000" placeholder="+0%" readonly>Matter<br />
+				<input type="number" class="inputborder inputspacethree" name="resists" id="crushtot" min="0" max="1000" placeholder="+0%" readonly>Crush 
+				<input type="number" class="inputborder inputspacethree" style="margin-left: 37px;" name="resists" id="energytot" min="0" max="1000" placeholder="+0%" readonly>Energy<br />
+				<input type="number" class="inputborder inputspacethree" name="resists" id="slashtot" min="0" max="1000" placeholder="+0%" readonly>Slash 
+				<input type="number" class="inputborder inputspacethree" style="margin-left: 39px;" name="resists" id="spirittot" min="0" max="1000" placeholder="+0%" readonly>Spirit<br />
+				<input type="number" class="inputborder inputspacethree" name="resists" id="heattot" min="0" max="1000" placeholder="+0%" readonly>Heat 
+				<input type="number" class="inputborder inputspacethree" style="margin-left: 43px;" name="resists" id="bodytot" min="0" max="1000" placeholder="+0%" readonly>Body<br />
+				<div class="attbox">
+				Prof: <!-- Overall class type --><br />
+				Order: <!-- Crafting order --><br />
+				Craft Title <!-- Crafting title for current level --><br />
+				Guild: <!-- Guild name --><br />
+				Guild Rank: <br />
+				Realm Title: <!-- Title based on Realm rank --><br />
+				Title: <!-- Selected player title --><br />
+				Realm Rank: <!-- Current realm rank --><br />
+				Realm Skill Points: <!-- Current realm points available, pull from Value realmpoints above --><br />
+				Bounty Points: <!-- Current bounty points held --><br />
+				ML: <!-- Current Master Level --><br />
+				Race: <!-- Selected Race, pull from Race drop down --><br />
+				Base Class: <!-- --><br />
+				Class: <!-- Selected Class, pull from Class drop down --><br />
+				Class Rank: <!-- title based on class's level? --><br />
+				Champion Title: <!-- -->
+				</div>
+				<select>
+					<option value="minotaura">Minotaur</option>
+					<option value="briton">Briton</option>
+					<option value="avalonion">Avalonion</option>
+					<option value="highlander">Highlander</option>
+					<option value="saracen">Saracen</option>
+					<option value="inconnu">Inconnu</option>
+					<option value="halfogre">Half Ogre</option>
+					<option value="minotaurh">Minotaur</option>
+					<option value="celt">Celt</option>
+					<option value="firbolg">Firbolg</option>
+					<option value="elf">Elf</option>
+					<option value="lurikeen">Lurikeen</option>
+					<option value="sylvan">Sylvan</option>
+					<option value="shar">Shar</option>
+					<option value="minotaurm">Minotaur</option>
+					<option value="norseman">Norseman</option>
+					<option value="troll">Troll</option>
+					<option value="dwarf">Dwarf</option>
+					<option value="kobold">Kobold</option>
+					<option value="valkyn">Valkyn</option>
+					<option value="frostalf">Frostalf</option>
+				</select>
+				<select>
+					<option value="paladin">Paladin</option>
+					<option value="armsman">Armsman</option>
+					<option value="scout">Scout</option>
+					<option value="minstrel">Minstrel</option>
+					<option value="theurgist">Theurgist</option>
+					<option value="cleric">Cleric</option>
+					<option value="wizard">Wizard</option>
+					<option value="sorcerer">Sorcerer</option>
+					<option value="infiltrator">Infiltrator</option>
+					<option value="friar">Friar</option>
+					<option value="mercenary">Mercenary</option>
+					<option value="necromancer">Necromancer</option>
+					<option value="cabalist">Cabalist</option>
+					<option value="reaver">Reaver</option>
+					<option value="heretic">Heretic</option>
+					<option value="maulera">Mauler</option>
+					<option value="bainshee">Bainshee</option>
+					<option value="eldritch">Eldritch</option>
+					<option value="enchanter">Enchanter</option>
+					<option value="mentalist">Mentalist</option>
+					<option value="blademaster">Blademaster</option>
+					<option value="hero">Hero</option>
+					<option value="champion">Champion</option>
+					<option value="warden">Warden</option>
+					<option value="druid">Druid</option>
+					<option value="bard">Bard</option>
+					<option value="nightshade">Nightshade</option>
+					<option value="ranger">Ranger</option>
+					<option value="animist">Animist</option>
+					<option value="valewalker">Valewalker</option>
+					<option value="vampiir">Vampiir</option>
+					<option value="maulerh">Mauler</option>
+					<option value="thane">Thane</option>
+					<option value="warrior">Warrior</option>
+					<option value="shadowblade">Shadowblade</option>
+					<option value="skald">Skald</option>
+					<option value="hunter">Hunter</option>
+					<option value="healer">Healer</option>
+					<option value="spiritmaster">Spiritmaster</option>
+					<option value="shaman">Shaman</option>
+					<option value="runemanster">Runemaster</option>
+					<option value="bonedancer">Bonedancer</option>
+					<option value="berserker">Berserker</option>
+					<option value="savage">Savage</option>
+					<option value="valkyrie">Valkyrie</option>
+					<option value="warlock">Warlock</option>
+					<option value="maulerm">Mauler</option>
+				</select>
 			</td>
 			<td class="table-align"><!-- Inventory page -->
 			
 			</td>
 			<td class="table-align"><!-- Specializations page -->
-				<label class="objectborder">Specializations </label>  
-				<label class="objectborder">Points:<input type="number" class="selectinputborder" value="specpoints" min="0" max="9999" readonly></label><br />
-				<!-- Selected Class trainable specializations, can scroll --><br />
-				<label class="objectborder">Abilities</label><br />
-				<!-- Class and realm rank abilities, can scroll --><br />
-				<label class="objectborder">Tradeskills</label><br />
-				<!-- Scroll window -->
+				<label class="objectborder pagetitle" style="padding-right: 40px;">Specializations </label>  
+				<label class="objectborder">Points:<input type="number" class="selectinputborder" placeholder="0" style="text-align: right;" value="specpoints" min="0" max="9999" readonly></label><br />
+				<div class="specbox">
+					<!-- Selected Class trainable specializations, can scroll --><br />
+				</div>
+				<label class="objectborder pagetitle" style="padding-right: 78%;">Abilities</label><br />
+				<div class="specbox" style="height: 139px;">
+					<!-- Class and realm rank abilities, can scroll --><br />
+				</div>
+				<label class="objectborder pagetitle" style="padding-right: 72%;">Tradeskills</label><br />
+				<div class="specbox">
+					<!-- Scroll window -->
+				</div>
 			</td>
 			<td class="table-align"><!-- Combat styles page -->
-				Combat<br />
-				<!-- Selected Class trianed styles -->
+				<label class="objectborder pagetitle" style="padding-right: 78%;">Combat </label><br />
+				<div class="abbox">
+					<!-- Insert Styles here -->
+				</div>
+				<!-- Selected Class trained styles -->
 			</td>
 			<td class="table-align"><!-- Magic Spells page -->
-				Magic<br />
+				<label class="objectborder pagetitle" style="padding-right: 82%;">Magic</label><br />
+				<div class="abbox" style="margin-bottom: 3px">
 				<!-- Selected Class spells, both naturally learned and trained -->
+				</div>
+				<label class="buttonborder"><button type="button" class="button">Train</button>
 			</td>
-			<td class="table-align"><!-- "Group page" will display selectable character builds -->
+			<td class="table-align"><!-- "Group page" Options for class and race here -->
 			</td>
 		</tr>
 </table>
