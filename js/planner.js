@@ -49,10 +49,10 @@ var charTrainSpells = [];
 
 function changeSpecPoints() {
 	if(document.getElementById("charLevel").value > level) {	
-		specPoints += (level * pointMod);
+		specPoints += (document.getElementById("charLevel").value * pointMod);
 	} 
 	else if(document.getElementById("charLevel").value < level) {
-		specPoints -= (document.getElementById("charLevel").value * pointMod);
+		specPoints -= (level * pointMod);
 	}
 	document.getElementById("specPoints").value = specPoints;
 	level = document.getElementById("charLevel").value;
