@@ -3,6 +3,7 @@
 <head>
 
 <link rel="stylesheet" href="CSS/planner.css">
+<script src="js/planner.js"></script>
 
 <title>Dark Age of Camelot Character Planner</title>
 </head>
@@ -29,7 +30,7 @@
 		<tr>
 			<td class="table-align"><!-- Attributes page-->
 				<!-- Insert character name here--><br />
-				Level <input type="number" name="charLevel"  id="charLevel" value="1" min="1" max="50" step="1" class="inputborder" style="width: 28px; margin-right: 15px; margin-left: 2px;"> 
+				Level <input type="number" name="charLevel" id="charLevel" value="1" min="1" max="50" step="1" class="inputborder" style="width: 28px; margin-right: 15px; margin-left: 2px;" oninput="changeSpecPoints()"> 
 				Realm Points <input type="number" name="realmPoints" id="realmPoints" value="0" min="0" max="999999999" step="1" class="inputborder" style="width: 80px; margin-top: 2px; margin-bottom:2px;"><br />
 				WeapSkill <input type="number" name="weaponSkill" id="weaponSkill" min="1" max="9999" class="inputborder inputspaceone" style="margin-right: 41px; margin-left: 6px;" readonly> 
 				Hit Points <input type="number" name="hitPoints" id="hitPoints" min="1" max="99999" class="inputborder inputspaceone" readonly><br />
@@ -57,7 +58,7 @@
 				<input type="number" name="spiritRes" id="spiritRes" min="0" max="1000" placeholder="+0%" class="inputborder inputspacethree" style="margin-left: 39px;" readonly>Spirit<br />
 				<input type="number" name="bodyRes" id="heatRes" min="0" max="1000" placeholder="+0%" class="inputborder inputspacethree" readonly>Heat 
 				<input type="number" name="bodyRes" id="bodyRes" min="0" max="1000" placeholder="+0%" class="inputborder inputspacethree" style="margin-left: 43px;" readonly>Body<br />
-				<div class="attbox">
+				<div id="charDetails" class="attbox" >
 				Prof: <!-- Overall class type --><br />
 				Order: <!-- Crafting order --><br />
 				Craft Title <!-- Crafting title for current level --><br />
