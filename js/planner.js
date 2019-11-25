@@ -48,10 +48,10 @@ var charTrainSpells = [];
 //Function adjusts available specialization points on character level increase
 
 function changeSpecPoints() {
-	if(document.getElementById("charLevel").value > level) {	
-		specPoints += (document.getElementById("charLevel").value * pointMod);
+	if(parseInt(document.getElementById("charLevel").value) > level) {	
+		specPoints += (document.getElementById("charLevel").value * pointMod);		
 	} 
-	else if(document.getElementById("charLevel").value < level) {
+	else if(parseInt(document.getElementById("charLevel").value) < level) {
 		specPoints -= (level * pointMod);
 	}
 	document.getElementById("specPoints").value = specPoints;
