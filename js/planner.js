@@ -1,39 +1,40 @@
 //Global variables
-var realm = "";
-var charClass = "";
-var race = "";
-var level = 1;
-var specPoints = 0;
-var pointMod = 1;
+let realm = "";
+let charClass = "";
+let race = "";
+let level = 1;
+let specPoints = 0;
+let pointMod = 1;
 //character attributes
-var str = 0;
-var con = 0;
-var dex = 0;
-var qui = 0;
-var int = 0;
-var emp = 0;
-var pie = 0;
-var cha = 0;
+let str = 0;
+let con = 0;
+let dex = 0;
+let qui = 0;
+let intel = 0;
+let emp = 0;
+let pie = 0;
+let cha = 0;
 //character resists
-var thrust = 0;
-var crush = 0;
-var slash = 0;
-var heat = 0;
-var cold = 0;
-var matter = 0;
-var energy = 0;
-var spirit = 0;
-var body = 0;
+let thrust = 0;
+let crush = 0;
+let slash = 0;
+let heat = 0;
+let cold = 0;
+let matter = 0;
+let energy = 0;
+let spirit = 0;
+let body = 0;
 //styles
-var allStyles = [];
-var classStyles = [];
-var charStyles = []; 
+const ALL_STYLES = [];
+let classStyles = [];
+let charStyles = []; 
 //spells
-var allSpells = [];
-var baseSpells = [];
-var trainSpells = [];
-var charBaseSpells = [];
-var charTrainSpells = [];
+const ALL_BASE_SPELLS = [];
+const ALL_TRAINED_SPELLS = [];
+let classBaseSpells = [];
+let classTrainedSpells = [];
+let charBaseSpells = [];
+let charTrainedSpells = [];
 
 //Import JSON files and assign to allStyles and allSpells
 
@@ -48,12 +49,18 @@ var charTrainSpells = [];
 //Function adjusts available specialization points on character level increase
 
 function changeSpecPoints() {
-	if(parseInt(document.getElementById("charLevel").value) > level) {	
-		specPoints += (document.getElementById("charLevel").value * pointMod);		
-	} 
-	else if(parseInt(document.getElementById("charLevel").value) < level) {
-		specPoints -= (level * pointMod);
+	let newLevel = parseInt(document.getElementById("charLevel").value);
+	let levelChange = 0;
+		
+	if(newLevel > level) {
+		for(levelChange = newLevel; levelChange > level; levelChange--) {
+			specPoints += (levelChange * pointMod);	
+		}
+	} else if(newLevel < level) {
+		for(levelChange = newLevel; levelChange < level; levelChange++) {
+			specPoints -= (levelChange * pointMod) + 1;
+		}
 	}
 	document.getElementById("specPoints").value = specPoints;
-	level = document.getElementById("charLevel").value;
+	level = newLevel;
 }
