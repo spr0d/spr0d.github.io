@@ -25,7 +25,7 @@ let energy = 0;
 let spirit = 0;
 let body = 0;
 //styles
-const ALL_STYLES = [];
+
 let classStyles = [];
 let charStyles = []; 
 //spells
@@ -46,12 +46,22 @@ let charTrainedSpells = [];
 
 //Create function to adjust character attributes depending on class
 
-//Function adjusts available specialization points on character level increase
-
+//Function adjusts available specialization points on character level change
 function changeSpecPoints() {
-	let newLevel = parseInt(document.getElementById("charLevel").value);
 	let levelChange = 0;
-		
+	let newLevel;
+	if(document.getElementById("charLevel").value == "") {
+		document.getElementById("charLevel").value = 1;
+		newLevel = 1;
+	} else {
+		newLevel = parseInt(document.getElementById("charLevel").value);
+	}		
+	
+	if(newLevel > 50) {
+		document.getElementById("charLevel").value = 50;
+		newLevel = 50;
+	}
+
 	if(newLevel > level) {
 		for(levelChange = newLevel; levelChange > level; levelChange--) {
 			specPoints += (levelChange * pointMod);	
