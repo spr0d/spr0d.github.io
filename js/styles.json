@@ -1,0 +1,242 @@
+[
+	{
+		"id": 65,
+		"realms": ["Albion"],
+		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
+		"tree": "Slash",
+		"name": "Ruby Slash",
+		"level": 1,
+		"open": "Any",
+		"followup": ["Emerald Slash"],
+		"end": "Low",
+		"dmg": "Very Low",
+		"hit": "No Bonus",
+		"def": "No Bonus",
+		"effect": null
+	}
+	{
+		"id": 66,
+		"realms": ["Albion"],
+		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
+		"tree": "Slash",
+		"name": "Emerald Slash",
+		"level": 2,
+		"open": "Ruby Slash",
+		"followup": null,
+		"end": "Low",
+		"dmg": "Low",
+		"hit": "Medium Bonus",
+		"def": "No Bonus",
+		"effect": "8 damage every 4.0 seconds for 20 seconds."
+	}
+	{
+		"id": 67,
+		"realms": ["Albion"],
+		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
+		"tree": "Slash",
+		"name": "Cross Slash",
+		"level": 4,
+		"open": "In front of target",
+		"followup": ["Bloodletter"],
+		"end": "Low",
+		"dmg": "Medium",
+		"hit": "Medium Bonus",
+		"def": "Medium Bonus",
+		"effect": "Target\'s attack speed reduced by 16% for 20 seconds."
+	}
+	{
+		"id": 68,
+		"realms": ["Albion"],
+		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
+		"tree": "Slash",
+		"name": "Uppercut",
+		"level": 6,
+		"open": "Any",
+		"followup": ["Opal Slash", "Cleave"],
+		"end": "Medium",
+		"dmg": "Low",
+		"hit": "Low Bonus",
+		"def": "No Bonus",
+		"effect": null
+	}
+	{
+		"id": 69,
+		"realms": ["Albion"],
+		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
+		"tree": "Slash",
+		"name": "Enrage",
+		"level": 8,
+		"open": "Any",
+		"followup": ["Sapphire Slash"],
+		"end": "Low",
+		"dmg": "Medium",
+		"hit": "No Bonus",
+		"def": "Medium Penalty",
+		"effect": "Increases your threat to monster targets by 275 damage."
+	}
+	{
+		"id": 70,
+		"realms": ["Albion"],
+		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
+		"tree": "Slash",
+		"name": "Bloodletter",
+		"level": 10,
+		"open": "Cross Slash",
+		"followup": null,
+		"end": "Medium",
+		"dmg": "Low",
+		"hit": "High Bonus",
+		"def": "Medium Bonus",
+		"effect": "13 damage every 4.0 seconds for 20 seconds."
+	}
+	{
+		"id": 71,
+		"realms": ["Albion"],
+		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
+		"tree": "Slash",
+		"name": "Reflect",
+		"level": 12,
+		"open": "Any",
+		"followup": null,
+		"end": "Low",
+		"dmg": "None",
+		"hit": "No Bonus",
+		"def": "Medium Bonus",
+		"effect": "Increases your threat to monster targets by 0 damage."
+	}
+	{
+		"id": 72,
+		"realms": ["Albion"],
+		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
+		"tree": "Slash",
+		"name": "Opal Slash",
+		"level": 15,
+		"open": "Uppercut",
+		"followup": null,
+		"end": "Medium",
+		"dmg": "Low",
+		"hit": "Medium Bonus",
+		"def": "No Bonus",
+		"effect": "13 damage every 4.0 seconds for 20 seconds."
+	}
+	{
+		"id": 73,
+		"realms": ["Albion"],
+		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
+		"tree": "Slash",
+		"name": "Riposte",
+		"level": 18,
+		"open": "You Block",
+		"followup": ["Befuddler"],
+		"end": "Low",
+		"dmg": "High",
+		"hit": "Medium Bonus",
+		"def": "Medium Bonus",
+		"effect": "Target\'s attack speed reduced by 21% for 20 seconds."
+	}
+	{
+		"id": 74,
+		"realms": ["Albion"],
+		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
+		"tree": "Slash",
+		"name": "Side Slicer",
+		"level": 21,
+		"open": "To side of target",
+		"followup": null,
+		"end": "Low",
+		"dmg": "Medium",
+		"hit": "Low Bonus",
+		"def": "No Bonus",
+		"effect": "Target moves 40% slower for 14 seconds."
+	}
+	{
+		"id": 75,
+		"realms": ["Albion"],
+		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
+		"tree": "Slash",
+		"name": "Cleave",
+		"level": 25,
+		"open": "Uppercut",
+		"followup": null,
+		"end": "Low",
+		"dmg": "High",
+		"hit": "Medium Bonus",
+		"def": "No Bonus",
+		"effect": "20 damage every 4.0 seconds for 20 seconds."
+	}
+	{
+		"id": 76,
+		"realms": ["Albion"],
+		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
+		"tree": "Slash",
+		"name": "Amethyst Slash",
+		"level": 29,
+		"open": "Any",
+		"followup": null,
+		"end": "Medium",
+		"dmg": "High",
+		"hit": "High Bonus",
+		"def": "No Bonus",
+		"effect": null
+	}
+	{
+		"id": 77,
+		"realms": ["Albion"],
+		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
+		"tree": "Slash",
+		"name": "Befuddler",
+		"level": 34,
+		"open": "Riposte",
+		"followup": null,
+		"end": "Medium",
+		"dmg": "High",
+		"hit": "Medium Bonus",
+		"def": "No Bonus",
+		"effect": "Target cannot move or take any other action for 6 seconds."
+	}
+	{
+		"id": 78,
+		"realms": ["Albion"],
+		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
+		"tree": "Slash",
+		"name": "Back Slash",
+		"level": 39,
+		"open": "Behind target",
+		"followup": ["Diamond Slash"],
+		"end": "High",
+		"dmg": "High",
+		"hit": "High Bonus",
+		"def": "No Bonus",
+		"effect": "Target moves 40% slower for 19 seconds."
+	}
+	{
+		"id": 79,
+		"realms": ["Albion"],
+		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
+		"tree": "Slash",
+		"name": "Sapphire Slash",
+		"level": 44,
+		"open": "Enrage",
+		"followup": null,
+		"end": "Low",
+		"dmg": "High",
+		"hit": "Medium Bonus",
+		"def": "High Penalty",
+		"effect": "26 damage every 4.0 seconds for 20 seconds."
+	}
+	{
+		"id": 80,
+		"realms": ["Albion"],
+		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
+		"tree": "Slash",
+		"name": "Diamond Slash",
+		"level": 50,
+		"open": "Back Slash",
+		"followup": null,
+		"end": "High",
+		"dmg": "High",
+		"hit": "Very High Bonus",
+		"def": "No Bonus",
+		"effect": "Target\'s attack speed reduced by 34% for 20 seconds."
+	}
+]
