@@ -13,7 +13,7 @@
 		"hit": "No Bonus",
 		"def": "No Bonus",
 		"effect": null
-	}
+	},
 	{
 		"id": 66,
 		"realms": ["Albion"],
@@ -28,7 +28,7 @@
 		"hit": "Medium Bonus",
 		"def": "No Bonus",
 		"effect": "8 damage every 4.0 seconds for 20 seconds."
-	}
+	},
 	{
 		"id": 67,
 		"realms": ["Albion"],
@@ -42,8 +42,8 @@
 		"dmg": "Medium",
 		"hit": "Medium Bonus",
 		"def": "Medium Bonus",
-		"effect": "Target\'s attack speed reduced by 16% for 20 seconds."
-	}
+		"effect": "Target's attack speed reduced by 16% for 20 seconds."
+	},
 	{
 		"id": 68,
 		"realms": ["Albion"],
@@ -58,7 +58,7 @@
 		"hit": "Low Bonus",
 		"def": "No Bonus",
 		"effect": null
-	}
+	},
 	{
 		"id": 69,
 		"realms": ["Albion"],
@@ -73,7 +73,7 @@
 		"hit": "No Bonus",
 		"def": "Medium Penalty",
 		"effect": "Increases your threat to monster targets by 275 damage."
-	}
+	},
 	{
 		"id": 70,
 		"realms": ["Albion"],
@@ -88,7 +88,7 @@
 		"hit": "High Bonus",
 		"def": "Medium Bonus",
 		"effect": "13 damage every 4.0 seconds for 20 seconds."
-	}
+	},
 	{
 		"id": 71,
 		"realms": ["Albion"],
@@ -103,7 +103,7 @@
 		"hit": "No Bonus",
 		"def": "Medium Bonus",
 		"effect": "Increases your threat to monster targets by 0 damage."
-	}
+	},
 	{
 		"id": 72,
 		"realms": ["Albion"],
@@ -118,7 +118,7 @@
 		"hit": "Medium Bonus",
 		"def": "No Bonus",
 		"effect": "13 damage every 4.0 seconds for 20 seconds."
-	}
+	},
 	{
 		"id": 73,
 		"realms": ["Albion"],
@@ -132,8 +132,8 @@
 		"dmg": "High",
 		"hit": "Medium Bonus",
 		"def": "Medium Bonus",
-		"effect": "Target\'s attack speed reduced by 21% for 20 seconds."
-	}
+		"effect": "Target's attack speed reduced by 21% for 20 seconds."
+	},
 	{
 		"id": 74,
 		"realms": ["Albion"],
@@ -148,7 +148,7 @@
 		"hit": "Low Bonus",
 		"def": "No Bonus",
 		"effect": "Target moves 40% slower for 14 seconds."
-	}
+	},
 	{
 		"id": 75,
 		"realms": ["Albion"],
@@ -163,7 +163,7 @@
 		"hit": "Medium Bonus",
 		"def": "No Bonus",
 		"effect": "20 damage every 4.0 seconds for 20 seconds."
-	}
+	},
 	{
 		"id": 76,
 		"realms": ["Albion"],
@@ -178,7 +178,7 @@
 		"hit": "High Bonus",
 		"def": "No Bonus",
 		"effect": null
-	}
+	},
 	{
 		"id": 77,
 		"realms": ["Albion"],
@@ -193,7 +193,7 @@
 		"hit": "Medium Bonus",
 		"def": "No Bonus",
 		"effect": "Target cannot move or take any other action for 6 seconds."
-	}
+	},
 	{
 		"id": 78,
 		"realms": ["Albion"],
@@ -208,7 +208,7 @@
 		"hit": "High Bonus",
 		"def": "No Bonus",
 		"effect": "Target moves 40% slower for 19 seconds."
-	}
+	},
 	{
 		"id": 79,
 		"realms": ["Albion"],
@@ -223,7 +223,7 @@
 		"hit": "Medium Bonus",
 		"def": "High Penalty",
 		"effect": "26 damage every 4.0 seconds for 20 seconds."
-	}
+	},
 	{
 		"id": 80,
 		"realms": ["Albion"],
@@ -237,6 +237,6 @@
 		"dmg": "High",
 		"hit": "Very High Bonus",
 		"def": "No Bonus",
-		"effect": "Target\'s attack speed reduced by 34% for 20 seconds."
+		"effect": "Target's attack speed reduced by 34% for 20 seconds."
 	}
 ]

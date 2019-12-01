@@ -25,7 +25,7 @@ let energy = 0;
 let spirit = 0;
 let body = 0;
 //styles
-
+const ALL_STYLES = [];
 let classStyles = [];
 let charStyles = []; 
 //spells
@@ -35,6 +35,15 @@ let classBaseSpells = [];
 let classTrainedSpells = [];
 let charBaseSpells = [];
 let charTrainedSpells = [];
+//index ALB/HIB/MID - [start, quantity]
+const CRUSH_STYLE_INDEX = [0, 16];
+const DUALWIELD_STYLE_INDEX = [16, 16];
+const FLEX_STYLE_INDEX = [32, 16];
+const POLEARM_STYLE_INDEX = [48, 17];
+const SLASH_STYLE_INDEX = [65, 16];
+const STAFF_STYLE_INDEX = [81, 13];
+const THRUST_STYLE_INDEX = [94, 17];
+const TWOHAND_STYLE_INDEX = [111, 16];
 
 //Import JSON files and assign to allStyles and allSpells
 
@@ -50,18 +59,19 @@ let charTrainedSpells = [];
 function changeSpecPoints() {
 	let levelChange = 0;
 	let newLevel;
+
+	//check input
 	if(document.getElementById("charLevel").value == "") {
 		document.getElementById("charLevel").value = 1;
 		newLevel = 1;
+	} else if(newLevel > 50) {
+		document.getElementById("charLevel").value = 50;
+		newLevel = 50;
 	} else {
 		newLevel = parseInt(document.getElementById("charLevel").value);
 	}		
 	
-	if(newLevel > 50) {
-		document.getElementById("charLevel").value = 50;
-		newLevel = 50;
-	}
-
+	//calculate points
 	if(newLevel > level) {
 		for(levelChange = newLevel; levelChange > level; levelChange--) {
 			specPoints += (levelChange * pointMod);	
@@ -71,6 +81,7 @@ function changeSpecPoints() {
 			specPoints -= (levelChange * pointMod) + 1;
 		}
 	}
+	
 	document.getElementById("specPoints").value = specPoints;
 	level = newLevel;
 }
