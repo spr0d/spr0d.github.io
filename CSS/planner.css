@@ -3,8 +3,6 @@ body {
 }
 h1 {
 	text-align: center;
-	margin-left: 200px;
-	margin-right: 200px;
 }
 td {
 	background-color: #0A0A0A; 
@@ -175,15 +173,15 @@ select {
 	border-style: solid; 
 	border-color: #745C42;
 	margin-top: 7px;
-	margin-bottom: 22px;
+	margin-bottom: 3px;
 	margin-left: 3px;
 }
 #selectalb {
 	color: red;
 }
 #selecthib {
-	color: green;
+	color: black;
 }
 #selectmid {
-	color: blue;
+	color: black;
 }

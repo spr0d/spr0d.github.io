@@ -1,4 +1,4 @@
-[
+const STYLE_DATA = [
 	{
 		"id": 65,
 		"realms": ["Albion"],
@@ -239,4 +239,4 @@
 		"def": "No Bonus",
 		"effect": "Target's attack speed reduced by 34% for 20 seconds."
 	}
-]
+];

@@ -3,7 +3,9 @@
 <head>
 
 <link rel="stylesheet" href="CSS/planner.css">
-<script src="js/planner.js"></script>
+<script id="styles-data" src="./js/styles.js"></script>
+<script src="./js/planner.js"></script>
+
 
 <title>Dark Age of Camelot Character Planner</title>
 </head>
@@ -12,12 +14,90 @@
 <h1>Dark Age of Camelot Character Planner</h1>
 
 
-<table>
+<table align="center">
 	<caption>
 		Realm: 
-		<label id="selectalb"><input type="radio" name="realm" id="albRealm" checked>Albion </label> 
-		<label id="selecthib"><input type="radio" name="realm" id="hibRealm">Hibernia </label>
-		<label id="selectmid"><input type="radio" name="realm" id="midRealm">Midguard </label>
+		<label id="selectalb"><input type="radio" name="realm" id="albRealm" onchange="changeClasses()" checked>Albion </label> 
+		<label id="selecthib"><input type="radio" name="realm" id="hibRealm" onchange="changeClasses()">Hibernia </label>
+		<label id="selectmid"><input type="radio" name="realm" id="midRealm" onchange="changeClasses()">Midguard </label><br /><br />
+		Race: 
+		<select name="races" id="races">
+			<!--Albion races-->
+			<option id="avalonian" value="avalonian">Avalonian</option>
+			<option id="briton" value="briton">Briton</option>
+			<option id="halfogre" value="halfogre">Half Ogre</option>
+			<option id="highlander" value="highlander">Highlander</option>
+			<option id="inconnu" value="inconnu">Inconnu</option>
+			<option id="minotaura" value="minotaura">Minotaur</option>
+			<option id="saracen" value="saracen">Saracen</option>
+			<!--Hibernia races-->
+			<option id="celt" value="celt">Celt</option>
+			<option id="elf" value="elf">Elf</option>
+			<option id="firbolg" value="firbolg">Firbolg</option>
+			<option id="lurikeen" value="lurikeen">Lurikeen</option>
+			<option id="minotaurh" value="minotaurh">Minotaur</option>
+			<option id="shar" value="shar">Shar</option>
+			<option id="sylvan" value="sylvan">Sylvan</option>
+			<!--Midgaurd races-->
+			<option id="dwarf" value="dwarf">Dwarf</option>
+			<option id="frostalf" value="frostalf">Frostalf</option>
+			<option id="kobold" value="kobold">Kobold</option>
+			<option id="minotaurm" value="minotaurm">Minotaur</option>
+			<option id="norseman" value="norseman">Norseman</option>
+			<option id="troll" value="troll">Troll</option>
+			<option id="valkyn" value="valkyn">Valkyn</option>
+		</div>
+		</select>
+		Class: 
+		<select name="classes" id="classes">
+			<option id="armsman" value="armsman" style="display: block;">Armsman</option>
+			<option id="cabalist" value="cabalist" style="display: block;">Cabalist</option>
+			<option id="cleric" value="cleric" style="display: block;">Cleric</option>
+			<option id="friar" value="friar" style="display: block;">Friar</option>
+			<option id="heretic" value="heretic" style="display: block;">Heretic</option>
+			<option id="infiltrator" value="infiltrator" style="display: block;">Infiltrator</option>
+			<option id="maulera" value="maulera" style="display: block;">Mauler</option>
+			<option id="mercenary" value="mercenary" style="display: block;">Mercenary</option>
+			<option id="minstrel" value="minstrel" style="display: block;">Minstrel</option>
+			<option id="necromancer" value="necromancer" style="display: block;">Necromancer</option>
+			<option id="paladin" value="paladin" style="display: block;">Paladin</option>
+			<option id="reaver" value="reaver" style="display: block;">Reaver</option>
+			<option id="scout" value="scout" style="display: block;">Scout</option>
+			<option id="sorcerer" value="sorcerer" style="display: block;">Sorcerer</option>
+			<option id="theurgist" value="theurgist" style="display: block;">Theurgist</option>
+			<option id="wizard" value="wizard" style="display: block;">Wizard</option>
+			<option id="animist" value="animist" style="display: none;">Animist</option>
+			<option id="bainshee" value="bainshee" style="display: none;">Bainshee</option>
+			<option id="bard" value="bard" style="display: none;">Bard</option>
+			<option id="blademaster" value="blademaster" style="display: none;">Blademaster</option>
+			<option id="champion" value="champion" style="display: none;">Champion</option>
+			<option id="druid" value="druid" style="display: none;">Druid</option>
+			<option id="eldritch" value="eldritch" style="display: none;">Eldritch</option>
+			<option id="enchanter" value="enchanter" style="display: none;">Enchanter</option>
+			<option id="hero" value="hero" style="display: none;">Hero</option>
+			<option id="maulerh" value="maulerh" style="display: none;">Mauler</option>
+			<option id="mentalist" value="mentalist" style="display: none;">Mentalist</option>
+			<option id="nightshade" value="nightshade" style="display: none;">Nightshade</option>
+			<option id="ranger" value="ranger" style="display: none;">Ranger</option>
+			<option id="valewalker" value="valewalker" style="display: none;">Valewalker</option>
+			<option id="vampiir" value="vampiir" style="display: none;">Vampiir</option>
+			<option id="warden" value="warden" style="display: none;">Warden</option>
+			<option id="berserker" value="berserker" style="display: none;">Berserker</option>
+			<option id="bonedancer" value="bonedancer" style="display: none;">Bonedancer</option>
+			<option id="healer" value="healer" style="display: none;">Healer</option>
+			<option id="hunter" value="hunter" style="display: none;">Hunter</option>
+			<option id="maulerm" value="maulerm" style="display: none;">Mauler</option>
+			<option id="runemaster" value="runemanster" style="display: none;">Runemaster</option>
+			<option id="savage" value="savage" style="display: none;">Savage</option>
+			<option id="shadowblade" value="shadowblade" style="display: none;">Shadowblade</option>
+			<option id="shaman" value="shaman" style="display: none;">Shaman</option>
+			<option id="skald" value="skald" style="display: none;">Skald</option>
+			<option id="spiritmaster" value="spiritmaster" style="display: none;">Spiritmaster</option>
+			<option id="thane" value="thane" style="display: none;">Thane</option>
+			<option id="valkyrie" value="valkyrie" style="display: none;">Valkyrie</option>
+			<option id="warlock" value="warlock" style="display: none;">Warlock</option>
+			<option id="warrior" value="warrior" style="display: none;">Warrior</option>
+		</select><br /><br />
 	</caption>
 		<tr>
 			<th>Attributes</th>
@@ -25,7 +105,7 @@
 			<th>Specialization</th>
 			<th>Combat Styles</th>
 			<th>Magic Spells</th>
-			<th> TBD </th>
+			<th>User Controls</th>
 		</tr>
 		<tr>
 			<td class="table-align"><!-- Attributes page-->
@@ -76,84 +156,13 @@
 				Class Rank: <!-- title based on class's level? --><br />
 				Champion Title: <!-- -->
 				</div>
-				<select>
-					<option value="minotaura">Minotaur</option>
-					<option value="briton">Briton</option>
-					<option value="avalonion">Avalonion</option>
-					<option value="highlander">Highlander</option>
-					<option value="saracen">Saracen</option>
-					<option value="inconnu">Inconnu</option>
-					<option value="halfogre">Half Ogre</option>
-					<option value="minotaurh">Minotaur</option>
-					<option value="celt">Celt</option>
-					<option value="firbolg">Firbolg</option>
-					<option value="elf">Elf</option>
-					<option value="lurikeen">Lurikeen</option>
-					<option value="sylvan">Sylvan</option>
-					<option value="shar">Shar</option>
-					<option value="minotaurm">Minotaur</option>
-					<option value="norseman">Norseman</option>
-					<option value="troll">Troll</option>
-					<option value="dwarf">Dwarf</option>
-					<option value="kobold">Kobold</option>
-					<option value="valkyn">Valkyn</option>
-					<option value="frostalf">Frostalf</option>
-				</select>
-				<select>
-					<option value="paladin">Paladin</option>
-					<option value="armsman">Armsman</option>
-					<option value="scout">Scout</option>
-					<option value="minstrel">Minstrel</option>
-					<option value="theurgist">Theurgist</option>
-					<option value="cleric">Cleric</option>
-					<option value="wizard">Wizard</option>
-					<option value="sorcerer">Sorcerer</option>
-					<option value="infiltrator">Infiltrator</option>
-					<option value="friar">Friar</option>
-					<option value="mercenary">Mercenary</option>
-					<option value="necromancer">Necromancer</option>
-					<option value="cabalist">Cabalist</option>
-					<option value="reaver">Reaver</option>
-					<option value="heretic">Heretic</option>
-					<option value="maulera">Mauler</option>
-					<option value="bainshee">Bainshee</option>
-					<option value="eldritch">Eldritch</option>
-					<option value="enchanter">Enchanter</option>
-					<option value="mentalist">Mentalist</option>
-					<option value="blademaster">Blademaster</option>
-					<option value="hero">Hero</option>
-					<option value="champion">Champion</option>
-					<option value="warden">Warden</option>
-					<option value="druid">Druid</option>
-					<option value="bard">Bard</option>
-					<option value="nightshade">Nightshade</option>
-					<option value="ranger">Ranger</option>
-					<option value="animist">Animist</option>
-					<option value="valewalker">Valewalker</option>
-					<option value="vampiir">Vampiir</option>
-					<option value="maulerh">Mauler</option>
-					<option value="thane">Thane</option>
-					<option value="warrior">Warrior</option>
-					<option value="shadowblade">Shadowblade</option>
-					<option value="skald">Skald</option>
-					<option value="hunter">Hunter</option>
-					<option value="healer">Healer</option>
-					<option value="spiritmaster">Spiritmaster</option>
-					<option value="shaman">Shaman</option>
-					<option value="runemanster">Runemaster</option>
-					<option value="bonedancer">Bonedancer</option>
-					<option value="berserker">Berserker</option>
-					<option value="savage">Savage</option>
-					<option value="valkyrie">Valkyrie</option>
-					<option value="warlock">Warlock</option>
-					<option value="maulerm">Mauler</option>
-				</select>
+				
 			</td>
 			<td class="table-align"><!-- Inventory page -->
 			
 			</td>
 			<td class="table-align"><!-- Specializations page -->
-				<label class="objectborder pagetitle" style="padding-right: 40px;">Specializations </label>  
+				<label class="objectborder pagetitle" style="padding-right: 40px;">Specializations</label>  
 				<label class="objectborder">Points:<input type="number" name="specPoints" id="specPoints" value="0" min="0" max="9999" placeholder="0" class="selectinputborder" style="text-align: right;" readonly></label><br />
 				<div class="specbox">
 					<!-- Selected Class trainable specializations, can scroll --><br />
@@ -168,18 +177,19 @@
 				</div>
 			</td>
 			<td class="table-align"><!-- Combat styles page -->
-				<label class="objectborder pagetitle" style="padding-right: 78%;">Combat </label><br />
+				<label class="objectborder pagetitle" style="padding-right: 78%;">Combat</label><br />
 				<div class="abbox">
 					<!-- Insert Styles here -->
 				</div>
+				<label class="buttonborder"><button type="button" name="train" id="train" class="button">Train</button></label>
 				<!-- Selected Class trained styles -->
 			</td>
 			<td class="table-align"><!-- Magic Spells page -->
 				<label class="objectborder pagetitle" style="padding-right: 82%;">Magic</label><br />
-				<div class="abbox" style="margin-bottom: 3px">
+				<div class="abbox">
 				<!-- Selected Class spells, both naturally learned and trained -->
 				</div>
-				<label class="buttonborder"><button type="button" name="train" id="train" class="button">Train</button>
+				<label class="buttonborder"><button type="button" name="train" id="train" class="button">Train</button></label>
 			</td>
 			<td class="table-align"><!-- "Group page" Options for class and race here -->
 			</td>
