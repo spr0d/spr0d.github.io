@@ -24,6 +24,17 @@ let matter = 0;
 let energy = 0;
 let spirit = 0;
 let body = 0;
+//classes
+let albClasses = ["armsman", "cabalist", "cleric", "friar", "heretic", 
+				  "infiltrator", "maulera", "mercenary", "minstrel", "necromancer", 
+				  "paladin", "reaver", "scout", "sorcerer", "theurgist", "wizard"];
+let hibClasses = ["animist", "bainshee", "bard", "blademaster", "champion", 
+				  "druid", "eldritch", "enchanter", "hero", "maulerh", 
+				  "mentalist", "nightshade", "ranger", "valewalker", "vampiir", "warden"];
+let midClasses = ["berserker", "bonedancer", "healer", "hunter", "maulerm", 
+				  "runemaster", "savage", "shadowblade", "shaman", "skald", 
+				  "spiritmaster", "thane", "valkyrie", "warlock", "warrior"];
+		
 //races and class eligibility
 //Albion
 let albRaces = ["avalonian", "briton", "halfogre", "highlander", "inconnu", "minotaura", "saracen"];
@@ -81,16 +92,7 @@ let trollClass = ["berserker", "bonedancer", "maulerm", "savage", "shaman",
 				  "skald", "thane", "warlock", "warrior"];
 let valkynClass = ["berserker", "bonedancer", "hunter", "savage", "shadowblade", 
 				   "thane", "valkyrie", "warrior"]; 
-//classes
-let albClasses = ["armsman", "cabalist", "cleric", "friar", "heretic", 
-				  "infiltrator", "maulera", "mercenary", "minstrel", "necromancer", 
-				  "paladin", "reaver", "scout", "sorcerer", "theurgist", "wizard"];
-let hibClasses = ["animist", "bainshee", "bard", "blademaster", "champion", 
-				  "druid", "eldritch", "enchanter", "hero", "maulerh", 
-				  "mentalist", "nightshade", "ranger", "valewalker", "vampiir", "warden"];
-let midClasses = ["berserker", "bonedancer", "healer", "hunter", "maulerm", 
-				  "runemaster", "savage", "shadowblade", "shaman", "skald", 
-				  "spiritmaster", "thane", "valkyrie", "warlock", "warrior"];
+
 //styles
 const ALL_STYLES = STYLE_DATA;
 let classStyles = [];
