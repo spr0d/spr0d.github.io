@@ -16,91 +16,19 @@
 
 <table align="center">
 	<caption>
-		Realm: 
-		<label id="selectalb"><input type="radio" name="realm" id="albRealm" onchange="changeClasses()" checked>Albion </label> 
-		<label id="selecthib"><input type="radio" name="realm" id="hibRealm" onchange="changeClasses()">Hibernia </label>
-		<label id="selectmid"><input type="radio" name="realm" id="midRealm" onchange="changeClasses()">Midguard </label><br /><br />
-		Race: 
-		<select name="races" id="races">
-			<!--Albion races-->
-			<option id="avalonian" value="avalonian">Avalonian</option>
-			<option id="briton" value="briton">Briton</option>
-			<option id="halfogre" value="halfogre">Half Ogre</option>
-			<option id="highlander" value="highlander">Highlander</option>
-			<option id="inconnu" value="inconnu">Inconnu</option>
-			<option id="minotaura" value="minotaura">Minotaur</option>
-			<option id="saracen" value="saracen">Saracen</option>
-			<!--Hibernia races-->
-			<option id="celt" value="celt">Celt</option>
-			<option id="elf" value="elf">Elf</option>
-			<option id="firbolg" value="firbolg">Firbolg</option>
-			<option id="lurikeen" value="lurikeen">Lurikeen</option>
-			<option id="minotaurh" value="minotaurh">Minotaur</option>
-			<option id="shar" value="shar">Shar</option>
-			<option id="sylvan" value="sylvan">Sylvan</option>
-			<!--Midgaurd races-->
-			<option id="dwarf" value="dwarf">Dwarf</option>
-			<option id="frostalf" value="frostalf">Frostalf</option>
-			<option id="kobold" value="kobold">Kobold</option>
-			<option id="minotaurm" value="minotaurm">Minotaur</option>
-			<option id="norseman" value="norseman">Norseman</option>
-			<option id="troll" value="troll">Troll</option>
-			<option id="valkyn" value="valkyn">Valkyn</option>
-		</div>
-		</select>
-		Class: 
-		<select name="classes" id="classes">
-			<!--Albion classes-->
-			<option id="armsman" value="armsman" style="display: block;">Armsman</option>
-			<option id="cabalist" value="cabalist" style="display: block;">Cabalist</option>
-			<option id="cleric" value="cleric" style="display: block;">Cleric</option>
-			<option id="friar" value="friar" style="display: block;">Friar</option>
-			<option id="heretic" value="heretic" style="display: block;">Heretic</option>
-			<option id="infiltrator" value="infiltrator" style="display: block;">Infiltrator</option>
-			<option id="maulera" value="maulera" style="display: block;">Mauler</option>
-			<option id="mercenary" value="mercenary" style="display: block;">Mercenary</option>
-			<option id="minstrel" value="minstrel" style="display: block;">Minstrel</option>
-			<option id="necromancer" value="necromancer" style="display: block;">Necromancer</option>
-			<option id="paladin" value="paladin" style="display: block;">Paladin</option>
-			<option id="reaver" value="reaver" style="display: block;">Reaver</option>
-			<option id="scout" value="scout" style="display: block;">Scout</option>
-			<option id="sorcerer" value="sorcerer" style="display: block;">Sorcerer</option>
-			<option id="theurgist" value="theurgist" style="display: block;">Theurgist</option>
-			<option id="wizard" value="wizard" style="display: block;">Wizard</option>
-			<!--Hibernia classes-->
-			<option id="animist" value="animist" style="display: none;">Animist</option>
-			<option id="bainshee" value="bainshee" style="display: none;">Bainshee</option>
-			<option id="bard" value="bard" style="display: none;">Bard</option>
-			<option id="blademaster" value="blademaster" style="display: none;">Blademaster</option>
-			<option id="champion" value="champion" style="display: none;">Champion</option>
-			<option id="druid" value="druid" style="display: none;">Druid</option>
-			<option id="eldritch" value="eldritch" style="display: none;">Eldritch</option>
-			<option id="enchanter" value="enchanter" style="display: none;">Enchanter</option>
-			<option id="hero" value="hero" style="display: none;">Hero</option>
-			<option id="maulerh" value="maulerh" style="display: none;">Mauler</option>
-			<option id="mentalist" value="mentalist" style="display: none;">Mentalist</option>
-			<option id="nightshade" value="nightshade" style="display: none;">Nightshade</option>
-			<option id="ranger" value="ranger" style="display: none;">Ranger</option>
-			<option id="valewalker" value="valewalker" style="display: none;">Valewalker</option>
-			<option id="vampiir" value="vampiir" style="display: none;">Vampiir</option>
-			<option id="warden" value="warden" style="display: none;">Warden</option>
-			<!--Midgaurd classes-->
-			<option id="berserker" value="berserker" style="display: none;">Berserker</option>
-			<option id="bonedancer" value="bonedancer" style="display: none;">Bonedancer</option>
-			<option id="healer" value="healer" style="display: none;">Healer</option>
-			<option id="hunter" value="hunter" style="display: none;">Hunter</option>
-			<option id="maulerm" value="maulerm" style="display: none;">Mauler</option>
-			<option id="runemaster" value="runemanster" style="display: none;">Runemaster</option>
-			<option id="savage" value="savage" style="display: none;">Savage</option>
-			<option id="shadowblade" value="shadowblade" style="display: none;">Shadowblade</option>
-			<option id="shaman" value="shaman" style="display: none;">Shaman</option>
-			<option id="skald" value="skald" style="display: none;">Skald</option>
-			<option id="spiritmaster" value="spiritmaster" style="display: none;">Spiritmaster</option>
-			<option id="thane" value="thane" style="display: none;">Thane</option>
-			<option id="valkyrie" value="valkyrie" style="display: none;">Valkyrie</option>
-			<option id="warlock" value="warlock" style="display: none;">Warlock</option>
-			<option id="warrior" value="warrior" style="display: none;">Warrior</option>
-		</select><br /><br />
+		<label id="realmSelector">
+			Realm: 
+			<label id="selectalb"><input type="radio" name="realm" id="albRealm" onchange="onRealmSelect()">Albion </label> 
+			<label id="selecthib"><input type="radio" name="realm" id="hibRealm" onchange="onRealmSelect()">Hibernia </label>
+			<label id="selectmid"><input type="radio" name="realm" id="midRealm" onchange="onRealmSelect()">Midguard </label><br /><br />
+		</label>
+		<label id="raceSelector">
+			<!--Created with JavaScript functions drawDropDown() and fillDropDown()-->
+			Select your Realm!
+		</label>
+		<label id="classSelector">
+			<!--Created with Javascript functions drawDropDown() and fillDropDown()-->
+		</label><br /><br />
 	</caption>
 		<tr>
 			<th>Attributes</th>
