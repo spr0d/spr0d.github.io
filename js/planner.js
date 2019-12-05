@@ -191,66 +191,63 @@ const TWOHAND_STYLE_INDEX = [111, 16];
 //Create functions to adjust available classes depending on the selected realm
 
 function onRealmSelect() {
-	
-	//When Albion is selected
-	if (document.getElementById('albRealm').checked) {
-				
-		//Change Albion text color
+
+	changeRealmColors();
+	resetAttributes();
+	resetAttributePrio();
+	drawDropDown('races');
+	fillDropDown('races');
+	drawDropDown('classes');
+	fillDropDown('classes');
+
+}
+
+function changeRealmColors() {
+	let realm = getSelectedRealm();
+	if(realm == 'alb') {
 		document.getElementById('selectalb').style.color = 'red';
 		document.getElementById('selecthib').style.color = 'black';
 		document.getElementById('selectmid').style.color = 'black';
-		drawDropDown('races');
-		fillDropDown('races', 'alb');
-		drawDropDown('classes');
-		fillDropDown('classes', 'alb');
-				
-	} //When Hibernia is selected 
-	else if (document.getElementById('hibRealm').checked) {
-				
-		//Change Hibernia text color
+	} else if (realm == 'hib') {
 		document.getElementById('selectalb').style.color = 'black';
 		document.getElementById('selecthib').style.color = 'green';
 		document.getElementById('selectmid').style.color = 'black';
-		drawDropDown('races');
-		fillDropDown('races', 'hib');
-		drawDropDown('classes');
-		fillDropDown('classes', 'hib');
-		
-	} //When Midgaurd is selected 
-	else if (document.getElementById('midRealm').checked) {
-		
-		//Change Midguard text color
+	} else if (realm == 'mid') {
 		document.getElementById('selectalb').style.color = 'black';
 		document.getElementById('selecthib').style.color = 'black';
 		document.getElementById('selectmid').style.color = 'blue';
-		
-		drawDropDown('races');
-		fillDropDown('races', 'mid');
-		drawDropDown('classes');
-		fillDropDown('classes', 'mid');
-				
 	}
+}
+
+function getSelectedRealm() {
+	if(document.getElementById('albRealm').checked) {
+		return 'alb';
+	} else if(document.getElementById('hibRealm').checked) {
+		return 'hib';
+	} else if(document.getElementById('midRealm').checked) {
+		return 'mid';
+	}
+}
+
+function getSelectedRace() {
+	return document.getElementById('races').value;
+}
+function getSelectedClass() {
+	return document.getElementById('classes').value;
 }
 
 function drawDropDown(type) {
-	let selected = '';
-
-	if(document.getElementById('albRealm').checked) {
-			selected = 'alb';
-		} else if(document.getElementById('hibRealm').checked) {
-			selected = 'hib';
-		} else if(document.getElementById('midRealm').checked) {
-			selected = 'mid';
-		}
+	
 	if(type == 'races') {		
-		
-		document.getElementById("raceSelector").innerHTML = `Race: <select name="${type}" id="${type}" onchange="drawDropDown('classes'), fillDropDown('classes', '${selected}')"></select>`;
+		document.getElementById("raceSelector").innerHTML = `Race: <select name="${type}" id="${type}" onchange="onRaceSelect()"></select>`;
 	} else if(type == 'classes') {
-		document.getElementById("classSelector").innerHTML = `Class: <select name="${type}" id="${type}"></select>`;
+		document.getElementById("classSelector").innerHTML = `Class: <select name="${type}" id="${type}" onchange="onClassSelect()"></select>`;
 	}
 }
 
-function fillDropDown(type, realm) {
+function fillDropDown(type) {
+	let realm = getSelectedRealm();
+	
 	if(type == 'races') {
 	document.getElementById(type).innerHTML += `<option name="Blank" id="Blank"></option>`
 		if(realm == 'alb') {
@@ -270,7 +267,7 @@ function fillDropDown(type, realm) {
 	
 	if(type == 'classes') {
 		
-		if(document.getElementById('races').value == "") {
+		if(getSelectedRace() == "") {
 			document.getElementById('classSelector').innerHTML = 'Select your Race!';
 		} else {
 			document.getElementById(type).innerHTML = `<option name="Blank" id="Blank"></option>`;
@@ -304,14 +301,566 @@ function fillDropDown(type, realm) {
 	}
 }
 
-//Create function to adjust available races depending on the selected realm
-function onRaceSelect() {
-	if(document.getElementById("albRealm").checked) {
-			
+function resetAttributes() {
+	str = 0;
+	con = 0;
+	dex = 0;
+	qui = 0;
+	intel = 0;
+	emp = 0;
+	pie = 0;
+	cha = 0;
+		
+	document.getElementById('strAttribute').value = str;
+	document.getElementById('conAttribute').value = con;
+	document.getElementById('dexAttribute').value = dex;
+	document.getElementById('quiAttribute').value = qui;
+	document.getElementById('intAttribute').value = intel;
+	document.getElementById('empAttribute').value = emp;
+	document.getElementById('pieAttribute').value = pie;
+	document.getElementById('chaAttribute').value = cha;
+}
+
+function resetAttributePrio() {
+	let styleNormal = 'white';
+	document.getElementById('strPrio').style.color = styleNormal;
+	document.getElementById('conPrio').style.color = styleNormal;
+	document.getElementById('dexPrio').style.color = styleNormal;
+	document.getElementById('quiPrio').style.color = styleNormal;
+	document.getElementById('intPrio').style.color = styleNormal;
+	document.getElementById('empPrio').style.color = styleNormal;
+	document.getElementById('piePrio').style.color = styleNormal;
+	document.getElementById('chaPrio').style.color = styleNormal;
+}
+
+function setAttributePrio(attOne, attTwo, attThree) {
+	let attributePrios = [attOne, attTwo, attThree];
+	resetAttributePrio();
+	for(let i = 0; i < attributePrios.length; i++) {
+		if(attributePrios[i] == 'str') {
+			document.getElementById('strPrio').style.color = 'yellow';
+		} else if(attributePrios[i] == 'con') {
+			document.getElementById('conPrio').style.color = 'yellow';
+		} else if(attributePrios[i] == 'dex') {
+			document.getElementById('dexPrio').style.color = 'yellow';
+		} else if(attributePrios[i] == 'qui') {
+			document.getElementById('quiPrio').style.color = 'yellow';
+		} else if(attributePrios[i] == 'int') {
+			document.getElementById('intPrio').style.color = 'yellow';
+		} else if(attributePrios[i] == 'emp') {
+			document.getElementById('empPrio').style.color = 'yellow';
+		} else if(attributePrios[i] == 'pie') {
+			document.getElementById('piePrio').style.color = 'yellow';
+		} else if(attributePrios[i] == 'cha') {
+			document.getElementById('chaPrio').style.color = 'yellow';
+		}
 	}
 }
 
+function setAttributes(selectedRace) {
+	let realm = getSelectedRealm();
+	switch(selectedRace)
+	{
+		case AVALONIAN_RACE:
+			str = 45;
+			con = 45;
+			dex = 60;
+			qui = 70;
+			intel = 80;
+			emp = 60;
+			pie = 60;
+			cha = 60;
+			break;
+		case BRITON_RACE:
+			str = 60;
+			con = 60;
+			dex = 60;
+			qui = 60;
+			intel = 60;
+			emp = 60;
+			pie = 60;
+			cha = 60;
+			break;
+		case HALF_OGRE_RACE:
+			str = 90;
+			con = 70;
+			dex = 40;
+			qui = 40;
+			intel = 60;
+			emp = 60;
+			pie = 60;
+			cha = 60;
+			break;
+		case HIGHLANDER_RACE:
+			str = 70;
+			con = 70;
+			dex = 50;
+			qui = 50;
+			intel = 60;
+			emp = 60;
+			pie = 60;
+			cha = 60;
+			break;
+		case INCONNU_RACE:
+			str = 50;
+			con = 60;
+			dex = 70;
+			qui = 50;
+			intel = 70;
+			emp = 60;
+			pie = 60;
+			cha = 60;
+			break;
+		case A_MINOTAUR_RACE:
+			str = 80;
+			con = 70;
+			dex = 50;
+			qui = 40;
+			intel = 60;
+			emp = 60;
+			pie = 60;
+			cha = 60;
+			break;
+		case SARACEN_RACE:
+			str = 50;
+			con = 50;
+			dex = 80;
+			qui = 60;
+			intel = 60;
+			emp = 60;
+			pie = 60;
+			cha = 60;
+			break;
+		case CELT_RACE:
+			str = 60;
+			con = 60;
+			dex = 60;
+			qui = 60;
+			intel = 60;
+			emp = 60;
+			pie = 60;
+			cha = 60;
+			break;
+		case ELF_RACE:
+			str = 40;
+			con = 40;
+			dex = 75;
+			qui = 75;
+			intel = 70;
+			emp = 60;
+			pie = 60;
+			cha = 60;
+			break;
+		case FIRBOLG_RACE:
+			str = 90;
+			con = 60;
+			dex = 40;
+			qui = 40;
+			intel = 60;
+			emp = 60;
+			pie = 70;
+			cha = 60;
+			break;
+		case LURIKEEN_RACE:
+			str = 40;
+			con = 40;
+			dex = 80;
+			qui = 80;
+			intel = 60;
+			emp = 60;
+			pie = 60;
+			cha = 60;
+			break;
+		case H_MINOTAUR_RACE:
+			str = 80;
+			con = 70;
+			dex = 50;
+			qui = 40;
+			intel = 60;
+			emp = 60;
+			pie = 60;
+			cha = 60;
+			break;
+		case SHAR_RACE:
+			str = 60;
+			con = 80;
+			dex = 50;
+			qui = 50;
+			intel = 60;
+			emp = 60;
+			pie = 60;
+			cha = 60;
+			break;
+		case SYLVAN_RACE:
+			str = 70;
+			con = 60;
+			dex = 55;
+			qui = 45;
+			intel = 70;
+			emp = 60;
+			pie = 60;
+			cha = 60;
+			break;
+		case DWARF_RACE:
+			str = 60;
+			con = 80;
+			dex = 50;
+			qui = 50;
+			intel = 60;
+			emp = 60;
+			pie = 60;
+			cha = 60;
+			break;
+		case FROSTALF_RACE:
+			str = 55;
+			con = 55;
+			dex = 55;
+			qui = 60;
+			intel = 60;
+			emp = 75;
+			pie = 60;
+			cha = 60;
+			break;
+		case KOBOLD_RACE:
+			str = 50;
+			con = 50;
+			dex = 70;
+			qui = 70;
+			intel = 60;
+			emp = 60;
+			pie = 60;
+			cha = 60;
+			break;
+		case M_MINOTAUR_RACE:
+			str = 80;
+			con = 70;
+			dex = 50;
+			qui = 40;
+			intel = 60;
+			emp = 60;
+			pie = 60;
+			cha = 60;
+			break;
+		case NORSEMAN_RACE:
+			str = 70;
+			con = 70;
+			dex = 50;
+			qui = 50;
+			intel = 60;
+			emp = 60;
+			pie = 60;
+			cha = 60;
+			break;
+		case TROLL_RACE:
+			str = 100;
+			con = 70;
+			dex = 35;
+			qui = 35;
+			intel = 60;
+			emp = 60;
+			pie = 60;
+			cha = 60;
+			break;
+		case VALKYN_RACE:
+			str = 55;
+			con = 45;
+			dex = 65;
+			qui = 75;
+			intel = 60;
+			emp = 60;
+			pie = 60;
+			cha = 60;
+			break;
+	}
+	
+	document.getElementById('strAttribute').value = str;
+	document.getElementById('conAttribute').value = con;
+	document.getElementById('dexAttribute').value = dex;
+	document.getElementById('quiAttribute').value = qui;
+	document.getElementById('intAttribute').value = intel;
+	document.getElementById('empAttribute').value = emp;
+	document.getElementById('pieAttribute').value = pie;
+	document.getElementById('chaAttribute').value = cha;
+}
+
+function updateAttributes(selectedClass) {
+		
+	setAttributes(getSelectedRace())
+	
+	switch(selectedClass) {
+		case ARMSMAN_CLASS:
+			setAttributePrio('str', 'con', 'dex');
+			str += 10;
+			con += 10;
+			dex += 10;
+			break;
+		case CABALIST_CLASS:
+			setAttributePrio('dex', 'qui', 'int');
+			dex += 15;
+			intel += 10;
+			break;
+		case CLERIC_CLASS:
+			setAttributePrio('con', 'dex', 'pie');
+			dex += 15;
+			pie += 10;
+			break;
+		case FRIAR_CLASS:
+			setAttributePrio('con', 'dex', 'pie');
+			con += 10;
+			dex += 10;
+			pie += 10;
+			break;
+		case HERETIC_CLASS:
+			setAttributePrio('con', 'dex', 'pie');
+			con += 10;
+			dex += 10;
+			pie += 10;
+			break;
+		case INFILTRATOR_CLASS:
+			setAttributePrio('str', 'dex', 'qui');
+			str += 10;
+			dex += 15;
+			break;
+		case MERCENARY_CLASS:
+			setAttributePrio('str', 'con', 'dex');
+			str += 10;
+			con += 10;
+			dex += 10;
+			break;
+		case MINSTREL_CLASS:
+			setAttributePrio('str', 'con', 'dex');
+			str += 10;
+			con += 10;
+			dex += 10;
+			break;
+		case NECROMANCER_CLASS:
+			setAttributePrio('dex', 'qui', 'int');
+			dex += 15;
+			intel += 10;
+			break;
+		case PALADIN_CLASS:
+			setAttributePrio('str', 'con', 'dex');
+			str += 10;
+			con += 10;
+			dex += 10;
+			break;
+		case REAVER_CLASS:
+			setAttributePrio('str', 'con', 'dex');
+			str += 10;
+			con += 10;
+			dex += 10;
+			break;
+		case SCOUT_CLASS:
+			setAttributePrio('str', 'dex', 'qui');
+			str += 10;
+			dex += 15;
+			break;
+		case SORCERER_CLASS:
+			setAttributePrio('dex', 'qui', 'int');
+			dex += 15;
+			intel += 10;
+			break;
+		case THEURGIST_CLASS:
+			setAttributePrio('dex', 'qui', 'int');
+			dex += 15;
+			intel += 10;
+			break;
+		case WIZARD_CLASS:
+			setAttributePrio('dex', 'qui', 'int');
+			dex += 15;
+			intel += 10;
+			break;
+		case ANIMIST_CLASS:
+			setAttributePrio('con', 'dex', 'int');
+			dex += 15;
+			intel += 10;
+			break;
+		case BAINSHEE_CLASS:
+			setAttributePrio('str', 'con', 'dex');
+			str += 10;
+			dex += 15;
+			break;
+		case BARD_CLASS:
+			setAttributePrio('con', 'dex', 'cha');
+			dex += 15;
+			cha += 10;
+			break;
+		case BLADEMASTER_CLASS:
+			setAttributePrio('str', 'con', 'dex');
+			str += 10;
+			con += 10;
+			dex += 10;
+			break;
+		case CHAMPION_CLASS:
+			setAttributePrio('str', 'con', 'dex');
+			str += 10;
+			con += 10;
+			dex += 10;
+			break;
+		case DRUID_CLASS:
+			setAttributePrio('con', 'dex', 'emp');
+			dex += 15;
+			emp += 10;
+			break;
+		case ELDRITCH_CLASS:
+			setAttributePrio('dex', 'qui', 'int');
+			dex += 15;
+			intel += 10;
+			break;
+		case ENCHANTER_CLASS:
+			setAttributePrio('dex', 'qui', 'int');
+			dex += 15;
+			intel += 10;
+			break;
+		case HERO_CLASS:
+			setAttributePrio('str', 'con', 'dex');
+			str += 10;
+			con += 10;
+			dex += 10;
+			break;
+		case MENTALIST_CLASS:
+			setAttributePrio('dex', 'qui', 'int');
+			dex += 15;
+			intel += 10;
+			break;
+		case NIGHTSHADE_CLASS:
+			setAttributePrio('str', 'dex', 'qui');
+			str += 10;
+			dex += 15;
+			break;
+		case RANGER_CLASS:
+			setAttributePrio('str', 'dex', 'qui');
+			str += 10;
+			dex += 15;
+			break;
+		case VALEWALKER_CLASS:
+			setAttributePrio('str', 'con', 'dex');
+			str += 10;
+			con += 10;
+			dex += 10;
+			break;
+		case VAMPIIR_CLASS:
+			setAttributePrio('str', 'con', 'dex');
+			str += 10;
+			con += 10;
+			dex += 10;
+			break;
+		case WARDEN_CLASS:
+			setAttributePrio('con', 'dex', 'emp');
+			dex += 15;
+			emp += 10;
+			break;
+		case BERSERKER_CLASS:
+			setAttributePrio('str', 'con', 'dex');
+			str += 10;
+			con += 10;
+			dex += 10;
+			break;
+		case BONEDANCER_CLASS:
+			setAttributePrio('dex', 'qui', 'pie');
+			dex += 15;
+			pie += 10;
+			break;
+		case HEALER_CLASS:
+			setAttributePrio('con', 'dex', 'pie');
+			dex += 15;
+			pie += 10;
+			break;
+		case HUNTER_CLASS:
+			setAttributePrio('str', 'dex', 'qui');
+			str += 10;
+			dex += 15;
+			break;
+		case RUNEMASTER_CLASS:
+			setAttributePrio('dex', 'qui', 'pie');
+			dex += 15;
+			pie += 10;
+			break;
+		case SAVAGE_CLASS:
+			setAttributePrio('str', 'con', 'dex');
+			str += 10;
+			con += 10;
+			dex += 10;
+			break;
+		case SHADOWBLADE_CLASS:
+			setAttributePrio('str', 'dex', 'qui');
+			str += 10;
+			dex += 15;
+			break;
+		case SHAMAN_CLASS:
+			setAttributePrio('con', 'dex', 'pie');
+			dex += 15;
+			pie += 10;
+			break;
+		case SKALD_CLASS:
+			setAttributePrio('str', 'con', 'cha');
+			str += 10;
+			con += 10;
+			cha += 10;
+			break;
+		case SPIRITMASTER_CLASS:
+			setAttributePrio('dex', 'qui', 'pie');
+			dex += 15;
+			pie += 10;
+			break;
+		case THANE_CLASS:
+			setAttributePrio('str', 'con', 'pie');
+			str += 10;
+			con += 10;
+			pie += 10;
+			break;
+		case VALKYRIE_CLASS:
+			setAttributePrio('str', 'con', 'dex');
+			str += 10;
+			con += 10;
+			dex += 10;
+			break;
+		case WARLOCK_CLASS:
+			setAttributePrio('con', 'dex', 'pie');
+			con += 10;
+			pie += 15;
+			break;
+		case WARRIOR_CLASS:
+			setAttributePrio('str', 'con', 'dex');
+			str += 10;
+			con += 10;
+			dex += 10;
+			break;
+		case A_MAULER_CLASS || H_MAULER_CLASS || M_MAULER_CLASS:
+			setAttributePrio('str', 'con', 'dex');
+			str += 10;
+			con += 10;
+			dex += 10;
+			break;
+	}
+	
+	document.getElementById('strAttribute').value = str;
+	document.getElementById('conAttribute').value = con;
+	document.getElementById('dexAttribute').value = dex;
+	document.getElementById('quiAttribute').value = qui;
+	document.getElementById('intAttribute').value = intel;
+	document.getElementById('empAttribute').value = emp;
+	document.getElementById('pieAttribute').value = pie;
+	document.getElementById('chaAttribute').value = cha;
+}
+
+//Create function to adjust available races depending on the selected realm
+function onRaceSelect() {
+	let realm = getSelectedRealm();
+	resetAttributePrio();
+	drawDropDown('classes');
+	fillDropDown('classes');
+	
+	setAttributes(getSelectedRace());
+	
+	
+}
+
 //Create function to adjust character attributes depending on class
+function onClassSelect() {
+	let realm = getSelectedRealm();
+	updateAttributes(getSelectedClass());
+}
 
 //Function adjusts available specialization points on character level change
 function changeSpecPoints() {
