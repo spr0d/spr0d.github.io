@@ -25,6 +25,7 @@ let energy = 0;
 let spirit = 0;
 let body = 0;
 //classes
+const MAULER_CLASS = "Mauler";
 //ALBION
 const ARMSMAN_CLASS = "Armsman";
 const CABALIST_CLASS = "Cabalist";
@@ -32,7 +33,6 @@ const CLERIC_CLASS = "Cleric";
 const FRIAR_CLASS = "Friar";
 const HERETIC_CLASS = "Heretic";
 const INFILTRATOR_CLASS = "Infiltrator";
-const A_MAULER_CLASS = "Mauler";
 const MERCENARY_CLASS = "Mercenary";
 const MINSTREL_CLASS = "Minstrel";
 const NECROMANCER_CLASS = "Necromancer";
@@ -43,7 +43,7 @@ const SORCERER_CLASS = "Sorcerer";
 const THEURGIST_CLASS = "Theurgist";
 const WIZARD_CLASS = "Wizard";
 let albClasses = [ARMSMAN_CLASS, CABALIST_CLASS, CLERIC_CLASS, FRIAR_CLASS, HERETIC_CLASS, 
-				  INFILTRATOR_CLASS, A_MAULER_CLASS, MERCENARY_CLASS, MINSTREL_CLASS, NECROMANCER_CLASS, 
+				  INFILTRATOR_CLASS, MAULER_CLASS, MERCENARY_CLASS, MINSTREL_CLASS, NECROMANCER_CLASS, 
 				  PALADIN_CLASS, REAVER_CLASS, SCOUT_CLASS, SORCERER_CLASS, THEURGIST_CLASS, WIZARD_CLASS];
 //HIBERNIA
 const ANIMIST_CLASS = "Animist";
@@ -55,7 +55,6 @@ const DRUID_CLASS = "Druid";
 const ELDRITCH_CLASS = "Eldritch";
 const ENCHANTER_CLASS = "Enchanter";
 const HERO_CLASS = "Hero";
-const H_MAULER_CLASS = "Mauler";
 const MENTALIST_CLASS = "Mentalist";
 const NIGHTSHADE_CLASS = "Nightshade";
 const RANGER_CLASS = "Ranger";
@@ -63,14 +62,13 @@ const VALEWALKER_CLASS = "Valewalker";
 const VAMPIIR_CLASS = "Vampiir";
 const WARDEN_CLASS = "Warden";
 let hibClasses = [ANIMIST_CLASS, BAINSHEE_CLASS, BARD_CLASS, BLADEMASTER_CLASS, CHAMPION_CLASS, 
-				  DRUID_CLASS, ELDRITCH_CLASS, ENCHANTER_CLASS, HERO_CLASS, H_MAULER_CLASS, 
+				  DRUID_CLASS, ELDRITCH_CLASS, ENCHANTER_CLASS, HERO_CLASS, MAULER_CLASS, 
 				  MENTALIST_CLASS, NIGHTSHADE_CLASS, RANGER_CLASS, VALEWALKER_CLASS, VAMPIIR_CLASS, WARDEN_CLASS];
 		
 const BERSERKER_CLASS = "Berserker";
 const BONEDANCER_CLASS = "Bonedancer";
 const HEALER_CLASS = "Healer";
 const HUNTER_CLASS = "Hunter";
-const M_MAULER_CLASS = "Mauler";
 const RUNEMASTER_CLASS = "Runemaster";
 const SAVAGE_CLASS = "Savage";
 const SHADOWBLADE_CLASS = "Shadowblade";
@@ -81,7 +79,7 @@ const THANE_CLASS = "Thane";
 const VALKYRIE_CLASS = "Valkyrie";
 const WARLOCK_CLASS = "Warlock";
 const WARRIOR_CLASS = "Warrior";
-let midClasses = [BERSERKER_CLASS, BONEDANCER_CLASS, HEALER_CLASS, HUNTER_CLASS, M_MAULER_CLASS, 
+let midClasses = [BERSERKER_CLASS, BONEDANCER_CLASS, HEALER_CLASS, HUNTER_CLASS, MAULER_CLASS, 
 				  RUNEMASTER_CLASS, SAVAGE_CLASS, SHADOWBLADE_CLASS, SHAMAN_CLASS, SKALD_CLASS, 
 				  SPIRITMASTER_CLASS, THANE_CLASS, VALKYRIE_CLASS, WARLOCK_CLASS, WARRIOR_CLASS];
 		
@@ -92,7 +90,7 @@ const BRITON_RACE = "Briton";
 const HALF_OGRE_RACE = "Half Ogre";
 const HIGHLANDER_RACE = "Highlander";
 const INCONNU_RACE = "Inconnu";
-const A_MINOTAUR_RACE = "Minotaur";
+const A_MINOTAUR_RACE = "Korazh";
 const SARACEN_RACE = "Saracen";
 let albRaces = [AVALONIAN_RACE, BRITON_RACE, HALF_OGRE_RACE, HIGHLANDER_RACE, INCONNU_RACE, A_MINOTAUR_RACE, SARACEN_RACE];
 
@@ -100,14 +98,14 @@ let avalonianClass = [ARMSMAN_CLASS, CABALIST_CLASS, CLERIC_CLASS, FRIAR_CLASS, 
 					  MERCENARY_CLASS, NECROMANCER_CLASS, PALADIN_CLASS, SORCERER_CLASS, THEURGIST_CLASS, 
 					  WIZARD_CLASS];
 let britonClass = albClasses;
-let halfOgreClass = [ARMSMAN_CLASS, CABALIST_CLASS, A_MAULER_CLASS, MERCENARY_CLASS, SORCERER_CLASS, 
+let halfOgreClass = [ARMSMAN_CLASS, CABALIST_CLASS, MAULER_CLASS, MERCENARY_CLASS, SORCERER_CLASS, 
 					  THEURGIST_CLASS, WIZARD_CLASS];
 let highlanderClass = [ARMSMAN_CLASS, CLERIC_CLASS, FRIAR_CLASS, HERETIC_CLASS, INFILTRATOR_CLASS, 
 					   MERCENARY_CLASS, MINSTREL_CLASS, PALADIN_CLASS, SCOUT_CLASS];
-let inconnuClass = [ARMSMAN_CLASS, CABALIST_CLASS, HERETIC_CLASS, INFILTRATOR_CLASS, A_MAULER_CLASS, 
+let inconnuClass = [ARMSMAN_CLASS, CABALIST_CLASS, HERETIC_CLASS, INFILTRATOR_CLASS, MAULER_CLASS, 
 					MERCENARY_CLASS, MINSTREL_CLASS, NECROMANCER_CLASS, REAVER_CLASS, SCOUT_CLASS, 
 					SORCERER_CLASS, WIZARD_CLASS];
-let minotauraClass = [ARMSMAN_CLASS, HERETIC_CLASS, A_MAULER_CLASS, MERCENARY_CLASS, REAVER_CLASS];
+let minotauraClass = [ARMSMAN_CLASS, HERETIC_CLASS, MAULER_CLASS, MERCENARY_CLASS, REAVER_CLASS];
 let saracenClass = [ARMSMAN_CLASS, CABALIST_CLASS, HERETIC_CLASS, INFILTRATOR_CLASS, MERCENARY_CLASS, 
 					MINSTREL_CLASS, NECROMANCER_CLASS, PALADIN_CLASS, REAVER_CLASS, SCOUT_CLASS, 
 					SORCERER_CLASS];
@@ -117,22 +115,22 @@ const CELT_RACE = "Celt";
 const ELF_RACE = "Elf";
 const FIRBOLG_RACE = "Firbolg";
 const LURIKEEN_RACE = "Lurikeen";
-const H_MINOTAUR_RACE = "Minotaur";
+const H_MINOTAUR_RACE = "Graoch";
 const SHAR_RACE = "Shar";
 const SYLVAN_RACE = "Sylvan";
 let hibRaces = [CELT_RACE, ELF_RACE, FIRBOLG_RACE, LURIKEEN_RACE, H_MINOTAUR_RACE, SHAR_RACE, SYLVAN_RACE];
 
 let celtClass = [ANIMIST_CLASS, BAINSHEE_CLASS, BARD_CLASS, BLADEMASTER_CLASS, CHAMPION_CLASS, 
-				 DRUID_CLASS, HERO_CLASS, H_MAULER_CLASS, MENTALIST_CLASS, NIGHTSHADE_CLASS, 
+				 DRUID_CLASS, HERO_CLASS, MAULER_CLASS, MENTALIST_CLASS, NIGHTSHADE_CLASS, 
 				 RANGER_CLASS, VALEWALKER_CLASS, VAMPIIR_CLASS, WARDEN_CLASS];
 let elfClass = [ANIMIST_CLASS, BAINSHEE_CLASS, BLADEMASTER_CLASS, CHAMPION_CLASS, ELDRITCH_CLASS, 
 				ENCHANTER_CLASS, MENTALIST_CLASS, NIGHTSHADE_CLASS, RANGER_CLASS];
 let firbolgClass = [ANIMIST_CLASS, BARD_CLASS, BLADEMASTER_CLASS, DRUID_CLASS, HERO_CLASS, 
-					H_MAULER_CLASS, VALEWALKER_CLASS, WARDEN_CLASS];
+					MAULER_CLASS, VALEWALKER_CLASS, WARDEN_CLASS];
 let lurikeenClass = [BAINSHEE_CLASS, BLADEMASTER_CLASS, CHAMPION_CLASS, ELDRITCH_CLASS, ENCHANTER_CLASS, 
-					 HERO_CLASS, H_MAULER_CLASS, MENTALIST_CLASS, NIGHTSHADE_CLASS, RANGER_CLASS, 
+					 HERO_CLASS, MAULER_CLASS, MENTALIST_CLASS, NIGHTSHADE_CLASS, RANGER_CLASS, 
 					 VAMPIIR_CLASS];
-let minotaurhClass = [BLADEMASTER_CLASS, CHAMPION_CLASS, HERO_CLASS, H_MAULER_CLASS, VALEWALKER_CLASS, 
+let minotaurhClass = [BLADEMASTER_CLASS, CHAMPION_CLASS, HERO_CLASS, MAULER_CLASS, VALEWALKER_CLASS, 
 					  WARDEN_CLASS];
 let sharClass = [BLADEMASTER_CLASS, CHAMPION_CLASS, HERO_CLASS, MENTALIST_CLASS, RANGER_CLASS, 
 				 VAMPIIR_CLASS, WARDEN_CLASS];
@@ -143,7 +141,7 @@ let hibClassEleg = [celtClass, elfClass, firbolgClass, lurikeenClass, minotaurhC
 const DWARF_RACE = "Dwarf";
 const FROSTALF_RACE = "Frostalf";
 const KOBOLD_RACE = "Kobold";
-const M_MINOTAUR_RACE = "Minotaur";
+const M_MINOTAUR_RACE = "Deifrang";
 const NORSEMAN_RACE = "Norseman";
 const TROLL_RACE = "Troll";
 const VALKYN_RACE = "Valkyn";
@@ -154,14 +152,14 @@ let dwarfClass = [BERSERKER_CLASS, HEALER_CLASS, HUNTER_CLASS, RUNEMASTER_CLASS,
 				  WARRIOR_CLASS];
 let frostalfClass = [BONEDANCER_CLASS, HEALER_CLASS, HUNTER_CLASS, RUNEMASTER_CLASS, SHADOWBLADE_CLASS, 
 					 SHAMAN_CLASS, SPIRITMASTER_CLASS, THANE_CLASS, VALKYRIE_CLASS, WARLOCK_CLASS];
-let koboldClass = [BERSERKER_CLASS, BONEDANCER_CLASS, HUNTER_CLASS, M_MAULER_CLASS, RUNEMASTER_CLASS, 
+let koboldClass = [BERSERKER_CLASS, BONEDANCER_CLASS, HUNTER_CLASS, MAULER_CLASS, RUNEMASTER_CLASS, 
 				   SAVAGE_CLASS, SHADOWBLADE_CLASS, SHAMAN_CLASS, SKALD_CLASS, SPIRITMASTER_CLASS, 
 				   WARLOCK_CLASS, WARRIOR_CLASS];
-let minotaurmClass = [BERSERKER_CLASS, M_MAULER_CLASS, SKALD_CLASS, THANE_CLASS, WARRIOR_CLASS];
-let norsemanClass = [BERSERKER_CLASS, HEALER_CLASS, HUNTER_CLASS, M_MAULER_CLASS, RUNEMASTER_CLASS, 
+let minotaurmClass = [BERSERKER_CLASS, MAULER_CLASS, SKALD_CLASS, THANE_CLASS, WARRIOR_CLASS];
+let norsemanClass = [BERSERKER_CLASS, HEALER_CLASS, HUNTER_CLASS, MAULER_CLASS, RUNEMASTER_CLASS, 
 					 SAVAGE_CLASS, SHADOWBLADE_CLASS, SKALD_CLASS, SPIRITMASTER_CLASS, THANE_CLASS, 
 					 VALKYRIE_CLASS, WARLOCK_CLASS, WARRIOR_CLASS];
-let trollClass = [BERSERKER_CLASS, BONEDANCER_CLASS, M_MAULER_CLASS, SAVAGE_CLASS, SHAMAN_CLASS, 
+let trollClass = [BERSERKER_CLASS, BONEDANCER_CLASS, MAULER_CLASS, SAVAGE_CLASS, SHAMAN_CLASS, 
 				  SKALD_CLASS, THANE_CLASS, WARLOCK_CLASS, WARRIOR_CLASS];
 let valkynClass = [BERSERKER_CLASS, BONEDANCER_CLASS, HUNTER_CLASS, SAVAGE_CLASS, SHADOWBLADE_CLASS, 
 				   THANE_CLASS, VALKYRIE_CLASS, WARRIOR_CLASS]; 
@@ -199,7 +197,7 @@ function onRealmSelect() {
 	fillDropDown('races');
 	drawDropDown('classes');
 	fillDropDown('classes');
-
+	document.getElementById("charLevel").readOnly = true;
 }
 
 function changeRealmColors() {
@@ -593,244 +591,289 @@ function updateAttributes(selectedClass) {
 			str += 10;
 			con += 10;
 			dex += 10;
+			pointMod = 2.0;
 			break;
 		case CABALIST_CLASS:
 			setAttributePrio('dex', 'qui', 'int');
 			dex += 15;
 			intel += 10;
+			pointMod = 1.0;
 			break;
 		case CLERIC_CLASS:
 			setAttributePrio('con', 'dex', 'pie');
 			dex += 15;
 			pie += 10;
+			pointMod = 1.0;
 			break;
 		case FRIAR_CLASS:
 			setAttributePrio('con', 'dex', 'pie');
 			con += 10;
 			dex += 10;
 			pie += 10;
+			pointMod = 1.8;
 			break;
 		case HERETIC_CLASS:
 			setAttributePrio('con', 'dex', 'pie');
 			con += 10;
 			dex += 10;
 			pie += 10;
+			pointMod = 2.0;
 			break;
 		case INFILTRATOR_CLASS:
 			setAttributePrio('str', 'dex', 'qui');
 			str += 10;
 			dex += 15;
+			pointMod = 2.9;
 			break;
 		case MERCENARY_CLASS:
 			setAttributePrio('str', 'con', 'dex');
 			str += 10;
 			con += 10;
 			dex += 10;
+			pointMod = 2.0;
 			break;
 		case MINSTREL_CLASS:
 			setAttributePrio('str', 'con', 'dex');
 			str += 10;
 			con += 10;
 			dex += 10;
+			pointMod = 1.5;
 			break;
 		case NECROMANCER_CLASS:
 			setAttributePrio('dex', 'qui', 'int');
 			dex += 15;
 			intel += 10;
+			pointMod = 1.0;
 			break;
 		case PALADIN_CLASS:
 			setAttributePrio('str', 'con', 'dex');
 			str += 10;
 			con += 10;
 			dex += 10;
+			pointMod = 2.0;
 			break;
 		case REAVER_CLASS:
 			setAttributePrio('str', 'con', 'dex');
 			str += 10;
 			con += 10;
 			dex += 10;
+			pointMod = 2.0;
 			break;
 		case SCOUT_CLASS:
 			setAttributePrio('str', 'dex', 'qui');
 			str += 10;
 			dex += 15;
+			pointMod = 2.0;
 			break;
 		case SORCERER_CLASS:
 			setAttributePrio('dex', 'qui', 'int');
 			dex += 15;
 			intel += 10;
+			pointMod = 1.0;
 			break;
 		case THEURGIST_CLASS:
 			setAttributePrio('dex', 'qui', 'int');
 			dex += 15;
 			intel += 10;
+			pointMod = 1.0;
 			break;
 		case WIZARD_CLASS:
 			setAttributePrio('dex', 'qui', 'int');
 			dex += 15;
 			intel += 10;
+			pointMod = 1.0;
 			break;
 		case ANIMIST_CLASS:
 			setAttributePrio('con', 'dex', 'int');
 			dex += 15;
 			intel += 10;
+			pointMod = 1.0;
 			break;
 		case BAINSHEE_CLASS:
 			setAttributePrio('str', 'con', 'dex');
 			str += 10;
 			dex += 15;
+			pointMod = 1.0;
 			break;
 		case BARD_CLASS:
 			setAttributePrio('con', 'dex', 'cha');
 			dex += 15;
 			cha += 10;
+			pointMod = 1.5;
 			break;
 		case BLADEMASTER_CLASS:
 			setAttributePrio('str', 'con', 'dex');
 			str += 10;
 			con += 10;
 			dex += 10;
+			pointMod = 2.0;
 			break;
 		case CHAMPION_CLASS:
 			setAttributePrio('str', 'con', 'dex');
 			str += 10;
 			con += 10;
 			dex += 10;
+			pointMod = 2.0;
 			break;
 		case DRUID_CLASS:
 			setAttributePrio('con', 'dex', 'emp');
 			dex += 15;
 			emp += 10;
+			pointMod = 1.0;
 			break;
 		case ELDRITCH_CLASS:
 			setAttributePrio('dex', 'qui', 'int');
 			dex += 15;
 			intel += 10;
+			pointMod = 1.0;
 			break;
 		case ENCHANTER_CLASS:
 			setAttributePrio('dex', 'qui', 'int');
 			dex += 15;
 			intel += 10;
+			pointMod = 1.0;
 			break;
 		case HERO_CLASS:
 			setAttributePrio('str', 'con', 'dex');
 			str += 10;
 			con += 10;
 			dex += 10;
+			pointMod = 2.0;
 			break;
 		case MENTALIST_CLASS:
 			setAttributePrio('dex', 'qui', 'int');
 			dex += 15;
 			intel += 10;
+			pointMod = 1.0;
 			break;
 		case NIGHTSHADE_CLASS:
 			setAttributePrio('str', 'dex', 'qui');
 			str += 10;
 			dex += 15;
+			pointMod = 2.8;
 			break;
 		case RANGER_CLASS:
 			setAttributePrio('str', 'dex', 'qui');
 			str += 10;
 			dex += 15;
+			pointMod = 2.0;
 			break;
 		case VALEWALKER_CLASS:
 			setAttributePrio('str', 'con', 'dex');
 			str += 10;
 			con += 10;
 			dex += 10;
+			pointMod = 1.5;
 			break;
 		case VAMPIIR_CLASS:
 			setAttributePrio('str', 'con', 'dex');
 			str += 10;
 			con += 10;
 			dex += 10;
+			pointMod = 1.5;
 			break;
 		case WARDEN_CLASS:
 			setAttributePrio('con', 'dex', 'emp');
 			dex += 15;
 			emp += 10;
+			pointMod = 1.8;
 			break;
 		case BERSERKER_CLASS:
 			setAttributePrio('str', 'con', 'dex');
 			str += 10;
 			con += 10;
 			dex += 10;
+			pointMod = 2.0;
 			break;
 		case BONEDANCER_CLASS:
 			setAttributePrio('dex', 'qui', 'pie');
 			dex += 15;
 			pie += 10;
+			pointMod = 1.0;
 			break;
 		case HEALER_CLASS:
 			setAttributePrio('con', 'dex', 'pie');
 			dex += 15;
 			pie += 10;
+			pointMod = 1.0;
 			break;
 		case HUNTER_CLASS:
 			setAttributePrio('str', 'dex', 'qui');
 			str += 10;
 			dex += 15;
+			pointMod = 2.0;
 			break;
 		case RUNEMASTER_CLASS:
 			setAttributePrio('dex', 'qui', 'pie');
 			dex += 15;
 			pie += 10;
+			pointMod = 1.0;
 			break;
 		case SAVAGE_CLASS:
 			setAttributePrio('str', 'con', 'dex');
 			str += 10;
 			con += 10;
 			dex += 10;
+			pointMod = 1.5;
 			break;
 		case SHADOWBLADE_CLASS:
 			setAttributePrio('str', 'dex', 'qui');
 			str += 10;
 			dex += 15;
+			pointMod = 2.8;
 			break;
 		case SHAMAN_CLASS:
 			setAttributePrio('con', 'dex', 'pie');
 			dex += 15;
 			pie += 10;
+			pointMod = 1.0;
 			break;
 		case SKALD_CLASS:
 			setAttributePrio('str', 'con', 'cha');
 			str += 10;
 			con += 10;
 			cha += 10;
+			pointMod = 1.5;
 			break;
 		case SPIRITMASTER_CLASS:
 			setAttributePrio('dex', 'qui', 'pie');
 			dex += 15;
 			pie += 10;
+			pointMod = 1.0;
 			break;
 		case THANE_CLASS:
 			setAttributePrio('str', 'con', 'pie');
 			str += 10;
 			con += 10;
 			pie += 10;
+			pointMod = 2.0;
 			break;
 		case VALKYRIE_CLASS:
 			setAttributePrio('str', 'con', 'dex');
 			str += 10;
 			con += 10;
 			dex += 10;
+			pointMod = 2.0;
 			break;
 		case WARLOCK_CLASS:
 			setAttributePrio('con', 'dex', 'pie');
 			con += 10;
 			pie += 15;
+			pointMod = 1.0;
 			break;
 		case WARRIOR_CLASS:
 			setAttributePrio('str', 'con', 'dex');
 			str += 10;
 			con += 10;
 			dex += 10;
+			pointMod = 2.0;
 			break;
-		case A_MAULER_CLASS || H_MAULER_CLASS || M_MAULER_CLASS:
+		case MAULER_CLASS:
 			setAttributePrio('str', 'con', 'dex');
 			str += 10;
 			con += 10;
 			dex += 10;
+			pointMod = 1.8;
 			break;
 	}
 	
@@ -852,7 +895,7 @@ function onRaceSelect() {
 	fillDropDown('classes');
 	
 	setAttributes(getSelectedRace());
-	
+	document.getElementById("charLevel").readOnly = true;
 	
 }
 
@@ -860,6 +903,15 @@ function onRaceSelect() {
 function onClassSelect() {
 	let realm = getSelectedRealm();
 	updateAttributes(getSelectedClass());
+	resetLevel();
+	document.getElementById("charLevel").readOnly = false;
+}
+
+function resetLevel() {
+	level = 1;
+	specPoints = 0;
+	document.getElementById("charLevel").value = level;
+	document.getElementById("specPoints").value = specPoints;
 }
 
 //Function adjusts available specialization points on character level change
@@ -876,16 +928,45 @@ function changeSpecPoints() {
 		newLevel = 50;
 	} else {
 		newLevel = parseInt(document.getElementById("charLevel").value);
-	}		
+	}//add check for decimals to automatically set to level + .5 to prevent .1, .2, etc.		
+	
+	//change step
+	/*if(newLevel >= 40) {
+		document.getElementById("charLevel").step = 0.5;
+	} else {
+		document.getElementById("charLevel").step = 1;
+	}*/
 	
 	//calculate points
 	if(newLevel > level) {
-		for(levelChange = newLevel; levelChange > level; levelChange--) {
-			specPoints += (levelChange * pointMod);	
+		for(let initLevel = level+1; initLevel <= newLevel; initLevel++) {
+			if (initLevel <= 5) {
+				specPoints += (Math.floor(initLevel * 1));
+			} else if(initLevel > 40) {
+				if((initLevel % 1) == 0) {
+					specPoints += (Math.floor((initLevel * pointMod)) + Math.floor(Math.floor(initLevel/2) * pointMod));
+				} else {
+					specPoints += Math.floor(Math.floor(Math.floor(initLevel)/2) * pointMod);
+				}
+				if((initLevel % 2) == 0) {
+					specPoints--;
+				}
+			} else {
+				specPoints += (Math.floor(initLevel * pointMod));
+			}
 		}
 	} else if(newLevel < level) {
-		for(levelChange = newLevel; levelChange < level; levelChange++) {
-			specPoints -= (levelChange * pointMod) + 1;
+		for(let initLevel = level; initLevel > newLevel; initLevel--) {
+			if (initLevel <= 5) {
+				specPoints -= (Math.floor(initLevel * 1));
+			} else if(initLevel > 40) {
+				specPoints -= (Math.floor((initLevel * pointMod)) + Math.floor(Math.floor(initLevel/2) * pointMod));
+				if((initLevel % 2) == 0) {
+					specPoints++;
+				}
+			} else {
+				specPoints -= (Math.floor(initLevel * pointMod));
+			}
 		}
 	}
 	
