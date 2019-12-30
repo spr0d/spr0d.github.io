@@ -1072,12 +1072,9 @@ function changeSpecPoints() {
 				}
 				
 				if(initLevel > 40) {
-					
 					specPoints -= Math.floor(initLevel * pointMod); 
 					specPoints -= Math.floor(((initLevel - 1) * pointMod) / 2);
-					
-					
-				} else if(initLevel <= 40) {
+				} else if(initLevel <= 40 && initLevel > 5) {
 					specPoints -= Math.floor(initLevel * pointMod);
 				} else if (initLevel <= 5) {
 					specPoints -= Math.floor(initLevel * 1);
