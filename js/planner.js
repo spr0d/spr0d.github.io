@@ -643,8 +643,7 @@ function setAttributes(selectedRace) {
 	document.getElementById('chaAttribute').value = cha;
 }
 
-
-
+//Assigns values to character resistances depending on what is passed
 function setResists(th, cr, sl, he, co, ma, en, sp, bo) {
 	
 	thrust = th;
@@ -668,6 +667,7 @@ function setResists(th, cr, sl, he, co, ma, en, sp, bo) {
 	document.getElementById('bodyRes').value = `+${body}%`;
 }
 
+//Adds 30 recommended attribute points
 function updateAttributes(selectedClass) {
 		
 	switch(selectedClass) {
@@ -993,6 +993,7 @@ function onClassSelect() {
 	//setSkills();
 }
 
+//Resets character level to 1
 function resetLevel() {
 	level = 1;
 	specPoints = 0;
@@ -1040,26 +1041,24 @@ function changeSpecPoints() {
 			} else if(initLevel <= 40) {
 				specPoints += Math.floor(initLevel * pointMod);
 			} else if(initLevel > 40) {
-				specPoints += Math.floor(initLevel * pointMod); 
-				specPoints += Math.floor(((initLevel - 1) * pointMod) / 2);
-				console.log(initLevel);
-				console.log(pointMod);
+				specPoints += Math.floor(initLevel * pointMod + 0.000001); 
+				specPoints += Math.floor(((initLevel - 1) * pointMod + 0.000001) / 2);
 			}
 		}
 		//add half levels
 		if(newLevel == (level + 0.5) && (newLevel % 1) != 0) {
-			specPoints += Math.floor((Math.floor(newLevel) * pointMod) / 2);
+			specPoints += Math.floor((Math.floor(newLevel) * pointMod + 0.000001) / 2);
 		} else if(newLevel == (level + 0.5) && (newLevel % 1) == 0) {
-			specPoints += Math.floor(newLevel * pointMod);
+			specPoints += Math.floor(newLevel * pointMod + 0.000001);
 		}
 		
 	} else if(newLevel < level) {
 		//remove half levels
 		if(newLevel == (level - 0.5) && (newLevel % 1) != 0) {
-			specPoints -= (Math.floor(Math.floor(level) * pointMod));
+			specPoints -= Math.floor(Math.floor(level) * pointMod + 0.000001);
 			halfRun = true;
 		} else if(newLevel == (level - 0.5) && (newLevel % 1) == 0) {
-			specPoints -= Math.floor((Math.floor(level) * pointMod) / 2);
+			specPoints -= Math.floor((Math.floor(level) * pointMod + 0.000001) / 2);
 			halfRun = true;
 		}
 		//remove full levels and any half levels in between
@@ -1067,13 +1066,13 @@ function changeSpecPoints() {
 			for(let initLevel = level; initLevel > newLevel; initLevel--) {
 				//remove current half level points
 				if(initLevel % 1 != 0) {
-					specPoints -= Math.floor(Math.floor(initLevel * pointMod) / 2);
+					specPoints -= Math.floor((Math.floor(initLevel) * pointMod + 0.000001) / 2);
 					initLevel -= 0.5;
 				}
 				
 				if(initLevel > 40) {
-					specPoints -= Math.floor(initLevel * pointMod); 
-					specPoints -= Math.floor(((initLevel - 1) * pointMod) / 2);
+					specPoints -= Math.floor(initLevel * pointMod + 0.000001); 
+					specPoints -= Math.floor(((initLevel - 1) * pointMod + 0.000001) / 2);
 				} else if(initLevel <= 40 && initLevel > 5) {
 					specPoints -= Math.floor(initLevel * pointMod);
 				} else if (initLevel <= 5) {
