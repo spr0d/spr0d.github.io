@@ -5,6 +5,7 @@ let race = "";
 let level = 1;
 let specPoints = 0;
 let pointMod = 1;
+
 //character attributes
 let str = 0;
 let con = 0;
@@ -14,6 +15,7 @@ let intel = 0;
 let emp = 0;
 let pie = 0;
 let cha = 0;
+
 //character resists
 let thrust = 0;
 let crush = 0;
@@ -24,6 +26,7 @@ let matter = 0;
 let energy = 0;
 let spirit = 0;
 let body = 0;
+
 //classes
 const MAULER_CLASS = "Mauler";
 //ALBION
@@ -175,19 +178,19 @@ let classBaseSpells = [];
 let classTrainedSpells = [];
 let charBaseSpells = [];
 let charTrainedSpells = [];
-//index ALB/HIB/MID - [starting id, quantity]
-const CRUSH_STYLE_INDEX = [0, 16];
-const DUALWIELD_STYLE_INDEX = [16, 16];
-const FLEX_STYLE_INDEX = [32, 16];
-const POLEARM_STYLE_INDEX = [48, 17];
-const SLASH_STYLE_INDEX = [65, 16];
-const STAFF_STYLE_INDEX = [81, 13];
-const THRUST_STYLE_INDEX = [94, 17];
-const TWOHAND_STYLE_INDEX = [111, 16];
+//index ALB/HIB/MID - [starting ID, quantity]
+const CRUSH_STYLE_INDEX = [0, 18];
+const DUALWIELD_STYLE_INDEX = [18, 16];
+const FLEX_STYLE_INDEX = [36, 16];
+const PAINWORKING_STYLE_INDEX = [52, 10]
+const POLEARM_STYLE_INDEX = [62, 17];
+const SLASH_STYLE_INDEX = [79, 16];
+const STAFF_STYLE_INDEX = [95, 13];
+const THRUST_STYLE_INDEX = [108, 17];
+const TWOHAND_STYLE_INDEX = [125, 16];
 
 
-//Create functions to adjust available classes depending on the selected realm
-
+//Function adjusts available classes depending on the selected realm
 function onRealmSelect() {
 
 	changeRealmColors();
@@ -200,6 +203,7 @@ function onRealmSelect() {
 	document.getElementById("charLevel").readOnly = true;
 }
 
+//Function changes color for selected realm
 function changeRealmColors() {
 	let realm = getSelectedRealm();
 	if(realm == 'alb') {
@@ -217,6 +221,7 @@ function changeRealmColors() {
 	}
 }
 
+//Return selected realm
 function getSelectedRealm() {
 	if(document.getElementById('albRealm').checked) {
 		return 'alb';
@@ -227,13 +232,17 @@ function getSelectedRealm() {
 	}
 }
 
+//Return selected race
 function getSelectedRace() {
 	return document.getElementById('races').value;
 }
+
+//Return selected class
 function getSelectedClass() {
 	return document.getElementById('classes').value;
 }
 
+//Creates race and class drop downs
 function drawDropDown(type) {
 	
 	if(type == 'races') {		
@@ -243,6 +252,7 @@ function drawDropDown(type) {
 	}
 }
 
+//Inserts available races and classes into drop downs depending on selected realm
 function fillDropDown(type) {
 	let realm = getSelectedRealm();
 	
@@ -299,6 +309,7 @@ function fillDropDown(type) {
 	}
 }
 
+//Resets character attributes
 function resetAttributes() {
 	str = 0;
 	con = 0;
@@ -308,6 +319,9 @@ function resetAttributes() {
 	emp = 0;
 	pie = 0;
 	cha = 0;
+	
+	resetResists();
+	
 		
 	document.getElementById('strAttribute').value = str;
 	document.getElementById('conAttribute').value = con;
@@ -319,6 +333,7 @@ function resetAttributes() {
 	document.getElementById('chaAttribute').value = cha;
 }
 
+//Resets character attribute priorities
 function resetAttributePrio() {
 	let styleNormal = 'white';
 	document.getElementById('strPrio').style.color = styleNormal;
@@ -331,6 +346,31 @@ function resetAttributePrio() {
 	document.getElementById('chaPrio').style.color = styleNormal;
 }
 
+//Resets character resistances
+function resetResists() {
+	
+	thrust = 0;
+	crush = 0;
+	slash = 0;
+	heat = 0;
+	cold = 0;
+	matter = 0;
+	energy = 0;
+	spirit = 0;
+	body = 0;
+	
+	document.getElementById('thrustRes').value = `+${thrust}%`;
+	document.getElementById('crushRes').value = `+${crush}%`;
+	document.getElementById('slashRes').value = `+${slash}%`;
+	document.getElementById('heatRes').value = `+${heat}%`;
+	document.getElementById('coldRes').value = `+${cold}%`;
+	document.getElementById('matterRes').value = `+${matter}%`;
+	document.getElementById('energyRes').value = `+${energy}%`;
+	document.getElementById('spiritRes').value = `+${spirit}%`;
+	document.getElementById('bodyRes').value = `+${body}%`;
+}
+
+//Highlights text of primary, secondary and tertiary character attribute priorities
 function setAttributePrio(attOne, attTwo, attThree) {
 	let attributePrios = [attOne, attTwo, attThree];
 	resetAttributePrio();
@@ -355,8 +395,9 @@ function setAttributePrio(attOne, attTwo, attThree) {
 	}
 }
 
+//Assigns values to character attributes depending on selected race
 function setAttributes(selectedRace) {
-	let realm = getSelectedRealm();
+	
 	switch(selectedRace)
 	{
 		case AVALONIAN_RACE:
@@ -368,6 +409,7 @@ function setAttributes(selectedRace) {
 			emp = 60;
 			pie = 60;
 			cha = 60;
+			setResists(0, 2, 3, 0, 0, 0, 0, 5, 0);
 			break;
 		case BRITON_RACE:
 			str = 60;
@@ -378,6 +420,7 @@ function setAttributes(selectedRace) {
 			emp = 60;
 			pie = 60;
 			cha = 60;
+			setResists(0, 2, 3, 0, 0, 0, 0, 5, 0);
 			break;
 		case HALF_OGRE_RACE:
 			str = 90;
@@ -388,6 +431,7 @@ function setAttributes(selectedRace) {
 			emp = 60;
 			pie = 60;
 			cha = 60;
+			setResists(2, 0, 3, 0, 0, 0, 0, 0, 5);
 			break;
 		case HIGHLANDER_RACE:
 			str = 70;
@@ -398,6 +442,7 @@ function setAttributes(selectedRace) {
 			emp = 60;
 			pie = 60;
 			cha = 60;
+			setResists(0, 3, 2, 0, 5, 0, 0, 0, 0);
 			break;
 		case INCONNU_RACE:
 			str = 50;
@@ -408,6 +453,7 @@ function setAttributes(selectedRace) {
 			emp = 60;
 			pie = 60;
 			cha = 60;
+			setResists(3, 2, 0, 5, 0, 0, 0, 5, 0);
 			break;
 		case A_MINOTAUR_RACE:
 			str = 80;
@@ -418,6 +464,7 @@ function setAttributes(selectedRace) {
 			emp = 60;
 			pie = 60;
 			cha = 60;
+			setResists(0, 4, 0, 3, 3, 0, 0, 0, 0);
 			break;
 		case SARACEN_RACE:
 			str = 50;
@@ -428,6 +475,7 @@ function setAttributes(selectedRace) {
 			emp = 60;
 			pie = 60;
 			cha = 60;
+			setResists(3, 0, 2, 5, 0, 0, 0, 0, 0);
 			break;
 		case CELT_RACE:
 			str = 60;
@@ -438,6 +486,7 @@ function setAttributes(selectedRace) {
 			emp = 60;
 			pie = 60;
 			cha = 60;
+			setResists(0, 2, 3, 0, 0, 0, 0, 5, 0);
 			break;
 		case ELF_RACE:
 			str = 40;
@@ -448,6 +497,7 @@ function setAttributes(selectedRace) {
 			emp = 60;
 			pie = 60;
 			cha = 60;
+			setResists(3, 0, 2, 0, 0, 0, 0, 5, 0);
 			break;
 		case FIRBOLG_RACE:
 			str = 90;
@@ -458,6 +508,7 @@ function setAttributes(selectedRace) {
 			emp = 60;
 			pie = 70;
 			cha = 60;
+			setResists(0, 3, 2, 5, 0, 0, 0, 0, 0);
 			break;
 		case LURIKEEN_RACE:
 			str = 40;
@@ -468,6 +519,7 @@ function setAttributes(selectedRace) {
 			emp = 60;
 			pie = 60;
 			cha = 60;
+			setResists(0, 5, 0, 0, 0, 0, 5, 0, 0);
 			break;
 		case H_MINOTAUR_RACE:
 			str = 80;
@@ -478,6 +530,7 @@ function setAttributes(selectedRace) {
 			emp = 60;
 			pie = 60;
 			cha = 60;
+			setResists(0, 4, 0, 3, 3, 0, 0, 0, 0);
 			break;
 		case SHAR_RACE:
 			str = 60;
@@ -488,6 +541,7 @@ function setAttributes(selectedRace) {
 			emp = 60;
 			pie = 60;
 			cha = 60;
+			setResists(0, 5, 0, 0, 0, 0, 5, 0, 0);
 			break;
 		case SYLVAN_RACE:
 			str = 70;
@@ -498,6 +552,7 @@ function setAttributes(selectedRace) {
 			emp = 60;
 			pie = 60;
 			cha = 60;
+			setResists(2, 3, 0, 0, 0, 5, 5, 0, 0);
 			break;
 		case DWARF_RACE:
 			str = 60;
@@ -508,6 +563,7 @@ function setAttributes(selectedRace) {
 			emp = 60;
 			pie = 60;
 			cha = 60;
+			setResists(3, 0, 2, 0, 0, 0, 0, 0, 5);
 			break;
 		case FROSTALF_RACE:
 			str = 55;
@@ -518,6 +574,7 @@ function setAttributes(selectedRace) {
 			emp = 75;
 			pie = 60;
 			cha = 60;
+			setResists(3, 0, 2, 0, 0, 0, 0, 5, 0);
 			break;
 		case KOBOLD_RACE:
 			str = 50;
@@ -528,6 +585,7 @@ function setAttributes(selectedRace) {
 			emp = 60;
 			pie = 60;
 			cha = 60;
+			setResists(0, 5, 0, 0, 0, 0, 5, 0, 0);
 			break;
 		case M_MINOTAUR_RACE:
 			str = 80;
@@ -538,6 +596,7 @@ function setAttributes(selectedRace) {
 			emp = 60;
 			pie = 60;
 			cha = 60;
+			setResists(0, 4, 0, 3, 3, 0, 0, 0, 0);
 			break;
 		case NORSEMAN_RACE:
 			str = 70;
@@ -548,6 +607,7 @@ function setAttributes(selectedRace) {
 			emp = 60;
 			pie = 60;
 			cha = 60;
+			setResists(0, 2, 3, 0, 5, 0, 0, 0, 0);
 			break;
 		case TROLL_RACE:
 			str = 100;
@@ -558,6 +618,7 @@ function setAttributes(selectedRace) {
 			emp = 60;
 			pie = 60;
 			cha = 60;
+			setResists(2, 0, 3, 0, 0, 5, 0, 0, 0);
 			break;
 		case VALKYN_RACE:
 			str = 55;
@@ -568,6 +629,7 @@ function setAttributes(selectedRace) {
 			emp = 60;
 			pie = 60;
 			cha = 60;
+			setResists(2, 0, 3, 0, 5, 0, 0, 0, 5);
 			break;
 	}
 	
@@ -581,10 +643,33 @@ function setAttributes(selectedRace) {
 	document.getElementById('chaAttribute').value = cha;
 }
 
+
+
+function setResists(th, cr, sl, he, co, ma, en, sp, bo) {
+	
+	thrust = th;
+	crush = cr;
+	slash = sl;
+	heat = he;
+	cold = co;
+	matter = ma;
+	energy = en;
+	spirit = sp;
+	body = bo;
+	
+	document.getElementById('thrustRes').value = `+${thrust}%`;
+	document.getElementById('crushRes').value = `+${crush}%`;
+	document.getElementById('slashRes').value = `+${slash}%`;
+	document.getElementById('heatRes').value = `+${heat}%`;
+	document.getElementById('coldRes').value = `+${cold}%`;
+	document.getElementById('matterRes').value = `+${matter}%`;
+	document.getElementById('energyRes').value = `+${energy}%`;
+	document.getElementById('spiritRes').value = `+${spirit}%`;
+	document.getElementById('bodyRes').value = `+${body}%`;
+}
+
 function updateAttributes(selectedClass) {
 		
-	setAttributes(getSelectedRace())
-	
 	switch(selectedClass) {
 		case ARMSMAN_CLASS:
 			setAttributePrio('str', 'con', 'dex');
@@ -889,7 +974,7 @@ function updateAttributes(selectedClass) {
 
 //Create function to adjust available races depending on the selected realm
 function onRaceSelect() {
-	let realm = getSelectedRealm();
+	
 	resetAttributePrio();
 	drawDropDown('classes');
 	fillDropDown('classes');
@@ -901,10 +986,11 @@ function onRaceSelect() {
 
 //Create function to adjust character attributes depending on class
 function onClassSelect() {
-	let realm = getSelectedRealm();
+	
 	updateAttributes(getSelectedClass());
 	resetLevel();
 	document.getElementById("charLevel").readOnly = false;
+	//setSkills();
 }
 
 function resetLevel() {
@@ -916,60 +1002,90 @@ function resetLevel() {
 
 //Function adjusts available specialization points on character level change
 function changeSpecPoints() {
-	let levelChange = 0;
 	let newLevel;
+	let halfRun = false;
 
 	//check input
-	if(document.getElementById("charLevel").value == "") {
+	if(document.getElementById("charLevel").value == "" || document.getElementById("charLevel").value == 0) {
 		document.getElementById("charLevel").value = 1;
 		newLevel = 1;
 	} else if(document.getElementById("charLevel").value > 50) {
 		document.getElementById("charLevel").value = 50;
 		newLevel = 50;
 	} else {
-		newLevel = parseInt(document.getElementById("charLevel").value);
-	}//add check for decimals to automatically set to level + .5 to prevent .1, .2, etc.		
+		newLevel = parseFloat(document.getElementById("charLevel").value);
+	}
 	
 	//change step
-	/*if(newLevel >= 40) {
+	if(newLevel >= 40) {
 		document.getElementById("charLevel").step = 0.5;
 	} else {
 		document.getElementById("charLevel").step = 1;
-	}*/
+		document.getElementById("charLevel").value = Math.floor(newLevel);
+		newLevel = parseFloat(document.getElementById("charLevel").value);
+	}
+	
+	//check for decimals and automatically set to level + .5 to prevent .1 - .9		
+	if(newLevel > Math.floor(newLevel) && newLevel < Math.ceil(newLevel)) {
+		newLevel = Math.floor(newLevel) + 0.5;
+		document.getElementById("charLevel").value = newLevel;
+	}
 	
 	//calculate points
 	if(newLevel > level) {
+		//add full levels and any half levels in between
 		for(let initLevel = level+1; initLevel <= newLevel; initLevel++) {
 			if (initLevel <= 5) {
-				specPoints += (Math.floor(initLevel * 1));
+				specPoints += Math.floor(initLevel * 1);
+			} else if(initLevel <= 40) {
+				specPoints += Math.floor(initLevel * pointMod);
 			} else if(initLevel > 40) {
-				if((initLevel % 1) == 0) {
-					specPoints += (Math.floor((initLevel * pointMod)) + Math.floor(Math.floor(initLevel/2) * pointMod));
-				} else {
-					specPoints += Math.floor(Math.floor(Math.floor(initLevel)/2) * pointMod);
-				}
-				if((initLevel % 2) == 0) {
-					specPoints--;
-				}
-			} else {
-				specPoints += (Math.floor(initLevel * pointMod));
+				specPoints += Math.floor(initLevel * pointMod); 
+				specPoints += Math.floor(((initLevel - 1) * pointMod) / 2);
+				console.log(initLevel);
+				console.log(pointMod);
 			}
 		}
+		//add half levels
+		if(newLevel == (level + 0.5) && (newLevel % 1) != 0) {
+			specPoints += Math.floor((Math.floor(newLevel) * pointMod) / 2);
+		} else if(newLevel == (level + 0.5) && (newLevel % 1) == 0) {
+			specPoints += Math.floor(newLevel * pointMod);
+		}
+		
 	} else if(newLevel < level) {
-		for(let initLevel = level; initLevel > newLevel; initLevel--) {
-			if (initLevel <= 5) {
-				specPoints -= (Math.floor(initLevel * 1));
-			} else if(initLevel > 40) {
-				specPoints -= (Math.floor((initLevel * pointMod)) + Math.floor(Math.floor(initLevel/2) * pointMod));
-				if((initLevel % 2) == 0) {
-					specPoints++;
+		//remove half levels
+		if(newLevel == (level - 0.5) && (newLevel % 1) != 0) {
+			specPoints -= (Math.floor(Math.floor(level) * pointMod));
+			halfRun = true;
+		} else if(newLevel == (level - 0.5) && (newLevel % 1) == 0) {
+			specPoints -= Math.floor((Math.floor(level) * pointMod) / 2);
+			halfRun = true;
+		}
+		//remove full levels and any half levels in between
+		if(!halfRun){
+			for(let initLevel = level; initLevel > newLevel; initLevel--) {
+				//remove current half level points
+				if(initLevel % 1 != 0) {
+					specPoints -= Math.floor(Math.floor(initLevel * pointMod) / 2);
+					initLevel -= 0.5;
 				}
-			} else {
-				specPoints -= (Math.floor(initLevel * pointMod));
+				
+				if(initLevel > 40) {
+					
+					specPoints -= Math.floor(initLevel * pointMod); 
+					specPoints -= Math.floor(((initLevel - 1) * pointMod) / 2);
+					
+					
+				} else if(initLevel <= 40) {
+					specPoints -= Math.floor(initLevel * pointMod);
+				} else if (initLevel <= 5) {
+					specPoints -= Math.floor(initLevel * 1);
+				}
 			}
 		}
 	}
-	
+	specPoints = Math.floor(specPoints);
 	document.getElementById("specPoints").value = specPoints;
 	level = newLevel;
 }

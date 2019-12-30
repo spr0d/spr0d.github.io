@@ -1,6 +1,6 @@
 const STYLE_DATA = [
 	{
-		"id": 65,
+		"id": 79,
 		"realms": ["Albion"],
 		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
 		"tree": "Slash",
@@ -15,7 +15,7 @@ const STYLE_DATA = [
 		"effect": null
 	},
 	{
-		"id": 66,
+		"id": 80,
 		"realms": ["Albion"],
 		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
 		"tree": "Slash",
@@ -30,7 +30,7 @@ const STYLE_DATA = [
 		"effect": "8 damage every 4.0 seconds for 20 seconds."
 	},
 	{
-		"id": 67,
+		"id": 81,
 		"realms": ["Albion"],
 		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
 		"tree": "Slash",
@@ -45,7 +45,7 @@ const STYLE_DATA = [
 		"effect": "Target's attack speed reduced by 16% for 20 seconds."
 	},
 	{
-		"id": 68,
+		"id": 82,
 		"realms": ["Albion"],
 		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
 		"tree": "Slash",
@@ -60,7 +60,7 @@ const STYLE_DATA = [
 		"effect": null
 	},
 	{
-		"id": 69,
+		"id": 83,
 		"realms": ["Albion"],
 		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
 		"tree": "Slash",
@@ -75,7 +75,7 @@ const STYLE_DATA = [
 		"effect": "Increases your threat to monster targets by 275 damage."
 	},
 	{
-		"id": 70,
+		"id": 84,
 		"realms": ["Albion"],
 		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
 		"tree": "Slash",
@@ -90,7 +90,7 @@ const STYLE_DATA = [
 		"effect": "13 damage every 4.0 seconds for 20 seconds."
 	},
 	{
-		"id": 71,
+		"id": 85,
 		"realms": ["Albion"],
 		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
 		"tree": "Slash",
@@ -105,7 +105,7 @@ const STYLE_DATA = [
 		"effect": "Increases your threat to monster targets by 0 damage."
 	},
 	{
-		"id": 72,
+		"id": 86,
 		"realms": ["Albion"],
 		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
 		"tree": "Slash",
@@ -120,7 +120,7 @@ const STYLE_DATA = [
 		"effect": "13 damage every 4.0 seconds for 20 seconds."
 	},
 	{
-		"id": 73,
+		"id": 87,
 		"realms": ["Albion"],
 		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
 		"tree": "Slash",
@@ -135,7 +135,7 @@ const STYLE_DATA = [
 		"effect": "Target's attack speed reduced by 21% for 20 seconds."
 	},
 	{
-		"id": 74,
+		"id": 88,
 		"realms": ["Albion"],
 		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
 		"tree": "Slash",
@@ -150,7 +150,7 @@ const STYLE_DATA = [
 		"effect": "Target moves 40% slower for 14 seconds."
 	},
 	{
-		"id": 75,
+		"id": 89,
 		"realms": ["Albion"],
 		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
 		"tree": "Slash",
@@ -165,7 +165,7 @@ const STYLE_DATA = [
 		"effect": "20 damage every 4.0 seconds for 20 seconds."
 	},
 	{
-		"id": 76,
+		"id": 90,
 		"realms": ["Albion"],
 		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
 		"tree": "Slash",
@@ -180,7 +180,7 @@ const STYLE_DATA = [
 		"effect": null
 	},
 	{
-		"id": 77,
+		"id": 91,
 		"realms": ["Albion"],
 		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
 		"tree": "Slash",
@@ -195,7 +195,7 @@ const STYLE_DATA = [
 		"effect": "Target cannot move or take any other action for 6 seconds."
 	},
 	{
-		"id": 78,
+		"id": 92,
 		"realms": ["Albion"],
 		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
 		"tree": "Slash",
@@ -210,7 +210,7 @@ const STYLE_DATA = [
 		"effect": "Target moves 40% slower for 19 seconds."
 	},
 	{
-		"id": 79,
+		"id": 93,
 		"realms": ["Albion"],
 		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
 		"tree": "Slash",
@@ -225,7 +225,7 @@ const STYLE_DATA = [
 		"effect": "26 damage every 4.0 seconds for 20 seconds."
 	},
 	{
-		"id": 80,
+		"id": 94,
 		"realms": ["Albion"],
 		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
 		"tree": "Slash",
