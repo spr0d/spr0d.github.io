@@ -15,6 +15,26 @@ let intel = 0;
 let emp = 0;
 let pie = 0;
 let cha = 0;
+//character bonus attributes
+let strAttBonus = 0;
+let conAttBonus = 0;
+let dexAttBonus = 0;
+let quiAttBonus = 0;
+let intAttBonus = 0;
+let empAttBonus = 0;
+let pieAttBonus = 0;
+let chaAttBonus = 0;
+let attributePoints = 0;
+let selectedAttribute;
+//attribute descriptions
+let strDesc = ["Strength", "Determines the damage done by weapons for crushing and slashing damage types. Strength also affects half the damage done by thrusting weapons. Maximum encumbrance also depends on your strength."];
+let conDesc = ["Constitution", "General health and well being. Determines the maximum number of hit points your character will have."];
+let dexDesc = ["Dexterity", "Archery and Staves as well as defensive skills such as shield blocking, parrying, and evasion depend on dexterity. Half of thrusting weapon damage is dependant on dexterity. Magic users rely on dexterity to increase their casting speed."];
+let quiDesc = ["Quickness", "Affects the attack speed of a player in melee combat. Half of evasive skills rely on quickness. The other half relies on dexterity."];
+let intDesc = ["Intelligence", "A primary casting stat, which determines the power pool of intelligence based casses as well as the damage done by their spells. These classes have intelligence as their primary stat."];
+let empDesc = ["Empathy", "Empathy affects the maximum power pool available to the Druid and Warden classes as well as the damage done by Druidic damage over time spells."];
+let pieDesc = ["Piety", "Priest, Clerical, Mystic, and Seer classes rely on piety to determine the depth of their power pools. Their damage spells, if they have them, are also affected by this attribute."];
+let chaDesc = ["Charisma", "Personal magnetism or charm. Charisma guides the effectiveness of a musical class's songs."];
 
 //character resists
 let thrust = 0;
@@ -188,6 +208,8 @@ const SLASH_STYLE_INDEX = [79, 16];
 const STAFF_STYLE_INDEX = [95, 13];
 const THRUST_STYLE_INDEX = [108, 17];
 const TWOHAND_STYLE_INDEX = [125, 16];
+//Class specialization
+//const ARMSMAN_SPEC = [[Polearm, Crossbow, Two-Handed, Parry, Slash, Crush, Thrust, Shield], [Sprint, Tireless]];
 
 
 //Function adjusts available classes depending on the selected realm
@@ -195,12 +217,33 @@ function onRealmSelect() {
 
 	changeRealmColors();
 	resetAttributes();
-	resetAttributePrio();
 	drawDropDown('races');
 	fillDropDown('races');
 	drawDropDown('classes');
 	fillDropDown('classes');
 	document.getElementById("charLevel").readOnly = true;
+}
+
+//Create function to adjust available races depending on the selected realm
+function onRaceSelect() {
+	
+	resetAttributePrio();
+	drawDropDown('classes');
+	fillDropDown('classes');
+	
+	setAttributes(getSelectedRace());
+	document.getElementById("charLevel").readOnly = true;
+	
+}
+
+//Create function to adjust character attributes depending on class
+function onClassSelect() {
+	
+	setOptimizedAttributes(getSelectedClass());
+	resetAttributeBonus();
+	resetLevel();
+	document.getElementById("charLevel").readOnly = false;
+	//setSkills();
 }
 
 //Function changes color for selected realm
@@ -240,6 +283,35 @@ function getSelectedRace() {
 //Return selected class
 function getSelectedClass() {
 	return document.getElementById('classes').value;
+}
+
+function getSelectedAttribute(event) {
+	selectedAttribute = event.target.getAttribute("id");
+}
+
+function openModal() {
+	document.getElementById("attributeModal").style.display = "block";
+	fillAttributeModal();
+}
+
+function closeModal() {
+	document.getElementById("attributeModal").style.display = "none";
+	if(attributePoints > 0) {
+		setOptimizedAttributes(getSelectedClass());
+	}
+}
+
+function fillAttributeModal() {
+	document.getElementById('strengthAtt').innerHTML = str + strAttBonus;
+	document.getElementById('constitutionAtt').innerHTML = con + conAttBonus;
+	document.getElementById('dexterityAtt').innerHTML = dex + dexAttBonus;
+	document.getElementById('quicknessAtt').innerHTML = qui + quiAttBonus;
+	document.getElementById('intelligenceAtt').innerHTML = intel + intAttBonus;
+	document.getElementById('empathyAtt').innerHTML = emp + empAttBonus;
+	document.getElementById('pietyAtt').innerHTML = pie + pieAttBonus;
+	document.getElementById('charismaAtt').innerHTML = cha + chaAttBonus;
+	document.getElementById('attPoints').innerHTML = attributePoints;
+	console.log(strAttBonus);
 }
 
 //Creates race and class drop downs
@@ -309,7 +381,46 @@ function fillDropDown(type) {
 	}
 }
 
-//Resets character attributes
+function updateAttributeDesc() {
+	let attributeName = document.getElementById("attributeName");
+	let attributeDescription = document.getElementById("attributeDescription");
+	
+	if(selectedAttribute == "strengthAtt" || selectedAttribute == "decStrength" || selectedAttribute == "incStrength" || selectedAttribute == "strLabel") {
+		attributeName.innerHTML = strDesc[0];
+		attributeDescription.innerHTML = strDesc[1];
+	} else if(selectedAttribute == "constitutionAtt" || selectedAttribute == "decConstitution" || selectedAttribute == "incConstitution" || selectedAttribute == "conLabel") {
+		attributeName.innerHTML = conDesc[0];
+		attributeDescription.innerHTML = conDesc[1];
+	} else if(selectedAttribute == "dexterityAtt" || selectedAttribute == "decDexterity" || selectedAttribute == "incDexterity" || selectedAttribute == "dexLabel") {
+		attributeName.innerHTML = dexDesc[0];
+		attributeDescription.innerHTML = dexDesc[1];
+	} else if(selectedAttribute == "quicknessAtt" || selectedAttribute == "decQuickness" || selectedAttribute == "incQuickness" || selectedAttribute == "quiLabel") {
+		attributeName.innerHTML = quiDesc[0];
+		attributeDescription.innerHTML = quiDesc[1];
+	} else if(selectedAttribute == "intelligencehAtt" || selectedAttribute == "decIntelligence" || selectedAttribute == "incIntelligence" || selectedAttribute == "intLabel") {
+		attributeName.innerHTML = intDesc[0];
+		attributeDescription.innerHTML = intDesc[1];
+	} else if(selectedAttribute == "empathyAtt" || selectedAttribute == "decEmpathy" || selectedAttribute == "incEmpathy" || selectedAttribute == "empLabel") {
+		attributeName.innerHTML = empDesc[0];
+		attributeDescription.innerHTML = empDesc[1];
+	} else if(selectedAttribute == "pietyAtt" || selectedAttribute == "decPiety" || selectedAttribute == "incPiety" || selectedAttribute == "pieLabel") {
+		attributeName.innerHTML = pieDesc[0];
+		attributeDescription.innerHTML = pieDesc[1];
+	} else if(selectedAttribute == "charismaAtt" || selectedAttribute == "decCharisma" || selectedAttribute == "incCharisma" || selectedAttribute == "chaLabel") {
+		attributeName.innerHTML = chaDesc[0];
+		attributeDescription.innerHTML = chaDesc[1];
+	}
+}
+
+//Resets character level to 1
+function resetLevel() {
+	level = 1;
+	specPoints = 0;
+	document.getElementById("charLevel").value = level;
+	document.getElementById("specPoints").value = specPoints;
+}
+
+//Resets character base attributes
 function resetAttributes() {
 	str = 0;
 	con = 0;
@@ -320,6 +431,8 @@ function resetAttributes() {
 	pie = 0;
 	cha = 0;
 	
+	resetAttributeBonus();
+	resetAttributePrio();
 	resetResists();
 	
 		
@@ -333,17 +446,38 @@ function resetAttributes() {
 	document.getElementById('chaAttribute').value = cha;
 }
 
+//Resets bonus attributes
+function resetAttributeBonus() {
+	strAttBonus = 0;
+	conAttBonus = 0;
+	dexAttBonus = 0;
+	quiAttBonus = 0;
+	intAttBonus = 0;
+	empAttBonus = 0;
+	pieAttBonus = 0;
+	chaAttBonus = 0;
+	attributePoints = 30;
+}
+
 //Resets character attribute priorities
 function resetAttributePrio() {
 	let styleNormal = 'white';
 	document.getElementById('strPrio').style.color = styleNormal;
+	document.getElementById('strLabel').style.color = styleNormal;
 	document.getElementById('conPrio').style.color = styleNormal;
+	document.getElementById('conLabel').style.color = styleNormal;
 	document.getElementById('dexPrio').style.color = styleNormal;
+	document.getElementById('dexLabel').style.color = styleNormal;
 	document.getElementById('quiPrio').style.color = styleNormal;
+	document.getElementById('quiLabel').style.color = styleNormal;
 	document.getElementById('intPrio').style.color = styleNormal;
+	document.getElementById('intLabel').style.color = styleNormal;
 	document.getElementById('empPrio').style.color = styleNormal;
+	document.getElementById('empLabel').style.color = styleNormal;
 	document.getElementById('piePrio').style.color = styleNormal;
+	document.getElementById('pieLabel').style.color = styleNormal;
 	document.getElementById('chaPrio').style.color = styleNormal;
+	document.getElementById('chaLabel').style.color = styleNormal;
 }
 
 //Resets character resistances
@@ -377,20 +511,28 @@ function setAttributePrio(attOne, attTwo, attThree) {
 	for(let i = 0; i < attributePrios.length; i++) {
 		if(attributePrios[i] == 'str') {
 			document.getElementById('strPrio').style.color = 'yellow';
+			document.getElementById('strLabel').style.color = 'yellow';
 		} else if(attributePrios[i] == 'con') {
 			document.getElementById('conPrio').style.color = 'yellow';
+			document.getElementById('conLabel').style.color = 'yellow';
 		} else if(attributePrios[i] == 'dex') {
 			document.getElementById('dexPrio').style.color = 'yellow';
+			document.getElementById('dexLabel').style.color = 'yellow';
 		} else if(attributePrios[i] == 'qui') {
 			document.getElementById('quiPrio').style.color = 'yellow';
+			document.getElementById('quiLabel').style.color = 'yellow';
 		} else if(attributePrios[i] == 'int') {
 			document.getElementById('intPrio').style.color = 'yellow';
+			document.getElementById('intLabel').style.color = 'yellow';
 		} else if(attributePrios[i] == 'emp') {
 			document.getElementById('empPrio').style.color = 'yellow';
+			document.getElementById('empLabel').style.color = 'yellow';
 		} else if(attributePrios[i] == 'pie') {
 			document.getElementById('piePrio').style.color = 'yellow';
+			document.getElementById('pieLabel').style.color = 'yellow';
 		} else if(attributePrios[i] == 'cha') {
 			document.getElementById('chaPrio').style.color = 'yellow';
+			document.getElementById('chaLabel').style.color = 'yellow';
 		}
 	}
 }
@@ -643,6 +785,366 @@ function setAttributes(selectedRace) {
 	document.getElementById('chaAttribute').value = cha;
 }
 
+//Adds 30 recommended attribute points
+function setOptimizedAttributes(selectedClass) {
+		
+	switch(selectedClass) {
+		case ARMSMAN_CLASS:
+			setAttributePrio('str', 'con', 'dex');
+			strAttBonus = 10;
+			conAttBonus = 10;
+			dexAttBonus = 10;
+			pointMod = 2.0;
+			break;
+		case CABALIST_CLASS:
+			setAttributePrio('dex', 'qui', 'int');
+			dexAttBonus = 15;
+			intAttBonus = 10;
+			pointMod = 1.0;
+			break;
+		case CLERIC_CLASS:
+			setAttributePrio('con', 'dex', 'pie');
+			dexAttBonus = 15;
+			pieAttBonus = 10;
+			pointMod = 1.0;
+			break;
+		case FRIAR_CLASS:
+			setAttributePrio('con', 'dex', 'pie');
+			conAttBonus = 10;
+			dexAttBonus = 10;
+			pieAttBonus = 10;
+			pointMod = 1.8;
+			break;
+		case HERETIC_CLASS:
+			setAttributePrio('con', 'dex', 'pie');
+			conAttBonus = 10;
+			dexAttBonus = 10;
+			pieAttBonus= 10;
+			pointMod = 2.0;
+			break;
+		case INFILTRATOR_CLASS:
+			setAttributePrio('str', 'dex', 'qui');
+			strAttBonus = 10;
+			dexAttBonus= 15;
+			pointMod = 2.9;
+			break;
+		case MERCENARY_CLASS:
+			setAttributePrio('str', 'con', 'dex');
+			strAttBonus = 10;
+			conAttBonus = 10;
+			dexAttBonus = 10;
+			pointMod = 2.0;
+			break;
+		case MINSTREL_CLASS:
+			setAttributePrio('str', 'con', 'dex');
+			strAttBonus = 10;
+			conAttBonus = 10;
+			dexAttBonus = 10;
+			pointMod = 1.5;
+			break;
+		case NECROMANCER_CLASS:
+			setAttributePrio('dex', 'qui', 'int');
+			dexAttBonus = 15;
+			intAttBonus = 10;
+			pointMod = 1.0;
+			break;
+		case PALADIN_CLASS:
+			setAttributePrio('str', 'con', 'dex');
+			strAttBonus = 10;
+			conAttBonus = 10;
+			dexAttBonus = 10;
+			pointMod = 2.0;
+			break;
+		case REAVER_CLASS:
+			setAttributePrio('str', 'con', 'dex');
+			strAttBonus = 10;
+			conAttBonus = 10;
+			dexAttBonus = 10;
+			pointMod = 2.0;
+			break;
+		case SCOUT_CLASS:
+			setAttributePrio('str', 'dex', 'qui');
+			strAttBonus = 10;
+			dexAttBonus = 15;
+			pointMod = 2.0;
+			break;
+		case SORCERER_CLASS:
+			setAttributePrio('dex', 'qui', 'int');
+			dexAttBonus = 15;
+			intAttBonus = 10;
+			pointMod = 1.0;
+			break;
+		case THEURGIST_CLASS:
+			setAttributePrio('dex', 'qui', 'int');
+			dexAttBonus = 15;
+			intAttBonus = 10;
+			pointMod = 1.0;
+			break;
+		case WIZARD_CLASS:
+			setAttributePrio('dex', 'qui', 'int');
+			dexAttBonus = 15;
+			intAttBonus = 10;
+			pointMod = 1.0;
+			break;
+		case ANIMIST_CLASS:
+			setAttributePrio('con', 'dex', 'int');
+			dexAttBonus = 15;
+			intAttBonus = 10;
+			pointMod = 1.0;
+			break;
+		case BAINSHEE_CLASS:
+			setAttributePrio('str', 'con', 'dex');
+			strAttBonus = 10;
+			dexAttBonus = 15;
+			pointMod = 1.0;
+			break;
+		case BARD_CLASS:
+			setAttributePrio('con', 'dex', 'cha');
+			dexAttBonus = 15;
+			chaAttBonus = 10;
+			pointMod = 1.5;
+			break;
+		case BLADEMASTER_CLASS:
+			setAttributePrio('str', 'con', 'dex');
+			strAttBonus = 10;
+			conAttBonus = 10;
+			dexAttBonus = 10;
+			pointMod = 2.0;
+			break;
+		case CHAMPION_CLASS:
+			setAttributePrio('str', 'con', 'dex');
+			strAttBonus = 10;
+			conAttBonus = 10;
+			dexAttBonus = 10;
+			pointMod = 2.0;
+			break;
+		case DRUID_CLASS:
+			setAttributePrio('con', 'dex', 'emp');
+			dexAttBonus = 15;
+			empAttBonus = 10;
+			pointMod = 1.0;
+			break;
+		case ELDRITCH_CLASS:
+			setAttributePrio('dex', 'qui', 'int');
+			dexAttBonus = 15;
+			intAttBonus = 10;
+			pointMod = 1.0;
+			break;
+		case ENCHANTER_CLASS:
+			setAttributePrio('dex', 'qui', 'int');
+			dexAttBonus = 15;
+			intAttBonus = 10;
+			pointMod = 1.0;
+			break;
+		case HERO_CLASS:
+			setAttributePrio('str', 'con', 'dex');
+			strAttBonus = 10;
+			conAttBonus = 10;
+			dexAttBonus = 10;
+			pointMod = 2.0;
+			break;
+		case MENTALIST_CLASS:
+			setAttributePrio('dex', 'qui', 'int');
+			dexAttBonus = 15;
+			intAttBonus = 10;
+			pointMod = 1.0;
+			break;
+		case NIGHTSHADE_CLASS:
+			setAttributePrio('str', 'dex', 'qui');
+			strAttBonus = 10;
+			dexAttBonus = 15;
+			pointMod = 2.8;
+			break;
+		case RANGER_CLASS:
+			setAttributePrio('str', 'dex', 'qui');
+			strAttBonus = 10;
+			dexAttBonus = 15;
+			pointMod = 2.0;
+			break;
+		case VALEWALKER_CLASS:
+			setAttributePrio('str', 'con', 'dex');
+			strAttBonus = 10;
+			conAttBonus = 10;
+			dexAttBonus = 10;
+			pointMod = 1.5;
+			break;
+		case VAMPIIR_CLASS:
+			setAttributePrio('str', 'con', 'dex');
+			strAttBonus = 10;
+			conAttBonus = 10;
+			dexAttBonus = 10;
+			pointMod = 1.5;
+			break;
+		case WARDEN_CLASS:
+			setAttributePrio('con', 'dex', 'emp');
+			dexAttBonus = 15;
+			empAttBonus = 10;
+			pointMod = 1.8;
+			break;
+		case BERSERKER_CLASS:
+			setAttributePrio('str', 'con', 'dex');
+			strAttBonus = 10;
+			conAttBonus = 10;
+			dexAttBonus = 10;
+			pointMod = 2.0;
+			break;
+		case BONEDANCER_CLASS:
+			setAttributePrio('dex', 'qui', 'pie');
+			dexAttBonus = 15;
+			pieAttBonus = 10;
+			pointMod = 1.0;
+			break;
+		case HEALER_CLASS:
+			setAttributePrio('con', 'dex', 'pie');
+			dexAttBonus = 15;
+			pieAttBonus = 10;
+			pointMod = 1.0;
+			break;
+		case HUNTER_CLASS:
+			setAttributePrio('str', 'dex', 'qui');
+			strAttBonus = 10;
+			dexAttBonus = 15;
+			pointMod = 2.0;
+			break;
+		case RUNEMASTER_CLASS:
+			setAttributePrio('dex', 'qui', 'pie');
+			dexAttBonus = 15;
+			pieAttBonus = 10;
+			pointMod = 1.0;
+			break;
+		case SAVAGE_CLASS:
+			setAttributePrio('str', 'con', 'dex');
+			strAttBonus = 10;
+			conAttBonus = 10;
+			dexAttBonus = 10;
+			pointMod = 1.5;
+			break;
+		case SHADOWBLADE_CLASS:
+			setAttributePrio('str', 'dex', 'qui');
+			strAttBonus = 10;
+			dexAttBonus = 15;
+			pointMod = 2.8;
+			break;
+		case SHAMAN_CLASS:
+			setAttributePrio('con', 'dex', 'pie');
+			dexAttBonus = 15;
+			pieAttBonus = 10;
+			pointMod = 1.0;
+			break;
+		case SKALD_CLASS:
+			setAttributePrio('str', 'con', 'cha');
+			strAttBonus = 10;
+			conAttBonus = 10;
+			chaAttBonus = 10;
+			pointMod = 1.5;
+			break;
+		case SPIRITMASTER_CLASS:
+			setAttributePrio('dex', 'qui', 'pie');
+			dexAttBonus = 15;
+			pieAttBonus = 10;
+			pointMod = 1.0;
+			break;
+		case THANE_CLASS:
+			setAttributePrio('str', 'con', 'pie');
+			strAttBonus = 10;
+			conAttBonus = 10;
+			pieAttBonus = 10;
+			pointMod = 2.0;
+			break;
+		case VALKYRIE_CLASS:
+			setAttributePrio('str', 'con', 'dex');
+			strAttBonus = 10;
+			conAttBonus = 10;
+			dexAttBonus = 10;
+			pointMod = 2.0;
+			break;
+		case WARLOCK_CLASS:
+			setAttributePrio('con', 'dex', 'pie');
+			conAttBonus = 10;
+			pieAttBonus = 15;
+			pointMod = 1.0;
+			break;
+		case WARRIOR_CLASS:
+			setAttributePrio('str', 'con', 'dex');
+			strAttBonus = 10;
+			conAttBonus = 10;
+			dexAttBonus = 10;
+			pointMod = 2.0;
+			break;
+		case MAULER_CLASS:
+			setAttributePrio('str', 'con', 'dex');
+			strAttBonus = 10;
+			conAttBonus = 10;
+			dexAttBonus = 10;
+			pointMod = 1.8;
+			break;
+	}
+	
+	attributePoints = 0;
+	
+	document.getElementById('strAttribute').value = str + strAttBonus;
+	document.getElementById('conAttribute').value = con + conAttBonus;
+	document.getElementById('dexAttribute').value = dex + dexAttBonus;
+	document.getElementById('quiAttribute').value = qui + quiAttBonus;
+	document.getElementById('intAttribute').value = intel + intAttBonus;
+	document.getElementById('empAttribute').value = emp + empAttBonus;
+	document.getElementById('pieAttribute').value = pie + pieAttBonus;
+	document.getElementById('chaAttribute').value = cha + chaAttBonus;
+}
+
+function increaseAttributeBonus(attribute) {
+	let attBonus = attribute;
+	
+	if(attributePoints > 0) {
+		if(attBonus >= 15 && attributePoints >= 3) {
+			attributePoints -= 3;
+			attBonus++;
+		}
+		else if(attBonus >= 10 && attributePoints >= 2){
+			attributePoints -= 2;
+			attBonus++;
+		} else if(attBonus < 10) {
+			attributePoints--;
+			attBonus++;
+		}
+	}
+	
+	/*if(selectedAttribute.includes('str')) {
+		strAttBonus = attBonus;
+	} else if(selectedAttribute.includes('con')) {
+		conAttBonus = attBonus;
+	} else if(selectedAttribute.includes('dex')) {
+		dexAttBonus = attBonus;
+	} else if(selectedAttribute.includes('qui')) {
+		quiAttBonus = attBonus;
+	} else if(selectedAttribute.includes('int')) {
+		intAttBonus = attBonus;
+	} else if(selectedAttribute.includes('emp')) {
+		empAttBonus = attBonus;
+	} else if(selectedAttribute.includes('pie')) {
+		pieAttBonus = attBonus;
+	} else if(selectedAttribute.includes('cha')) {
+		chaAttBonus = attBonus;
+	}*/
+}
+
+function decreaseAttributeBonus(attribute) {
+	let attBonus = attribute;
+	
+	if(attBonus > 0) {
+		if(attBonus >= 15) {
+			attributePoints += 3;
+			attBonus--;
+		} else if(attBonus >= 10) {
+			attributePoints += 2;
+			attBonus--;
+		} else if(attBonus <= 10) {
+			attributePoints++;
+			attBonus--;
+		}
+	}
+}
+
 //Assigns values to character resistances depending on what is passed
 function setResists(th, cr, sl, he, co, ma, en, sp, bo) {
 	
@@ -665,340 +1167,6 @@ function setResists(th, cr, sl, he, co, ma, en, sp, bo) {
 	document.getElementById('energyRes').value = `+${energy}%`;
 	document.getElementById('spiritRes').value = `+${spirit}%`;
 	document.getElementById('bodyRes').value = `+${body}%`;
-}
-
-//Adds 30 recommended attribute points
-function updateAttributes(selectedClass) {
-		
-	switch(selectedClass) {
-		case ARMSMAN_CLASS:
-			setAttributePrio('str', 'con', 'dex');
-			str += 10;
-			con += 10;
-			dex += 10;
-			pointMod = 2.0;
-			break;
-		case CABALIST_CLASS:
-			setAttributePrio('dex', 'qui', 'int');
-			dex += 15;
-			intel += 10;
-			pointMod = 1.0;
-			break;
-		case CLERIC_CLASS:
-			setAttributePrio('con', 'dex', 'pie');
-			dex += 15;
-			pie += 10;
-			pointMod = 1.0;
-			break;
-		case FRIAR_CLASS:
-			setAttributePrio('con', 'dex', 'pie');
-			con += 10;
-			dex += 10;
-			pie += 10;
-			pointMod = 1.8;
-			break;
-		case HERETIC_CLASS:
-			setAttributePrio('con', 'dex', 'pie');
-			con += 10;
-			dex += 10;
-			pie += 10;
-			pointMod = 2.0;
-			break;
-		case INFILTRATOR_CLASS:
-			setAttributePrio('str', 'dex', 'qui');
-			str += 10;
-			dex += 15;
-			pointMod = 2.9;
-			break;
-		case MERCENARY_CLASS:
-			setAttributePrio('str', 'con', 'dex');
-			str += 10;
-			con += 10;
-			dex += 10;
-			pointMod = 2.0;
-			break;
-		case MINSTREL_CLASS:
-			setAttributePrio('str', 'con', 'dex');
-			str += 10;
-			con += 10;
-			dex += 10;
-			pointMod = 1.5;
-			break;
-		case NECROMANCER_CLASS:
-			setAttributePrio('dex', 'qui', 'int');
-			dex += 15;
-			intel += 10;
-			pointMod = 1.0;
-			break;
-		case PALADIN_CLASS:
-			setAttributePrio('str', 'con', 'dex');
-			str += 10;
-			con += 10;
-			dex += 10;
-			pointMod = 2.0;
-			break;
-		case REAVER_CLASS:
-			setAttributePrio('str', 'con', 'dex');
-			str += 10;
-			con += 10;
-			dex += 10;
-			pointMod = 2.0;
-			break;
-		case SCOUT_CLASS:
-			setAttributePrio('str', 'dex', 'qui');
-			str += 10;
-			dex += 15;
-			pointMod = 2.0;
-			break;
-		case SORCERER_CLASS:
-			setAttributePrio('dex', 'qui', 'int');
-			dex += 15;
-			intel += 10;
-			pointMod = 1.0;
-			break;
-		case THEURGIST_CLASS:
-			setAttributePrio('dex', 'qui', 'int');
-			dex += 15;
-			intel += 10;
-			pointMod = 1.0;
-			break;
-		case WIZARD_CLASS:
-			setAttributePrio('dex', 'qui', 'int');
-			dex += 15;
-			intel += 10;
-			pointMod = 1.0;
-			break;
-		case ANIMIST_CLASS:
-			setAttributePrio('con', 'dex', 'int');
-			dex += 15;
-			intel += 10;
-			pointMod = 1.0;
-			break;
-		case BAINSHEE_CLASS:
-			setAttributePrio('str', 'con', 'dex');
-			str += 10;
-			dex += 15;
-			pointMod = 1.0;
-			break;
-		case BARD_CLASS:
-			setAttributePrio('con', 'dex', 'cha');
-			dex += 15;
-			cha += 10;
-			pointMod = 1.5;
-			break;
-		case BLADEMASTER_CLASS:
-			setAttributePrio('str', 'con', 'dex');
-			str += 10;
-			con += 10;
-			dex += 10;
-			pointMod = 2.0;
-			break;
-		case CHAMPION_CLASS:
-			setAttributePrio('str', 'con', 'dex');
-			str += 10;
-			con += 10;
-			dex += 10;
-			pointMod = 2.0;
-			break;
-		case DRUID_CLASS:
-			setAttributePrio('con', 'dex', 'emp');
-			dex += 15;
-			emp += 10;
-			pointMod = 1.0;
-			break;
-		case ELDRITCH_CLASS:
-			setAttributePrio('dex', 'qui', 'int');
-			dex += 15;
-			intel += 10;
-			pointMod = 1.0;
-			break;
-		case ENCHANTER_CLASS:
-			setAttributePrio('dex', 'qui', 'int');
-			dex += 15;
-			intel += 10;
-			pointMod = 1.0;
-			break;
-		case HERO_CLASS:
-			setAttributePrio('str', 'con', 'dex');
-			str += 10;
-			con += 10;
-			dex += 10;
-			pointMod = 2.0;
-			break;
-		case MENTALIST_CLASS:
-			setAttributePrio('dex', 'qui', 'int');
-			dex += 15;
-			intel += 10;
-			pointMod = 1.0;
-			break;
-		case NIGHTSHADE_CLASS:
-			setAttributePrio('str', 'dex', 'qui');
-			str += 10;
-			dex += 15;
-			pointMod = 2.8;
-			break;
-		case RANGER_CLASS:
-			setAttributePrio('str', 'dex', 'qui');
-			str += 10;
-			dex += 15;
-			pointMod = 2.0;
-			break;
-		case VALEWALKER_CLASS:
-			setAttributePrio('str', 'con', 'dex');
-			str += 10;
-			con += 10;
-			dex += 10;
-			pointMod = 1.5;
-			break;
-		case VAMPIIR_CLASS:
-			setAttributePrio('str', 'con', 'dex');
-			str += 10;
-			con += 10;
-			dex += 10;
-			pointMod = 1.5;
-			break;
-		case WARDEN_CLASS:
-			setAttributePrio('con', 'dex', 'emp');
-			dex += 15;
-			emp += 10;
-			pointMod = 1.8;
-			break;
-		case BERSERKER_CLASS:
-			setAttributePrio('str', 'con', 'dex');
-			str += 10;
-			con += 10;
-			dex += 10;
-			pointMod = 2.0;
-			break;
-		case BONEDANCER_CLASS:
-			setAttributePrio('dex', 'qui', 'pie');
-			dex += 15;
-			pie += 10;
-			pointMod = 1.0;
-			break;
-		case HEALER_CLASS:
-			setAttributePrio('con', 'dex', 'pie');
-			dex += 15;
-			pie += 10;
-			pointMod = 1.0;
-			break;
-		case HUNTER_CLASS:
-			setAttributePrio('str', 'dex', 'qui');
-			str += 10;
-			dex += 15;
-			pointMod = 2.0;
-			break;
-		case RUNEMASTER_CLASS:
-			setAttributePrio('dex', 'qui', 'pie');
-			dex += 15;
-			pie += 10;
-			pointMod = 1.0;
-			break;
-		case SAVAGE_CLASS:
-			setAttributePrio('str', 'con', 'dex');
-			str += 10;
-			con += 10;
-			dex += 10;
-			pointMod = 1.5;
-			break;
-		case SHADOWBLADE_CLASS:
-			setAttributePrio('str', 'dex', 'qui');
-			str += 10;
-			dex += 15;
-			pointMod = 2.8;
-			break;
-		case SHAMAN_CLASS:
-			setAttributePrio('con', 'dex', 'pie');
-			dex += 15;
-			pie += 10;
-			pointMod = 1.0;
-			break;
-		case SKALD_CLASS:
-			setAttributePrio('str', 'con', 'cha');
-			str += 10;
-			con += 10;
-			cha += 10;
-			pointMod = 1.5;
-			break;
-		case SPIRITMASTER_CLASS:
-			setAttributePrio('dex', 'qui', 'pie');
-			dex += 15;
-			pie += 10;
-			pointMod = 1.0;
-			break;
-		case THANE_CLASS:
-			setAttributePrio('str', 'con', 'pie');
-			str += 10;
-			con += 10;
-			pie += 10;
-			pointMod = 2.0;
-			break;
-		case VALKYRIE_CLASS:
-			setAttributePrio('str', 'con', 'dex');
-			str += 10;
-			con += 10;
-			dex += 10;
-			pointMod = 2.0;
-			break;
-		case WARLOCK_CLASS:
-			setAttributePrio('con', 'dex', 'pie');
-			con += 10;
-			pie += 15;
-			pointMod = 1.0;
-			break;
-		case WARRIOR_CLASS:
-			setAttributePrio('str', 'con', 'dex');
-			str += 10;
-			con += 10;
-			dex += 10;
-			pointMod = 2.0;
-			break;
-		case MAULER_CLASS:
-			setAttributePrio('str', 'con', 'dex');
-			str += 10;
-			con += 10;
-			dex += 10;
-			pointMod = 1.8;
-			break;
-	}
-	
-	document.getElementById('strAttribute').value = str;
-	document.getElementById('conAttribute').value = con;
-	document.getElementById('dexAttribute').value = dex;
-	document.getElementById('quiAttribute').value = qui;
-	document.getElementById('intAttribute').value = intel;
-	document.getElementById('empAttribute').value = emp;
-	document.getElementById('pieAttribute').value = pie;
-	document.getElementById('chaAttribute').value = cha;
-}
-
-//Create function to adjust available races depending on the selected realm
-function onRaceSelect() {
-	
-	resetAttributePrio();
-	drawDropDown('classes');
-	fillDropDown('classes');
-	
-	setAttributes(getSelectedRace());
-	document.getElementById("charLevel").readOnly = true;
-	
-}
-
-//Create function to adjust character attributes depending on class
-function onClassSelect() {
-	
-	updateAttributes(getSelectedClass());
-	resetLevel();
-	document.getElementById("charLevel").readOnly = false;
-	//setSkills();
-}
-
-//Resets character level to 1
-function resetLevel() {
-	level = 1;
-	specPoints = 0;
-	document.getElementById("charLevel").value = level;
-	document.getElementById("specPoints").value = specPoints;
 }
 
 //Function adjusts available specialization points on character level change

@@ -13,6 +13,33 @@
 
 <h1>Dark Age of Camelot Character Planner</h1>
 
+<div id="attributeModal" class="modal">
+	<div class="modal-content" onclick="getSelectedAttribute(event), updateAttributeDesc()">
+		<table>
+			<tr>
+				<td style="border: 0px; width: 200px;">
+					<span id="attributeName" class="attributeName">Strength</span>
+					<p id="attributeDescription">Determines the damage done by weapons for crushing and slashing damage types. Strength also affects half the damage done by thrusting weapons. Maximum encumbrance also depends on your strength.</p>
+				</td>
+				<td style="border: 0px;">
+					<span class="attributeName" style="text-align: center;">Attributes</span>
+					<p><button type="button" name="decStrength" id="decStrength">&#8249;</button><span id="strengthAtt"></span><button type="button" name="incStrength" id="incStrength">&#8250;</button><label id="strLabel"> Strength</label><br />
+					   <button type="button" name="decConstitution" id="decConstitution">&#8249;</button><span id="constitutionAtt"></span><button type="button" name="incConstitution" id="incConstitution">&#8250;</button><label id="conLabel"> Constitution</label><br />
+					   <button type="button" name="decDexterity" id="decDexterity">&#8249;</button><span id="dexterityAtt"></span><button type="button" name="incDexterity" id="incDexterity">&#8250;</button><label id="dexLabel"> Dexterity</label><br />
+					   <button type="button" name="decQuickness" id="decQuickness">&#8249;</button><span id="quicknessAtt"></span><button type="button" name="incQuickness" id="incQuickness">&#8250;</button><label id="quiLabel"> Quickness</label><br />
+					   <button type="button" name="decIntelligence" id="decIntelligence">&#8249;</button><span id="intelligenceAtt"></span><button type="button" name="incIntelligence" id="incIntelligence">&#8250;</button><label id="intLabel"> Intelligence</label><br />
+					   <button type="button" name="decEmpathy" id="decEmpathy">&#8249;</button><span id="empathyAtt"></span><button type="button" name="incEmpathy" id="incEmpathy">&#8250;</button><label id="empLabel"> Empathy</label><br />
+					   <button type="button" name="decPiety" id="decPiety">&#8249;</button><span id="pietyAtt"></span><button type="button" name="incPiety" id="incPiety">&#8250;</button><label id="pieLabel"> Piety</label><br />
+					   <button type="button" name="decCharisma" id="decCharisma">&#8249;</button><span id="charismaAtt"></span><button type="button" name="incCharisma" id="incCharisma">&#8250;</button><label id="chaLabel"> Charisma</label><br />
+						<span id="attPoints"></span> Points Remaining
+				</td>
+			</tr>
+		</table>
+		<label class="buttonborder" style="margin-left: 95px;"><button type="button" name="reset" id="resetAttributeButton" class="button" onclick="resetAttributeBonus()">Reset</button></label>
+		<label class="buttonborder" style="margin-left: 35px;"><button type="button" name="optimize" id="optimizeAttributeButton" class="button">Optimize</button></label>
+		<label class="buttonborder" style="margin-left: 35px;"><button type="button" name="close" id="close" class="button" onclick="closeModal()">Close</button></label>
+	</div>
+</div>
 
 <table align="center">
 	<caption>
@@ -87,7 +114,7 @@
 				Class Rank: <!-- title based on class's level? --><br />
 				Champion Title: <!-- -->
 				</div>
-				
+				<label class="buttonborder" style="margin-left: 65px;"><button type="button" name="adjustAttributes" id="adjustAttributes" class="button" onclick="openModal()">Adjust Attributes</button></label>
 			</td>
 			<td class="table-align"><!-- Inventory page -->
 			
