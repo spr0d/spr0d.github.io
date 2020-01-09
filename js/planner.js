@@ -221,7 +221,8 @@ function onRealmSelect() {
 	fillDropDown('races');
 	drawDropDown('classes');
 	fillDropDown('classes');
-	document.getElementById("charLevel").readOnly = true;
+	document.getElementById('charLevel').readOnly = true;
+	document.getElementById('builder').style.display = "none";
 }
 
 //Create function to adjust available races depending on the selected realm
@@ -233,16 +234,17 @@ function onRaceSelect() {
 	
 	setAttributes(getSelectedRace());
 	document.getElementById("charLevel").readOnly = true;
-	
+	document.getElementById('builder').style.display = "none";
 }
 
 //Create function to adjust character attributes depending on class
 function onClassSelect() {
 	
-	setOptimizedAttributes(getSelectedClass());
-	resetAttributeBonus();
 	resetLevel();
+	resetAttributeBonus();
+	setOptimizedAttributes(getSelectedClass());
 	document.getElementById("charLevel").readOnly = false;
+	document.getElementById('builder').style.display = "block";
 	//setSkills();
 }
 
@@ -1121,8 +1123,9 @@ function setOptimizedAttributes(selectedClass) {
 	document.getElementById('attPoints').innerHTML = attributePoints;
 }
 
-function increaseAttributeBonus() {
-	let attBonus;
+//Increases or decreases attribute bonuses depending on which was selected.
+function changeAttributeBonus() {
+	let attBonus = 0;
 	
 	if(selectedAttribute.includes('Str')) {
 		attBonus = strAttBonus;
@@ -1142,83 +1145,35 @@ function increaseAttributeBonus() {
 		attBonus = chaAttBonus;
 	}
 	
-	if(attributePoints > 0) {
-		if(attBonus >= 15 && attributePoints >= 3) {
-			attributePoints -= 3;
-			attBonus++;
+	if(selectedAttribute.includes('dec')) {
+		if(attBonus > 0) {
+			if(attBonus >= 15) {
+				attributePoints += 3;
+				attBonus--;
+			} else if(attBonus > 10) {
+				attributePoints += 2;
+				attBonus--;
+			} else if(attBonus <= 10) {
+				attributePoints++;
+				attBonus--;
+			}
 		}
-		else if(attBonus >= 10 && attributePoints >= 2){
-			attributePoints -= 2;
-			attBonus++;
-		} else if(attBonus < 10) {
-			attributePoints--;
-			attBonus++;
-		}
-	}
-	
-	if(selectedAttribute.includes('Str')) {
-		strAttBonus = attBonus;
-		document.getElementById('strengthAtt').innerHTML = str + strAttBonus;
-	} else if(selectedAttribute.includes('Con')) {
-		conAttBonus = attBonus;
-		document.getElementById('constitutionAtt').innerHTML = con + conAttBonus;
-	} else if(selectedAttribute.includes('Dex')) {
-		dexAttBonus = attBonus;
-		document.getElementById('dexterityAtt').innerHTML = dex + dexAttBonus;
-	} else if(selectedAttribute.includes('Qui')) {
-		quiAttBonus = attBonus;
-		document.getElementById('quicknessAtt').innerHTML = qui + quiAttBonus;
-	} else if(selectedAttribute.includes('Int')) {
-		intAttBonus = attBonus;
-		document.getElementById('intelligenceAtt').innerHTML = intel + intAttBonus;
-	} else if(selectedAttribute.includes('Emp')) {
-		empAttBonus = attBonus;
-		document.getElementById('empathyAtt').innerHTML = emp + empAttBonus;
-	} else if(selectedAttribute.includes('Pie')) {
-		pieAttBonus = attBonus;
-		document.getElementById('pietyAtt').innerHTML = pie + pieAttBonus;
-	} else if(selectedAttribute.includes('Cha')) {
-		chaAttBonus = attBonus;
-		document.getElementById('charismaAtt').innerHTML = cha + chaAttBonus;
-	}
-	
-	document.getElementById('attPoints').innerHTML = attributePoints;
-}
-
-function decreaseAttributeBonus() {
-	let attBonus;
-	
-	if(selectedAttribute.includes('Str')) {
-		attBonus = strAttBonus;
-	} else if(selectedAttribute.includes('Con')) {
-		attBonus = conAttBonus;
-	} else if(selectedAttribute.includes('Dex')) {
-		attBonus = dexAttBonus;
-	} else if(selectedAttribute.includes('Qui')) {
-		attBonus = quiAttBonus;
-	} else if(selectedAttribute.includes('Int')) {
-		attBonus = intAttBonus;
-	} else if(selectedAttribute.includes('Emp')) {
-		attBonus = empAttBonus;
-	} else if(selectedAttribute.includes('Pie')) {
-		attBonus = pieAttBonus;
-	} else if(selectedAttribute.includes('Cha')) {
-		attBonus = chaAttBonus;
-	}
-	
-	if(attBonus > 0) {
-		if(attBonus >= 15) {
-			attributePoints += 3;
-			attBonus--;
-		} else if(attBonus >= 10) {
-			attributePoints += 2;
-			attBonus--;
-		} else if(attBonus <= 10) {
-			attributePoints++;
-			attBonus--;
+	} else if (selectedAttribute.includes('inc')) {
+		if(attributePoints > 0) {
+			if(attBonus >= 15 && attributePoints >= 3) {
+				attributePoints -= 3;
+				attBonus++;
+			}
+			else if(attBonus >= 10 && attributePoints >= 2){
+				attributePoints -= 2;
+				attBonus++;
+			} else if(attBonus < 10) {
+				attributePoints--;
+				attBonus++;
+			}
 		}
 	}
-	
+		
 	if(selectedAttribute.includes('Str')) {
 		strAttBonus = attBonus;
 		document.getElementById('strengthAtt').innerHTML = str + strAttBonus;
