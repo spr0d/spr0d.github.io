@@ -11,149 +11,149 @@
 </head>
 <body>
 
-<h1>Dark Age of Camelot Character Planner</h1>
-
 <div id="attributeModal" class="modal">
 	<div class="modal-content">
 		<table>
 			<tr>
-				<td style="border: 0px; width: 250px; padding-bottom: 80px; padding-right: 15px;">
+				<td valign="top" style="border: 0px; width: 275px; height: 180px;">
 					<span id="attributeName" class="attributeName">Strength</span>
 					<p id="attributeDescription">Determines the damage done by weapons for crushing and slashing damage types. Strength also affects half the damage done by thrusting weapons. Maximum encumbrance also depends on your strength.</p>
 				</td>
-				<td style="border: 0px; width: 150px;">
-					<span class="attributeName" style="text-align: center;">Attributes</span>
-					<p onclick="getSelectedAttribute(event), updateAttributeDesc()">
-						<button type="button" name="decStrength" id="decStrength" class="attbutton" onclick="decreaseAttributeBonus()">&#8249;</button><span id="strengthAtt" class="attBonus"></span><button type="button" name="incStrength" id="incStrength" class="attbutton" onclick="increaseAttributeBonus()">&#8250;</button><label id="strLabel"> Strength</label><br />
-						<button type="button" name="decConstitution" id="decConstitution" class="attbutton" onclick="decreaseAttributeBonus()">&#8249;</button><span id="constitutionAtt" class="attBonus"></span><button type="button" name="incConstitution" class="attbutton" id="incConstitution" onclick="increaseAttributeBonus()">&#8250;</button><label id="conLabel"> Constitution</label><br />
-						<button type="button" name="decDexterity" id="decDexterity" class="attbutton" onclick="decreaseAttributeBonus()">&#8249;</button><span id="dexterityAtt" class="attBonus"></span><button type="button" name="incDexterity" id="incDexterity" class="attbutton" onclick="increaseAttributeBonus()">&#8250;</button><label id="dexLabel"> Dexterity</label><br />
-						<button type="button" name="decQuickness" id="decQuickness" class="attbutton" onclick="decreaseAttributeBonus()">&#8249;</button><span id="quicknessAtt" class="attBonus"></span><button type="button" name="incQuickness" id="incQuickness" class="attbutton" onclick="increaseAttributeBonus()">&#8250;</button><label id="quiLabel"> Quickness</label><br />
-						<button type="button" name="decIntelligence" id="decIntelligence" class="attbutton" onclick="decreaseAttributeBonus()">&#8249;</button><span id="intelligenceAtt" class="attBonus"></span><button type="button" name="incIntelligence" id="incIntelligence" class="attbutton" onclick="increaseAttributeBonus()">&#8250;</button><label id="intLabel"> Intelligence</label><br />
-						<button type="button" name="decEmpathy" id="decEmpathy" class="attbutton" onclick="decreaseAttributeBonus()">&#8249;</button><span id="empathyAtt" class="attBonus"></span><button type="button" name="incEmpathy" id="incEmpathy" class="attbutton" onclick="increaseAttributeBonus()">&#8250;</button><label id="empLabel"> Empathy</label><br />
-						<button type="button" name="decPiety" id="decPiety" class="attbutton" onclick="decreaseAttributeBonus()">&#8249;</button><span id="pietyAtt" class="attBonus"></span><button type="button" name="incPiety" id="incPiety" class="attbutton" onclick="increaseAttributeBonus()">&#8250;</button><label id="pieLabel"> Piety</label><br />
-						<button type="button" name="decCharisma" id="decCharisma" class="attbutton" onclick="decreaseAttributeBonus()">&#8249;</button><span id="charismaAtt" class="attBonus"></span><button type="button" name="incCharisma" id="incCharisma" class="attbutton" onclick="increaseAttributeBonus()">&#8250;</button><label id="chaLabel"> Charisma</label><br />
-						<span id="attPoints"></span> Points Remaining
+				<td style="border: 0px; width: 150px; height: 180px;">
+					<span class="attributeName" style="text-align: center; font-size: 18px;">Attributes</span>
+					<p onclick="getSelectedAttribute(event), updateAttributeDesc(), changeAttributeBonus()">
+						<button type="button" name="decStrength" id="decStrength" class="attbutton">&#8249;</button><span id="strengthAtt" class="attBonus"></span><button type="button" name="incStrength" id="incStrength" class="attbutton">&#8250;</button><label id="strLabel"> Strength</label><br />
+						<button type="button" name="decConstitution" id="decConstitution" class="attbutton">&#8249;</button><span id="constitutionAtt" class="attBonus"></span><button type="button" name="incConstitution" class="attbutton" id="incConstitution">&#8250;</button><label id="conLabel"> Constitution</label><br />
+						<button type="button" name="decDexterity" id="decDexterity" class="attbutton">&#8249;</button><span id="dexterityAtt" class="attBonus"></span><button type="button" name="incDexterity" id="incDexterity" class="attbutton">&#8250;</button><label id="dexLabel"> Dexterity</label><br />
+						<button type="button" name="decQuickness" id="decQuickness" class="attbutton">&#8249;</button><span id="quicknessAtt" class="attBonus"></span><button type="button" name="incQuickness" id="incQuickness" class="attbutton">&#8250;</button><label id="quiLabel"> Quickness</label><br />
+						<button type="button" name="decIntelligence" id="decIntelligence" class="attbutton">&#8249;</button><span id="intelligenceAtt" class="attBonus"></span><button type="button" name="incIntelligence" id="incIntelligence" class="attbutton">&#8250;</button><label id="intLabel"> Intelligence</label><br />
+						<button type="button" name="decEmpathy" id="decEmpathy" class="attbutton">&#8249;</button><span id="empathyAtt" class="attBonus"></span><button type="button" name="incEmpathy" id="incEmpathy" class="attbutton">&#8250;</button><label id="empLabel"> Empathy</label><br />
+						<button type="button" name="decPiety" id="decPiety" class="attbutton">&#8249;</button><span id="pietyAtt" class="attBonus"></span><button type="button" name="incPiety" id="incPiety" class="attbutton">&#8250;</button><label id="pieLabel"> Piety</label><br />
+						<button type="button" name="decCharisma" id="decCharisma" class="attbutton">&#8249;</button><span id="charismaAtt" class="attBonus"></span><button type="button" name="incCharisma" id="incCharisma" class="attbutton">&#8250;</button><label id="chaLabel"> Charisma</label><br /><br /></p>
+						<span id="attPoints" style="margin-left: 15px;"></span> Points Remaining
 				</td>
 			</tr>
 		</table>
-		<label class="buttonborder" style="margin-left: 95px;"><button type="button" name="reset" id="resetAttributeButton" class="button" onclick="resetAttributeBonus()">Reset</button></label>
-		<label class="buttonborder" style="margin-left: 35px;"><button type="button" name="optimize" id="optimizeAttributeButton" class="button" onclick="setOptimizedAttributes(getSelectedClass())">Optimize</button></label>
-		<label class="buttonborder" style="margin-left: 35px;"><button type="button" name="close" id="close" class="button" onclick="closeModal()">Close</button></label>
+		<label class="buttonborder" style="margin-left: 80px;"><button type="button" name="reset" id="resetAttributeButton" class="button attcontrols" onclick="resetAttributeBonus()">Reset</button></label>
+		<label class="buttonborder" style="margin-left: 35px;"><button type="button" name="optimize" id="optimizeAttributeButton" class="button attcontrols" onclick="setOptimizedAttributes(getSelectedClass())">Optimize</button></label>
+		<label class="buttonborder" style="margin-left: 35px;"><button type="button" name="close" id="close" class="button attcontrols" onclick="closeModal()">Close</button></label>
 	</div>
 </div>
 
-<table align="center">
-	<caption>
-		<label id="realmSelector">
-			Realm: 
-			<label id="selectalb"><input type="radio" name="realm" id="albRealm" onchange="onRealmSelect()">Albion </label> 
-			<label id="selecthib"><input type="radio" name="realm" id="hibRealm" onchange="onRealmSelect()">Hibernia </label>
-			<label id="selectmid"><input type="radio" name="realm" id="midRealm" onchange="onRealmSelect()">Midguard </label><br /><br />
-		</label>
-		<label id="raceSelector">
-			<!--Created with JavaScript functions drawDropDown() and fillDropDown()-->
-			Select your Realm
-		</label>
-		<label id="classSelector">
-			<!--Created with Javascript functions drawDropDown() and fillDropDown()-->
-		</label><br /><br />
-	</caption>
-		<tr>
-			<th>Attributes</th>
-			<th>Inventory</th>
-			<th>Specialization</th>
-			<th>Combat Styles</th>
-			<th>Magic Spells</th>
-			<th>User Controls</th>
-		</tr>
-		<tr>
-			<td class="table-align"><!-- Attributes page-->
-				<!-- Insert character name here--><br />
-				Level <input type="number" name="charLevel" id="charLevel" value="1" min="1" max="50" maxlength="4" step="1" class="inputborder" style="width: 39px; margin-right: 2px; margin-left: 2px;" oninput="changeSpecPoints()" readonly> 
-				Realm Points <input type="number" name="realmPoints" id="realmPoints" value="0" min="0" max="999999999" maxlength="9" step="1" class="inputborder" style="width: 80px; margin-top: 2px; margin-bottom:2px;"><br />
-				WeapSkill <input type="number" name="weaponSkill" id="weaponSkill" min="1" max="9999" class="inputborder inputspaceone" style="margin-right: 41px; margin-left: 6px;" readonly> 
-				Hit Points <input type="number" name="hitPoints" id="hitPoints" min="1" max="99999" class="inputborder inputspaceone" readonly><br />
-				WeapDam <input type="number" name="weaponDamage" id="weaponDamage" min="1" max="9999" class="inputborder inputspaceone" style="margin-right: 38px;" readonly> 
-				ArmorFact <input type="number" name="armorFactor" id="armorFactor" min="1" max="9999" class="inputborder inputspaceone" readonly><br />
-				<div style="background: black;">
-					<hr />
-					<input type="number" name="strAttribute" id="strAttribute" value="0" min="1" max="9999" class="inputborder inputspaceone" readonly><label id="strPrio">Strength</label> 
-					<input type="number" name="intAttribute" id="intAttribute" value="0" min="1" max="9999" class="inputborder inputspaceone" style="margin-left: 39px;" readonly><label id="intPrio">Intelligence</label><br />
-					<input type="number" name="conAttribute" id="conAttribute" value="0" min="1" max="9999" class="inputborder inputspaceone" readonly><label id="conPrio">Constitution</label> 
-					<input type="number" name="empAttribute" id="empAttribute" value="0" min="1" max="9999" class="inputborder inputspaceone" style="margin-left: 21px;" readonly><label id="empPrio">Empathy</label><br />
-					<input type="number" name="dexAttribute" id="dexAttribute" value="0" min="1" max="9999" class="inputborder inputspaceone" readonly><label id="dexPrio">Dexterity</label> 
-					<input type="number" name="pieAttribute" id="pieAttribute" value="0" min="1" max="9999" class="inputborder inputspaceone" style="margin-left: 37px;" readonly><label id="piePrio">Piety</label><br />
-					<input type="number" name="quiAttribute" id="quiAttribute" value="0" min="1" max="9999" class="inputborder inputspaceone" readonly><label id="quiPrio">Quickness</label> 
-					<input type="number" name="chaAttribute" id="chaAttribute" value="0" min="1" max="9999" class="inputborder inputspaceone" style="margin-left: 29px;" readonly><label id="chaPrio">Charisma</label><br />
-					<hr />
-				</div>
-				<label class="objectborder" style="padding-right:20%; margin-left: 2px;">Resists </label>
-				<input type="text" name="coldRes" id="coldRes" min="0" max="1000" placeholder="+0%" class="inputborder inputspacethree" style="margin-left: 22px;" readonly>Cold<br />
-				<input type="text" name="thrustRes" id="thrustRes" min="0" max="1000" placeholder="+0%" class="inputborder inputspacethree" readonly>Thrust 
-				<input type="text" name="matterRes" id="matterRes" min="0" max="1000" placeholder="+0%" class="inputborder inputspacethree" style="margin-left: 35px;" readonly>Matter<br />
-				<input type="text" name="crushRes" id="crushRes" min="0" max="1000" placeholder="+0%" class="inputborder inputspacethree" readonly>Crush 
-				<input type="text" name="energyRes" id="energyRes" min="0" max="1000" placeholder="+0%" class="inputborder inputspacethree" style="margin-left: 37px;" readonly>Energy<br />
-				<input type="text" name="slashRes" id="slashRes" min="0" max="1000" placeholder="+0%" class="inputborder inputspacethree" readonly>Slash 
-				<input type="text" name="spiritRes" id="spiritRes" min="0" max="1000" placeholder="+0%" class="inputborder inputspacethree" style="margin-left: 39px;" readonly>Spirit<br />
-				<input type="text" name="bodyRes" id="heatRes" min="0" max="1000" placeholder="+0%" class="inputborder inputspacethree" readonly>Heat 
-				<input type="text" name="bodyRes" id="bodyRes" min="0" max="1000" placeholder="+0%" class="inputborder inputspacethree" style="margin-left: 43px;" readonly>Body<br />
-				<div id="charDetails" class="attbox" >
-				Prof: <!-- Overall class type --><br />
-				Order: <!-- Crafting order --><br />
-				Craft Title <!-- Crafting title for current level --><br />
-				Guild: <!-- Guild name --><br />
-				Guild Rank: <br />
-				Realm Title: <!-- Title based on Realm rank --><br />
-				Title: <!-- Selected player title --><br />
-				Realm Rank: <!-- Current realm rank --><br />
-				Realm Skill Points: <!-- Current realm points available, pull from Value realmpoints above --><br />
-				Bounty Points: <!-- Current bounty points held --><br />
-				ML: <!-- Current Master Level --><br />
-				Race: <!-- Selected Race, pull from Race drop down --><br />
-				Base Class: <!-- --><br />
-				Class: <!-- Selected Class, pull from Class drop down --><br />
-				Class Rank: <!-- title based on class's level? --><br />
-				Champion Title: <!-- -->
-				</div>
-				<label class="buttonborder" style="margin-left: 65px;"><button type="button" name="adjustAttributes" id="adjustAttributes" class="button" onclick="openModal()">Adjust Attributes</button></label>
-			</td>
-			<td class="table-align"><!-- Inventory page -->
-			
-			</td>
-			<td class="table-align"><!-- Specializations page -->
-				<label class="objectborder pagetitle" style="padding-right: 40px;">Specializations</label>  
-				<label class="objectborder">Points:<input type="number" name="specPoints" id="specPoints" value="0" min="0" max="9999" placeholder="0" class="selectinputborder" style="text-align: right;" readonly></label><br />
-				<div class="specbox">
-					<!-- Selected Class trainable specializations, can scroll --><br />
-				</div>
-				<label class="objectborder pagetitle" style="padding-right: 78%;">Abilities</label><br />
-				<div class="specbox" style="height: 139px;">
-					<!-- Class and realm rank abilities, can scroll --><br />
-				</div>
-				<label class="objectborder pagetitle" style="padding-right: 72%;">Tradeskills</label><br />
-				<div class="specbox">
-					<!-- Scroll window -->
-				</div>
-			</td>
-			<td class="table-align"><!-- Combat styles page -->
-				<label class="objectborder pagetitle" style="padding-right: 78%;">Combat</label><br />
-				<div class="abbox">
-					<!-- Insert Styles here -->
-				</div>
-				<label class="buttonborder"><button type="button" name="train" id="train" class="button">Train</button></label>
-				<!-- Selected Class trained styles -->
-			</td>
-			<td class="table-align"><!-- Magic Spells page -->
-				<label class="objectborder pagetitle" style="padding-right: 82%;">Magic</label><br />
-				<div class="abbox">
-				<!-- Selected Class spells, both naturally learned and trained -->
-				</div>
-				<label class="buttonborder"><button type="button" name="train" id="train" class="button">Train</button></label>
-			</td>
-			<td class="table-align"><!-- "Group page" Options for class and race here -->
-			</td>
-		</tr>
-</table>
+<h1>Dark Age of Camelot Character Planner</h1>
+<div class="selections">
+	<label id="realmSelector">
+		Realm: 
+		<label id="selectalb"><input type="radio" name="realm" id="albRealm" onchange="onRealmSelect()">Albion </label> 
+		<label id="selecthib"><input type="radio" name="realm" id="hibRealm" onchange="onRealmSelect()">Hibernia </label>
+		<label id="selectmid"><input type="radio" name="realm" id="midRealm" onchange="onRealmSelect()">Midguard </label><br /><br />
+	</label>
+	<label id="raceSelector">
+		<!--Created with JavaScript functions drawDropDown() and fillDropDown()-->
+		Select your Realm
+	</label>
+	<label id="classSelector">
+		<!--Created with Javascript functions drawDropDown() and fillDropDown()-->
+	</label><br /><br />
+</div>
+<div class="show_hide" id="builder"><table>
+	<tr>
+		<th>Attributes</th>
+		<th>Inventory</th>
+		<th>Specialization</th>
+		<th>Combat Styles</th>
+		<th>Magic Spells</th>
+		<!-- <th>User Controls</th> -->
+	</tr>
+	<tr>
+		<td class="table-align"><!-- Attributes page-->
+			<!-- Insert character name here--><br />
+			Level <input type="number" name="charLevel" id="charLevel" value="1" min="1" max="50" maxlength="4" step="1" class="inputborder" style="width: 39px; margin-right: 2px; margin-left: 2px;" oninput="changeSpecPoints()" readonly> 
+			Realm Points <input type="number" name="realmPoints" id="realmPoints" value="0" min="0" max="999999999" maxlength="9" step="1" class="inputborder" style="width: 80px; margin-top: 2px; margin-bottom:2px;"><br />
+			WeapSkill <input type="number" name="weaponSkill" id="weaponSkill" min="1" max="9999" class="inputborder inputspaceone" style="margin-right: 41px; margin-left: 6px;" readonly> 
+			Hit Points <input type="number" name="hitPoints" id="hitPoints" min="1" max="99999" class="inputborder inputspaceone" readonly><br />
+			WeapDam <input type="number" name="weaponDamage" id="weaponDamage" min="1" max="9999" class="inputborder inputspaceone" style="margin-right: 38px;" readonly> 
+			ArmorFact <input type="number" name="armorFactor" id="armorFactor" min="1" max="9999" class="inputborder inputspaceone" readonly><br />
+			<div style="background: black;">
+				<hr />
+				<input type="number" name="strAttribute" id="strAttribute" value="0" min="1" max="9999" class="inputborder inputspaceone" readonly><label id="strPrio">Strength</label> 
+				<input type="number" name="intAttribute" id="intAttribute" value="0" min="1" max="9999" class="inputborder inputspaceone" style="margin-left: 39px;" readonly><label id="intPrio">Intelligence</label><br />
+				<input type="number" name="conAttribute" id="conAttribute" value="0" min="1" max="9999" class="inputborder inputspaceone" readonly><label id="conPrio">Constitution</label> 
+				<input type="number" name="empAttribute" id="empAttribute" value="0" min="1" max="9999" class="inputborder inputspaceone" style="margin-left: 21px;" readonly><label id="empPrio">Empathy</label><br />
+				<input type="number" name="dexAttribute" id="dexAttribute" value="0" min="1" max="9999" class="inputborder inputspaceone" readonly><label id="dexPrio">Dexterity</label> 
+				<input type="number" name="pieAttribute" id="pieAttribute" value="0" min="1" max="9999" class="inputborder inputspaceone" style="margin-left: 37px;" readonly><label id="piePrio">Piety</label><br />
+				<input type="number" name="quiAttribute" id="quiAttribute" value="0" min="1" max="9999" class="inputborder inputspaceone" readonly><label id="quiPrio">Quickness</label> 
+				<input type="number" name="chaAttribute" id="chaAttribute" value="0" min="1" max="9999" class="inputborder inputspaceone" style="margin-left: 29px;" readonly><label id="chaPrio">Charisma</label><br />
+				<hr />
+			</div>
+			<label class="objectborder" style="padding-right:20%; margin-left: 2px;">Resists </label>
+			<input type="text" name="coldRes" id="coldRes" min="0" max="1000" placeholder="+0%" class="inputborder inputspacethree" style="margin-left: 22px;" readonly>Cold<br />
+			<input type="text" name="thrustRes" id="thrustRes" min="0" max="1000" placeholder="+0%" class="inputborder inputspacethree" readonly>Thrust 
+			<input type="text" name="matterRes" id="matterRes" min="0" max="1000" placeholder="+0%" class="inputborder inputspacethree" style="margin-left: 35px;" readonly>Matter<br />
+			<input type="text" name="crushRes" id="crushRes" min="0" max="1000" placeholder="+0%" class="inputborder inputspacethree" readonly>Crush 
+			<input type="text" name="energyRes" id="energyRes" min="0" max="1000" placeholder="+0%" class="inputborder inputspacethree" style="margin-left: 37px;" readonly>Energy<br />
+			<input type="text" name="slashRes" id="slashRes" min="0" max="1000" placeholder="+0%" class="inputborder inputspacethree" readonly>Slash 
+			<input type="text" name="spiritRes" id="spiritRes" min="0" max="1000" placeholder="+0%" class="inputborder inputspacethree" style="margin-left: 39px;" readonly>Spirit<br />
+			<input type="text" name="bodyRes" id="heatRes" min="0" max="1000" placeholder="+0%" class="inputborder inputspacethree" readonly>Heat 
+			<input type="text" name="bodyRes" id="bodyRes" min="0" max="1000" placeholder="+0%" class="inputborder inputspacethree" style="margin-left: 43px;" readonly>Body<br />
+			<div id="charDetails" class="attbox" >
+			Prof: <!-- Overall class type --><br />
+			Order: <!-- Crafting order --><br />
+			Craft Title <!-- Crafting title for current level --><br />
+			Guild: <!-- Guild name --><br />
+			Guild Rank: <br />
+			Realm Title: <!-- Title based on Realm rank --><br />
+			Title: <!-- Selected player title --><br />
+			Realm Rank: <!-- Current realm rank --><br />
+			Realm Skill Points: <!-- Current realm points available, pull from Value realmpoints above --><br />
+			Bounty Points: <!-- Current bounty points held --><br />
+			ML: <!-- Current Master Level --><br />
+			Race: <!-- Selected Race, pull from Race drop down --><br />
+			Base Class: <!-- --><br />
+			Class: <!-- Selected Class, pull from Class drop down --><br />
+			Class Rank: <!-- title based on class's level? --><br />
+			Champion Title: <!-- -->
+			</div>
+			<label class="buttonborder" style="margin-left: 65px;"><button type="button" name="adjustAttributes" id="adjustAttributes" class="button" onclick="openModal()">Adjust Attributes</button></label>
+		</td>
+		<td class="table-align"><!-- Inventory page -->
+			<div class="paperdoll"></div>
+			<div class="inventory"></div>
+		</td>
+		<td class="table-align"><!-- Specializations page -->
+			<label class="objectborder pagetitle" style="padding-right: 40px;">Specializations</label>  
+			<label class="objectborder">Points:<input type="number" name="specPoints" id="specPoints" value="0" min="0" max="9999" placeholder="0" class="selectinputborder" style="text-align: right;" readonly></label><br />
+			<div class="specbox">
+				<!-- Selected Class trainable specializations, can scroll --><br />
+			</div>
+			<label class="objectborder pagetitle" style="padding-right: 78%;">Abilities</label><br />
+			<div class="specbox" style="height: 139px;">
+				<!-- Class and realm rank abilities, can scroll --><br />
+			</div>
+			<label class="objectborder pagetitle" style="padding-right: 72%;">Tradeskills</label><br />
+			<div class="specbox">
+				<!-- Scroll window -->
+			</div>
+		</td>
+		<td class="table-align"><!-- Combat styles page -->
+			<label class="objectborder pagetitle" style="padding-right: 78%;">Combat</label><br />
+			<div class="abbox">
+				<!-- Insert Styles here -->
+			</div>
+			<label class="buttonborder"><button type="button" name="train" id="train" class="button">Train</button></label>
+			<!-- Selected Class trained styles -->
+		</td>
+		<td class="table-align"><!-- Magic Spells page -->
+			<label class="objectborder pagetitle" style="padding-right: 82%;">Magic</label><br />
+			<div class="abbox">
+			<!-- Selected Class spells, both naturally learned and trained -->
+			</div>
+			<label class="buttonborder"><button type="button" name="train" id="train" class="button">Train</button></label>
+		</td>
+		<!-- <td class="table-align"><!-- "Group page" Options for class and race here -->
+		<!-- </td> -->
+	</tr>
+</table></div>
 	
 
 </body>
