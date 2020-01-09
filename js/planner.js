@@ -298,7 +298,17 @@ function closeModal() {
 	document.getElementById("attributeModal").style.display = "none";
 	if(attributePoints > 0) {
 		setOptimizedAttributes(getSelectedClass());
+	} else {
+		document.getElementById('strAttribute').value = str + strAttBonus;
+		document.getElementById('conAttribute').value = con + conAttBonus;
+		document.getElementById('dexAttribute').value = dex + dexAttBonus;
+		document.getElementById('quiAttribute').value = qui + quiAttBonus;
+		document.getElementById('intAttribute').value = intel + intAttBonus;
+		document.getElementById('empAttribute').value = emp + empAttBonus;
+		document.getElementById('pieAttribute').value = pie + pieAttBonus;
+		document.getElementById('chaAttribute').value = cha + chaAttBonus;
 	}
+	
 }
 
 function fillAttributeModal() {
@@ -311,7 +321,6 @@ function fillAttributeModal() {
 	document.getElementById('pietyAtt').innerHTML = pie + pieAttBonus;
 	document.getElementById('charismaAtt').innerHTML = cha + chaAttBonus;
 	document.getElementById('attPoints').innerHTML = attributePoints;
-	console.log(strAttBonus);
 }
 
 //Creates race and class drop downs
@@ -348,7 +357,7 @@ function fillDropDown(type) {
 	if(type == 'classes') {
 		
 		if(getSelectedRace() == "") {
-			document.getElementById('classSelector').innerHTML = 'Select your Race!';
+			document.getElementById('classSelector').innerHTML = 'Select your Race';
 		} else {
 			document.getElementById(type).innerHTML = `<option name="Blank" id="Blank"></option>`;
 		}
@@ -457,6 +466,16 @@ function resetAttributeBonus() {
 	pieAttBonus = 0;
 	chaAttBonus = 0;
 	attributePoints = 30;
+	
+	document.getElementById('strengthAtt').innerHTML = str;
+	document.getElementById('constitutionAtt').innerHTML = con;
+	document.getElementById('dexterityAtt').innerHTML = dex;
+	document.getElementById('quicknessAtt').innerHTML = qui;
+	document.getElementById('intelligenceAtt').innerHTML = intel;
+	document.getElementById('empathyAtt').innerHTML = emp;
+	document.getElementById('pietyAtt').innerHTML = pie;
+	document.getElementById('charismaAtt').innerHTML = cha;
+	document.getElementById('attPoints').innerHTML = attributePoints;
 }
 
 //Resets character attribute priorities
@@ -787,7 +806,8 @@ function setAttributes(selectedRace) {
 
 //Adds 30 recommended attribute points
 function setOptimizedAttributes(selectedClass) {
-		
+	resetAttributeBonus();
+			
 	switch(selectedClass) {
 		case ARMSMAN_CLASS:
 			setAttributePrio('str', 'con', 'dex');
@@ -1083,17 +1103,44 @@ function setOptimizedAttributes(selectedClass) {
 	attributePoints = 0;
 	
 	document.getElementById('strAttribute').value = str + strAttBonus;
+	document.getElementById('strengthAtt').innerHTML = str + strAttBonus; 
 	document.getElementById('conAttribute').value = con + conAttBonus;
+	document.getElementById('constitutionAtt').innerHTML = con + conAttBonus;
 	document.getElementById('dexAttribute').value = dex + dexAttBonus;
+	document.getElementById('dexterityAtt').innerHTML = dex + dexAttBonus;
 	document.getElementById('quiAttribute').value = qui + quiAttBonus;
+	document.getElementById('quicknessAtt').innerHTML = qui + quiAttBonus;
 	document.getElementById('intAttribute').value = intel + intAttBonus;
+	document.getElementById('intelligenceAtt').innerHTML = intel + intAttBonus;
 	document.getElementById('empAttribute').value = emp + empAttBonus;
+	document.getElementById('empathyAtt').innerHTML = emp + empAttBonus;
 	document.getElementById('pieAttribute').value = pie + pieAttBonus;
+	document.getElementById('pietyAtt').innerHTML = pie + pieAttBonus;
 	document.getElementById('chaAttribute').value = cha + chaAttBonus;
+	document.getElementById('charismaAtt').innerHTML = cha + chaAttBonus;
+	document.getElementById('attPoints').innerHTML = attributePoints;
 }
 
-function increaseAttributeBonus(attribute) {
-	let attBonus = attribute;
+function increaseAttributeBonus() {
+	let attBonus;
+	
+	if(selectedAttribute.includes('Str')) {
+		attBonus = strAttBonus;
+	} else if(selectedAttribute.includes('Con')) {
+		attBonus = conAttBonus;
+	} else if(selectedAttribute.includes('Dex')) {
+		attBonus = dexAttBonus;
+	} else if(selectedAttribute.includes('Qui')) {
+		attBonus = quiAttBonus;
+	} else if(selectedAttribute.includes('Int')) {
+		attBonus = intAttBonus;
+	} else if(selectedAttribute.includes('Emp')) {
+		attBonus = empAttBonus;
+	} else if(selectedAttribute.includes('Pie')) {
+		attBonus = pieAttBonus;
+	} else if(selectedAttribute.includes('Cha')) {
+		attBonus = chaAttBonus;
+	}
 	
 	if(attributePoints > 0) {
 		if(attBonus >= 15 && attributePoints >= 3) {
@@ -1109,27 +1156,55 @@ function increaseAttributeBonus(attribute) {
 		}
 	}
 	
-	/*if(selectedAttribute.includes('str')) {
+	if(selectedAttribute.includes('Str')) {
 		strAttBonus = attBonus;
-	} else if(selectedAttribute.includes('con')) {
+		document.getElementById('strengthAtt').innerHTML = str + strAttBonus;
+	} else if(selectedAttribute.includes('Con')) {
 		conAttBonus = attBonus;
-	} else if(selectedAttribute.includes('dex')) {
+		document.getElementById('constitutionAtt').innerHTML = con + conAttBonus;
+	} else if(selectedAttribute.includes('Dex')) {
 		dexAttBonus = attBonus;
-	} else if(selectedAttribute.includes('qui')) {
+		document.getElementById('dexterityAtt').innerHTML = dex + dexAttBonus;
+	} else if(selectedAttribute.includes('Qui')) {
 		quiAttBonus = attBonus;
-	} else if(selectedAttribute.includes('int')) {
+		document.getElementById('quicknessAtt').innerHTML = qui + quiAttBonus;
+	} else if(selectedAttribute.includes('Int')) {
 		intAttBonus = attBonus;
-	} else if(selectedAttribute.includes('emp')) {
+		document.getElementById('intelligenceAtt').innerHTML = intel + intAttBonus;
+	} else if(selectedAttribute.includes('Emp')) {
 		empAttBonus = attBonus;
-	} else if(selectedAttribute.includes('pie')) {
+		document.getElementById('empathyAtt').innerHTML = emp + empAttBonus;
+	} else if(selectedAttribute.includes('Pie')) {
 		pieAttBonus = attBonus;
-	} else if(selectedAttribute.includes('cha')) {
+		document.getElementById('pietyAtt').innerHTML = pie + pieAttBonus;
+	} else if(selectedAttribute.includes('Cha')) {
 		chaAttBonus = attBonus;
-	}*/
+		document.getElementById('charismaAtt').innerHTML = cha + chaAttBonus;
+	}
+	
+	document.getElementById('attPoints').innerHTML = attributePoints;
 }
 
-function decreaseAttributeBonus(attribute) {
-	let attBonus = attribute;
+function decreaseAttributeBonus() {
+	let attBonus;
+	
+	if(selectedAttribute.includes('Str')) {
+		attBonus = strAttBonus;
+	} else if(selectedAttribute.includes('Con')) {
+		attBonus = conAttBonus;
+	} else if(selectedAttribute.includes('Dex')) {
+		attBonus = dexAttBonus;
+	} else if(selectedAttribute.includes('Qui')) {
+		attBonus = quiAttBonus;
+	} else if(selectedAttribute.includes('Int')) {
+		attBonus = intAttBonus;
+	} else if(selectedAttribute.includes('Emp')) {
+		attBonus = empAttBonus;
+	} else if(selectedAttribute.includes('Pie')) {
+		attBonus = pieAttBonus;
+	} else if(selectedAttribute.includes('Cha')) {
+		attBonus = chaAttBonus;
+	}
 	
 	if(attBonus > 0) {
 		if(attBonus >= 15) {
@@ -1143,6 +1218,34 @@ function decreaseAttributeBonus(attribute) {
 			attBonus--;
 		}
 	}
+	
+	if(selectedAttribute.includes('Str')) {
+		strAttBonus = attBonus;
+		document.getElementById('strengthAtt').innerHTML = str + strAttBonus;
+	} else if(selectedAttribute.includes('Con')) {
+		conAttBonus = attBonus;
+		document.getElementById('constitutionAtt').innerHTML = con + conAttBonus;
+	} else if(selectedAttribute.includes('Dex')) {
+		dexAttBonus = attBonus;
+		document.getElementById('dexterityAtt').innerHTML = dex + dexAttBonus;
+	} else if(selectedAttribute.includes('Qui')) {
+		quiAttBonus = attBonus;
+		document.getElementById('quicknessAtt').innerHTML = qui + quiAttBonus;
+	} else if(selectedAttribute.includes('Int')) {
+		intAttBonus = attBonus;
+		document.getElementById('intelligenceAtt').innerHTML = intel + intAttBonus;
+	} else if(selectedAttribute.includes('Emp')) {
+		empAttBonus = attBonus;
+		document.getElementById('empathyAtt').innerHTML = emp + empAttBonus;
+	} else if(selectedAttribute.includes('Pie')) {
+		pieAttBonus = attBonus;
+		document.getElementById('pietyAtt').innerHTML = pie + pieAttBonus;
+	} else if(selectedAttribute.includes('Cha')) {
+		chaAttBonus = attBonus;
+		document.getElementById('charismaAtt').innerHTML = cha + chaAttBonus;
+	}
+	
+	document.getElementById('attPoints').innerHTML = attributePoints;
 }
 
 //Assigns values to character resistances depending on what is passed

@@ -14,29 +14,30 @@
 <h1>Dark Age of Camelot Character Planner</h1>
 
 <div id="attributeModal" class="modal">
-	<div class="modal-content" onclick="getSelectedAttribute(event), updateAttributeDesc()">
+	<div class="modal-content">
 		<table>
 			<tr>
-				<td style="border: 0px; width: 200px;">
+				<td style="border: 0px; width: 250px; padding-bottom: 80px; padding-right: 15px;">
 					<span id="attributeName" class="attributeName">Strength</span>
 					<p id="attributeDescription">Determines the damage done by weapons for crushing and slashing damage types. Strength also affects half the damage done by thrusting weapons. Maximum encumbrance also depends on your strength.</p>
 				</td>
-				<td style="border: 0px;">
+				<td style="border: 0px; width: 150px;">
 					<span class="attributeName" style="text-align: center;">Attributes</span>
-					<p><button type="button" name="decStrength" id="decStrength">&#8249;</button><span id="strengthAtt"></span><button type="button" name="incStrength" id="incStrength">&#8250;</button><label id="strLabel"> Strength</label><br />
-					   <button type="button" name="decConstitution" id="decConstitution">&#8249;</button><span id="constitutionAtt"></span><button type="button" name="incConstitution" id="incConstitution">&#8250;</button><label id="conLabel"> Constitution</label><br />
-					   <button type="button" name="decDexterity" id="decDexterity">&#8249;</button><span id="dexterityAtt"></span><button type="button" name="incDexterity" id="incDexterity">&#8250;</button><label id="dexLabel"> Dexterity</label><br />
-					   <button type="button" name="decQuickness" id="decQuickness">&#8249;</button><span id="quicknessAtt"></span><button type="button" name="incQuickness" id="incQuickness">&#8250;</button><label id="quiLabel"> Quickness</label><br />
-					   <button type="button" name="decIntelligence" id="decIntelligence">&#8249;</button><span id="intelligenceAtt"></span><button type="button" name="incIntelligence" id="incIntelligence">&#8250;</button><label id="intLabel"> Intelligence</label><br />
-					   <button type="button" name="decEmpathy" id="decEmpathy">&#8249;</button><span id="empathyAtt"></span><button type="button" name="incEmpathy" id="incEmpathy">&#8250;</button><label id="empLabel"> Empathy</label><br />
-					   <button type="button" name="decPiety" id="decPiety">&#8249;</button><span id="pietyAtt"></span><button type="button" name="incPiety" id="incPiety">&#8250;</button><label id="pieLabel"> Piety</label><br />
-					   <button type="button" name="decCharisma" id="decCharisma">&#8249;</button><span id="charismaAtt"></span><button type="button" name="incCharisma" id="incCharisma">&#8250;</button><label id="chaLabel"> Charisma</label><br />
+					<p onclick="getSelectedAttribute(event), updateAttributeDesc()">
+						<button type="button" name="decStrength" id="decStrength" class="attbutton" onclick="decreaseAttributeBonus()">&#8249;</button><span id="strengthAtt" class="attBonus"></span><button type="button" name="incStrength" id="incStrength" class="attbutton" onclick="increaseAttributeBonus()">&#8250;</button><label id="strLabel"> Strength</label><br />
+						<button type="button" name="decConstitution" id="decConstitution" class="attbutton" onclick="decreaseAttributeBonus()">&#8249;</button><span id="constitutionAtt" class="attBonus"></span><button type="button" name="incConstitution" class="attbutton" id="incConstitution" onclick="increaseAttributeBonus()">&#8250;</button><label id="conLabel"> Constitution</label><br />
+						<button type="button" name="decDexterity" id="decDexterity" class="attbutton" onclick="decreaseAttributeBonus()">&#8249;</button><span id="dexterityAtt" class="attBonus"></span><button type="button" name="incDexterity" id="incDexterity" class="attbutton" onclick="increaseAttributeBonus()">&#8250;</button><label id="dexLabel"> Dexterity</label><br />
+						<button type="button" name="decQuickness" id="decQuickness" class="attbutton" onclick="decreaseAttributeBonus()">&#8249;</button><span id="quicknessAtt" class="attBonus"></span><button type="button" name="incQuickness" id="incQuickness" class="attbutton" onclick="increaseAttributeBonus()">&#8250;</button><label id="quiLabel"> Quickness</label><br />
+						<button type="button" name="decIntelligence" id="decIntelligence" class="attbutton" onclick="decreaseAttributeBonus()">&#8249;</button><span id="intelligenceAtt" class="attBonus"></span><button type="button" name="incIntelligence" id="incIntelligence" class="attbutton" onclick="increaseAttributeBonus()">&#8250;</button><label id="intLabel"> Intelligence</label><br />
+						<button type="button" name="decEmpathy" id="decEmpathy" class="attbutton" onclick="decreaseAttributeBonus()">&#8249;</button><span id="empathyAtt" class="attBonus"></span><button type="button" name="incEmpathy" id="incEmpathy" class="attbutton" onclick="increaseAttributeBonus()">&#8250;</button><label id="empLabel"> Empathy</label><br />
+						<button type="button" name="decPiety" id="decPiety" class="attbutton" onclick="decreaseAttributeBonus()">&#8249;</button><span id="pietyAtt" class="attBonus"></span><button type="button" name="incPiety" id="incPiety" class="attbutton" onclick="increaseAttributeBonus()">&#8250;</button><label id="pieLabel"> Piety</label><br />
+						<button type="button" name="decCharisma" id="decCharisma" class="attbutton" onclick="decreaseAttributeBonus()">&#8249;</button><span id="charismaAtt" class="attBonus"></span><button type="button" name="incCharisma" id="incCharisma" class="attbutton" onclick="increaseAttributeBonus()">&#8250;</button><label id="chaLabel"> Charisma</label><br />
 						<span id="attPoints"></span> Points Remaining
 				</td>
 			</tr>
 		</table>
 		<label class="buttonborder" style="margin-left: 95px;"><button type="button" name="reset" id="resetAttributeButton" class="button" onclick="resetAttributeBonus()">Reset</button></label>
-		<label class="buttonborder" style="margin-left: 35px;"><button type="button" name="optimize" id="optimizeAttributeButton" class="button">Optimize</button></label>
+		<label class="buttonborder" style="margin-left: 35px;"><button type="button" name="optimize" id="optimizeAttributeButton" class="button" onclick="setOptimizedAttributes(getSelectedClass())">Optimize</button></label>
 		<label class="buttonborder" style="margin-left: 35px;"><button type="button" name="close" id="close" class="button" onclick="closeModal()">Close</button></label>
 	</div>
 </div>
@@ -51,7 +52,7 @@
 		</label>
 		<label id="raceSelector">
 			<!--Created with JavaScript functions drawDropDown() and fillDropDown()-->
-			Select your Realm!
+			Select your Realm
 		</label>
 		<label id="classSelector">
 			<!--Created with Javascript functions drawDropDown() and fillDropDown()-->
