@@ -26,7 +26,7 @@ let pieAttBonus = 0;
 let chaAttBonus = 0;
 let attributePoints = 0;
 let selectedAttribute;
-//attribute descriptions
+//attribute descriptions [Name, Description]
 let strDesc = ["Strength", "Determines the damage done by weapons for crushing and slashing damage types. Strength also affects half the damage done by thrusting weapons. Maximum encumbrance also depends on your strength."];
 let conDesc = ["Constitution", "General health and well being. Determines the maximum number of hit points your character will have."];
 let dexDesc = ["Dexterity", "Archery and Staves as well as defensive skills such as shield blocking, parrying, and evasion depend on dexterity. Half of thrusting weapon damage is dependant on dexterity. Magic users rely on dexterity to increase their casting speed."];
@@ -37,15 +37,15 @@ let pieDesc = ["Piety", "Priest, Clerical, Mystic, and Seer classes rely on piet
 let chaDesc = ["Charisma", "Personal magnetism or charm. Charisma guides the effectiveness of a musical class's songs."];
 
 //character resists
-let thrust = 0;
-let crush = 0;
-let slash = 0;
-let heat = 0;
-let cold = 0;
-let matter = 0;
-let energy = 0;
-let spirit = 0;
-let body = 0;
+let thrustRes = 0;
+let crushRes = 0;
+let slashRes = 0;
+let heatRes = 0;
+let coldRes = 0;
+let matterRes = 0;
+let energyRes = 0;
+let spiritRes = 0;
+let bodyRes = 0;
 
 //classes
 const MAULER_CLASS = "Mauler";
@@ -198,7 +198,8 @@ let classBaseSpells = [];
 let classTrainedSpells = [];
 let charBaseSpells = [];
 let charTrainedSpells = [];
-//index ALB/HIB/MID - [starting ID, quantity]
+//combat style indexes - [starting ID, quantity]
+//Albion
 const CRUSH_STYLE_INDEX = [0, 18];
 const DUALWIELD_STYLE_INDEX = [18, 16];
 const FLEX_STYLE_INDEX = [36, 16];
@@ -207,9 +208,66 @@ const POLEARM_STYLE_INDEX = [62, 17];
 const SLASH_STYLE_INDEX = [79, 16];
 const STAFF_STYLE_INDEX = [95, 13];
 const THRUST_STYLE_INDEX = [108, 17];
-const TWOHAND_STYLE_INDEX = [125, 16];
-//Class specialization
-//const ARMSMAN_SPEC = [[Polearm, Crossbow, Two-Handed, Parry, Slash, Crush, Thrust, Shield], [Sprint, Tireless]];
+const TWOHANDED_STYLE_INDEX = [125, 16];
+//Hibernia
+const BLADES_STYLE_INDEX = [141, 16];
+const BLUNT_STYLE_INDEX = [157, 16];
+const CELTICDUAL_STYLE_INDEX = [173, 16];
+const CELTICSPEAR_STYLE_INDEX = [189, 16];
+const LARGEWEAPONS_STYLE_INDEX = [205, 16];
+const PIERCING_STYLE_INDEX = [221, 17];
+const SCYTHE_STYLE_INDEX = [238, 17];
+//Midgard
+const AXE_STYLE_INDEX = [255, 16];
+const HAMMER_STYLE_INDEX = [271, 17];
+const HANDTOHAND_STYLE_INDEX = [288, 16];
+const LEFTAXE_STYLE_INDEX = [304, 16];
+const SPEAR_STYLE_INDEX = [320, 16];
+const SWORD_STYLE_INDEX = [336, 17];
+//All
+const CRITICALSTRIKE_STYLE_INDEX = [353, 17];
+const FISTWRAPS_STYLE_INDEX = [370, 16];
+const MAULERSTAFFS_STYLE_INDEX = [386, 16];
+const SHIELD_STYLE_INDEX = [402, 14];
+//magic spell indexes
+
+//Specialization variables, hold trained level // [spec name, points trained, index]
+//Albion Combat
+let crushSpec = ["Crush", 1, CRUSH_STYLE_INDEX];
+let dualWieldSpec = ["Dual Wield", 1, DUALWIELD_SYTLE_INDEX];
+let flexibleSpec = ["Flexible", 1, FLEX_STYLE_INDEX];
+let parrySpec = ["Parry", 1, null];
+let polearmSpec = ["Polearm", 1, POLEARM_STYLE_INDEX];
+let slashSpec = ["Slash", 1, SLASH_STYLE_INDEX];
+let staffSpec = ["Staff", 1, STAFF_STYLE_INDEX];
+let thrustSpec = ["Thrust", 1, THRUST_STYLE_INDEX];
+let twoHandedSpec = ["Two-Handed", 1, TWOHANDED_STYLE_INDEX];
+//Albion Magic
+//let crossbowSpec = ["Crossbow", "Crossbow", 1, /*crossbow index*/];
+//Hibernia Combat
+let bladesSpec = ["Blades", 1, BLADES_STYLE_INDEX];
+let bluntSpec = ["Blunt", 1, BLUNT_STYLE_INDEX];
+let celticDualSpec = ["Celtic Dual", 1, CELTICDUAL_STYLE_INDEX];
+let celticSpearSpec = ["Celtic Spear", 1, CELTICSPEAR_STYLE_INDEX];
+let largeWeaponsSpec = ["Large Weapons", 1, LARGEWEAPONS_STYLE_INDEX];
+let piercingSpec = ["Piercing", 1, PIERCING_STYLE_INDEX];
+let scytheSpec = ["Scythe", 1, SCYTHE_STYLE_INDEX];
+//Hibernia Magic
+//Midgard Combat
+let axeSpec = ["Axe", 1, AXE_STYLE_INDEX];
+let hammerSpec = ["Hammer", 1, HAMMER_STYLE_INDEX];
+let handToHandSpec = ["Hand to Hand", 1, HANDTOHAND_STYLE_INDEX];
+let leftAxeSpec = ["Left Axe", 1, LEFTAXE_STYLE_INDEX];
+let spearSpec = ["Spear", 1, SPEAR_STYLE_INDEX];
+let swordSpec = ["Sword", 1, SWORD_STYLE_INDEX];
+//Midgard Magic
+//All Combat
+let criticalStrikeSpec = ["Critical Strike", 1, CRITICALSTRIKE_STYLE_INDEX];
+let fistWrapsspec = ["Fist Wraps", 1, FISTWRAPS_STYLE_INDEX];
+let maulerStaffsSpec = ["Mauler Staffs", 1, MAULDERSTAFFS_STYLE_INDEX];
+let shieldSpec = ["Shield", 1, SHIELD_STYLE_INDEX];
+//Class specialization : Class = [specializations, abilities, weaponry, armor, shield, combat, magic]
+//const ARMSMAN_SPEC = [[polearmSpec, crossbowSpec, twoHandedSpec, parrySpec, slashSpec, crushSpec, thrustSpec, shieldSpec], [ABILITY_DATA[0], ABILITY_DATA[3]], [Staves, Polearms, Two-Handed, Slashing, Crushing, Thrusting, Crossbows], ARMOR_ABILITY_DATA[x], SHIELD_ABILITY_DATA[x], [Polearm, Two Handed, Slash, Crush, Thrust, Shield]];
 
 
 //Function adjusts available classes depending on the selected realm
@@ -504,25 +562,25 @@ function resetAttributePrio() {
 //Resets character resistances
 function resetResists() {
 	
-	thrust = 0;
-	crush = 0;
-	slash = 0;
-	heat = 0;
-	cold = 0;
-	matter = 0;
-	energy = 0;
-	spirit = 0;
-	body = 0;
+	thrustRes = 0;
+	crushRes = 0;
+	slashRes = 0;
+	heatRes = 0;
+	coldRes = 0;
+	matterRes = 0;
+	energyRes = 0;
+	spiritRes = 0;
+	bodyRes = 0;
 	
-	document.getElementById('thrustRes').value = `+${thrust}%`;
-	document.getElementById('crushRes').value = `+${crush}%`;
-	document.getElementById('slashRes').value = `+${slash}%`;
-	document.getElementById('heatRes').value = `+${heat}%`;
-	document.getElementById('coldRes').value = `+${cold}%`;
-	document.getElementById('matterRes').value = `+${matter}%`;
-	document.getElementById('energyRes').value = `+${energy}%`;
-	document.getElementById('spiritRes').value = `+${spirit}%`;
-	document.getElementById('bodyRes').value = `+${body}%`;
+	document.getElementById('thrustRes').value = `+${thrustRes}%`;
+	document.getElementById('crushRes').value = `+${crushRes}%`;
+	document.getElementById('slashRes').value = `+${slashRes}%`;
+	document.getElementById('heatRes').value = `+${heatRes}%`;
+	document.getElementById('coldRes').value = `+${coldRes}%`;
+	document.getElementById('matterRes').value = `+${matterRes}%`;
+	document.getElementById('energyRes').value = `+${energyRes}%`;
+	document.getElementById('spiritRes').value = `+${spiritRes}%`;
+	document.getElementById('bodyRes').value = `+${bodyRes}%`;
 }
 
 //Highlights text of primary, secondary and tertiary character attribute priorities
@@ -1206,25 +1264,25 @@ function changeAttributeBonus() {
 //Assigns values to character resistances depending on what is passed
 function setResists(th, cr, sl, he, co, ma, en, sp, bo) {
 	
-	thrust = th;
-	crush = cr;
-	slash = sl;
-	heat = he;
-	cold = co;
-	matter = ma;
-	energy = en;
-	spirit = sp;
-	body = bo;
+	thrustRes = th;
+	crushRes = cr;
+	slashRes = sl;
+	heatRes = he;
+	coldRes = co;
+	matterRes = ma;
+	energyRes = en;
+	spiritRes = sp;
+	bodyRes = bo;
 	
-	document.getElementById('thrustRes').value = `+${thrust}%`;
-	document.getElementById('crushRes').value = `+${crush}%`;
-	document.getElementById('slashRes').value = `+${slash}%`;
-	document.getElementById('heatRes').value = `+${heat}%`;
-	document.getElementById('coldRes').value = `+${cold}%`;
-	document.getElementById('matterRes').value = `+${matter}%`;
-	document.getElementById('energyRes').value = `+${energy}%`;
-	document.getElementById('spiritRes').value = `+${spirit}%`;
-	document.getElementById('bodyRes').value = `+${body}%`;
+	document.getElementById('thrustRes').value = `+${thrustRes}%`;
+	document.getElementById('crushRes').value = `+${crushRes}%`;
+	document.getElementById('slashRes').value = `+${slashRes}%`;
+	document.getElementById('heatRes').value = `+${heatRes}%`;
+	document.getElementById('coldRes').value = `+${coldRes}%`;
+	document.getElementById('matterRes').value = `+${matterRes}%`;
+	document.getElementById('energyRes').value = `+${energyRes}%`;
+	document.getElementById('spiritRes').value = `+${spiritRes}%`;
+	document.getElementById('bodyRes').value = `+${bodyRes}%`;
 }
 
 //Function adjusts available specialization points on character level change
