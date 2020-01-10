@@ -234,7 +234,7 @@ const SHIELD_STYLE_INDEX = [402, 14];
 //Specialization variables, hold trained level // [spec name, points trained, index]
 //Albion Combat
 let crushSpec = ["Crush", 1, CRUSH_STYLE_INDEX];
-let dualWieldSpec = ["Dual Wield", 1, DUALWIELD_SYTLE_INDEX];
+let dualWieldSpec = ["Dual Wield", 1, DUALWIELD_STYLE_INDEX];
 let flexibleSpec = ["Flexible", 1, FLEX_STYLE_INDEX];
 let parrySpec = ["Parry", 1, null];
 let polearmSpec = ["Polearm", 1, POLEARM_STYLE_INDEX];
@@ -243,7 +243,7 @@ let staffSpec = ["Staff", 1, STAFF_STYLE_INDEX];
 let thrustSpec = ["Thrust", 1, THRUST_STYLE_INDEX];
 let twoHandedSpec = ["Two-Handed", 1, TWOHANDED_STYLE_INDEX];
 //Albion Magic
-//let crossbowSpec = ["Crossbow", "Crossbow", 1, /*crossbow index*/];
+let crossbowSpec = ["Crossbow", 1, /*crossbow index*/1, "Crossbow"];
 //Hibernia Combat
 let bladesSpec = ["Blades", 1, BLADES_STYLE_INDEX];
 let bluntSpec = ["Blunt", 1, BLUNT_STYLE_INDEX];
@@ -264,10 +264,10 @@ let swordSpec = ["Sword", 1, SWORD_STYLE_INDEX];
 //All Combat
 let criticalStrikeSpec = ["Critical Strike", 1, CRITICALSTRIKE_STYLE_INDEX];
 let fistWrapsspec = ["Fist Wraps", 1, FISTWRAPS_STYLE_INDEX];
-let maulerStaffsSpec = ["Mauler Staffs", 1, MAULDERSTAFFS_STYLE_INDEX];
+let maulerStaffsSpec = ["Mauler Staffs", 1, MAULERSTAFFS_STYLE_INDEX];
 let shieldSpec = ["Shield", 1, SHIELD_STYLE_INDEX];
 //Class specialization : Class = [specializations, abilities, weaponry, armor, shield, combat, magic]
-//const ARMSMAN_SPEC = [[polearmSpec, crossbowSpec, twoHandedSpec, parrySpec, slashSpec, crushSpec, thrustSpec, shieldSpec], [ABILITY_DATA[0], ABILITY_DATA[3]], [Staves, Polearms, Two-Handed, Slashing, Crushing, Thrusting, Crossbows], ARMOR_ABILITY_DATA[x], SHIELD_ABILITY_DATA[x], [Polearm, Two Handed, Slash, Crush, Thrust, Shield]];
+const ARMSMAN_SPEC = [[polearmSpec, crossbowSpec, twoHandedSpec, parrySpec, slashSpec, crushSpec, thrustSpec, shieldSpec], [ABILITY_DATA[0], ABILITY_DATA[3]], ["Staves, Polearms, Two-Handed, Slashing, Crushing, Thrusting, Crossbows"], /*ARMOR_ABILITY_DATA[x], SHIELD_ABILITY_DATA[x],*/ ["Polearm, TwoHanded, Slash, Crush, Thrust, Shield"]];
 
 
 //Function adjusts available classes depending on the selected realm
@@ -300,10 +300,13 @@ function onClassSelect() {
 	
 	resetLevel();
 	resetAttributeBonus();
+	resetSpecializations();
+	resetAbilities();
 	setOptimizedAttributes(getSelectedClass());
 	document.getElementById("charLevel").readOnly = false;
 	document.getElementById('builder').style.display = "block";
-	//setSkills();
+	setSpecializations(ARMSMAN_SPEC);
+	setAbilities(ARMSMAN_SPEC);
 }
 
 //Function changes color for selected realm
@@ -581,6 +584,16 @@ function resetResists() {
 	document.getElementById('energyRes').value = `+${energyRes}%`;
 	document.getElementById('spiritRes').value = `+${spiritRes}%`;
 	document.getElementById('bodyRes').value = `+${bodyRes}%`;
+}
+
+//Resets character specializations
+function resetSpecializations() {
+	document.getElementById('specBox').innerHTML = "";
+}
+
+//Resets character abilities
+function resetAbilities() {
+	document.getElementById('abilityBox').innerHTML = "";
 }
 
 //Highlights text of primary, secondary and tertiary character attribute priorities
@@ -1283,6 +1296,19 @@ function setResists(th, cr, sl, he, co, ma, en, sp, bo) {
 	document.getElementById('energyRes').value = `+${energyRes}%`;
 	document.getElementById('spiritRes').value = `+${spiritRes}%`;
 	document.getElementById('bodyRes').value = `+${bodyRes}%`;
+}
+
+//Function set skills based on selected class
+function setSpecializations(specializations) {
+	for(let i = 0; i < specializations[0].length; i++) {
+		document.getElementById('specBox').innerHTML += `<span id="${specializations[0][i][0]}SpecImage" class="specImage"></span><span id="${specializations[0][i][0]}Spec" class="specName">${specializations[0][i][0]}</span><span id="${specializations[0][i][0]}SpecLevel" class="specLevel">${specializations[0][i][1]}</span><br />`;
+	}
+}
+
+function setAbilities(abilities) {
+	for(let i = 0; i < abilities[1].length; i++) {
+		document.getElementById('abilityBox').innerHTML += `<span id="${abilities[1][i]['name']}AbilityImage" class="specImage"></span><span id="${abilities[1][i]['name']}Ability" class="specName">${abilities[1][i]['name']}</span><br />`;
+	}
 }
 
 //Function adjusts available specialization points on character level change
