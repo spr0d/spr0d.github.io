@@ -1,9 +1,33 @@
 body {
 	background-color: silver;
 }
+.daocLogo {
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+	background: #000000;
+	font-size: 80px;
+}
+#realmTitle {
+	text-align: left;
+	height: 100px;
+	width: 1000px;
+	padding-top: 11px;
+	padding-right: 500px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	font-size: 70px;
+	background: #66040b;
+	color: #8c7345;
+	font-family: 'kingthings_foundationregular';
+	-webkit-text-stroke: 1px black;
+}
+.initial {
+	font-size: 100px;
+}
 h1 {
 	text-align: center;
-	font-family: 'kingthings_foundationregular';
+	/* font-family: 'kingthings_foundationregular'; */
 }
 td {
 	background-color: #0A0A0A; 
