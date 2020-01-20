@@ -1,19 +1,35 @@
 body {
-	background-color: silver;
+	background: silver;
+	background-repeat: repeat;
 }
 .daocLogo {
-	display: inline-block;
-	height: 100px;
-	width: 100px;
-	background: #000000;
+	position: absolute;
+	display: block;
+	height: 154px;
+	width: 255px;
+	margin-top: -40px;
+	margin-left: -100px;
 	font-size: 80px;
+	text-align: left;
+}
+.daocTop {
+	text-align: center;
+	height: 175px;
+	width: 1200px;
+	background-image: url("../images/realmTopPlaceholder.png");
+	background-position: 100px center;
+	background-size: 1414px 546px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+	border: 3px solid #745C42;
 }
 #realmTitle {
 	text-align: left;
 	height: 100px;
 	width: 1000px;
 	padding-top: 11px;
-	padding-right: 500px;
+	padding-right: 200px;
 	padding-bottom: 10px;
 	padding-left: 20px;
 	font-size: 70px;
@@ -21,6 +37,51 @@ body {
 	color: #8c7345;
 	font-family: 'kingthings_foundationregular';
 	-webkit-text-stroke: 1px black;
+}
+#realmLogo {
+	height: 150px;
+	width: 150px;
+	display: inline-block;
+	position: absolute;
+	margin-left: 15px;
+	margin-top: -12px;
+}
+#selectionDetails {
+	width: 1290px;
+	height: 120px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+	background-color: #0A0A0A; 
+	border-style: solid; 
+	border-color: #745C42; 
+	color: white;
+	border-width: 3px;
+	font-size: 12px;
+	font-family: Arial;
+	opacity: 0.9;
+	display: none;
+}
+#raceDesc {
+	display: inline-block;
+	position: absolute;
+	margin-left: 180px;
+	width: 500px;
+	margin-top: 10px;
+}
+#raceName {
+	font-size: 30px;
+	color: gold;
+}
+#raceDescription {
+	font-style: italic;
+}
+#classDesc {
+	display: inline-block;
+	position: absolute;
+	margin-left: 750px;
+	width: 500px;
+	margin-top: 10px;
 }
 .initial {
 	font-size: 100px;
@@ -37,6 +98,7 @@ td {
 	border-width: 3px;
 	font-size: 12px;
 	font-family: Arial;
+	opacity: 0.9;
 }
 hr {
 	border-color: #745C42;
@@ -254,7 +316,20 @@ select {
 	margin: auto;
 }
 .selections {
+	height: 75px;
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
 	text-align: center;
+	margin-top: 15px;
+	background-color: #0A0A0A; 
+	border-style: solid; 
+	border-color: #745C42; 
+	color: white;
+	border-width: 3px;
+	font-size: 12px;
+	font-family: Arial;
+	opacity: 0.9;
 }
 .specImage {
 	display: inline-block;
@@ -303,11 +378,11 @@ select {
 	margin-left: 3px;
 }
 #selectalb {
-	color: black;
+	color: white;
 }
 #selecthib {
-	color: black;
+	color: white;
 }
 #selectmid {
-	color: black;
+	color: white;
 }
