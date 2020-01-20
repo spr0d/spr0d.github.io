@@ -1,7 +1,7 @@
 //Global variables
-let realm = "";
-let charClass = "";
-let race = "";
+let selectedRealm = "";
+let selectedClass = "";
+let selectedRace = "";
 let level = 1;
 let specPoints = 0;
 let pointMod = 1;
@@ -46,147 +46,8 @@ let matterRes = 0;
 let energyRes = 0;
 let spiritRes = 0;
 let bodyRes = 0;
+	
 
-//classes
-const MAULER_CLASS = "Mauler";
-//ALBION
-const ARMSMAN_CLASS = "Armsman";
-const CABALIST_CLASS = "Cabalist";
-const CLERIC_CLASS = "Cleric";
-const FRIAR_CLASS = "Friar";
-const HERETIC_CLASS = "Heretic";
-const INFILTRATOR_CLASS = "Infiltrator";
-const MERCENARY_CLASS = "Mercenary";
-const MINSTREL_CLASS = "Minstrel";
-const NECROMANCER_CLASS = "Necromancer";
-const PALADIN_CLASS = "Paladin";
-const REAVER_CLASS = "Reaver";
-const SCOUT_CLASS = "Scout";
-const SORCERER_CLASS = "Sorcerer";
-const THEURGIST_CLASS = "Theurgist";
-const WIZARD_CLASS = "Wizard";
-let albClasses = [ARMSMAN_CLASS, CABALIST_CLASS, CLERIC_CLASS, FRIAR_CLASS, HERETIC_CLASS, 
-				  INFILTRATOR_CLASS, MAULER_CLASS, MERCENARY_CLASS, MINSTREL_CLASS, NECROMANCER_CLASS, 
-				  PALADIN_CLASS, REAVER_CLASS, SCOUT_CLASS, SORCERER_CLASS, THEURGIST_CLASS, WIZARD_CLASS];
-//HIBERNIA
-const ANIMIST_CLASS = "Animist";
-const BAINSHEE_CLASS = "Bainshee";
-const BARD_CLASS = "Bard";
-const BLADEMASTER_CLASS = "Blademaster";
-const CHAMPION_CLASS = "Champion";
-const DRUID_CLASS = "Druid";
-const ELDRITCH_CLASS = "Eldritch";
-const ENCHANTER_CLASS = "Enchanter";
-const HERO_CLASS = "Hero";
-const MENTALIST_CLASS = "Mentalist";
-const NIGHTSHADE_CLASS = "Nightshade";
-const RANGER_CLASS = "Ranger";
-const VALEWALKER_CLASS = "Valewalker";
-const VAMPIIR_CLASS = "Vampiir";
-const WARDEN_CLASS = "Warden";
-let hibClasses = [ANIMIST_CLASS, BAINSHEE_CLASS, BARD_CLASS, BLADEMASTER_CLASS, CHAMPION_CLASS, 
-				  DRUID_CLASS, ELDRITCH_CLASS, ENCHANTER_CLASS, HERO_CLASS, MAULER_CLASS, 
-				  MENTALIST_CLASS, NIGHTSHADE_CLASS, RANGER_CLASS, VALEWALKER_CLASS, VAMPIIR_CLASS, WARDEN_CLASS];
-		
-const BERSERKER_CLASS = "Berserker";
-const BONEDANCER_CLASS = "Bonedancer";
-const HEALER_CLASS = "Healer";
-const HUNTER_CLASS = "Hunter";
-const RUNEMASTER_CLASS = "Runemaster";
-const SAVAGE_CLASS = "Savage";
-const SHADOWBLADE_CLASS = "Shadowblade";
-const SHAMAN_CLASS = "Shaman";
-const SKALD_CLASS = "Skald";
-const SPIRITMASTER_CLASS = "Spiritmaster";
-const THANE_CLASS = "Thane";
-const VALKYRIE_CLASS = "Valkyrie";
-const WARLOCK_CLASS = "Warlock";
-const WARRIOR_CLASS = "Warrior";
-let midClasses = [BERSERKER_CLASS, BONEDANCER_CLASS, HEALER_CLASS, HUNTER_CLASS, MAULER_CLASS, 
-				  RUNEMASTER_CLASS, SAVAGE_CLASS, SHADOWBLADE_CLASS, SHAMAN_CLASS, SKALD_CLASS, 
-				  SPIRITMASTER_CLASS, THANE_CLASS, VALKYRIE_CLASS, WARLOCK_CLASS, WARRIOR_CLASS];
-		
-//races and class eligibility
-//Albion
-const AVALONIAN_RACE = "Avalonian";
-const BRITON_RACE = "Briton";
-const HALF_OGRE_RACE = "Half Ogre";
-const HIGHLANDER_RACE = "Highlander";
-const INCONNU_RACE = "Inconnu";
-const A_MINOTAUR_RACE = "Korazh";
-const SARACEN_RACE = "Saracen";
-let albRaces = [AVALONIAN_RACE, BRITON_RACE, HALF_OGRE_RACE, HIGHLANDER_RACE, INCONNU_RACE, A_MINOTAUR_RACE, SARACEN_RACE];
-
-let avalonianClass = [ARMSMAN_CLASS, CABALIST_CLASS, CLERIC_CLASS, FRIAR_CLASS, HERETIC_CLASS, 
-					  MERCENARY_CLASS, NECROMANCER_CLASS, PALADIN_CLASS, SORCERER_CLASS, THEURGIST_CLASS, 
-					  WIZARD_CLASS];
-let britonClass = albClasses;
-let halfOgreClass = [ARMSMAN_CLASS, CABALIST_CLASS, MAULER_CLASS, MERCENARY_CLASS, SORCERER_CLASS, 
-					  THEURGIST_CLASS, WIZARD_CLASS];
-let highlanderClass = [ARMSMAN_CLASS, CLERIC_CLASS, FRIAR_CLASS, HERETIC_CLASS, INFILTRATOR_CLASS, 
-					   MERCENARY_CLASS, MINSTREL_CLASS, PALADIN_CLASS, SCOUT_CLASS];
-let inconnuClass = [ARMSMAN_CLASS, CABALIST_CLASS, HERETIC_CLASS, INFILTRATOR_CLASS, MAULER_CLASS, 
-					MERCENARY_CLASS, MINSTREL_CLASS, NECROMANCER_CLASS, REAVER_CLASS, SCOUT_CLASS, 
-					SORCERER_CLASS, WIZARD_CLASS];
-let minotauraClass = [ARMSMAN_CLASS, HERETIC_CLASS, MAULER_CLASS, MERCENARY_CLASS, REAVER_CLASS];
-let saracenClass = [ARMSMAN_CLASS, CABALIST_CLASS, HERETIC_CLASS, INFILTRATOR_CLASS, MERCENARY_CLASS, 
-					MINSTREL_CLASS, NECROMANCER_CLASS, PALADIN_CLASS, REAVER_CLASS, SCOUT_CLASS, 
-					SORCERER_CLASS];
-let albClassEleg = [avalonianClass, britonClass, halfOgreClass, highlanderClass, inconnuClass, minotauraClass, saracenClass];
-//Hiberina
-const CELT_RACE = "Celt";
-const ELF_RACE = "Elf";
-const FIRBOLG_RACE = "Firbolg";
-const LURIKEEN_RACE = "Lurikeen";
-const H_MINOTAUR_RACE = "Graoch";
-const SHAR_RACE = "Shar";
-const SYLVAN_RACE = "Sylvan";
-let hibRaces = [CELT_RACE, ELF_RACE, FIRBOLG_RACE, LURIKEEN_RACE, H_MINOTAUR_RACE, SHAR_RACE, SYLVAN_RACE];
-
-let celtClass = [ANIMIST_CLASS, BAINSHEE_CLASS, BARD_CLASS, BLADEMASTER_CLASS, CHAMPION_CLASS, 
-				 DRUID_CLASS, HERO_CLASS, MAULER_CLASS, MENTALIST_CLASS, NIGHTSHADE_CLASS, 
-				 RANGER_CLASS, VALEWALKER_CLASS, VAMPIIR_CLASS, WARDEN_CLASS];
-let elfClass = [ANIMIST_CLASS, BAINSHEE_CLASS, BLADEMASTER_CLASS, CHAMPION_CLASS, ELDRITCH_CLASS, 
-				ENCHANTER_CLASS, MENTALIST_CLASS, NIGHTSHADE_CLASS, RANGER_CLASS];
-let firbolgClass = [ANIMIST_CLASS, BARD_CLASS, BLADEMASTER_CLASS, DRUID_CLASS, HERO_CLASS, 
-					MAULER_CLASS, VALEWALKER_CLASS, WARDEN_CLASS];
-let lurikeenClass = [BAINSHEE_CLASS, BLADEMASTER_CLASS, CHAMPION_CLASS, ELDRITCH_CLASS, ENCHANTER_CLASS, 
-					 HERO_CLASS, MAULER_CLASS, MENTALIST_CLASS, NIGHTSHADE_CLASS, RANGER_CLASS, 
-					 VAMPIIR_CLASS];
-let minotaurhClass = [BLADEMASTER_CLASS, CHAMPION_CLASS, HERO_CLASS, MAULER_CLASS, VALEWALKER_CLASS, 
-					  WARDEN_CLASS];
-let sharClass = [BLADEMASTER_CLASS, CHAMPION_CLASS, HERO_CLASS, MENTALIST_CLASS, RANGER_CLASS, 
-				 VAMPIIR_CLASS, WARDEN_CLASS];
-let sylvanClass = [ANIMIST_CLASS, CHAMPION_CLASS, DRUID_CLASS, HERO_CLASS, RANGER_CLASS, 
-				   VALEWALKER_CLASS, WARDEN_CLASS];
-let hibClassEleg = [celtClass, elfClass, firbolgClass, lurikeenClass, minotaurhClass, sharClass, sylvanClass];
-//Midgaurd
-const DWARF_RACE = "Dwarf";
-const FROSTALF_RACE = "Frostalf";
-const KOBOLD_RACE = "Kobold";
-const M_MINOTAUR_RACE = "Deifrang";
-const NORSEMAN_RACE = "Norseman";
-const TROLL_RACE = "Troll";
-const VALKYN_RACE = "Valkyn";
-let midRaces = [DWARF_RACE, FROSTALF_RACE, KOBOLD_RACE, M_MINOTAUR_RACE, NORSEMAN_RACE, TROLL_RACE, VALKYN_RACE];
-
-let dwarfClass = [BERSERKER_CLASS, HEALER_CLASS, HUNTER_CLASS, RUNEMASTER_CLASS, SAVAGE_CLASS, 
-				  SHADOWBLADE_CLASS, SHAMAN_CLASS, SKALD_CLASS, THANE_CLASS, VALKYRIE_CLASS, 
-				  WARRIOR_CLASS];
-let frostalfClass = [BONEDANCER_CLASS, HEALER_CLASS, HUNTER_CLASS, RUNEMASTER_CLASS, SHADOWBLADE_CLASS, 
-					 SHAMAN_CLASS, SPIRITMASTER_CLASS, THANE_CLASS, VALKYRIE_CLASS, WARLOCK_CLASS];
-let koboldClass = [BERSERKER_CLASS, BONEDANCER_CLASS, HUNTER_CLASS, MAULER_CLASS, RUNEMASTER_CLASS, 
-				   SAVAGE_CLASS, SHADOWBLADE_CLASS, SHAMAN_CLASS, SKALD_CLASS, SPIRITMASTER_CLASS, 
-				   WARLOCK_CLASS, WARRIOR_CLASS];
-let minotaurmClass = [BERSERKER_CLASS, MAULER_CLASS, SKALD_CLASS, THANE_CLASS, WARRIOR_CLASS];
-let norsemanClass = [BERSERKER_CLASS, HEALER_CLASS, HUNTER_CLASS, MAULER_CLASS, RUNEMASTER_CLASS, 
-					 SAVAGE_CLASS, SHADOWBLADE_CLASS, SKALD_CLASS, SPIRITMASTER_CLASS, THANE_CLASS, 
-					 VALKYRIE_CLASS, WARLOCK_CLASS, WARRIOR_CLASS];
-let trollClass = [BERSERKER_CLASS, BONEDANCER_CLASS, MAULER_CLASS, SAVAGE_CLASS, SHAMAN_CLASS, 
-				  SKALD_CLASS, THANE_CLASS, WARLOCK_CLASS, WARRIOR_CLASS];
-let valkynClass = [BERSERKER_CLASS, BONEDANCER_CLASS, HUNTER_CLASS, SAVAGE_CLASS, SHADOWBLADE_CLASS, 
-				   THANE_CLASS, VALKYRIE_CLASS, WARRIOR_CLASS]; 
-let midClassEleg = [dwarfClass, frostalfClass, koboldClass, minotaurmClass, norsemanClass, trollClass, valkynClass];
 //styles
 
 let classStyles = [];
@@ -272,27 +133,27 @@ const ARMSMAN_SPEC = [[polearmSpec, crossbowSpec, twoHandedSpec, parrySpec, slas
 
 //Function adjusts available classes depending on the selected realm
 function onRealmSelect() {
-
-	changeRealmColors();
+	selectedRealm = getSelectedRealm();
+	changeRealmLogo();
 	resetAttributes();
 	drawDropDown('races');
 	fillDropDown('races');
 	drawDropDown('classes');
 	fillDropDown('classes');
 	document.getElementById('charLevel').readOnly = true;
-	document.getElementById('builder').style.display = "none";
 }
 
 //Create function to adjust available races depending on the selected realm
 function onRaceSelect() {
-	
+	getSelectedRace();
 	resetAttributePrio();
 	drawDropDown('classes');
 	fillDropDown('classes');
-	
-	setAttributes(getSelectedRace());
-	document.getElementById("charLevel").readOnly = true;
-	document.getElementById('builder').style.display = "none";
+	setAttributes();
+	setResists();
+	document.getElementById('charLevel').readOnly = true;
+	document.getElementById('selectionDetails').style.display = "block";
+	updateRaceDesc();
 }
 
 //Create function to adjust character attributes depending on class
@@ -307,40 +168,41 @@ function onClassSelect() {
 	document.getElementById('builder').style.display = "block";
 	setSpecializations(ARMSMAN_SPEC);
 	setAbilities(ARMSMAN_SPEC);
+	updateClassDesc();
 }
 
 //Function changes color for selected realm
-function changeRealmColors() {
-	let realm = getSelectedRealm();
-	if(realm == 'alb') {
-		document.getElementById('selectalb').style.color = 'red';
-		document.getElementById('selecthib').style.color = 'black';
-		document.getElementById('selectmid').style.color = 'black';
-	} else if (realm == 'hib') {
-		document.getElementById('selectalb').style.color = 'black';
-		document.getElementById('selecthib').style.color = 'green';
-		document.getElementById('selectmid').style.color = 'black';
-	} else if (realm == 'mid') {
-		document.getElementById('selectalb').style.color = 'black';
-		document.getElementById('selecthib').style.color = 'black';
-		document.getElementById('selectmid').style.color = 'blue';
+function changeRealmLogo() {
+	
+	if(selectedRealm == 'Albion') {
+		//document.getElementById('').style.color = 'red';
+		//document.getElementById('selecthib').style.color = 'black';
+		//document.getElementById('selectmid').style.color = 'black';
+	} else if (selectedRealm == 'Hibernia') {
+		//document.getElementById('selectalb').style.color = 'black';
+		//document.getElementById('selecthib').style.color = 'green';
+		//document.getElementById('selectmid').style.color = 'black';
+	} else if (selectedRealm == 'Midgard') {
+		//document.getElementById('selectalb').style.color = 'black';
+		//document.getElementById('selecthib').style.color = 'black';
+		//document.getElementById('selectmid').style.color = 'blue';
 	}
 }
 
 //Return selected realm
 function getSelectedRealm() {
 	if(document.getElementById('albRealm').checked) {
-		return 'alb';
+		return 'Albion';
 	} else if(document.getElementById('hibRealm').checked) {
-		return 'hib';
+		return 'Hibernia';
 	} else if(document.getElementById('midRealm').checked) {
-		return 'mid';
+		return 'Midgard';
 	}
 }
 
-//Return selected race
+//Assign selected race
 function getSelectedRace() {
-	return document.getElementById('races').value;
+	selectedRace = RACE_DATA.find(race => race.name == document.getElementById('races').value);
 }
 
 //Return selected class
@@ -398,59 +260,44 @@ function drawDropDown(type) {
 
 //Inserts available races and classes into drop downs depending on selected realm
 function fillDropDown(type) {
-	let realm = getSelectedRealm();
-	
+		
 	if(type == 'races') {
 	document.getElementById(type).innerHTML += `<option name="Blank" id="Blank"></option>`
-		if(realm == 'alb') {
+		if(selectedRealm == 'Albion') {
 			for(let i = 0; i < albRaces.length; i++) {
-				document.getElementById(type).innerHTML += `<option name="${albRaces[i]}" id="${albRaces[i]}">${albRaces[i]}</option>`
+				document.getElementById(type).innerHTML += `<option name="${albRaces[i].name}" id="${albRaces[i].name}">${albRaces[i].name}</option>`
 			}
-		} else if(realm == 'hib') {
+		} else if(selectedRealm == 'Hibernia') {
 			for(let i = 0; i < hibRaces.length; i++) {
-				document.getElementById(type).innerHTML += `<option name="${hibRaces[i]}" id="${hibRaces[i]}">${hibRaces[i]}</option>`
+				document.getElementById(type).innerHTML += `<option name="${hibRaces[i].name}" id="${hibRaces[i].name}">${hibRaces[i].name}</option>`
 			}
-		} else if(realm == 'mid') {
+		} else if(selectedRealm == 'Midgard') {
 			for(let i = 0; i < midRaces.length; i++) {
-				document.getElementById(type).innerHTML += `<option name="${midRaces[i]}" id="${midRaces[i]}">${midRaces[i]}</option>`
+				document.getElementById(type).innerHTML += `<option name="${midRaces[i].name}" id="${midRaces[i].name}">${midRaces[i].name}</option>`
 			}
 		}
 	}
 	
 	if(type == 'classes') {
-		
-		if(getSelectedRace() == "") {
+		if(selectedRace == "") {
 			document.getElementById('classSelector').innerHTML = 'Select your Race';
 		} else {
 			document.getElementById(type).innerHTML = `<option name="Blank" id="Blank"></option>`;
-		}
-	
-		if(realm == 'alb') {
-			for(let i = 0; i < albRaces.length; i++) {
-				if(document.getElementById('races').value === albRaces[i]) {
-					for(let j = 0; j < albClassEleg[i].length; j++) {	
-						document.getElementById(type).innerHTML += `<option name="${albClassEleg[i][j]}" id="${albClassEleg[i][j]}">${albClassEleg[i][j]}</option>`
-					}
-				}
-			}
-		} else if(realm == 'hib') {
-			for(let i = 0; i < hibRaces.length; i++) {
-				if(document.getElementById('races').value === hibRaces[i]) {
-					for(let j = 0; j < hibClassEleg[i].length; j++) {	
-						document.getElementById(type).innerHTML += `<option name="${hibClassEleg[i][j]}" id="${hibClassEleg[i][j]}">${hibClassEleg[i][j]}</option>`
-					}
-				}
-			}
-		} else if(realm == 'mid') {
-			for(let i = 0; i < midRaces.length; i++) {
-				if(document.getElementById('races').value === midRaces[i]) {
-					for(let j = 0; j < midClassEleg[i].length; j++) {	
-						document.getElementById(type).innerHTML += `<option name="${midClassEleg[i][j]}" id="${midClassEleg[i][j]}">${midClassEleg[i][j]}</option>`
-					}
-				}
+			for(let i = 0; i < selectedRace.classes.length; i++) {
+				document.getElementById(type).innerHTML += `<option name="${selectedRace.classes[i]}" id="${selectedRace.classes[i]}">${selectedRace.classes[i]}</option>`;
 			}
 		}
 	}
+}
+
+function updateRaceDesc() {
+	document.getElementById('raceDesc').innerHTML = `<span id="raceName">${selectedRace.name}</span><br />`;
+	document.getElementById('raceDesc').innerHTML += `<span id="raceDescription">${selectedRace.desc}</span>`;
+}
+
+function updateClassDesc() {
+	document.getElementById('classDesc').innerHTML = `<span id="raceName">${CLASS_DATA[0].name}</span><br />`;
+	document.getElementById('classDesc').innerHTML += `<span id="raceDescription">${CLASS_DATA[0].description}</span>`;
 }
 
 function updateAttributeDesc() {
@@ -630,243 +477,15 @@ function setAttributePrio(attOne, attTwo, attThree) {
 }
 
 //Assigns values to character attributes depending on selected race
-function setAttributes(selectedRace) {
-	
-	switch(selectedRace)
-	{
-		case AVALONIAN_RACE:
-			str = 45;
-			con = 45;
-			dex = 60;
-			qui = 70;
-			intel = 80;
-			emp = 60;
-			pie = 60;
-			cha = 60;
-			setResists(0, 2, 3, 0, 0, 0, 0, 5, 0);
-			break;
-		case BRITON_RACE:
-			str = 60;
-			con = 60;
-			dex = 60;
-			qui = 60;
-			intel = 60;
-			emp = 60;
-			pie = 60;
-			cha = 60;
-			setResists(0, 2, 3, 0, 0, 0, 0, 5, 0);
-			break;
-		case HALF_OGRE_RACE:
-			str = 90;
-			con = 70;
-			dex = 40;
-			qui = 40;
-			intel = 60;
-			emp = 60;
-			pie = 60;
-			cha = 60;
-			setResists(2, 0, 3, 0, 0, 0, 0, 0, 5);
-			break;
-		case HIGHLANDER_RACE:
-			str = 70;
-			con = 70;
-			dex = 50;
-			qui = 50;
-			intel = 60;
-			emp = 60;
-			pie = 60;
-			cha = 60;
-			setResists(0, 3, 2, 0, 5, 0, 0, 0, 0);
-			break;
-		case INCONNU_RACE:
-			str = 50;
-			con = 60;
-			dex = 70;
-			qui = 50;
-			intel = 70;
-			emp = 60;
-			pie = 60;
-			cha = 60;
-			setResists(3, 2, 0, 5, 0, 0, 0, 5, 0);
-			break;
-		case A_MINOTAUR_RACE:
-			str = 80;
-			con = 70;
-			dex = 50;
-			qui = 40;
-			intel = 60;
-			emp = 60;
-			pie = 60;
-			cha = 60;
-			setResists(0, 4, 0, 3, 3, 0, 0, 0, 0);
-			break;
-		case SARACEN_RACE:
-			str = 50;
-			con = 50;
-			dex = 80;
-			qui = 60;
-			intel = 60;
-			emp = 60;
-			pie = 60;
-			cha = 60;
-			setResists(3, 0, 2, 5, 0, 0, 0, 0, 0);
-			break;
-		case CELT_RACE:
-			str = 60;
-			con = 60;
-			dex = 60;
-			qui = 60;
-			intel = 60;
-			emp = 60;
-			pie = 60;
-			cha = 60;
-			setResists(0, 2, 3, 0, 0, 0, 0, 5, 0);
-			break;
-		case ELF_RACE:
-			str = 40;
-			con = 40;
-			dex = 75;
-			qui = 75;
-			intel = 70;
-			emp = 60;
-			pie = 60;
-			cha = 60;
-			setResists(3, 0, 2, 0, 0, 0, 0, 5, 0);
-			break;
-		case FIRBOLG_RACE:
-			str = 90;
-			con = 60;
-			dex = 40;
-			qui = 40;
-			intel = 60;
-			emp = 60;
-			pie = 70;
-			cha = 60;
-			setResists(0, 3, 2, 5, 0, 0, 0, 0, 0);
-			break;
-		case LURIKEEN_RACE:
-			str = 40;
-			con = 40;
-			dex = 80;
-			qui = 80;
-			intel = 60;
-			emp = 60;
-			pie = 60;
-			cha = 60;
-			setResists(0, 5, 0, 0, 0, 0, 5, 0, 0);
-			break;
-		case H_MINOTAUR_RACE:
-			str = 80;
-			con = 70;
-			dex = 50;
-			qui = 40;
-			intel = 60;
-			emp = 60;
-			pie = 60;
-			cha = 60;
-			setResists(0, 4, 0, 3, 3, 0, 0, 0, 0);
-			break;
-		case SHAR_RACE:
-			str = 60;
-			con = 80;
-			dex = 50;
-			qui = 50;
-			intel = 60;
-			emp = 60;
-			pie = 60;
-			cha = 60;
-			setResists(0, 5, 0, 0, 0, 0, 5, 0, 0);
-			break;
-		case SYLVAN_RACE:
-			str = 70;
-			con = 60;
-			dex = 55;
-			qui = 45;
-			intel = 70;
-			emp = 60;
-			pie = 60;
-			cha = 60;
-			setResists(2, 3, 0, 0, 0, 5, 5, 0, 0);
-			break;
-		case DWARF_RACE:
-			str = 60;
-			con = 80;
-			dex = 50;
-			qui = 50;
-			intel = 60;
-			emp = 60;
-			pie = 60;
-			cha = 60;
-			setResists(3, 0, 2, 0, 0, 0, 0, 0, 5);
-			break;
-		case FROSTALF_RACE:
-			str = 55;
-			con = 55;
-			dex = 55;
-			qui = 60;
-			intel = 60;
-			emp = 75;
-			pie = 60;
-			cha = 60;
-			setResists(3, 0, 2, 0, 0, 0, 0, 5, 0);
-			break;
-		case KOBOLD_RACE:
-			str = 50;
-			con = 50;
-			dex = 70;
-			qui = 70;
-			intel = 60;
-			emp = 60;
-			pie = 60;
-			cha = 60;
-			setResists(0, 5, 0, 0, 0, 0, 5, 0, 0);
-			break;
-		case M_MINOTAUR_RACE:
-			str = 80;
-			con = 70;
-			dex = 50;
-			qui = 40;
-			intel = 60;
-			emp = 60;
-			pie = 60;
-			cha = 60;
-			setResists(0, 4, 0, 3, 3, 0, 0, 0, 0);
-			break;
-		case NORSEMAN_RACE:
-			str = 70;
-			con = 70;
-			dex = 50;
-			qui = 50;
-			intel = 60;
-			emp = 60;
-			pie = 60;
-			cha = 60;
-			setResists(0, 2, 3, 0, 5, 0, 0, 0, 0);
-			break;
-		case TROLL_RACE:
-			str = 100;
-			con = 70;
-			dex = 35;
-			qui = 35;
-			intel = 60;
-			emp = 60;
-			pie = 60;
-			cha = 60;
-			setResists(2, 0, 3, 0, 0, 5, 0, 0, 0);
-			break;
-		case VALKYN_RACE:
-			str = 55;
-			con = 45;
-			dex = 65;
-			qui = 75;
-			intel = 60;
-			emp = 60;
-			pie = 60;
-			cha = 60;
-			setResists(2, 0, 3, 0, 5, 0, 0, 0, 5);
-			break;
-	}
-	
+function setAttributes() {
+	str = selectedRace.attributes[0].value;
+	con = selectedRace.attributes[1].value;
+	dex = selectedRace.attributes[2].value;
+	qui = selectedRace.attributes[3].value;
+	intel = selectedRace.attributes[4].value;
+	emp = selectedRace.attributes[5].value;
+	pie = selectedRace.attributes[6].value;
+	cha = selectedRace.attributes[7].value;	
 	document.getElementById('strAttribute').value = str;
 	document.getElementById('conAttribute').value = con;
 	document.getElementById('dexAttribute').value = dex;
@@ -1275,17 +894,17 @@ function changeAttributeBonus() {
 }
 
 //Assigns values to character resistances depending on what is passed
-function setResists(th, cr, sl, he, co, ma, en, sp, bo) {
+function setResists() {
 	
-	thrustRes = th;
-	crushRes = cr;
-	slashRes = sl;
-	heatRes = he;
-	coldRes = co;
-	matterRes = ma;
-	energyRes = en;
-	spiritRes = sp;
-	bodyRes = bo;
+	thrustRes = selectedRace.resists[0].value;
+	crushRes = selectedRace.resists[1].value;
+	slashRes = selectedRace.resists[2].value;
+	heatRes = selectedRace.resists[3].value;
+	coldRes = selectedRace.resists[4].value;
+	matterRes = selectedRace.resists[5].value;
+	energyRes = selectedRace.resists[6].value;
+	spiritRes = selectedRace.resists[7].value;
+	bodyRes = selectedRace.resists[8].value;
 	
 	document.getElementById('thrustRes').value = `+${thrustRes}%`;
 	document.getElementById('crushRes').value = `+${crushRes}%`;
