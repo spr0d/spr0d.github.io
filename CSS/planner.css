@@ -182,6 +182,7 @@ select {
 	border-color: #4D4C4A;
 	border-width: 1px;
 	border-radius: 5px;
+	font-size: 12px;
 }
 .button:hover {
 	background-image: radial-gradient(ellipse at top, #B28500, #4A0F00);
