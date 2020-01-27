@@ -15,6 +15,7 @@
 </head>
 <body>
 
+<!-- Modal for adjusting bonus attribute points -->
 <div id="attributeModal" class="modal">
 	<div class="modal-content">
 		<table>
@@ -41,6 +42,53 @@
 		<label class="buttonborder" style="margin-left: 80px;"><button type="button" name="reset" id="resetAttributeButton" class="button attcontrols" onclick="resetAttributeBonus()">Reset</button></label>
 		<label class="buttonborder" style="margin-left: 35px;"><button type="button" name="optimize" id="optimizeAttributeButton" class="button attcontrols" onclick="setOptimizedAttributes(getSelectedClass())">Optimize</button></label>
 		<label class="buttonborder" style="margin-left: 35px;"><button type="button" name="close" id="close" class="button attcontrols" onclick="closeModal()">Close</button></label>
+	</div>
+</div>
+
+<!-- Modal for spending specialization points -->
+<div id="trainerModal" class="trainer">
+	<div class="trainer-content">
+		<table align="center" style="width:116%; margin-left:-28px;">
+			<caption style="text-align: center; margin-top: -25px; margin-bottom: 5px;">
+				Training
+			</caption>
+			<tr>
+				<td id="pointDisp" style="height: 100px; width: 200px; border-radius: 7px 7px 0px 0px">
+					<span id="specPointDisp">
+						<label class="pointTitle">Specialization Points</label><br />
+						<label id="specPointsAvailable" class="pointDisp">Available</label><label id="totalSpecAvailable" class="pointDispNum">0</label><br />
+						<label id="specPointsNeeded" class="pointDisp">Needed</label><label id="totalSpecNeeded" class="pointDispNum">0</label><br />
+						<label id="specPointsRemaining" class="pointDisp">Remaining</lable><label id="totalSpecRemaining" class="pointDispNum">0</label><br />
+					</span>
+					<span id="realmPointDisp">
+						<label class="pointTitle">Realm Points</label><br />
+						<label id="realmPointsAvailable" class="pointDisp">Available</label><label id="totalRealmAvailable" class="pointDispNum">0</label><br />
+						<label id="realmPointsNeeded" class="pointDisp">Needed</label><label id="totalRealmNeeded" class="pointDispNum">0</label><br />
+						<label id="realmPointsRemaining" class="pointDisp">Remaining</lable><label id="totalRealmRemaining" class="pointDispNum">0</label><br />
+					</span>
+					<span id="minLevelWrapper" style="display: inline-block; position: absolute; margin-top: 35px; margin-left: 150px; font-weight: bolder;"><label id="minLevelLabel">Minimum Level</label><label id="minLevelDisp" style="color: lightgray; margin-left: 25px; font-weight: bolder;">1</label></span>
+				</td>
+			</tr>
+			<tr>
+				<td id="trainingTabs" style="text-align: left; background:none; border:0px;">
+					<span id="tabWrapper" style="display:inline-block; padding-top:5px; font-weight:light;"><label class="buttonborder2"><button id="specializationsTab" class="button">Specializations</button></label><label class="buttonborder2"><button id="abilitySummaryTab" class="button">Ability Summary</button></label><label class="buttonborder2"><button id="realmAbilitiesTab" class="button">Realm Abilities</button></label></span>
+				</td>
+			</tr>
+			<tr>
+				<td style="height:400px;">
+					<span id="specializationAdjusters"></span>
+					<hr style="display: inline-block; margin-top:180px; margin-left:10px; width:370px;" /><br />
+					<label id="newAbilityTitle" style="margin-left: 13px; font-weight: bolder;">New Styles and Skills</label>
+					<span id="newAbilityDisp"></span>
+				</td>
+			</tr>
+			<tr>
+				<td id="trainingControls" style="text-align: left; background:none; border:0px; text-align: center; text-justify: inter-word;">
+					<span id="topButtonWrapper" style="display: inline-block; margin-top: 5px; margin-left:-205px; position: absolute;"><label class="buttonbordertrainer"><button id="respecAll" class="button buttonTop">/RESPEC ALL</button></label><label class="buttonbordertrainer"><button id="respecRealm" class="button buttonTop">/RESPEC REALM</button></label><label class="buttonbordertrainer"><button id="respecBuy" class="button buttonTop">/RESPEC BUY</button></label></span><br />
+					<span id="bottonButtonWrapper" style="display: inline-block; margin-top: 20px; margin-left:-5px;"><label class="buttonbordertrainer"><button id="trainConfirm" class="button buttonBottom" style="width:85px;">TRAIN</button></label><label class="buttonbordertrainer" style="margin-left:20px; margin-right:10px;"><button id="trainReset" class="button buttonBottom">RESET</button></label><label class="buttonbordertrainer"><button id="trainCancel" class="button buttonBottom" style="width:85px;" onclick="closeTrainer()">CANCEL</button></label></span>
+				</td>
+			</tr>
+		</table>
 	</div>
 </div>
 
@@ -127,7 +175,7 @@
 			Class Rank: <!-- title based on class's level? --><br />
 			Champion Title: <!-- -->
 			</div>
-			<label class="buttonborder" style="margin-left: 65px;"><button type="button" name="adjustAttributes" id="adjustAttributes" class="button" onclick="openModal()">Adjust Attributes</button></label>
+			<label class="buttonborder" style="margin-left: 65px;"><button type="button" name="adjustAttributes" id="adjustAttributes" class="button" onclick="openModal()">ADJUST ATTRIBUTES</button></label>
 		</td>
 		<td class="table-align"><!-- Inventory page -->
 			<div class="paperdoll"></div>
@@ -153,7 +201,7 @@
 			<div class="abbox">
 				<!-- Insert Styles here -->
 			</div>
-			<label class="buttonborder"><button type="button" name="train" id="train" class="button">Train</button></label>
+			<label class="buttonborder"><button type="button" name="train" id="train" class="button" onclick="openTrainer()">TRAIN</button></label>
 			<!-- Selected Class trained styles -->
 		</td>
 		<td class="table-align"><!-- Magic Spells page -->
@@ -161,7 +209,7 @@
 			<div class="abbox">
 			<!-- Selected Class spells, both naturally learned and trained -->
 			</div>
-			<label class="buttonborder"><button type="button" name="train" id="train" class="button">Train</button></label>
+			<label class="buttonborder"><button type="button" name="train" id="train" class="button" onclick="openTrainer()">TRAIN</button></label>
 		</td>
 		<!-- <td class="table-align"> "Group page" Options for class and race here -->
 		<!-- </td> -->
