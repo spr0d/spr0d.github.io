@@ -236,6 +236,14 @@ function closeModal() {
 	
 }
 
+function openTrainer() {
+	document.getElementById("trainerModal").style.display = "block";	
+}
+
+function closeTrainer() {
+	document.getElementById("trainerModal").style.display = "none";
+}
+
 function fillAttributeModal() {
 	document.getElementById('strengthAtt').innerHTML = str + strAttBonus;
 	document.getElementById('constitutionAtt').innerHTML = con + conAttBonus;
