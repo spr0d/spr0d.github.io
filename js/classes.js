@@ -25,7 +25,7 @@ const CLASS_DATA = [
 						"shield" : SHIELD_ABILITY_DATA[2]
 					  },
 		"combat" : ["Polearm", "Two Handed", "Slash", "Crush", "Thrust", "Shield"],
-		"magic" : null//Crossbow?
+		"magic" : ["Crossbow"]
 	},
 	{
 		"name" : "Cabalist",
@@ -644,7 +644,7 @@ const CLASS_DATA = [
 		"magic" : ["Enchantment", "Way of the Light", "Way of Mana", "Empowering", "Bedazzling", "Enchanting"]
 	},
 	{
-		"name" : "•	Hero",
+		"name" : "Hero",
 		"description" : "The basic fighting class of the Realm. Can use almost all weapons and armor in Hibernia. Not flashy, but effective and an essential component of any well-rounded group.",
 		"attributeBonuses" : [
 			{
@@ -670,6 +670,594 @@ const CLASS_DATA = [
 					  },
 		"combat" : ["Blades", "Blunt", "Piercing", "Shield", "Celtic Spear", "Large Weapons"],
 		"magic" : null
+	},
+	{
+		"name" : "Mentalist",
+		"description" : "A combination spellcasting class that relies on mind control and power. Mentalist have the ability both to damage their enemies and heal their friends.",
+		"attributeBonuses" : [
+			{
+				"name": "Dexterity",
+				"value": 15
+			},
+			{
+				"name": "Quickness",
+				"value": 0
+			},
+			{
+				"name": "Intelligence",
+				"value": 10
+			}
+		],
+		"pointModifier" : 1.0,
+		"specializations" : ["Mana Magic", "Light Magic", "Mentalism"],
+		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[1]],
+		"equipment" : {
+						"weapons" : [WEAPONRY_DATA[0]],
+						"armor" : ARMOR_ABILITY_DATA[0],
+						"shield" : null
+					  },
+		"combat" : null,
+		"magic" : ["Mentalism", "Way of Light", "Way of Mana", "Holism", "Illusions", "Mind Mastery"]
+	},
+	{
+		"name" : "Nightshade",
+		"description" : "A sneaky assassin that has the ability to move about unseen, attack using deadly backstab combat styles, as well as limited magical ability.",
+		"attributeBonuses" : [
+			{
+				"name": "Strength",
+				"value": 10
+			},
+			{
+				"name": "Dexterity",
+				"value": 15
+			},
+			{
+				"name": "Quickness",
+				"value": 0
+			}
+		],
+		"pointModifier" : 2.8,
+		"specializations" : ["Stealth", "Piercing", "Blades", "Envenom", "Critical Strike", "Celtic Dual"],
+		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4], ABILITY_DATA[3]],
+		"equipment" : {
+						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[10], WEAPONRY_DATA[12]],
+						"armor" : ARMOR_ABILITY_DATA[1],
+						"shield" : SHIELD_ABILITY_DATA[0]
+					  },
+		"combat" : ["Piercing", "Blades", "Critical Strike", "Celtic Dual"],
+		"magic" : ["Stealth", "Envenom"]
+	},
+	{
+		"name" : "Ranger",
+		"description" : "The Archer of Hibernia, the ranger also gains some magical spells, as well as the ability to wield weapons in both hands.",
+		"attributeBonuses" : [
+			{
+				"name": "Strength",
+				"value": 10
+			},
+			{
+				"name": "Dexterity",
+				"value": 15
+			},
+			{
+				"name": "Quickness",
+				"value": 0
+			}
+		],
+		"pointModifier" : 2.0,
+		"specializations" : ["Stealth", "Piercing", "Blades", "Celtic Dual", "Archery"],
+		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4], ABILITY_DATA[2]],
+		"equipment" : {
+						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[10], WEAPONRY_DATA[12], WEAPONRY_DATA[9]],
+						"armor" : ARMOR_ABILITY_DATA[5],
+						"shield" : SHIELD_ABILITY_DATA[0]
+					  },
+		"combat" : ["Piercing", "Blades", "Celtic Dual"],
+		"magic" : ["Archery","Stealth"]
+	},
+	{
+		"name" : "Valewalker",
+		"description" : "Valewalkers are cloth-wearing Hibernian mages who are given the ability to wield a large Scythe as a weapon. They are the strong arm of the Sylvan community – they are the primary fighters of this natural magic-using people.",
+		"attributeBonuses" : [
+			{
+				"name": "Strength",
+				"value": 10
+			},
+			{
+				"name": "Constitution",
+				"value": 10
+			},
+			{
+				"name": "Dexterity",
+				"value": 10
+			}
+		],
+		"pointModifier" : 1.5,
+		"specializations" : ["Scythe", "Parry", "Arboreal Path"],
+		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4], ABILITY_DATA[2]],
+		"equipment" : {
+						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[15]],
+						"armor" : ARMOR_ABILITY_DATA[0],
+						"shield" : null
+					  },
+		"combat" : ["Scythe"],
+		"magic" : ["Arboreal Path", "Valewalking"]
+	},
+	{
+		"name" : "Vampiir",
+		"description" : "The Vampiir class is a fighter who wields a one-handed piercing weapon in its right hand. While in melee combat, it is able to cast Vampiir magic with the left hand.",
+		"attributeBonuses" : [
+			{
+				"name": "Strength",
+				"value": 10
+			},
+			{
+				"name": "Constitution",
+				"value": 10
+			},
+			{
+				"name": "Dexterity",
+				"value": 10
+			}
+		],
+		"pointModifier" : 1.5,
+		"specializations" : ["Shadow Mastery", "Vampiiric EMbrace", "Dementia", "Piercing"],
+		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4] /*, Leeching Bolt spell*/],
+		"equipment" : {
+						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[12]],
+						"armor" : ARMOR_ABILITY_DATA[1],
+						"shield" : null
+					  },
+		"combat" : ["Piercing"],
+		"magic" : ["Shadow Mastery", "Vampiiric Embrace", "Dementia"]
+	},
+	{
+		"name" : "Warden",
+		"description" : "The Hibernian protectors of nature, Wardens are hybrid healers/fighters. They have the ability to specialize in some weapons as well as cast healing, defensive, and enhancing spells on their friends.",
+		"attributeBonuses" : [
+			{
+				"name": "Constitution",
+				"value": 0
+			},
+			{
+				"name": "Dexterity",
+				"value": 15
+			},
+			{
+				"name": "Empathy",
+				"value": 10
+			}
+		],
+		"pointModifier" : 1.8,
+		"specializations" : ["Nurture", "Regrowth", "Parry", "Blades", "Blunt", "Shield"],
+		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4]],
+		"equipment" : {
+						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[8], WEAPONRY_DATA[11], WEAPONRY_DATA[12]],
+						"armor" : ARMOR_ABILITY_DATA[6],
+						"shield" : SHIELD_ABILITY_DATA[2]
+					  },
+		"combat" : ["Blades", "Blunt", "Shield"],
+		"magic" : ["Regrowth", "Nurture"]
+	},
+	{
+		"name" : "Berserker",
+		"description" : "Patrons of Modi, the Norse god of battle-rage, Berserkers are light fighters who eschew heavy armor and rely on wielding two weapons at once, as well as positional combat styles.",
+		"attributeBonuses" : [
+			{
+				"name": "Strength",
+				"value": 10
+			},
+			{
+				"name": "Constitution",
+				"value": 10
+			},
+			{
+				"name": "Dexterity",
+				"value": 10
+			}
+		],
+		"pointModifier" : 2.0,
+		"specializations" : ["Sword", "Axe", "Parry", "Hammer", "Left Axe"],
+		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4], ABILITY_DATA[2], ABILITY_DATA[5]],
+		"equipment" : {
+						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[16], WEAPONRY_DATA[17], WEAPONRY_DATA[18], WEAPONRY_DATA[20]],
+						"armor" : ARMOR_ABILITY_DATA[2],
+						"shield" : SHIELD_ABILITY_DATA[0]
+					  },
+		"combat" : ["Sword", "Axe", "Hammer", "Left Axe"],
+		"magic" : null
+	},
+	{
+		"name" : "Bonedancer",
+		"description" : "The Bonedancer is a Midgard pet caster who follows the Valkyn ancient pre-Norse gold Bogdar. The heart of this new class is that they are a pet caster who can summon more than one pet at a time, at higher levels. However, they control only one pet directly, the commander – all the other minions are controlled by the commander.",
+		"attributeBonuses" : [
+			{
+				"name": "Dexterity",
+				"value": 15
+			},
+			{
+				"name": "Quickness",
+				"value": 0
+			},
+			{
+				"name": "Piety",
+				"value": 10
+			}
+		],
+		"pointModifier" : 1.0,
+		"specializations" : ["Darkness", "Suppression", "Bone Army"],
+		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[1]],
+		"equipment" : {
+						"weapons" : [WEAPONRY_DATA[0]],
+						"armor" : ARMOR_ABILITY_DATA[0],
+						"shield" : null
+					  },
+		"combat" : null,
+		"magic" : ["Bone Army", "Darkness", "Suppression", "Bone Darkness", "Bone Protection", "Bone Legion"]
+	},
+	{
+		"name" : "Healer",
+		"description" : "Followers of Eir, the Norse goddess of healing. Healers aid their comrades in battle with a variety of healing and buffing magic as well as powerful crowd-control spells.",
+		"attributeBonuses" : [
+			{
+				"name": "Constitution",
+				"value": 0
+			},
+			{
+				"name": "Dexterity",
+				"value": 15
+			},
+			{
+				"name": "Piety",
+				"value": 10
+			}
+		],
+		"pointModifier" : 1.0,
+		"specializations" : ["Mending", "Augmentation", "Pacification"],
+		"abilities" : [ABILITY_DATA[0]],
+		"equipment" : {
+						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[18]],
+						"armor" : ARMOR_ABILITY_DATA[3],
+						"shield" : SHIELD_ABILITY_DATA[0]
+					  },
+		"combat" : null,
+		"magic" : ["Mending", "Augmentation", "Pacification"]
+	},
+	{
+		"name" : "Hunter",
+		"description" : "The archer of Midgard, Hunters worship Skadi, the Norse goddess of the Hunt. They have ranged combat skills, as well as the ability to hide, and even charm animals to do their bidding.",
+		"attributeBonuses" : [
+			{
+				"name": "Strength",
+				"value": 10
+			},
+			{
+				"name": "Dexterity",
+				"value": 15
+			},
+			{
+				"name": "Quickness",
+				"value": 0
+			}
+		],
+		"pointModifier" : 2.0,
+		"specializations" : ["Sword", "Stealth", "Spear", "Beastcraft", "Archery"],
+		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[2], ABILITY_DATA[4]],
+		"equipment" : {
+						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[16], WEAPONRY_DATA[22]],
+						"armor" : ARMOR_ABILITY_DATA[3],
+						"shield" : SHIELD_ABILITY_DATA[0]
+					  },
+		"combat" : ["Sword", "Spear"],
+		"magic" : ["Beastcraft", "Archery", "Stealth"]
+	},
+	{
+		"name" : "Runemaster",
+		"description" : "Worshippers of Odin, the arch-god of the Norse pantheon, Runemasters use the mystical knowledge of Runes to craft deadly magic spells that provide offensive firepower.",
+		"attributeBonuses" : [
+			{
+				"name": "Dexterity",
+				"value": 15
+			},
+			{
+				"name": "Quickness",
+				"value": 0
+			},
+			{
+				"name": "Piety",
+				"value": 10
+			}
+		],
+		"pointModifier" : 1.0,
+		"specializations" : ["Darkness", "Suppression", "Runecarving"],
+		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[1]],
+		"equipment" : {
+						"weapons" : [WEAPONRY_DATA[0]],
+						"armor" : ARMOR_ABILITY_DATA[0],
+						"shield" : null
+					  },
+		"combat" : null,
+		"magic" : ["Runecarving", "Darkness", "Suppression", "Runes of Darkness", "Runes of Suppression", "Runes of Destruction"]
+	},
+	{
+		"name" : "Savage",
+		"description" : "The Savage is a studded-armor wearing fighter who disdains normal weapons in favor of hand-to-hand combat. Savages aren’t interested in mastering the art of complicated weapons – instead they affix simple sharp or blunt weapons to their hands and swing away.",
+		"attributeBonuses" : [
+			{
+				"name": "Strength",
+				"value": 10
+			},
+			{
+				"name": "Constitution",
+				"value": 10
+			},
+			{
+				"name": "Dexterity",
+				"value": 10
+			}
+		],
+		"pointModifier" : 1.5,
+		"specializations" : ["Sword", "Axe", "Parry", "Hammer", "Savagery", "Hand to Hand"],
+		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[2], ABILITY_DATA[4]],
+		"equipment" : {
+						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[16], WEAPONRY_DATA[18], WEAPONRY_DATA[17], WEAPONRY_DATA[21]],
+						"armor" : ARMOR_ABILITY_DATA[2],
+						"shield" : null
+					  },
+		"combat" : ["Sword", "Axe", "Hammer", "Hand to Hand"],
+		"magic" : ["Savagery"]
+	},
+	{
+		"name" : "Shadowblade",
+		"description" : "A sneaky class specializing in devastating hidden attacks, as well as the ability to wield two weapons at once, Shadowblades are patrons of Loki, the Norse trickster god.",
+		"attributeBonuses" : [
+			{
+				"name": "Strength",
+				"value": 10
+			},
+			{
+				"name": "Dexterity",
+				"value": 15
+			},
+			{
+				"name": "Quickness",
+				"value": 0
+			}
+		],
+		"pointModifier" : 2.8,
+		"specializations" : ["Sword", "Stealth", "Left Axe", "Axe", "Critical Strike", "Envenom"],
+		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[3], ABILITY_DATA[4]],
+		"equipment" : {
+						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[16], WEAPONRY_DATA[19], WEAPONRY_DATA[17], WEAPONRY_DATA[20]],
+						"armor" : ARMOR_ABILITY_DATA[1],
+						"shield" : SHIELD_ABILITY_DATA[0]
+					  },
+		"combat" : ["Sword", "Left Axe", "Axe", "Critical Strike"],
+		"magic" : ["Envenom", "Stealth"]
+	},
+	{
+		"name" : "Shaman",
+		"description" : "Patrons of Ymir, the ancient god whose body comprises the world of Midgard, Shaman are Trollish and Kobold tribal spellcasters who specialize in a variety of healing and combat magic.",
+		"attributeBonuses" : [
+			{
+				"name": "Constitution",
+				"value": 0
+			},
+			{
+				"name": "Dexterity",
+				"value": 15
+			},
+			{
+				"name": "Piety",
+				"value": 10
+			}
+		],
+		"pointModifier" : 1.0,
+		"specializations" : ["Mending", "Augmentation", "Cave Magic"],
+		"abilities" : [ABILITY_DATA[0]],
+		"equipment" : {
+						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[18]],
+						"armor" : ARMOR_ABILITY_DATA[3],
+						"shield" : SHIELD_ABILITY_DATA[0]
+					  },
+		"combat" : null,
+		"magic" : ["Mending", "Augmentation", "Cave Magic"]
+	},
+	{
+		"name" : "Skald",
+		"description" : "Followers of Bragi, the Norse god of poetry and song, Skalds are a fighting class that utilize their musical abilities to enhance the battle prowess of their friends, and to sooth their allies after the battle is done.",
+		"attributeBonuses" : [
+			{
+				"name": "Strength",
+				"value": 10
+			},
+			{
+				"name": "Constitution",
+				"value": 10
+			},
+			{
+				"name": "Charisma",
+				"value": 10
+			}
+		],
+		"pointModifier" : 1.5,
+		"specializations" : ["Sword", "Axe", "Parry", "Hammer", "Battlesongs"],
+		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4]],
+		"equipment" : {
+						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[16], WEAPONRY_DATA[17], WEAPONRY_DATA[18]],
+						"armor" : ARMOR_ABILITY_DATA[3],
+						"shield" : SHIELD_ABILITY_DATA[2]
+					  },
+		"combat" : ["Sword", "Axe", "Hammer"],
+		"magic" : ["Battlesongs"]
+	},
+	{
+		"name" : "Spiritmaster",
+		"description" : "A spellcasting class that receives aid from Hel, queen of the Norse underworld. Spiritmasters are given the ability to summon and control undead Norse spirits to aid them in battle.",
+		"attributeBonuses" : [
+			{
+				"name": "Dexterity",
+				"value": 15
+			},
+			{
+				"name": "Quickness",
+				"value": 0
+			},
+			{
+				"name": "Piety",
+				"value": 10
+			}
+		],
+		"pointModifier" : 1.0,
+		"specializations" : ["Darkness", "Suppression", "Summoning"],
+		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[1]],
+		"equipment" : {
+						"weapons" : [WEAPONRY_DATA[0]],
+						"armor" : ARMOR_ABILITY_DATA[0],
+						"shield" : null
+					  },
+		"combat" : null,
+		"magic" : ["Summoning", "Darkness", "Suppression", "Spirit Dimming", "Spirit Suppression", "Spirit Manipulation"]
+	},
+	{
+		"name" : "Thane",
+		"description" : "Worshippers of Thor, the Norse god of thunder, lightning, and weather, Thanes are a fighting class that is also given some ability to cast offensive spells.",
+		"attributeBonuses" : [
+			{
+				"name": "Strength",
+				"value": 10
+			},
+			{
+				"name": "Constitution",
+				"value": 10
+			},
+			{
+				"name": "Piety",
+				"value": 10
+			}
+		],
+		"pointModifier" : 2.0,
+		"specializations" : ["Sword", "Axe", "Parry", "Hammer", "Shield", "Stormcalling"],
+		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4], ABILITY_DATA[6]],
+		"equipment" : {
+						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[16], WEAPONRY_DATA[17], WEAPONRY_DATA[18]],
+						"armor" : ARMOR_ABILITY_DATA[3],
+						"shield" : SHIELD_ABILITY_DATA[2]
+					  },
+		"combat" : ["Sword", "Axe", "Hammer", "Shield"],
+		"magic" : ["Stormcalling"]
+	},
+	{
+		"name" : "Valkyrie",
+		"description" : "Valkyries are trained to fight using both melee and magic to damage their enemies. They can use swords, shields and spears, as they have unique combat styles available in each line. Their magic line, Odin’s Will, primarily uses cone area of effect spells.",
+		"attributeBonuses" : [
+			{
+				"name": "Strength",
+				"value": 10
+			},
+			{
+				"name": "Constitution",
+				"value": 10
+			},
+			{
+				"name": "Dexterity",
+				"value": 10
+			}
+		],
+		"pointModifier" : 2.0,
+		"specializations" : ["Sword", "Parry", "Shield", "Odin's Will", "Spear", "Mending"],
+		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4]],
+		"equipment" : {
+						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[16], WEAPONRY_DATA[22]],
+						"armor" : ARMOR_ABILITY_DATA[3],
+						"shield" : SHIELD_ABILITY_DATA[2]
+					  },
+		"combat" : ["Sword", "Shield", "Spear"],
+		"magic" : ["Mending", "Odin's Will"]
+	},
+	{
+		"name" : "Warlock",
+		"description" : "Originating from a cult that lives underground in caves beneath the Realm of Midgard, Warlocks are cloth-wearing worshippers of Hel who have mastered the art of spell weaving. They have three types of spells: Primary spells (Cursing Spec), Secondary spells (Hexing Spec), and Utility spells (witchcraft).",
+		"attributeBonuses" : [
+			{
+				"name": "Constitution",
+				"value": 10
+			},
+			{
+				"name": "Dexterity",
+				"value": 0
+			},
+			{
+				"name": "Piety",
+				"value": 15
+			}
+		],
+		"pointModifier" : 1.0,
+		"specializations" : ["Witchcraft", "Cursing", "Hexing"],
+		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[1]],
+		"equipment" : {
+						"weapons" : [WEAPONRY_DATA[0]],
+						"armor" : ARMOR_ABILITY_DATA[0],
+						"shield" : null
+					  },
+		"combat" : null,
+		"magic" : ["Base Cursing", "Witchcraft", "Cursing", "Hexing"]
+	},
+	{
+		"name" : "Warrior",
+		"description" : "The stock fighting class of Midgard, Warriors worship Tyr, the Norse god of battle. Warriors have no magical abilities, but they can use almost all weapons and armor.",
+		"attributeBonuses" : [
+			{
+				"name": "Strength",
+				"value": 10
+			},
+			{
+				"name": "Constitution",
+				"value": 10
+			},
+			{
+				"name": "Dexterity",
+				"value": 10
+			}
+		],
+		"pointModifier" : 2.0,
+		"specializations" : ["Sword", "Axe", "Parry", "Hammer", "Shield", "Thrown"],
+		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4]],
+		"equipment" : {
+						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[16], WEAPONRY_DATA[17], WEAPONRY_DATA[18], WEAPONRY_DATA[19]],
+						"armor" : ARMOR_ABILITY_DATA[3],
+						"shield" : SHIELD_ABILITY_DATA[2]
+					  },
+		"combat" : ["Sword", "Axe", "Hammer", "Shield"],
+		"magic" : ["Thrown"]
+	},
+	{
+		"name" : "Mauler",
+		"description" : "Maulers are a hybrid class comprised of brawny and brutish melee elements along with unique powers and spells. This Brawling class channels earthen elemental powers, such as gravity, magnetism and auras to augment their melee combat.",
+		"attributeBonuses" : [
+			{
+				"name": "Strength",
+				"value": 10
+			},
+			{
+				"name": "Constitution",
+				"value": 10
+			},
+			{
+				"name": "Dexterity",
+				"value": 10
+			}
+		],
+		"pointModifier" : 1.8,
+		"specializations" : ["Power Strikes", "Magnetism", "Aura Manipulation", "Fist Wraps", "Mauler Staff"],
+		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4], ABILITY_DATA[2]],
+		"equipment" : {
+						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[23], WEAPONRY_DATA[24]],
+						"armor" : ARMOR_ABILITY_DATA[1],
+						"shield" : null
+					  },
+		"combat" : ["Fist Wraps", "Mauler Staffs"],
+		"magic" : ["Power Strikes", "Aura Manipulation", "Abilities"]
 	}
 ]
 
