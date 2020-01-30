@@ -133,20 +133,26 @@ const ARMSMAN_SPEC = [[polearmSpec, crossbowSpec, twoHandedSpec, parrySpec, slas
 
 //Function adjusts available classes depending on the selected realm
 function onRealmSelect() {
-	selectedRealm = getSelectedRealm();
+	getSelectedRealm();
 	changeRealmLogo();
 	resetAttributes();
+	resetSpecializations();
+	resetAbilities();
 	drawDropDown('races');
 	fillDropDown('races');
 	drawDropDown('classes');
 	fillDropDown('classes');
 	document.getElementById('charLevel').readOnly = true;
+	updateRaceDesc();
+	updateClassDesc();
 }
 
 //Create function to adjust available races depending on the selected realm
 function onRaceSelect() {
 	getSelectedRace();
 	resetAttributePrio();
+	resetSpecializations();
+	resetAbilities();
 	drawDropDown('classes');
 	fillDropDown('classes');
 	setAttributes();
@@ -154,6 +160,7 @@ function onRaceSelect() {
 	document.getElementById('charLevel').readOnly = true;
 	document.getElementById('selectionDetails').style.display = "block";
 	updateRaceDesc();
+	updateClassDesc();
 }
 
 //Create function to adjust character attributes depending on class
@@ -163,11 +170,12 @@ function onClassSelect() {
 	resetAttributeBonus();
 	resetSpecializations();
 	resetAbilities();
-	setOptimizedAttributes(getSelectedClass());
+	getSelectedClass();
+	setOptimizedAttributes();
 	document.getElementById("charLevel").readOnly = false;
 	document.getElementById('builder').style.display = "block";
-	setSpecializations(ARMSMAN_SPEC);
-	setAbilities(ARMSMAN_SPEC);
+	setSpecializations();
+	setAbilities();
 	updateClassDesc();
 }
 
@@ -192,11 +200,11 @@ function changeRealmLogo() {
 //Return selected realm
 function getSelectedRealm() {
 	if(document.getElementById('albRealm').checked) {
-		return 'Albion';
+		selectedRealm = 'Albion';
 	} else if(document.getElementById('hibRealm').checked) {
-		return 'Hibernia';
+		selectedRealm = 'Hibernia';
 	} else if(document.getElementById('midRealm').checked) {
-		return 'Midgard';
+		selectedRealm = 'Midgard';
 	}
 }
 
@@ -207,7 +215,7 @@ function getSelectedRace() {
 
 //Return selected class
 function getSelectedClass() {
-	return document.getElementById('classes').value;
+	selectedClass = CLASS_DATA.find(classes => classes.name == document.getElementById('classes').value);
 }
 
 function getSelectedAttribute(event) {
@@ -290,22 +298,32 @@ function fillDropDown(type) {
 		if(selectedRace == "") {
 			document.getElementById('classSelector').innerHTML = 'Select your Race';
 		} else {
-			document.getElementById(type).innerHTML = `<option name="Blank" id="Blank"></option>`;
-			for(let i = 0; i < selectedRace.classes.length; i++) {
-				document.getElementById(type).innerHTML += `<option name="${selectedRace.classes[i]}" id="${selectedRace.classes[i]}">${selectedRace.classes[i]}</option>`;
+			if(selectedRace != undefined) {
+				document.getElementById(type).innerHTML = `<option name="Blank" id="Blank"></option>`;
+				for(let i = 0; i < selectedRace.classes.length; i++) {
+					document.getElementById(type).innerHTML += `<option name="${selectedRace.classes[i]}" id="${selectedRace.classes[i]}">${selectedRace.classes[i]}</option>`;
+				}
 			}
 		}
 	}
 }
 
 function updateRaceDesc() {
-	document.getElementById('raceDesc').innerHTML = `<span id="raceName">${selectedRace.name}</span><br />`;
-	document.getElementById('raceDesc').innerHTML += `<span id="raceDescription">${selectedRace.desc}</span>`;
+	if(document.getElementById('races').value == "") {
+		document.getElementById('raceDesc').innerHTML = "";
+	} else {
+		document.getElementById('raceDesc').innerHTML = `<span id="raceName">${selectedRace.name}</span><br />`;
+		document.getElementById('raceDesc').innerHTML += `<span id="raceDescription">${selectedRace.desc}</span>`;
+	}
 }
 
 function updateClassDesc() {
-	document.getElementById('classDesc').innerHTML = `<span id="raceName">${CLASS_DATA[0].name}</span><br />`;
-	document.getElementById('classDesc').innerHTML += `<span id="raceDescription">${CLASS_DATA[0].description}</span>`;
+	if(document.getElementById('classes').value == "") {
+		document.getElementById('classDesc').innerHTML = "";
+	} else {
+		document.getElementById('classDesc').innerHTML = `<span id="raceName">${selectedClass.name}</span><br />`;
+		document.getElementById('classDesc').innerHTML += `<span id="raceDescription">${selectedClass.description}</span>`;
+	}
 }
 
 function updateAttributeDesc() {
@@ -456,28 +474,28 @@ function setAttributePrio(attOne, attTwo, attThree) {
 	let attributePrios = [attOne, attTwo, attThree];
 	resetAttributePrio();
 	for(let i = 0; i < attributePrios.length; i++) {
-		if(attributePrios[i] == 'str') {
+		if(attributePrios[i] == 'Strength') {
 			document.getElementById('strPrio').style.color = 'yellow';
 			document.getElementById('strLabel').style.color = 'yellow';
-		} else if(attributePrios[i] == 'con') {
+		} else if(attributePrios[i] == 'Constitution') {
 			document.getElementById('conPrio').style.color = 'yellow';
 			document.getElementById('conLabel').style.color = 'yellow';
-		} else if(attributePrios[i] == 'dex') {
+		} else if(attributePrios[i] == 'Dexterity') {
 			document.getElementById('dexPrio').style.color = 'yellow';
 			document.getElementById('dexLabel').style.color = 'yellow';
-		} else if(attributePrios[i] == 'qui') {
+		} else if(attributePrios[i] == 'Quickness') {
 			document.getElementById('quiPrio').style.color = 'yellow';
 			document.getElementById('quiLabel').style.color = 'yellow';
-		} else if(attributePrios[i] == 'int') {
+		} else if(attributePrios[i] == 'Intelligence') {
 			document.getElementById('intPrio').style.color = 'yellow';
 			document.getElementById('intLabel').style.color = 'yellow';
-		} else if(attributePrios[i] == 'emp') {
+		} else if(attributePrios[i] == 'Empathy') {
 			document.getElementById('empPrio').style.color = 'yellow';
 			document.getElementById('empLabel').style.color = 'yellow';
-		} else if(attributePrios[i] == 'pie') {
+		} else if(attributePrios[i] == 'Piety') {
 			document.getElementById('piePrio').style.color = 'yellow';
 			document.getElementById('pieLabel').style.color = 'yellow';
-		} else if(attributePrios[i] == 'cha') {
+		} else if(attributePrios[i] == 'Charisma') {
 			document.getElementById('chaPrio').style.color = 'yellow';
 			document.getElementById('chaLabel').style.color = 'yellow';
 		}
@@ -486,339 +504,74 @@ function setAttributePrio(attOne, attTwo, attThree) {
 
 //Assigns values to character attributes depending on selected race
 function setAttributes() {
-	str = selectedRace.attributes[0].value;
-	con = selectedRace.attributes[1].value;
-	dex = selectedRace.attributes[2].value;
-	qui = selectedRace.attributes[3].value;
-	intel = selectedRace.attributes[4].value;
-	emp = selectedRace.attributes[5].value;
-	pie = selectedRace.attributes[6].value;
-	cha = selectedRace.attributes[7].value;	
-	document.getElementById('strAttribute').value = str;
-	document.getElementById('conAttribute').value = con;
-	document.getElementById('dexAttribute').value = dex;
-	document.getElementById('quiAttribute').value = qui;
-	document.getElementById('intAttribute').value = intel;
-	document.getElementById('empAttribute').value = emp;
-	document.getElementById('pieAttribute').value = pie;
-	document.getElementById('chaAttribute').value = cha;
+	if(selectedRace == undefined) {
+		resetAttributes();
+	} else {
+		str = selectedRace.attributes[0].value;
+		con = selectedRace.attributes[1].value;
+		dex = selectedRace.attributes[2].value;
+		qui = selectedRace.attributes[3].value;
+		intel = selectedRace.attributes[4].value;
+		emp = selectedRace.attributes[5].value;
+		pie = selectedRace.attributes[6].value;
+		cha = selectedRace.attributes[7].value;	
+		document.getElementById('strAttribute').value = str;
+		document.getElementById('conAttribute').value = con;
+		document.getElementById('dexAttribute').value = dex;
+		document.getElementById('quiAttribute').value = qui;
+		document.getElementById('intAttribute').value = intel;
+		document.getElementById('empAttribute').value = emp;
+		document.getElementById('pieAttribute').value = pie;
+		document.getElementById('chaAttribute').value = cha;
+	}
 }
 
 //Adds 30 recommended attribute points
-function setOptimizedAttributes(selectedClass) {
+function setOptimizedAttributes() {
 	resetAttributeBonus();
-			
-	switch(selectedClass) {
-		case ARMSMAN_CLASS:
-			setAttributePrio('str', 'con', 'dex');
-			strAttBonus = 10;
-			conAttBonus = 10;
-			dexAttBonus = 10;
-			pointMod = 2.0;
-			break;
-		case CABALIST_CLASS:
-			setAttributePrio('dex', 'qui', 'int');
-			dexAttBonus = 15;
-			intAttBonus = 10;
-			pointMod = 1.0;
-			break;
-		case CLERIC_CLASS:
-			setAttributePrio('con', 'dex', 'pie');
-			dexAttBonus = 15;
-			pieAttBonus = 10;
-			pointMod = 1.0;
-			break;
-		case FRIAR_CLASS:
-			setAttributePrio('con', 'dex', 'pie');
-			conAttBonus = 10;
-			dexAttBonus = 10;
-			pieAttBonus = 10;
-			pointMod = 1.8;
-			break;
-		case HERETIC_CLASS:
-			setAttributePrio('con', 'dex', 'pie');
-			conAttBonus = 10;
-			dexAttBonus = 10;
-			pieAttBonus= 10;
-			pointMod = 2.0;
-			break;
-		case INFILTRATOR_CLASS:
-			setAttributePrio('str', 'dex', 'qui');
-			strAttBonus = 10;
-			dexAttBonus= 15;
-			pointMod = 2.9;
-			break;
-		case MERCENARY_CLASS:
-			setAttributePrio('str', 'con', 'dex');
-			strAttBonus = 10;
-			conAttBonus = 10;
-			dexAttBonus = 10;
-			pointMod = 2.0;
-			break;
-		case MINSTREL_CLASS:
-			setAttributePrio('str', 'con', 'dex');
-			strAttBonus = 10;
-			conAttBonus = 10;
-			dexAttBonus = 10;
-			pointMod = 1.5;
-			break;
-		case NECROMANCER_CLASS:
-			setAttributePrio('dex', 'qui', 'int');
-			dexAttBonus = 15;
-			intAttBonus = 10;
-			pointMod = 1.0;
-			break;
-		case PALADIN_CLASS:
-			setAttributePrio('str', 'con', 'dex');
-			strAttBonus = 10;
-			conAttBonus = 10;
-			dexAttBonus = 10;
-			pointMod = 2.0;
-			break;
-		case REAVER_CLASS:
-			setAttributePrio('str', 'con', 'dex');
-			strAttBonus = 10;
-			conAttBonus = 10;
-			dexAttBonus = 10;
-			pointMod = 2.0;
-			break;
-		case SCOUT_CLASS:
-			setAttributePrio('str', 'dex', 'qui');
-			strAttBonus = 10;
-			dexAttBonus = 15;
-			pointMod = 2.0;
-			break;
-		case SORCERER_CLASS:
-			setAttributePrio('dex', 'qui', 'int');
-			dexAttBonus = 15;
-			intAttBonus = 10;
-			pointMod = 1.0;
-			break;
-		case THEURGIST_CLASS:
-			setAttributePrio('dex', 'qui', 'int');
-			dexAttBonus = 15;
-			intAttBonus = 10;
-			pointMod = 1.0;
-			break;
-		case WIZARD_CLASS:
-			setAttributePrio('dex', 'qui', 'int');
-			dexAttBonus = 15;
-			intAttBonus = 10;
-			pointMod = 1.0;
-			break;
-		case ANIMIST_CLASS:
-			setAttributePrio('con', 'dex', 'int');
-			dexAttBonus = 15;
-			intAttBonus = 10;
-			pointMod = 1.0;
-			break;
-		case BAINSHEE_CLASS:
-			setAttributePrio('str', 'con', 'dex');
-			strAttBonus = 10;
-			dexAttBonus = 15;
-			pointMod = 1.0;
-			break;
-		case BARD_CLASS:
-			setAttributePrio('con', 'dex', 'cha');
-			dexAttBonus = 15;
-			chaAttBonus = 10;
-			pointMod = 1.5;
-			break;
-		case BLADEMASTER_CLASS:
-			setAttributePrio('str', 'con', 'dex');
-			strAttBonus = 10;
-			conAttBonus = 10;
-			dexAttBonus = 10;
-			pointMod = 2.0;
-			break;
-		case CHAMPION_CLASS:
-			setAttributePrio('str', 'con', 'dex');
-			strAttBonus = 10;
-			conAttBonus = 10;
-			dexAttBonus = 10;
-			pointMod = 2.0;
-			break;
-		case DRUID_CLASS:
-			setAttributePrio('con', 'dex', 'emp');
-			dexAttBonus = 15;
-			empAttBonus = 10;
-			pointMod = 1.0;
-			break;
-		case ELDRITCH_CLASS:
-			setAttributePrio('dex', 'qui', 'int');
-			dexAttBonus = 15;
-			intAttBonus = 10;
-			pointMod = 1.0;
-			break;
-		case ENCHANTER_CLASS:
-			setAttributePrio('dex', 'qui', 'int');
-			dexAttBonus = 15;
-			intAttBonus = 10;
-			pointMod = 1.0;
-			break;
-		case HERO_CLASS:
-			setAttributePrio('str', 'con', 'dex');
-			strAttBonus = 10;
-			conAttBonus = 10;
-			dexAttBonus = 10;
-			pointMod = 2.0;
-			break;
-		case MENTALIST_CLASS:
-			setAttributePrio('dex', 'qui', 'int');
-			dexAttBonus = 15;
-			intAttBonus = 10;
-			pointMod = 1.0;
-			break;
-		case NIGHTSHADE_CLASS:
-			setAttributePrio('str', 'dex', 'qui');
-			strAttBonus = 10;
-			dexAttBonus = 15;
-			pointMod = 2.8;
-			break;
-		case RANGER_CLASS:
-			setAttributePrio('str', 'dex', 'qui');
-			strAttBonus = 10;
-			dexAttBonus = 15;
-			pointMod = 2.0;
-			break;
-		case VALEWALKER_CLASS:
-			setAttributePrio('str', 'con', 'dex');
-			strAttBonus = 10;
-			conAttBonus = 10;
-			dexAttBonus = 10;
-			pointMod = 1.5;
-			break;
-		case VAMPIIR_CLASS:
-			setAttributePrio('str', 'con', 'dex');
-			strAttBonus = 10;
-			conAttBonus = 10;
-			dexAttBonus = 10;
-			pointMod = 1.5;
-			break;
-		case WARDEN_CLASS:
-			setAttributePrio('con', 'dex', 'emp');
-			dexAttBonus = 15;
-			empAttBonus = 10;
-			pointMod = 1.8;
-			break;
-		case BERSERKER_CLASS:
-			setAttributePrio('str', 'con', 'dex');
-			strAttBonus = 10;
-			conAttBonus = 10;
-			dexAttBonus = 10;
-			pointMod = 2.0;
-			break;
-		case BONEDANCER_CLASS:
-			setAttributePrio('dex', 'qui', 'pie');
-			dexAttBonus = 15;
-			pieAttBonus = 10;
-			pointMod = 1.0;
-			break;
-		case HEALER_CLASS:
-			setAttributePrio('con', 'dex', 'pie');
-			dexAttBonus = 15;
-			pieAttBonus = 10;
-			pointMod = 1.0;
-			break;
-		case HUNTER_CLASS:
-			setAttributePrio('str', 'dex', 'qui');
-			strAttBonus = 10;
-			dexAttBonus = 15;
-			pointMod = 2.0;
-			break;
-		case RUNEMASTER_CLASS:
-			setAttributePrio('dex', 'qui', 'pie');
-			dexAttBonus = 15;
-			pieAttBonus = 10;
-			pointMod = 1.0;
-			break;
-		case SAVAGE_CLASS:
-			setAttributePrio('str', 'con', 'dex');
-			strAttBonus = 10;
-			conAttBonus = 10;
-			dexAttBonus = 10;
-			pointMod = 1.5;
-			break;
-		case SHADOWBLADE_CLASS:
-			setAttributePrio('str', 'dex', 'qui');
-			strAttBonus = 10;
-			dexAttBonus = 15;
-			pointMod = 2.8;
-			break;
-		case SHAMAN_CLASS:
-			setAttributePrio('con', 'dex', 'pie');
-			dexAttBonus = 15;
-			pieAttBonus = 10;
-			pointMod = 1.0;
-			break;
-		case SKALD_CLASS:
-			setAttributePrio('str', 'con', 'cha');
-			strAttBonus = 10;
-			conAttBonus = 10;
-			chaAttBonus = 10;
-			pointMod = 1.5;
-			break;
-		case SPIRITMASTER_CLASS:
-			setAttributePrio('dex', 'qui', 'pie');
-			dexAttBonus = 15;
-			pieAttBonus = 10;
-			pointMod = 1.0;
-			break;
-		case THANE_CLASS:
-			setAttributePrio('str', 'con', 'pie');
-			strAttBonus = 10;
-			conAttBonus = 10;
-			pieAttBonus = 10;
-			pointMod = 2.0;
-			break;
-		case VALKYRIE_CLASS:
-			setAttributePrio('str', 'con', 'dex');
-			strAttBonus = 10;
-			conAttBonus = 10;
-			dexAttBonus = 10;
-			pointMod = 2.0;
-			break;
-		case WARLOCK_CLASS:
-			setAttributePrio('con', 'dex', 'pie');
-			conAttBonus = 10;
-			pieAttBonus = 15;
-			pointMod = 1.0;
-			break;
-		case WARRIOR_CLASS:
-			setAttributePrio('str', 'con', 'dex');
-			strAttBonus = 10;
-			conAttBonus = 10;
-			dexAttBonus = 10;
-			pointMod = 2.0;
-			break;
-		case MAULER_CLASS:
-			setAttributePrio('str', 'con', 'dex');
-			strAttBonus = 10;
-			conAttBonus = 10;
-			dexAttBonus = 10;
-			pointMod = 1.8;
-			break;
+	if(selectedClass != undefined) {		
+		setAttributePrio(selectedClass.attributeBonuses[0].name, selectedClass.attributeBonuses[1].name, selectedClass.attributeBonuses[2].name);
+	
+		for(let i = 0; i < selectedClass.attributeBonuses.length; i++) {
+			if(selectedClass.attributeBonuses[i].name == "Strength") {
+				strAttBonus = selectedClass.attributeBonuses[i].value;
+			} else if(selectedClass.attributeBonuses[i].name == "Constitution") {
+				conAttBonus = selectedClass.attributeBonuses[i].value;
+			} else if(selectedClass.attributeBonuses[i].name == "Dexterity") {
+				dexAttBonus = selectedClass.attributeBonuses[i].value;
+			} else if(selectedClass.attributeBonuses[i].name == "Quickness") {
+				quiAttBonus = selectedClass.attributeBonuses[i].value;
+			} else if(selectedClass.attributeBonuses[i].name == "Intelligence") {
+				intAttBonus = selectedClass.attributeBonuses[i].value;
+			} else if(selectedClass.attributeBonuses[i].name == "Empathy") {
+				empAttBonus = selectedClass.attributeBonuses[i].value;
+			} else if(selectedClass.attributeBonuses[i].name == "Piety") {
+				pieAttBonus = selectedClass.attributeBonuses[i].value;
+			} else if(selectedClass.attributeBonuses[i].name == "Charisma") {
+				chaAttBonus = selectedClass.attributeBonuses[i].value;
+			}
+		}
+	
+		attributePoints = 0;
+		
+		document.getElementById('strAttribute').value = str + strAttBonus;
+		document.getElementById('strengthAtt').innerHTML = str + strAttBonus; 
+		document.getElementById('conAttribute').value = con + conAttBonus;
+		document.getElementById('constitutionAtt').innerHTML = con + conAttBonus;
+		document.getElementById('dexAttribute').value = dex + dexAttBonus;
+		document.getElementById('dexterityAtt').innerHTML = dex + dexAttBonus;
+		document.getElementById('quiAttribute').value = qui + quiAttBonus;
+		document.getElementById('quicknessAtt').innerHTML = qui + quiAttBonus;
+		document.getElementById('intAttribute').value = intel + intAttBonus;
+		document.getElementById('intelligenceAtt').innerHTML = intel + intAttBonus;
+		document.getElementById('empAttribute').value = emp + empAttBonus;
+		document.getElementById('empathyAtt').innerHTML = emp + empAttBonus;
+		document.getElementById('pieAttribute').value = pie + pieAttBonus;
+		document.getElementById('pietyAtt').innerHTML = pie + pieAttBonus;
+		document.getElementById('chaAttribute').value = cha + chaAttBonus;
+		document.getElementById('charismaAtt').innerHTML = cha + chaAttBonus;
+		document.getElementById('attPoints').innerHTML = attributePoints;
 	}
-	
-	attributePoints = 0;
-	
-	document.getElementById('strAttribute').value = str + strAttBonus;
-	document.getElementById('strengthAtt').innerHTML = str + strAttBonus; 
-	document.getElementById('conAttribute').value = con + conAttBonus;
-	document.getElementById('constitutionAtt').innerHTML = con + conAttBonus;
-	document.getElementById('dexAttribute').value = dex + dexAttBonus;
-	document.getElementById('dexterityAtt').innerHTML = dex + dexAttBonus;
-	document.getElementById('quiAttribute').value = qui + quiAttBonus;
-	document.getElementById('quicknessAtt').innerHTML = qui + quiAttBonus;
-	document.getElementById('intAttribute').value = intel + intAttBonus;
-	document.getElementById('intelligenceAtt').innerHTML = intel + intAttBonus;
-	document.getElementById('empAttribute').value = emp + empAttBonus;
-	document.getElementById('empathyAtt').innerHTML = emp + empAttBonus;
-	document.getElementById('pieAttribute').value = pie + pieAttBonus;
-	document.getElementById('pietyAtt').innerHTML = pie + pieAttBonus;
-	document.getElementById('chaAttribute').value = cha + chaAttBonus;
-	document.getElementById('charismaAtt').innerHTML = cha + chaAttBonus;
-	document.getElementById('attPoints').innerHTML = attributePoints;
 }
 
 //Increases or decreases attribute bonuses depending on which was selected.
@@ -903,38 +656,58 @@ function changeAttributeBonus() {
 
 //Assigns values to character resistances depending on what is passed
 function setResists() {
-	
-	thrustRes = selectedRace.resists[0].value;
-	crushRes = selectedRace.resists[1].value;
-	slashRes = selectedRace.resists[2].value;
-	heatRes = selectedRace.resists[3].value;
-	coldRes = selectedRace.resists[4].value;
-	matterRes = selectedRace.resists[5].value;
-	energyRes = selectedRace.resists[6].value;
-	spiritRes = selectedRace.resists[7].value;
-	bodyRes = selectedRace.resists[8].value;
-	
-	document.getElementById('thrustRes').value = `+${thrustRes}%`;
-	document.getElementById('crushRes').value = `+${crushRes}%`;
-	document.getElementById('slashRes').value = `+${slashRes}%`;
-	document.getElementById('heatRes').value = `+${heatRes}%`;
-	document.getElementById('coldRes').value = `+${coldRes}%`;
-	document.getElementById('matterRes').value = `+${matterRes}%`;
-	document.getElementById('energyRes').value = `+${energyRes}%`;
-	document.getElementById('spiritRes').value = `+${spiritRes}%`;
-	document.getElementById('bodyRes').value = `+${bodyRes}%`;
-}
-
-//Function set skills based on selected class
-function setSpecializations(specializations) {
-	for(let i = 0; i < specializations[0].length; i++) {
-		document.getElementById('specBox').innerHTML += `<span id="${specializations[0][i][0]}SpecImage" class="specImage"></span><span id="${specializations[0][i][0]}Spec" class="specName">${specializations[0][i][0]}</span><span id="${specializations[0][i][0]}SpecLevel" class="specLevel">${specializations[0][i][1]}</span><br />`;
+	if(selectedRace == undefined) {
+		resetResists()
+	} else {
+		thrustRes = selectedRace.resists[0].value;
+		crushRes = selectedRace.resists[1].value;
+		slashRes = selectedRace.resists[2].value;
+		heatRes = selectedRace.resists[3].value;
+		coldRes = selectedRace.resists[4].value;
+		matterRes = selectedRace.resists[5].value;
+		energyRes = selectedRace.resists[6].value;
+		spiritRes = selectedRace.resists[7].value;
+		bodyRes = selectedRace.resists[8].value;
+		
+		document.getElementById('thrustRes').value = `+${thrustRes}%`;
+		document.getElementById('crushRes').value = `+${crushRes}%`;
+		document.getElementById('slashRes').value = `+${slashRes}%`;
+		document.getElementById('heatRes').value = `+${heatRes}%`;
+		document.getElementById('coldRes').value = `+${coldRes}%`;
+		document.getElementById('matterRes').value = `+${matterRes}%`;
+		document.getElementById('energyRes').value = `+${energyRes}%`;
+		document.getElementById('spiritRes').value = `+${spiritRes}%`;
+		document.getElementById('bodyRes').value = `+${bodyRes}%`;
 	}
 }
 
-function setAbilities(abilities) {
-	for(let i = 0; i < abilities[1].length; i++) {
-		document.getElementById('abilityBox').innerHTML += `<span id="${abilities[1][i]['name']}AbilityImage" class="specImage"></span><span id="${abilities[1][i]['name']}Ability" class="specName">${abilities[1][i]['name']}</span><br />`;
+//Function set skills based on selected class
+function setSpecializations() {
+	if(selectedClass == undefined) {
+		resetSpecializations();
+	} else {
+		for(let i = 0; i < selectedClass.specializations.length; i++) {
+			document.getElementById('specBox').innerHTML += `<span id="${selectedClass.specializations[i]}SpecImage" class="specImage"></span><span id="${selectedClass.specializations[i]}Spec" class="specName">${selectedClass.specializations[i]}</span><span id="${selectedClass.specializations[i]}SpecLevel" class="specLevel">1</span><br />`;
+		}
+	}
+}
+
+function setAbilities() {
+	if(selectedClass == undefined) {
+		resetAbilities();
+	} else {	
+		for(let ability of selectedClass.abilities) {
+			document.getElementById('abilityBox').innerHTML += `<span id="${ability.name}AbilityImage" class="specImage"></span><span id="${ability.name}Ability" class="abilityName">${ability.name}</span><br />`;
+		}
+		
+		for(let weapon of selectedClass.equipment.weapons) {
+			document.getElementById('abilityBox').innerHTML += `<span id="${weapon.name}AbilityImage" class="specImage"></span><span id="${weapon.name}Ability" class="abilityName">Weaponry: ${weapon.name}</span><br />`;
+		}
+		
+		document.getElementById('abilityBox').innerHTML += `<span id="${selectedClass.equipment.armor.name}AbilityImage" class="specImage"></span><span id="${selectedClass.equipment.armor.name}Ability" class="abilityName">Armor Ability: ${selectedClass.equipment.armor.name}</span><br />`;
+		if(selectedClass.equipment.shield != null) {
+			document.getElementById('abilityBox').innerHTML += `<span id="${selectedClass.equipment.shield.name}AbilityImage" class="specImage"></span><span id="${selectedClass.equipment.shield.name}Ability" class="abilityName">Shield Ability: ${selectedClass.equipment.shield.name}</span><br />`;
+		}
 	}
 }
 
