@@ -441,22 +441,26 @@ select {
 	width: 20px;
 	text-align: left;
 	padding-left: 15px;
-	padding-top: 3px;
-	
+	padding-top: 5px;
 }
 .specName {
 	display: inline-block;
 	width: 100px;
 	text-align: left;
 	padding-right: 20px;
-	padding-top: 3px;
-	
+	padding-top: 5px;
+}
+.abilityName {
+	display: inline-block;
+	width: 180px;
+	text-align: left;
+	padding-top: 5px;
 }
 .specLevel {
 	display: inline-block;
 	width: 20px;
 	text-align: right;
-	padding-top: 3px;
+	padding-top: 5px;
 }
 .paperdoll {
 	background: #111111;
