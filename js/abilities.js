@@ -1,31 +1,43 @@
 const ABILITY_DATA = [
 	{
 		"name" : "Sprint",// 0
+		"level" : 1,
 		"desc" : "Increases your movement speed by 30% of your base movement while your endurance lasts. Drains 5 endurance per second while active."
 	},
 	{
 		"name" : "Quick Cast",// 1
+		"level" : 1,
 		"desc" : "Your next spell will not be interrupted. Your cast time will not be modified by any bonus including dexterity. Can be reused after 30 seconds."
 	}, 
 	{
 		"name" : "Evade I",// 2
+		"level" : 1,
 		"desc" : "Increases your chance to evade by 5%."
 	},
 	{
 		"name" : "Evade II",// 3
+		"level" : 1,
 		"desc" : "Increases your chance to evade by 10%."
 	},
 	{
 		"name" : "Tireless",// 4
+		"level" : 1,
 		"desc" : "Increases endurance regeneration. Does not stack with other endurance regeneration spells or effects."
 	},
 	{
 		"name" : "Berserk I",// 5
+		"level" : 1,
 		"desc" : "You transform into a vendo and enter a berserker frenzy doing 10% more damage over 20 seconds."
 	},
 	{
 		"name" : "Protect I",// 6
+		"level" : 1,
 		"desc" : "You can use this on one grouped character. If they are within 1000 units of you and not currently engaged in melee combat with an enemy, 15% of their threat will be transferred to you."
+	},
+	{
+		"name" : "Def. Combat Power Regen I",// 7
+		"level" : 1,
+		"desc" : "You regain power by taking damage in combat. You will lose 3% of your power pool every second you are not in combat down to 15%."
 	}
 ];
 
@@ -117,6 +129,18 @@ const WEAPONRY_DATA = [
 	{
 		"name" : "Hand to Hand",// 21
 		"desc" : "Grants the ability to use hand to hand weapons."
+	},
+	{
+		"name" : "Spear",// 22
+		"desc" : "Grants the ability to use spears."
+	},
+	{
+		"name" : "Fist Wraps",// 23
+		"desc" : "Grants the ability to use fistwraps."		
+	},
+	{
+		"name" : "Mauler Staff",// 24
+		"desc" : "Grats the ability to use mauler staves."
 	}
 ];
 
