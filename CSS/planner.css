@@ -462,6 +462,22 @@ select {
 	text-align: right;
 	padding-top: 5px;
 }
+.specValue {
+	margin-left: 15px;
+}
+#skillSectionWrapper {
+	position: absolute; 
+	display: inline-block; 
+	margin-top: 65px; 
+	margin-left: 10px; 
+	width: 370px;
+}
+#specSectionWrapper {
+	position: absolute;
+	display: inline-block;
+	margin-top: -190px;
+	margin-left: 20px;
+}
 .paperdoll {
 	background: #111111;
 	height: 318px;
