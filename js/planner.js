@@ -177,6 +177,7 @@ function onClassSelect() {
 	setSpecializations();
 	setAbilities();
 	updateClassDesc();
+	drawTrainer();
 }
 
 //Function changes color for selected realm
@@ -216,6 +217,7 @@ function getSelectedRace() {
 //Return selected class
 function getSelectedClass() {
 	selectedClass = CLASS_DATA.find(classes => classes.name == document.getElementById('classes').value);
+	pointMod = selectedClass.pointModifier;
 }
 
 function getSelectedAttribute(event) {
@@ -245,7 +247,7 @@ function closeModal() {
 }
 
 function openTrainer() {
-	document.getElementById("trainerModal").style.display = "block";	
+	document.getElementById("trainerModal").style.display = "block";
 }
 
 function closeTrainer() {
@@ -306,6 +308,66 @@ function fillDropDown(type) {
 			}
 		}
 	}
+}
+
+//Constructs trainer window with each specialization's name, buttons, slider and trained values
+function drawTrainer() {
+	document.getElementById("specializationAdjusters").innerHTML = "";
+	document.getElementById('totalSpecAvailable').innerHTML = parseInt(document.getElementById('specPoints').value);
+	document.getElementById('totalSpecNeeded').innerHTML = 0;
+	document.getElementById('totalSpecRemaining').innerHTML = 0;
+
+	let label, leftButton, rightButton, slider, numOnRight, numWrapper, setSpecs;
+	
+	for(spec in selectedClass.specializations) {
+		numOnRight = 1;
+		label = `<span id="${selectedClass.specializations[spec]}Label" class="specName">${selectedClass.specializations[spec]}</span>`;
+		leftButton = `<button id="${selectedClass.specializations[spec]}LeftButton" onclick="returnSpecPoints('${selectedClass.specializations[spec]}')">&lt;</button>`;
+		rightButton = `<button id="${selectedClass.specializations[spec]}RightButton" onclick="spendSpecPoints('${selectedClass.specializations[spec]}')">&gt;</button>`;
+		slider = `<input type="range" min="1" max="50" value="1" id="${selectedClass.specializations[spec]}Slider" onchange="${setSpecs}">`;
+		numWrapper = `<span id="${selectedClass.specializations[spec]}Value" class="specValue">${numOnRight}</span><br />`;
+		
+		//leftButton.onclick = () => {document.getElementById(`${selectedClass.specializations[spec]}Value`).innerHTML = (numOnRight -= 1);};
+		//rightButton.onclick = () => {document.getElementById(`${selectedClass.specializations[spec]}Value`).innerHTML = (numOnRight += 1);};
+		//slider.onchange = () => {document.getElementById(`${selectedClass.specializations[spec]}Value`).innerHTML = document.getElementById(`${selectedClass.specializations[spec]}Slider`).value;};
+		
+		document.getElementById("specializationAdjusters").innerHTML += label;
+		document.getElementById("specializationAdjusters").innerHTML += leftButton;
+		document.getElementById("specializationAdjusters").innerHTML += slider;
+		document.getElementById("specializationAdjusters").innerHTML += rightButton;
+		document.getElementById("specializationAdjusters").innerHTML += numWrapper;
+	}
+}
+
+//Adjusts the needed and remaining specialization points when a spec's trained value is increased (increases trained value)
+function spendSpecPoints(spec) {
+	if(parseInt(document.getElementById(`${spec}Value`).textContent) < 50) {
+		document.getElementById(`${spec}Slider`).value += 1;
+		document.getElementById(`${spec}Value`).innerHTML = parseInt(document.getElementById(`${spec}Value`).textContent) + 1;
+		document.getElementById('totalSpecNeeded').innerHTML = parseInt(document.getElementById('totalSpecNeeded').textContent) + parseInt(document.getElementById(`${spec}Value`).textContent);
+		document.getElementById('totalSpecRemaining').innerHTML = parseInt(document.getElementById('totalSpecAvailable').textContent) - parseInt(document.getElementById('totalSpecNeeded').textContent);
+		adjustMinLevel();
+	}
+}
+
+//Adjusts the needed and remaining specialization points when a spec's trained value is increased (reduces trained value)
+function returnSpecPoints(spec) {
+	if(parseInt(document.getElementById(`${spec}Value`).textContent) > 1) {
+		document.getElementById(`${spec}Slider`).value -= 1;
+		document.getElementById(`${spec}Value`).innerHTML = parseInt(document.getElementById(`${spec}Value`).textContent) - 1;
+		document.getElementById('totalSpecNeeded').innerHTML = parseInt(document.getElementById('totalSpecNeeded').textContent) - (parseInt(document.getElementById(`${spec}Value`).textContent) + 1);
+		document.getElementById('totalSpecRemaining').innerHTML = parseInt(document.getElementById('totalSpecAvailable').textContent) - parseInt(document.getElementById('totalSpecNeeded').textContent);
+		adjustMinLevel();
+	}
+}
+
+//Changes the displayed minimum level on the trainer window according to all specializations trained values
+function adjustMinLevel() {
+	let highestValues = [];
+	for(specLine in selectedClass.specializations) {
+		highestValues[specLine] = parseInt(document.getElementById(`${selectedClass.specializations[specLine]}Value`).textContent);
+	}
+	document.getElementById('minLevelDisp').innerHTML = Math.max(...highestValues);
 }
 
 function updateRaceDesc() {
@@ -793,6 +855,7 @@ function changeSpecPoints() {
 	}
 	specPoints = Math.floor(specPoints);
 	document.getElementById("specPoints").value = specPoints;
+	document.getElementById('totalSpecAvailable').innerHTML = parseInt(document.getElementById('specPoints').value);
 	level = newLevel;
 }
 
