@@ -17,7 +17,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 2.0,
-		"specializations" : ["Polearm", "Crossbow", "Two Handed", "Parry", "Slash", "Crush", "Thrust", "Shield"],
+		"specializations" : [POLEARM_STYLE_DATA, /*"Crossbow",*/ TWO_HANDED_STYLE_DATA, /*"Parry",*/ SLASH_STYLE_DATA/*, "Crush", "Thrust", "Shield"*/],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[1], WEAPONRY_DATA[2], WEAPONRY_DATA[3], WEAPONRY_DATA[4], WEAPONRY_DATA[5], WEAPONRY_DATA[7]],
