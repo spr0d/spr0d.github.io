@@ -456,6 +456,17 @@ select {
 	text-align: left;
 	padding-top: 5px;
 }
+.abilityName2 {
+	display: inline-block;
+	width: 170px;
+	text-align: left;
+	padding-top: 3px;
+	padding-bottom: 2px;
+}
+.abilityLevel {
+	display: inline-block;
+	text-align: right;
+}
 .specLevel {
 	display: inline-block;
 	width: 20px;
@@ -510,4 +521,38 @@ select {
 }
 #selectmid {
 	color: white;
+}
+.dropbttn {
+	margin-left: 10px;
+	background: gold;
+	border-radius: 50%;
+	border-width: 2px;
+	width: 3px;
+	height: 5px;
+	outline-style: solid;
+	outline-color: silver;
+	outline-offset: 3px;
+	outline-width: thin;
+}
+.dropbttn-clicked {
+	margin-left: 10px;
+	background: black;
+	border-radius: 50%;
+	border-width: 2px;
+	width: 3px;
+	height: 5px;
+	outline-style: solid;
+	outline-color: silver;
+	outline-offset: 3px;
+	outline-width: thin;
+}
+.dropdown-content {
+	display: none;
+	position: inline-block;
+	min-width: 160px;
+	margin-left: 35px;
+}
+.specTitle {
+	font-weight: bold;
+	padding-top: 2px;
 }
