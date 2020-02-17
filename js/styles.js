@@ -1,9 +1,222 @@
-const STYLE_DATA = [
+const POLEARM_STYLE_DATA = {
+	"metaData": {
+		"weapon": "Polearm",
+		"trainedValue": 1
+	},
+	"styles": [{
+		"class": ["Armsman"],
+		"name": "Pole Thrash",
+		"level": 1,
+		"open": "Any",
+		"followup": null,
+		"end": "Low",
+		"dmg": "Very Low",
+		"hit": "Low Bonus",
+		"def": "No Bonus",
+		"effect": null
+	},
 	{
-		"id": 79,
-		"realms": ["Albion"],
-		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
-		"tree": "Slash",
+		"class": ["Armsman"],
+		"name": "Impale",
+		"level": 2,
+		"open": "Any",
+		"followup": null,
+		"end": "Low",
+		"dmg": "Very Low",
+		"hit": "No Bonus",
+		"def": "No Bonus",
+		"effect": null
+	},
+	{
+		"class": ["Armsman"],
+		"name": "Defender's Cross",
+		"level": 4,
+		"open": "To side of target",
+		"followup": ["Disabler"],
+		"end": "Low",
+		"dmg": "Medium",
+		"hit": "Medium Bonus",
+		"def": "No Bonus",
+		"effect": "Target moves 40% slower for 11 seconds."
+	},
+	{
+		"class": ["Armsman"],
+		"name": "Deflect",
+		"level": 6,
+		"open": "Any",
+		"followup": null,
+		"end": "Low",
+		"dmg": "None",
+		"hit": "No Bonus",
+		"def": "High Bonus",
+		"effect": "Increases your threat to monster targets by 0 damage."
+	},
+	{
+		"class": ["Armsman"],
+		"name": "Defender's Faith",
+		"level": 8,
+		"open": "Any",
+		"followup": ["Defender's Courage"],
+		"end": "High",
+		"dmg": "Low",
+		"hit": "Low Bonus",
+		"def": "Low Penalty",
+		"effect": "4 damage every 5.0 sec for 25 seconds."
+	},
+	{
+		"class": ["Armsman"],
+		"name": "Executioner",
+		"level": 10,
+		"open": "You Parry",
+		"followup": ["Defender's Advance"],
+		"end": "Medium",
+		"dmg": "High",
+		"hit": "Low Bonus",
+		"def": "No Bonus",
+		"effect": "Targets attack speed reduced by 16% for 20 seconds."
+	},
+	{
+		"class": ["Armsman"],
+		"name": "Distract",
+		"level": 12,
+		"open": "Any",
+		"followup": null,
+		"end": "Low",
+		"dmg": "Medium",
+		"hit": "Low Bonus",
+		"def": "Medium Penalty",
+		"effect": "Increases your threat to monster targets by 275 damage."
+	},
+	{
+		"class": ["Armsman"],
+		"name": "Defender's Courage",
+		"level": 15,
+		"open": "Defender's Faith",
+		"followup": null,
+		"end": "Medium",
+		"dmg": "Medium",
+		"hit": "Medium Bonus",
+		"def": "No Bonus",
+		"effect": "Target's attack speed reduced by 20% for 20 seconds."
+	},
+	{
+		"class": ["Armsman"],
+		"name": "Crippling Blow",
+		"level": 18,
+		"open": "To side of target",
+		"followup": ["Mangle"],
+		"end": "Medium",
+		"dmg": "Low",
+		"hit": "Medium Bonus",
+		"def": "No Bonus",
+		"effect": "Target moves 40% slower for 11 seconds."
+	},
+	{
+		"class": ["Armsman"],
+		"name": "Disabler",
+		"level": 21,
+		"open": "Defender's Cross",
+		"followup": null,
+		"end": "Low",
+		"dmg": "Medium",
+		"hit": "Medium Bonus",
+		"def": "No Bonus",
+		"effect": "Target's attack speed reduced by 21% for 20 seconds."
+	},
+	{
+		"class": ["Armsman"],
+		"name": "Phalanx",
+		"level": 25,
+		"open": "Behind target",
+		"followup": ["Defender's Revenge"],
+		"end": "Medium",
+		"dmg": "High",
+		"hit": "Medium Bonus",
+		"def": "No Bonus",
+		"effect": "Target moves 40% slower for 15 seconds."
+	},
+	{
+		"class": ["Armsman"],
+		"name": "Mangle",
+		"level": 29,
+		"open": "Crippling Blow",
+		"followup": null,
+		"end": "Medium",
+		"dmg": "Medium",
+		"hit": "No Bonus",
+		"def": "No Bonus",
+		"effect": "Target cannot move or take any other action for 6 seconds."
+	},
+	{
+		"class": ["Armsman"],
+		"name": "Defender's Rage",
+		"level": 34,
+		"open": "Any",
+		"followup": null,
+		"end": "Low",
+		"dmg": "Medium",
+		"hit": "Medium Bonus",
+		"def": "No Bonus",
+		"effect": null
+	},
+	{
+		"class": ["Armsman"],
+		"name": "Poleaxe",
+		"level": 39,
+		"open": "To side of target",
+		"followup": ["Defender's Aegis"],
+		"end": "High",
+		"dmg": "High",
+		"hit": "High Bonus",
+		"def": "No Bonus",
+		"effect": "Target moves 40% slower for 15 seconds."
+	},
+	{
+		"class": ["Armsman"],
+		"name": "Defender's Revenge",
+		"level": 44,
+		"open": "Phalanx",
+		"followup": null,
+		"end": "Medium",
+		"dmg": "Very High",
+		"hit": "Very High Bonus",
+		"def": "No Bonus",
+		"effect": "Target cannot move or take any other action for 9 seconds."
+	},
+	{
+		"class": ["Armsman"],
+		"name": "Defender's Advance",
+		"level": 48,
+		"open": "Executioner",
+		"followup": null,
+		"end": "High",
+		"dmg": "Very High",
+		"hit": "Low Bonus",
+		"def": "Medium Bonus",
+		"effect": "20 damage every 4.0 sec for 20 seconds"
+	},
+	{
+		"class": ["Armsman"],
+		"name": "Defender's Aegis",
+		"level": 50,
+		"open": "Poleaxe",
+		"followup": null,
+		"end": "Medium",
+		"dmg": "Very High",
+		"hit": "High Bonus",
+		"def": "Low Bonus",
+		"effect": "32 damage every 4.0 sec for 20 seconds."
+	}
+	
+]};
+
+const SLASH_STYLE_DATA = {
+	"metaData": {
+		"weapon": "Slash",
+		"trainedValue": 1
+	},
+	"styles": [{
+		"class": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
 		"name": "Ruby Slash",
 		"level": 1,
 		"open": "Any",
@@ -15,10 +228,7 @@ const STYLE_DATA = [
 		"effect": null
 	},
 	{
-		"id": 80,
-		"realms": ["Albion"],
-		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
-		"tree": "Slash",
+		"class": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
 		"name": "Emerald Slash",
 		"level": 2,
 		"open": "Ruby Slash",
@@ -30,10 +240,7 @@ const STYLE_DATA = [
 		"effect": "8 damage every 4.0 seconds for 20 seconds."
 	},
 	{
-		"id": 81,
-		"realms": ["Albion"],
-		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
-		"tree": "Slash",
+		"class": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
 		"name": "Cross Slash",
 		"level": 4,
 		"open": "In front of target",
@@ -45,10 +252,7 @@ const STYLE_DATA = [
 		"effect": "Target's attack speed reduced by 16% for 20 seconds."
 	},
 	{
-		"id": 82,
-		"realms": ["Albion"],
-		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
-		"tree": "Slash",
+		"class": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
 		"name": "Uppercut",
 		"level": 6,
 		"open": "Any",
@@ -60,10 +264,7 @@ const STYLE_DATA = [
 		"effect": null
 	},
 	{
-		"id": 83,
-		"realms": ["Albion"],
-		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
-		"tree": "Slash",
+		"class": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
 		"name": "Enrage",
 		"level": 8,
 		"open": "Any",
@@ -75,10 +276,7 @@ const STYLE_DATA = [
 		"effect": "Increases your threat to monster targets by 275 damage."
 	},
 	{
-		"id": 84,
-		"realms": ["Albion"],
-		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
-		"tree": "Slash",
+		"class": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
 		"name": "Bloodletter",
 		"level": 10,
 		"open": "Cross Slash",
@@ -90,10 +288,7 @@ const STYLE_DATA = [
 		"effect": "13 damage every 4.0 seconds for 20 seconds."
 	},
 	{
-		"id": 85,
-		"realms": ["Albion"],
-		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
-		"tree": "Slash",
+		"class": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
 		"name": "Reflect",
 		"level": 12,
 		"open": "Any",
@@ -105,10 +300,7 @@ const STYLE_DATA = [
 		"effect": "Increases your threat to monster targets by 0 damage."
 	},
 	{
-		"id": 86,
-		"realms": ["Albion"],
-		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
-		"tree": "Slash",
+		"class": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
 		"name": "Opal Slash",
 		"level": 15,
 		"open": "Uppercut",
@@ -120,10 +312,7 @@ const STYLE_DATA = [
 		"effect": "13 damage every 4.0 seconds for 20 seconds."
 	},
 	{
-		"id": 87,
-		"realms": ["Albion"],
-		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
-		"tree": "Slash",
+		"class": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
 		"name": "Riposte",
 		"level": 18,
 		"open": "You Block",
@@ -135,10 +324,7 @@ const STYLE_DATA = [
 		"effect": "Target's attack speed reduced by 21% for 20 seconds."
 	},
 	{
-		"id": 88,
-		"realms": ["Albion"],
-		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
-		"tree": "Slash",
+		"class": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
 		"name": "Side Slicer",
 		"level": 21,
 		"open": "To side of target",
@@ -150,10 +336,7 @@ const STYLE_DATA = [
 		"effect": "Target moves 40% slower for 14 seconds."
 	},
 	{
-		"id": 89,
-		"realms": ["Albion"],
-		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
-		"tree": "Slash",
+		"class": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
 		"name": "Cleave",
 		"level": 25,
 		"open": "Uppercut",
@@ -165,10 +348,7 @@ const STYLE_DATA = [
 		"effect": "20 damage every 4.0 seconds for 20 seconds."
 	},
 	{
-		"id": 90,
-		"realms": ["Albion"],
-		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
-		"tree": "Slash",
+		"class": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
 		"name": "Amethyst Slash",
 		"level": 29,
 		"open": "Any",
@@ -180,10 +360,7 @@ const STYLE_DATA = [
 		"effect": null
 	},
 	{
-		"id": 91,
-		"realms": ["Albion"],
-		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
-		"tree": "Slash",
+		"class": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
 		"name": "Befuddler",
 		"level": 34,
 		"open": "Riposte",
@@ -195,10 +372,7 @@ const STYLE_DATA = [
 		"effect": "Target cannot move or take any other action for 6 seconds."
 	},
 	{
-		"id": 92,
-		"realms": ["Albion"],
-		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
-		"tree": "Slash",
+		"class": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
 		"name": "Back Slash",
 		"level": 39,
 		"open": "Behind target",
@@ -210,10 +384,7 @@ const STYLE_DATA = [
 		"effect": "Target moves 40% slower for 19 seconds."
 	},
 	{
-		"id": 93,
-		"realms": ["Albion"],
-		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
-		"tree": "Slash",
+		"class": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
 		"name": "Sapphire Slash",
 		"level": 44,
 		"open": "Enrage",
@@ -225,10 +396,7 @@ const STYLE_DATA = [
 		"effect": "26 damage every 4.0 seconds for 20 seconds."
 	},
 	{
-		"id": 94,
-		"realms": ["Albion"],
-		"classes": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
-		"tree": "Slash",
+		"class": ["Armsman", "Infiltrator", "Mercenary", "Minstrel", "Paladin", "Reaver", "Scout"],
 		"name": "Diamond Slash",
 		"level": 50,
 		"open": "Back Slash",
@@ -239,4 +407,220 @@ const STYLE_DATA = [
 		"def": "No Bonus",
 		"effect": "Target's attack speed reduced by 34% for 20 seconds."
 	}
-];
+]};
+
+const TWO_HANDED_STYLE_DATA = {
+	"metaData": {
+		"weapon": "Two Handed",
+		"trainedValue": 1,
+	},
+	"styles": [{
+		"class": ["Armsman", "Paladin"],
+		"name": "Quarter Moon",
+		"level": 1,
+		"open": "Any",
+		"followup": null,
+		"end": "Low",
+		"dmg": "Very Low",
+		"hit": "Low Bonus",
+		"def": "No Bonus",
+		"effect": null
+	},
+	{
+		"class": ["Armsman", "Paladin"],
+		"name": "Half Moon",
+		"level": 2,
+		"open": "Any",
+		"followup": null,
+		"end": "Low",
+		"dmg": "Very Low",
+		"hit": "No Bonus",
+		"def": "No Bonus",
+		"effect": null
+	},
+	{
+		"class": ["Armsman", "Paladin"],
+		"name": "Double Back",
+		"level": 4,
+		"open": "In front of target",
+		"followup": ["Two Fists"],
+		"end": "Medium",
+		"dmg": "Medium",
+		"hit": "Medium Bonus",
+		"def": "No Bonus",
+		"effect": "Target's attack speed reduced by 16% for 20 seconds."
+	},
+	{
+		"class": ["Armsman", "Paladin"],
+		"name": "Rile",
+		"level": 6,
+		"open": "Any",
+		"followup": null,
+		"end": "Low",
+		"dmg": "Medium",
+		"hit": "High Bonus",
+		"def": "Medium Penalty",
+		"effect": "Increases your threat to monster targets by 275 damage."
+	},
+	{
+		"class": ["Armsman", "Paladin"],
+		"name": "Pacify",
+		"level": 8,
+		"open": "Any",
+		"followup": null,
+		"end": "Low",
+		"dmg": "None",
+		"hit": "No Bonus",
+		"def": "High Bonus",
+		"effect": "Increases your threat to monster targets by 0 damage."
+	},
+	{
+		"class": ["Armsman", "Paladin"],
+		"name": "Two Fists",
+		"level": 10,
+		"open": "Double Back",
+		"followup": null,
+		"end": "Medium",
+		"dmg": "High",
+		"hit": "Medium Bonus",
+		"def": "No Bonus",
+		"effect": "8 damage every 5.0 sec for 20 seconds."
+	},
+	{
+		"class": ["Armsman", "Paladin"],
+		"name": "Bone Bruiser",
+		"level": 12,
+		"open": "Any",
+		"followup": null,
+		"end": "Medium",
+		"dmg": "Low",
+		"hit": "Low Bonus",
+		"def": "No Bonus",
+		"effect": "Target's attack speed reduced by 18% for 20 seconds."
+	},
+	{
+		"class": ["Armsman", "Paladin"],
+		"name": "Onslaught",
+		"level": 15,
+		"open": "To side of target",
+		"followup": ["Two Moons"],
+		"end": "Medium",
+		"dmg": "High",
+		"hit": "Medium Bonus",
+		"def": "No Bonus",
+		"effect": "Target moves 40% slower for 14 seconds."
+	},
+	{
+		"class": ["Armsman", "Paladin"],
+		"name": "Fury",
+		"level": 18,
+		"open": "You Parry",
+		"followup": ["Recenter"],
+		"end": "Low",
+		"dmg": "Medium",
+		"hit": "High Bonus",
+		"def": "High Penalty",
+		"effect": "13 damage every 4.0 sec for 20 seconds."
+	},
+	{
+		"class": ["Armsman", "Paladin"],
+		"name": "Bone Splitter",
+		"level": 21,
+		"open": "In front of target",
+		"followup": ["Bone Breaker"],
+		"end": "Medium",
+		"dmg": "Medium",
+		"hit": "Low Bonus",
+		"def": "No Bonus",
+		"effect": null
+	},
+	{
+		"class": ["Armsman", "Paladin"],
+		"name": "Recenter",
+		"level": 25,
+		"open": "Fury",
+		"followup": null,
+		"end": "Low",
+		"dmg": "High",
+		"hit": "Low Bonus",
+		"def": "High Bonus",
+		"effect": "Target's attack speed reduced by 26% for 20 seconds."
+	},
+	{
+		"class": ["Armsman", "Paladin"],
+		"name": "Bone Breaker",
+		"level": 29,
+		"open": "Bone Splitter",
+		"followup": null,
+		"end": "Medium",
+		"dmg": "High",
+		"hit": "Low Bonus",
+		"def": "No Bonus",
+		"effect": "20 damage every 4.0 sec for 20 seconds."
+	},
+	{
+		"class": ["Armsman", "Paladin"],
+		"name": "Obfuscate",
+		"level": 34,
+		"open": "Any",
+		"followup": null,
+		"end": "Medium",
+		"dmg": "Medium",
+		"hit": "Medium Bonus",
+		"def": "No Bonus",
+		"effect": null
+	},
+	{
+		"class": ["Armsman", "Paladin"],
+		"name": "Doubler",
+		"level": 39,
+		"open": "Behind target",
+		"followup": ["Sun and Moon"],
+		"end": "Medium",
+		"dmg": "High",
+		"hit": "Medium Bonus",
+		"def": "No Bonus",
+		"effect": "Target moves 40% slower for 23 seconds."
+	},
+	{
+		"class": ["Armsman", "Paladin"],
+		"name": "Two Moons",
+		"level": 44,
+		"open": "Onslaught",
+		"followup": null,
+		"end": "Low",
+		"dmg": "Very High",
+		"hit": "High Bonus",
+		"def": "No Bonus",
+		"effect": "Target cannot move or take any other action for 9 seconds."
+	},
+	{
+		"class": ["Armsman", "Paladin"],
+		"name": "Sun and Moon",
+		"level": 50,
+		"open": "Doubler",
+		"followup": null,
+		"end": "Medium",
+		"dmg": "Very High",
+		"hit": "Medium Bonus",
+		"def": "No Bonus",
+		"effect": "Target cannot move or take any other action for 7 seconds."
+	}
+]};
+
+
+
+/*  style template
+
+		"class": [""],
+		"name": "",
+		"level": ,
+		"open": "",
+		"followup": ,
+		"end": "",
+		"dmg": "",
+		"hit": "",
+		"def": "",
+		"effect":
+
+*/
