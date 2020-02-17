@@ -138,6 +138,8 @@ function onRealmSelect() {
 	resetAttributes();
 	resetSpecializations();
 	resetAbilities();
+	resetCombat();
+	resetMagic();
 	drawDropDown('races');
 	fillDropDown('races');
 	drawDropDown('classes');
@@ -153,6 +155,8 @@ function onRaceSelect() {
 	resetAttributePrio();
 	resetSpecializations();
 	resetAbilities();
+	resetCombat();
+	resetMagic();
 	drawDropDown('classes');
 	fillDropDown('classes');
 	setAttributes();
@@ -170,7 +174,10 @@ function onClassSelect() {
 	resetAttributeBonus();
 	resetSpecializations();
 	resetAbilities();
+	resetCombat();
+	resetMagic();
 	getSelectedClass();
+	drawCombat();
 	setOptimizedAttributes();
 	document.getElementById("charLevel").readOnly = false;
 	document.getElementById('builder').style.display = "block";
@@ -321,11 +328,11 @@ function drawTrainer() {
 	
 	for(spec in selectedClass.specializations) {
 		numOnRight = 1;
-		label = `<span id="${selectedClass.specializations[spec]}Label" class="specName">${selectedClass.specializations[spec]}</span>`;
-		leftButton = `<button id="${selectedClass.specializations[spec]}LeftButton" onclick="returnSpecPoints('${selectedClass.specializations[spec]}')">&lt;</button>`;
-		rightButton = `<button id="${selectedClass.specializations[spec]}RightButton" onclick="spendSpecPoints('${selectedClass.specializations[spec]}')">&gt;</button>`;
-		slider = `<input type="range" min="1" max="50" value="1" id="${selectedClass.specializations[spec]}Slider" onchange="${setSpecs}">`;
-		numWrapper = `<span id="${selectedClass.specializations[spec]}Value" class="specValue">${numOnRight}</span><br />`;
+		label = `<span id="${selectedClass.specializations[spec].metaData.weapon}Label" class="specName">${selectedClass.specializations[spec].metaData.weapon}</span>`;
+		leftButton = `<button id="${selectedClass.specializations[spec].metaData.weapon}LeftButton" onclick="returnSpecPoints('${selectedClass.specializations[spec].metaData.weapon}')">&lt;</button>`;
+		rightButton = `<button id="${selectedClass.specializations[spec].metaData.weapon}RightButton" onclick="spendSpecPoints('${selectedClass.specializations[spec].metaData.weapon}')">&gt;</button>`;
+		slider = `<input type="range" min="1" max="50" value="1" id="${selectedClass.specializations[spec].metaData.weapon}Slider" onchange="${setSpecs}">`;
+		numWrapper = `<span id="${selectedClass.specializations[spec].metaData.weapon}Value" class="specValue">${numOnRight}</span><br />`;
 		
 		//leftButton.onclick = () => {document.getElementById(`${selectedClass.specializations[spec]}Value`).innerHTML = (numOnRight -= 1);};
 		//rightButton.onclick = () => {document.getElementById(`${selectedClass.specializations[spec]}Value`).innerHTML = (numOnRight += 1);};
@@ -749,7 +756,7 @@ function setSpecializations() {
 		resetSpecializations();
 	} else {
 		for(let i = 0; i < selectedClass.specializations.length; i++) {
-			document.getElementById('specBox').innerHTML += `<span id="${selectedClass.specializations[i]}SpecImage" class="specImage"></span><span id="${selectedClass.specializations[i]}Spec" class="specName">${selectedClass.specializations[i]}</span><span id="${selectedClass.specializations[i]}SpecLevel" class="specLevel">1</span><br />`;
+			document.getElementById('specBox').innerHTML += `<span id="${selectedClass.specializations[i].metaData.weapon}SpecImage" class="specImage"></span><span id="${selectedClass.specializations[i].metaData.weapon}Spec" class="specName">${selectedClass.specializations[i].metaData.weapon}</span><span id="${selectedClass.specializations[i].metaData.weapon}SpecLevel" class="specLevel">1</span><br />`;
 		}
 	}
 }
@@ -769,6 +776,77 @@ function setAbilities() {
 		document.getElementById('abilityBox').innerHTML += `<span id="${selectedClass.equipment.armor.name}AbilityImage" class="specImage"></span><span id="${selectedClass.equipment.armor.name}Ability" class="abilityName">Armor Ability: ${selectedClass.equipment.armor.name}</span><br />`;
 		if(selectedClass.equipment.shield != null) {
 			document.getElementById('abilityBox').innerHTML += `<span id="${selectedClass.equipment.shield.name}AbilityImage" class="specImage"></span><span id="${selectedClass.equipment.shield.name}Ability" class="abilityName">Shield Ability: ${selectedClass.equipment.shield.name}</span><br />`;
+		}
+	}
+}
+
+function drawCombat() {
+	let specWrappers, specButton, specTitle, specTree;
+	
+	for(spec in selectedClass.specializations) {
+		specTree = selectedClass.specializations[spec].metaData.weapon;
+		specWrappers = `<div id="${specTree}Wrapper" onclick="showTree(event)"></div><div id="${specTree}Styles" class="dropdown-content"></div>`; 
+		specButton = `<button class="dropbttn" id="${specTree}Button"> </button>`;
+		specTitle = `<label id="${specTree}Title" class="specTitle">${specTree}</label>`; 
+		
+		document.getElementById("combat").innerHTML += specWrappers;
+		document.getElementById(`${selectedClass.specializations[spec].metaData.weapon}Wrapper`).innerHTML = specButton + specTitle;
+		
+		fillCombat(`${selectedClass.specializations[spec].metaData.weapon}Styles`, selectedClass.specializations[spec]);
+	}
+}
+
+function fillCombat(targetElement, style) {
+	let styleName, styleLevel;
+	for(let i = 0; i < style.styles.length; i++) {
+		styleName = `<span id="${style.styles[i].name}" class="abilityName2">${style.styles[i].name}</span>`;
+		styleLevel = `<span id="${style.styles[i].name}Level" class="abilityLevel">${style.styles[i].level}<span><br />`;
+		document.getElementById(targetElement).innerHTML += styleName + styleLevel;
+	}
+}
+
+function resetCombat() {
+	document.getElementById("combat").innerHTML = "";
+}
+
+function drawMagic() {
+	
+}
+
+function resetMagic() {
+	document.getElementById("magic").innerHTML = "";
+}
+
+function showTree(event) {
+	let targetted = event.target.getAttribute("id");
+	let index, targettedStyle, targettedButton, buttonElement, stylesElement, bttnOff, bttnOn;
+	bttnOff = "dropbttn";
+	bttnOn = "dropbttn-clicked";
+	if(targetted.includes("Button")) {
+		buttonElement = document.getElementById(targetted);
+		index = targetted.indexOf("Button");
+		targettedStyle = targetted.substring(0, index) + "Styles";
+		stylesElement = document.getElementById(targettedStyle);
+		
+		if(buttonElement.classList.contains('dropbttn')) {
+			buttonElement.classList.replace(bttnOff, bttnOn);
+			stylesElement.style.display = "block";
+		} else {
+			buttonElement.classList.replace(bttnOn, bttnOff);
+			stylesElement.style.display = "none";
+		}
+	} else if(targetted.includes("Title")) {
+		index = targetted.indexOf("Title");
+		targettedButton = targetted.substring(0, index) + "Button";
+		buttonElement = document.getElementById(targettedButton);
+		targettedStyle = targetted.substring(0, index) + "Styles";
+		stylesElement = document.getElementById(targettedStyle);
+		if(buttonElement.classList.contains(bttnOff)) {
+			buttonElement.classList.replace(bttnOff, bttnOn);
+			stylesElement.style.display = "block";
+		} else {
+			buttonElement.classList.replace(bttnOn, bttnOff);
+			stylesElement.style.display = "none";
 		}
 	}
 }
