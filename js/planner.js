@@ -138,8 +138,7 @@ function onRealmSelect() {
 	resetAttributes();
 	resetSpecializations();
 	resetAbilities();
-	resetCombat();
-	resetMagic();
+	resetSkills();
 	drawDropDown('races');
 	fillDropDown('races');
 	drawDropDown('classes');
@@ -155,8 +154,7 @@ function onRaceSelect() {
 	resetAttributePrio();
 	resetSpecializations();
 	resetAbilities();
-	resetCombat();
-	resetMagic();
+	resetSkills();
 	drawDropDown('classes');
 	fillDropDown('classes');
 	setAttributes();
@@ -174,10 +172,9 @@ function onClassSelect() {
 	resetAttributeBonus();
 	resetSpecializations();
 	resetAbilities();
-	resetCombat();
-	resetMagic();
+	resetSkills();
 	getSelectedClass();
-	drawCombat();
+	drawSkills();
 	setOptimizedAttributes();
 	document.getElementById("charLevel").readOnly = false;
 	document.getElementById('builder').style.display = "block";
@@ -752,11 +749,18 @@ function setResists() {
 
 //Function set skills based on selected class
 function setSpecializations() {
+	let specImage, specName, specLevel, specTree;
 	if(selectedClass == undefined) {
 		resetSpecializations();
 	} else {
+		
 		for(let i = 0; i < selectedClass.specializations.length; i++) {
-			document.getElementById('specBox').innerHTML += `<span id="${selectedClass.specializations[i].metaData.weapon}SpecImage" class="specImage"></span><span id="${selectedClass.specializations[i].metaData.weapon}Spec" class="specName">${selectedClass.specializations[i].metaData.weapon}</span><span id="${selectedClass.specializations[i].metaData.weapon}SpecLevel" class="specLevel">1</span><br />`;
+			specTree = selectedClass.specializations[i].metaData;
+			specImage = `<span id="${specTree.spec}SpecImage" class="specImage"></span>`;
+			specName = `<span id="${specTree.spec}Spec" class="specName">${specTree.spec}</span>`;
+			specLevel = `<span id="${specTree.spec}SpecLevel" class="specLevel">${specTree.trainedValue}</span><br />`;
+			
+			document.getElementById('specBox').innerHTML += specImage + specName + specLevel;
 		}
 	}
 }
@@ -780,40 +784,47 @@ function setAbilities() {
 	}
 }
 
-function drawCombat() {
-	let specWrappers, specButton, specTitle, specTree;
+function drawSkills() {
+	let specWrappers, specButton, specTitle, specName, currentSpec;
 	
 	for(spec in selectedClass.specializations) {
-		specTree = selectedClass.specializations[spec].metaData.weapon;
-		specWrappers = `<div id="${specTree}Wrapper" onclick="showTree(event)"></div><div id="${specTree}Styles" class="dropdown-content"></div>`; 
-		specButton = `<button class="dropbttn" id="${specTree}Button"> </button>`;
-		specTitle = `<label id="${specTree}Title" class="specTitle">${specTree}</label>`; 
-		
-		document.getElementById("combat").innerHTML += specWrappers;
-		document.getElementById(`${selectedClass.specializations[spec].metaData.weapon}Wrapper`).innerHTML = specButton + specTitle;
-		
-		fillCombat(`${selectedClass.specializations[spec].metaData.weapon}Styles`, selectedClass.specializations[spec]);
+		currentSpec = selectedClass.specializations[spec];
+		if(currentSpec.hasOwnProperty('styles') || currentSpec.hasOwnProperty('spells')){
+			if(currentSpec.metaData.hasOwnProperty('altName')) {
+				specName = currentSpec.metaData.altName;
+			} else {
+				specName = currentSpec.metaData.spec;
+			}
+			specWrappers = `<div id="${specName}Wrapper" onclick="showTree(event)"></div><div id="${specName}Styles" class="dropdown-content"></div>`; 
+			specButton = `<button class="dropbttn" id="${specName}Button"> </button>`;
+			specTitle = `<label id="${specName}Title" class="specTitle">${specName}</label>`; 
+			
+			if(currentSpec.metaData.type == "Combat") {
+				document.getElementById("combat").innerHTML += specWrappers;
+			} else if(currentSpec.metaData.type == "Magic") {
+				document.getElementById("magic").innerHTML += specWrappers;
+			}
+			document.getElementById(`${specName}Wrapper`).innerHTML = specButton + specTitle;
+			
+			fillSkills(`${specName}Styles`, currentSpec);
+		}
 	}
 }
 
-function fillCombat(targetElement, style) {
-	let styleName, styleLevel;
-	for(let i = 0; i < style.styles.length; i++) {
-		styleName = `<span id="${style.styles[i].name}" class="abilityName2">${style.styles[i].name}</span>`;
-		styleLevel = `<span id="${style.styles[i].name}Level" class="abilityLevel">${style.styles[i].level}<span><br />`;
-		document.getElementById(targetElement).innerHTML += styleName + styleLevel;
+function fillSkills(targetElement, skill) {
+	let skillName, skillLevel;
+	//add if statement to check for type, combat or magic, and send to correct element
+	for(let i = 0; i < skill.styles.length; i++) {
+		if(skill.styles[i].class.includes(selectedClass.name) && skill.styles[i].level <= skill.metaData.trainedValue) {
+			skillName = `<span id="${skill.styles[i].name}" class="abilityName2">${skill.styles[i].name}</span>`;
+			skillLevel = `<span id="${skill.styles[i].name}Level" class="abilityLevel">${skill.styles[i].level}<span><br />`;
+			document.getElementById(targetElement).innerHTML += skillName + skillLevel;
+		}
 	}
 }
 
-function resetCombat() {
+function resetSkills() {
 	document.getElementById("combat").innerHTML = "";
-}
-
-function drawMagic() {
-	
-}
-
-function resetMagic() {
 	document.getElementById("magic").innerHTML = "";
 }
 
