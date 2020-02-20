@@ -17,7 +17,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 2.0,
-		"specializations" : [POLEARM_STYLE_DATA, /*"Crossbow",*/ TWO_HANDED_STYLE_DATA, /*"Parry",*/ SLASH_STYLE_DATA/*, "Crush", "Thrust", "Shield"*/],
+		"specializations" : [POLEARM_SPEC_DATA, /*"Crossbow",*/ TWO_HANDED_SPEC_DATA, PARRY_SPEC_DATA, SLASH_SPEC_DATA, CRUSH_SPEC_DATA, THRUST_SPEC_DATA/*, "Shield"*/],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[1], WEAPONRY_DATA[2], WEAPONRY_DATA[3], WEAPONRY_DATA[4], WEAPONRY_DATA[5], WEAPONRY_DATA[7]],
@@ -101,7 +101,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 1.8,
-		"specializations" : ["Rejuvenation", "Enhancements", "Staff", "Parry"],
+		"specializations" : ["Rejuvenation", "Enhancements", STAFF_SPEC_DATA, PARRY_SPEC_DATA],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4], ABILITY_DATA[2]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[4]],
@@ -129,7 +129,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 2.0,
-		"specializations" : ["Rejuvenation", "Enhancements", "Shield", "Flexible", "Crush"],
+		"specializations" : ["Rejuvenation", "Enhancements", "Shield", FLEXIBLE_SPEC_DATA, CRUSH_SPEC_DATA],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[4], WEAPONRY_DATA[6]],
@@ -157,7 +157,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 2.9,
-		"specializations" : ["Dual Wield", "Envenom", "Critical Strike", "Stealth", "Slash", "Thrust"],
+		"specializations" : [DUAL_WIELD_SPEC_DATA, "Envenom", "Critical Strike", "Stealth", SLASH_SPEC_DATA, THRUST_SPEC_DATA],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4], ABILITY_DATA[2]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[3], WEAPONRY_DATA[5]],
@@ -185,7 +185,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 2.0,
-		"specializations" : ["Parry", "Slash", "Crush", "Thrust", "Shield", "Dual Wield"],
+		"specializations" : [PARRY_SPEC_DATA, SLASH_SPEC_DATA, CRUSH_SPEC_DATA, THRUST_SPEC_DATA, "Shield", DUAL_WIELD_SPEC_DATA],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[8], WEAPONRY_DATA[3], WEAPONRY_DATA[4], WEAPONRY_DATA[5]],
@@ -213,7 +213,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 1.5,
-		"specializations" : ["Stealth", "Slash", "Thrust", "Instruments"],
+		"specializations" : ["Stealth", SLASH_SPEC_DATA, THRUST_SPEC_DATA, "Instruments"],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4], ABILITY_DATA[2]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[3], WEAPONRY_DATA[5]],
@@ -269,7 +269,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 2.0,
-		"specializations" : ["Two Handed", "Parry", "Slash", "Crush", "Thrust", "Shield", "Chants"],
+		"specializations" : [TWO_HANDED_SPEC_DATA, PARRY_SPEC_DATA, SLASH_SPEC_DATA, CRUSH_SPEC_DATA, THRUST_SPEC_DATA, "Shield", "Chants"],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[2], WEAPONRY_DATA[3], WEAPONRY_DATA[4], WEAPONRY_DATA[5]],
@@ -297,7 +297,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 2.0,
-		"specializations" : ["Slash", "Crush", "Thrust", "Parry", "Shield", "Soulrending", "Flexible"],
+		"specializations" : [SLASH_SPEC_DATA, CRUSH_SPEC_DATA, THRUST_SPEC_DATA, PARRY_SPEC_DATA, "Shield", "Soulrending", FLEXIBLE_SPEC_DATA],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[3], WEAPONRY_DATA[4], WEAPONRY_DATA[5], WEAPONRY_DATA[6]],
@@ -325,7 +325,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 2.0,
-		"specializations" : ["Shield", "Stealth", "Slash", "Thrust", "Archery"],
+		"specializations" : ["Shield", "Stealth", SLASH_SPEC_DATA, THRUST_SPEC_DATA, "Archery"],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4], ABILITY_DATA[2]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[3], WEAPONRY_DATA[5], WEAPONRY_DATA[9]],
