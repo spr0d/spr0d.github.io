@@ -139,6 +139,7 @@ function onRealmSelect() {
 	resetSpecializations();
 	resetAbilities();
 	resetSkills();
+	respecAllPoints();
 	drawDropDown('races');
 	fillDropDown('races');
 	drawDropDown('classes');
@@ -155,6 +156,7 @@ function onRaceSelect() {
 	resetSpecializations();
 	resetAbilities();
 	resetSkills();
+	respecAllPoints();
 	drawDropDown('classes');
 	fillDropDown('classes');
 	setAttributes();
@@ -173,6 +175,7 @@ function onClassSelect() {
 	resetSpecializations();
 	resetAbilities();
 	resetSkills();
+	respecAllPoints();
 	getSelectedClass();
 	drawSkills();
 	setOptimizedAttributes();
@@ -325,11 +328,11 @@ function drawTrainer() {
 	
 	for(spec in selectedClass.specializations) {
 		numOnRight = 1;
-		label = `<span id="${selectedClass.specializations[spec].metaData.weapon}Label" class="specName">${selectedClass.specializations[spec].metaData.weapon}</span>`;
-		leftButton = `<button id="${selectedClass.specializations[spec].metaData.weapon}LeftButton" onclick="returnSpecPoints('${selectedClass.specializations[spec].metaData.weapon}')">&lt;</button>`;
-		rightButton = `<button id="${selectedClass.specializations[spec].metaData.weapon}RightButton" onclick="spendSpecPoints('${selectedClass.specializations[spec].metaData.weapon}')">&gt;</button>`;
-		slider = `<input type="range" min="1" max="50" value="1" id="${selectedClass.specializations[spec].metaData.weapon}Slider" onchange="${setSpecs}">`;
-		numWrapper = `<span id="${selectedClass.specializations[spec].metaData.weapon}Value" class="specValue">${numOnRight}</span><br />`;
+		label = `<span id="${selectedClass.specializations[spec].metaData.spec}Label" class="specName">${selectedClass.specializations[spec].metaData.spec}</span>`;
+		leftButton = `<button id="${selectedClass.specializations[spec].metaData.spec}LeftButton" onclick="adjustSpecPoints('${selectedClass.specializations[spec].metaData.spec}', 'return')">&lt;</button>`;
+		rightButton = `<button id="${selectedClass.specializations[spec].metaData.spec}RightButton" onclick="adjustSpecPoints('${selectedClass.specializations[spec].metaData.spec}', 'spend')">&gt;</button>`;
+		slider = `<input type="range" min="1" max="50" value="1" id="${selectedClass.specializations[spec].metaData.spec}Slider" onchange="${setSpecs}">`;
+		numWrapper = `<span id="${selectedClass.specializations[spec].metaData.spec}Value" class="specValue">${numOnRight}</span><br />`;
 		
 		//leftButton.onclick = () => {document.getElementById(`${selectedClass.specializations[spec]}Value`).innerHTML = (numOnRight -= 1);};
 		//rightButton.onclick = () => {document.getElementById(`${selectedClass.specializations[spec]}Value`).innerHTML = (numOnRight += 1);};
@@ -343,25 +346,70 @@ function drawTrainer() {
 	}
 }
 
-//Adjusts the needed and remaining specialization points when a spec's trained value is increased (increases trained value)
-function spendSpecPoints(spec) {
-	if(parseInt(document.getElementById(`${spec}Value`).textContent) < 50) {
-		document.getElementById(`${spec}Slider`).value += 1;
-		document.getElementById(`${spec}Value`).innerHTML = parseInt(document.getElementById(`${spec}Value`).textContent) + 1;
-		document.getElementById('totalSpecNeeded').innerHTML = parseInt(document.getElementById('totalSpecNeeded').textContent) + parseInt(document.getElementById(`${spec}Value`).textContent);
-		document.getElementById('totalSpecRemaining').innerHTML = parseInt(document.getElementById('totalSpecAvailable').textContent) - parseInt(document.getElementById('totalSpecNeeded').textContent);
-		adjustMinLevel();
+//Adjusts the needed and remaining specialization points when a spec's trained value is increased or decreased
+function adjustSpecPoints(spec, action) {
+	let slider, value, pointsNeeded, pointsRemaining, pointsAvailable, minLevel, trainButton;
+	slider = document.getElementById(`${spec}Slider`);
+	value = document.getElementById(`${spec}Value`);
+	pointsNeeded = document.getElementById('totalSpecNeeded');
+	pointsRemaining = document.getElementById('totalSpecRemaining');
+	pointsAvailable = document.getElementById('totalSpecAvailable');
+	minLevel = document.getElementById('minLevelDisp');
+	trainButton = document.getElementById('trainConfirm');
+	if(action =="spend") {
+		if(parseInt(value.textContent) < 50) {
+			slider.value += 1;
+			value.innerHTML = parseInt(value.textContent) + 1;
+			pointsNeeded.innerHTML = parseInt(pointsNeeded.textContent) + parseInt(value.textContent);
+			pointsRemaining.innerHTML = parseInt(pointsAvailable.textContent) - parseInt(pointsNeeded.textContent);
+			adjustMinLevel();
+		}
+	} else if(action == "return") {
+		if(parseInt(value.textContent) > 1) {
+			slider.value -= 1;
+			value.innerHTML = parseInt(value.textContent) - 1;
+			pointsNeeded.innerHTML = parseInt(pointsNeeded.textContent) - (parseInt(value.textContent) + 1);
+			pointsRemaining.innerHTML = parseInt(pointsAvailable.textContent) - parseInt(pointsNeeded.textContent);
+			adjustMinLevel();
+		}
+	}
+	
+	if(parseInt(minLevel.textContent) > level || parseInt(pointsNeeded.textContent) > parseInt(pointsNeeded.textContent)) {
+		trainButton.disabled = true;
+	} else {
+		trainButton.disabled = false;
 	}
 }
 
-//Adjusts the needed and remaining specialization points when a spec's trained value is increased (reduces trained value)
-function returnSpecPoints(spec) {
-	if(parseInt(document.getElementById(`${spec}Value`).textContent) > 1) {
-		document.getElementById(`${spec}Slider`).value -= 1;
-		document.getElementById(`${spec}Value`).innerHTML = parseInt(document.getElementById(`${spec}Value`).textContent) - 1;
-		document.getElementById('totalSpecNeeded').innerHTML = parseInt(document.getElementById('totalSpecNeeded').textContent) - (parseInt(document.getElementById(`${spec}Value`).textContent) + 1);
-		document.getElementById('totalSpecRemaining').innerHTML = parseInt(document.getElementById('totalSpecAvailable').textContent) - parseInt(document.getElementById('totalSpecNeeded').textContent);
-		adjustMinLevel();
+function applySpecPoints() {
+	let newValue, allSpecs, pointsNeeded, pointsRemaining, pointsAvailable, currentSpecLevel;
+	allSpecs = selectedClass.specializations;
+	pointsNeeded = document.getElementById('totalSpecNeeded');
+	pointsRemaining = document.getElementById('totalSpecRemaining');
+	pointsAvailable = document.getElementById('totalSpecAvailable');
+	
+	if(document.getElementById('trainConfirm').disabled == false) {
+		for(let i = 0; i < allSpecs.length; i++) {
+			currentSpecLevel = document.getElementById(`${allSpecs[i].metaData.spec}SpecLevel`);
+			newValue = parseInt(document.getElementById(`${allSpecs[i].metaData.spec}Value`).textContent);
+			allSpecs[i].metaData.trainedValue = newValue;
+			console.log(allSpecs[i].metaData.trainedValue);
+			currentSpecLevel.textContent = newValue;
+		}
+		specPoints = parseInt(pointsRemaining.textContent);
+		document.getElementById("specPoints").value = specPoints;
+		document.getElementById('totalSpecAvailable').innerHTML = parseInt(document.getElementById('specPoints').value);
+		pointsAvailable.innerHTML = specPoints;
+		pointsNeeded.innerHTML = 0;
+		pointsRemaining.innerHTML = parseInt(pointsAvailable.textContent);
+		drawSkills();
+	}
+}
+
+function respecAllPoints() {
+	let allSpecs = selectedClass.specializations;
+	for(spec in allSpecs) {
+		allSpecs[spec].metaData.trainedValue = 1;
 	}
 }
 
@@ -369,7 +417,7 @@ function returnSpecPoints(spec) {
 function adjustMinLevel() {
 	let highestValues = [];
 	for(specLine in selectedClass.specializations) {
-		highestValues[specLine] = parseInt(document.getElementById(`${selectedClass.specializations[specLine]}Value`).textContent);
+		highestValues[specLine] = parseInt(document.getElementById(`${selectedClass.specializations[specLine].metaData.spec}Value`).textContent);
 	}
 	document.getElementById('minLevelDisp').innerHTML = Math.max(...highestValues);
 }
@@ -785,40 +833,71 @@ function setAbilities() {
 }
 
 function drawSkills() {
-	let specWrappers, specButton, specTitle, specName, currentSpec;
+	let wrapper, wrapperTarget, skillTarget, button, title, name, currentSpec;
 	
 	for(spec in selectedClass.specializations) {
 		currentSpec = selectedClass.specializations[spec];
-		if(currentSpec.hasOwnProperty('styles') || currentSpec.hasOwnProperty('spells')){
-			if(currentSpec.metaData.hasOwnProperty('altName')) {
-				specName = currentSpec.metaData.altName;
-			} else {
-				specName = currentSpec.metaData.spec;
+		if(currentSpec.metaData.hasOwnProperty('type')){
+			if(currentSpec.metaData.type.includes("Combat")) {
+				if(currentSpec.metaData.hasOwnProperty('altName')) {
+					name = currentSpec.metaData.altName;
+				} else {
+					name = currentSpec.metaData.spec;
+				}
+				title = `<label id="${name}Title" class="specTitle">${name}</label>`;
+				wrapperTarget = `${name}CombatWrapper`;
+				skillTarget = `${name}Styles`;
+				wrapper = `<div id="${wrapperTarget}" onclick="showTree(event, 'Styles')"></div><div id="${skillTarget}" class="dropdown-content"></div>`;
+				button = `<button class="dropbttn" id="${name}Button"></button>`;
+				document.getElementById("combat").innerHTML += wrapper;
+				document.getElementById(wrapperTarget).innerHTML = button + title;
+				fillSkills(skillTarget, currentSpec, "styles");
 			}
-			specWrappers = `<div id="${specName}Wrapper" onclick="showTree(event)"></div><div id="${specName}Styles" class="dropdown-content"></div>`; 
-			specButton = `<button class="dropbttn" id="${specName}Button"> </button>`;
-			specTitle = `<label id="${specName}Title" class="specTitle">${specName}</label>`; 
-			
-			if(currentSpec.metaData.type == "Combat") {
-				document.getElementById("combat").innerHTML += specWrappers;
-			} else if(currentSpec.metaData.type == "Magic") {
-				document.getElementById("magic").innerHTML += specWrappers;
+			if(currentSpec.metaData.type.includes("Magic")) {
+				if(currentSpec.metaData.hasOwnProperty('baseline')) {
+					name = currentSpec.metaData.baseline;
+					title = `<label id="${name}Title" class="specTitle">${name}</label>`;
+					wrapperTarget = `${name}Wrapper`;
+					skillTarget = `${name}BaseSpells`;
+					wrapper = `<div id="${wrapperTarget}" onclick="showTree(event, 'BaseSpells')"></div><div id="${skillTarget}" class="dropdown-content"></div>`;
+					button = `<button class="dropbttn" id="${name}Button"></button>`;
+					document.getElementById("magic").innerHTML += wrapper;
+					document.getElementById(wrapperTarget).innerHTML = button + title;
+					fillSkills(skillTarget, currentSpec, "base"); 
+				}
+				
+				if(currentSpec.metaData.hasOwnProperty('specline')) {
+					name = currentSpec.metaData.specline;
+					title = `<label id="${name}Title" class="specTitle">${name}</label>`;
+					wrapperTarget = `${name}Wrapper`;
+					skillTarget = `${name}TrainSpells`;
+					wrapper = `<div id="${wrapperTarget}" onclick="showTree(event, 'TrainSpells')"></div><div id="${skillTarget}" class="dropdown-content"></div>`;
+					button = `<button class="dropbttn" id="${name}Button"></button>`;
+					document.getElementById("magic").innerHTML += wrapper;
+					document.getElementById(wrapperTarget).innerHTML = button + title;
+					fillSkills(skillTarget, currentSpec, "spells");
+				}
 			}
-			document.getElementById(`${specName}Wrapper`).innerHTML = specButton + specTitle;
-			
-			fillSkills(`${specName}Styles`, currentSpec);
 		}
 	}
 }
 
-function fillSkills(targetElement, skill) {
+function fillSkills(targetElement, skill, type) {
 	let skillName, skillLevel;
-	//add if statement to check for type, combat or magic, and send to correct element
-	for(let i = 0; i < skill.styles.length; i++) {
-		if(skill.styles[i].class.includes(selectedClass.name) && skill.styles[i].level <= skill.metaData.trainedValue) {
-			skillName = `<span id="${skill.styles[i].name}" class="abilityName2">${skill.styles[i].name}</span>`;
-			skillLevel = `<span id="${skill.styles[i].name}Level" class="abilityLevel">${skill.styles[i].level}<span><br />`;
-			document.getElementById(targetElement).innerHTML += skillName + skillLevel;
+	document.getElementById(targetElement).innerHTML = "";
+	for(let i = 0; i < skill[type].length; i++) {
+		if(type == "base") {
+			if(skill[type][i].level <= level && skill[type][i].class.includes(selectedClass.name)) {
+				skillName = `<span id="${skill[type][i].name}" class="abilityName2">${skill[type][i].name}</span>`;
+				skillLevel = `<span id="${skill[type][i].name}Level" class="abilityLevel">${skill[type][i].level}<span><br />`;
+				document.getElementById(targetElement).innerHTML += skillName + skillLevel;
+			}
+		} else if(type == "spells" || "styles") {
+			if(skill[type][i].class.includes(selectedClass.name) && skill[type][i].level <= skill.metaData.trainedValue) {
+				skillName = `<span id="${skill[type][i].name}" class="abilityName2">${skill[type][i].name}</span>`;
+				skillLevel = `<span id="${skill[type][i].name}Level" class="abilityLevel">${skill[type][i].level}<span><br />`;
+				document.getElementById(targetElement).innerHTML += skillName + skillLevel;
+			}
 		}
 	}
 }
@@ -828,37 +907,31 @@ function resetSkills() {
 	document.getElementById("magic").innerHTML = "";
 }
 
-function showTree(event) {
+function showTree(event, type) {
 	let targetted = event.target.getAttribute("id");
 	let index, targettedStyle, targettedButton, buttonElement, stylesElement, bttnOff, bttnOn;
 	bttnOff = "dropbttn";
 	bttnOn = "dropbttn-clicked";
+	
+	
 	if(targetted.includes("Button")) {
 		buttonElement = document.getElementById(targetted);
 		index = targetted.indexOf("Button");
-		targettedStyle = targetted.substring(0, index) + "Styles";
+		targettedStyle = targetted.substring(0, index) + type;
 		stylesElement = document.getElementById(targettedStyle);
-		
-		if(buttonElement.classList.contains('dropbttn')) {
-			buttonElement.classList.replace(bttnOff, bttnOn);
-			stylesElement.style.display = "block";
-		} else {
-			buttonElement.classList.replace(bttnOn, bttnOff);
-			stylesElement.style.display = "none";
-		}
 	} else if(targetted.includes("Title")) {
 		index = targetted.indexOf("Title");
 		targettedButton = targetted.substring(0, index) + "Button";
 		buttonElement = document.getElementById(targettedButton);
-		targettedStyle = targetted.substring(0, index) + "Styles";
+		targettedStyle = targetted.substring(0, index) + type;
 		stylesElement = document.getElementById(targettedStyle);
-		if(buttonElement.classList.contains(bttnOff)) {
-			buttonElement.classList.replace(bttnOff, bttnOn);
-			stylesElement.style.display = "block";
-		} else {
-			buttonElement.classList.replace(bttnOn, bttnOff);
-			stylesElement.style.display = "none";
-		}
+	}
+	if(buttonElement.classList.contains(bttnOff)) {
+		buttonElement.classList.replace(bttnOff, bttnOn);
+		stylesElement.style.display = "block";
+	} else {
+		buttonElement.classList.replace(bttnOn, bttnOff);
+		stylesElement.style.display = "none";
 	}
 }
 
@@ -946,6 +1019,7 @@ function changeSpecPoints() {
 	document.getElementById("specPoints").value = specPoints;
 	document.getElementById('totalSpecAvailable').innerHTML = parseInt(document.getElementById('specPoints').value);
 	level = newLevel;
+	drawSkills();
 }
 
 //Create function that assigns styles based on class selection
