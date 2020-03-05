@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="CSS/stylesheet.css" type="text/css" charset="utf-8" />
 <link rel="stylesheet" href="CSS/planner.css" />
 <script id="styles-data" src="./js/styles.js"></script>
+<script id="spells-data" src="./js/spells.js"></script>
 <script id="ability-data" src="./js/abilities.js"></script>
 <script id="class-data" src="./js/classes.js"></script>
 <script id="race-data" src="./js/races.js"></script>
@@ -88,7 +89,7 @@
 			<tr>
 				<td id="trainingControls" style="text-align: left; background:none; border:0px; text-align: center; text-justify: inter-word;">
 					<span id="topButtonWrapper" style="display: inline-block; margin-top: 5px; margin-left:-205px; position: absolute;"><label class="buttonbordertrainer"><button id="respecAll" class="button buttonTop">/RESPEC ALL</button></label><label class="buttonbordertrainer"><button id="respecRealm" class="button buttonTop">/RESPEC REALM</button></label><label class="buttonbordertrainer"><button id="respecBuy" class="button buttonTop">/RESPEC BUY</button></label></span><br />
-					<span id="bottonButtonWrapper" style="display: inline-block; margin-top: 20px; margin-left:-5px;"><label class="buttonbordertrainer"><button id="trainConfirm" class="button buttonBottom" style="width:85px;">TRAIN</button></label><label class="buttonbordertrainer" style="margin-left:20px; margin-right:10px;"><button id="trainReset" class="button buttonBottom">RESET</button></label><label class="buttonbordertrainer"><button id="trainCancel" class="button buttonBottom" style="width:85px;" onclick="closeTrainer()">CANCEL</button></label></span>
+					<span id="bottonButtonWrapper" style="display: inline-block; margin-top: 20px; margin-left:-5px;"><label class="buttonbordertrainer"><button id="trainConfirm" class="button buttonBottom" style="width:85px;" onclick="applySpecPoints()">TRAIN</button></label><label class="buttonbordertrainer" style="margin-left:20px; margin-right:10px;"><button id="trainReset" class="button buttonBottom">RESET</button></label><label class="buttonbordertrainer"><button id="trainCancel" class="button buttonBottom" style="width:85px;" onclick="closeTrainer()">CANCEL</button></label></span>
 				</td>
 			</tr>
 		</table>
