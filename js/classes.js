@@ -241,7 +241,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 1.0,
-		"specializations" : ["Death Servant", "Deathsight", "Painworking"],
+		"specializations" : [/*"Death Servant", "Deathsight",*/ PAINWORKING_SPEC_DATA],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4], ABILITY_DATA[1]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0]],
