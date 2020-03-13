@@ -24,8 +24,6 @@ const CLASS_DATA = [
 						"armor" : ARMOR_ABILITY_DATA[4],
 						"shield" : SHIELD_ABILITY_DATA[2]
 					  },
-		"combat" : ["Polearm", "Two Handed", "Slash", "Crush", "Thrust", "Shield"],
-		"magic" : ["Crossbow"]
 	},
 	{
 		"name" : "Cabalist",
@@ -45,7 +43,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 1.0,
-		"specializations" : ["Body Magic", "Matter Magic", "Spirit Magic"],
+		"specializations" : [BODY_MAGIC_SPEC_DATA, MATTER_MAGIC_SPEC_DATA, SPIRIT_MAGIC_SPEC_DATA],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[1]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0]],
@@ -773,7 +771,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 1.5,
-		"specializations" : ["Scythe", PARRY_SPEC_DATA, "Arboreal Path"],
+		"specializations" : [SCYTHE_SPEC_DATA, PARRY_SPEC_DATA, "Arboreal Path"],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4], ABILITY_DATA[2]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[15]],
