@@ -133,75 +133,37 @@ const ARMSMAN_SPEC = [[polearmSpec, crossbowSpec, twoHandedSpec, parrySpec, slas
 
 //Function adjusts available classes depending on the selected realm
 function onRealmSelect() {
+	resetCharacterDetails('realm');
 	getSelectedRealm();
-	changeRealmLogo();
-	resetAttributes();
-	resetSpecializations();
-	resetAbilities();
-	resetSkills();
-	respecAllPoints();
-	drawDropDown('races');
-	fillDropDown('races');
-	drawDropDown('classes');
-	fillDropDown('classes');
-	document.getElementById('charLevel').readOnly = true;
-	updateRaceDesc();
-	updateClassDesc();
 }
 
 //Create function to adjust available races depending on the selected realm
 function onRaceSelect() {
+	resetCharacterDetails('race');
 	getSelectedRace();
-	resetAttributePrio();
-	resetSpecializations();
-	resetAbilities();
-	resetSkills();
-	respecAllPoints();
-	drawDropDown('classes');
-	fillDropDown('classes');
-	setAttributes();
-	setResists();
-	document.getElementById('charLevel').readOnly = true;
-	document.getElementById('selectionDetails').style.display = "block";
-	updateRaceDesc();
-	updateClassDesc();
 }
 
 //Create function to adjust character attributes depending on class
 function onClassSelect() {
-	
-	resetLevel();
-	resetAttributeBonus();
-	resetSpecializations();
-	resetAbilities();
-	resetSkills();
-	respecAllPoints();
+	resetCharacterDetails('class');
 	getSelectedClass();
-	drawSkills();
-	setOptimizedAttributes();
-	document.getElementById("charLevel").readOnly = false;
-	document.getElementById('builder').style.display = "block";
-	setSpecializations();
-	setAbilities();
-	updateClassDesc();
-	drawTrainer();
 }
 
 //Function changes color for selected realm
 function changeRealmLogo() {
 	
 	if(selectedRealm == 'Albion') {
-		//document.getElementById('').style.color = 'red';
-		//document.getElementById('selecthib').style.color = 'black';
-		//document.getElementById('selectmid').style.color = 'black';
+		document.getElementById('selectalb').style.color = 'red';
+		document.getElementById('selecthib').style.color = 'white';
+		document.getElementById('selectmid').style.color = 'white';
 	} else if (selectedRealm == 'Hibernia') {
-		//document.getElementById('selectalb').style.color = 'black';
-		//document.getElementById('selecthib').style.color = 'green';
-		//document.getElementById('selectmid').style.color = 'black';
+		document.getElementById('selectalb').style.color = 'white';
+		document.getElementById('selecthib').style.color = 'green';
+		document.getElementById('selectmid').style.color = 'white';
 	} else if (selectedRealm == 'Midgard') {
-		//document.getElementById('selectalb').style.color = 'black';
-		//document.getElementById('selecthib').style.color = 'black';
-		//document.getElementById('selectmid').style.color = 'blue';
+		document.getElementById('selectalb').style.color = 'white';
+		document.getElementById('selecthib').style.color = 'white';
+		document.getElementById('selectmid').style.color = 'blue';
 	}
 }
 
@@ -214,17 +176,41 @@ function getSelectedRealm() {
 	} else if(document.getElementById('midRealm').checked) {
 		selectedRealm = 'Midgard';
 	}
+	drawDropDown('races');
+	fillDropDown('races');
+	drawDropDown('classes');
+	fillDropDown('classes');
+	document.getElementById('charLevel').readOnly = true;
+	updateRaceDesc();
+	updateClassDesc();
+	changeRealmLogo();
 }
 
 //Assign selected race
 function getSelectedRace() {
 	selectedRace = RACE_DATA.find(race => race.name == document.getElementById('races').value);
+	drawDropDown('classes');
+	fillDropDown('classes');
+	setAttributes();
+	setResists();
+	document.getElementById('charLevel').readOnly = true;
+	document.getElementById('selectionDetails').style.display = "block";
+	updateRaceDesc();
+	updateClassDesc();
 }
 
 //Return selected class
 function getSelectedClass() {
 	selectedClass = CLASS_DATA.find(classes => classes.name == document.getElementById('classes').value);
 	pointMod = selectedClass.pointModifier;
+	drawSkills();
+	setOptimizedAttributes();
+	document.getElementById("charLevel").readOnly = false;
+	document.getElementById('builder').style.display = "block";
+	setSpecializations();
+	setAbilities();
+	updateClassDesc();
+	drawTrainer();
 }
 
 function getSelectedAttribute(event) {
@@ -250,7 +236,6 @@ function closeModal() {
 		document.getElementById('pieAttribute').value = pie + pieAttBonus;
 		document.getElementById('chaAttribute').value = cha + chaAttBonus;
 	}
-	
 }
 
 function openTrainer() {
@@ -324,14 +309,14 @@ function drawTrainer() {
 	document.getElementById('totalSpecNeeded').innerHTML = 0;
 	document.getElementById('totalSpecRemaining').innerHTML = 0;
 
-	let label, leftButton, rightButton, slider, numOnRight, numWrapper, setSpecs;
+	let label, leftButton, rightButton, slider, numOnRight, numWrapper;
 	
 	for(spec in selectedClass.specializations) {
 		numOnRight = 1;
 		label = `<span id="${selectedClass.specializations[spec].metaData.spec}Label" class="specName">${selectedClass.specializations[spec].metaData.spec}</span>`;
 		leftButton = `<button id="${selectedClass.specializations[spec].metaData.spec}LeftButton" onclick="adjustSpecPoints('${selectedClass.specializations[spec].metaData.spec}', 'return')">&lt;</button>`;
 		rightButton = `<button id="${selectedClass.specializations[spec].metaData.spec}RightButton" onclick="adjustSpecPoints('${selectedClass.specializations[spec].metaData.spec}', 'spend')">&gt;</button>`;
-		slider = `<input type="range" min="1" max="50" value="1" id="${selectedClass.specializations[spec].metaData.spec}Slider" onchange="${setSpecs}">`;
+		slider = `<input type="range" min="1" max="50" value="1" id="${selectedClass.specializations[spec].metaData.spec}Slider" oninput="adjustSpecPoints('${selectedClass.specializations[spec].metaData.spec}', 'slide')">`;
 		numWrapper = `<span id="${selectedClass.specializations[spec].metaData.spec}Value" class="specValue">${numOnRight}</span><br />`;
 		
 		//leftButton.onclick = () => {document.getElementById(`${selectedClass.specializations[spec]}Value`).innerHTML = (numOnRight -= 1);};
@@ -346,9 +331,32 @@ function drawTrainer() {
 	}
 }
 
+function resetTrainer() {
+	let currentSpec, currentSpecName, currentSpecValue, allSpecs, pointsNeeded, pointsRemaining, pointsAvailable;
+	allSpecs = selectedClass.specializations;
+	pointsNeeded = document.getElementById('totalSpecNeeded');
+	pointsRemaining = document.getElementById('totalSpecRemaining');
+	pointsAvailable = document.getElementById('totalSpecAvailable');
+	
+	for(spec in allSpecs) {
+		currentSpec = allSpecs[spec];
+		currentSpecName = currentSpec.metaData.spec;
+		currentSpecValue = parseInt(document.getElementById(`${currentSpecName}Value`).textContent);
+		for(let i = currentSpecValue; i > currentSpec.metaData.trainedValue; i--) { 
+			pointsRemaining.innerHTML = parseInt(pointsRemaining.textContent) + i;
+		}
+		document.getElementById(`${currentSpecName}Value`).innerHTML = currentSpec.metaData.trainedValue;
+		document.getElementById(`${currentSpecName}Slider`).value = currentSpec.metaData.trainedValue;
+	}
+	pointsAvailable.innerHTML = parseInt(pointsRemaining.textContent)
+	pointsNeeded.innerHTML = 0;
+	adjustMinLevel();
+}
+
 //Adjusts the needed and remaining specialization points when a spec's trained value is increased or decreased
 function adjustSpecPoints(spec, action) {
-	let slider, value, pointsNeeded, pointsRemaining, pointsAvailable, minLevel, trainButton;
+	let slider, value, pointsNeeded, pointsRemaining, pointsAvailable, minLevel, trainButton, selectedSpec;
+	selectedSpec = selectedClass.specializations.find(specs => specs.metaData.spec == spec);
 	slider = document.getElementById(`${spec}Slider`);
 	value = document.getElementById(`${spec}Value`);
 	pointsNeeded = document.getElementById('totalSpecNeeded');
@@ -356,23 +364,33 @@ function adjustSpecPoints(spec, action) {
 	pointsAvailable = document.getElementById('totalSpecAvailable');
 	minLevel = document.getElementById('minLevelDisp');
 	trainButton = document.getElementById('trainConfirm');
-	if(action =="spend") {
-		if(parseInt(value.textContent) < 50) {
-			slider.value += 1;
-			value.innerHTML = parseInt(value.textContent) + 1;
-			pointsNeeded.innerHTML = parseInt(pointsNeeded.textContent) + parseInt(value.textContent);
-			pointsRemaining.innerHTML = parseInt(pointsAvailable.textContent) - parseInt(pointsNeeded.textContent);
-			adjustMinLevel();
-		}
-	} else if(action == "return") {
-		if(parseInt(value.textContent) > 1) {
-			slider.value -= 1;
-			value.innerHTML = parseInt(value.textContent) - 1;
-			pointsNeeded.innerHTML = parseInt(pointsNeeded.textContent) - (parseInt(value.textContent) + 1);
-			pointsRemaining.innerHTML = parseInt(pointsAvailable.textContent) - parseInt(pointsNeeded.textContent);
-			adjustMinLevel();
+	
+	if(action == "slide") {
+		if(parseInt(value.textContent) < slider.value) {
+			action = "spend";
+		} else if(parseInt(value.textContent) > slider.value) {
+			action = "return";
 		}
 	}
+	
+	if(action =="spend") {
+		if(parseInt(value.textContent) < 50) {
+			value.innerHTML = parseInt(value.textContent) + 1;
+			slider.value = parseInt(value.textContent);
+			pointsNeeded.innerHTML = parseInt(pointsNeeded.textContent) + parseInt(value.textContent);
+			pointsRemaining.innerHTML = parseInt(pointsAvailable.textContent) - parseInt(pointsNeeded.textContent);
+		}
+	} else if(action == "return") {
+		if(parseInt(value.textContent) > 1 && selectedSpec.metaData.trainedValue <= slider.value && selectedSpec.metaData.trainedValue <= parseInt(value.textContent) - 1) {
+			value.innerHTML = parseInt(value.textContent) - 1;
+			slider.value = parseInt(value.textContent);
+			pointsNeeded.innerHTML = parseInt(pointsNeeded.textContent) - (parseInt(value.textContent) + 1);
+			pointsRemaining.innerHTML = parseInt(pointsAvailable.textContent) - parseInt(pointsNeeded.textContent);
+		} else {
+			slider.value = parseInt(value.textContent);
+		}
+	}
+	adjustMinLevel();
 	
 	if(parseInt(minLevel.textContent) > level || parseInt(pointsNeeded.textContent) > parseInt(pointsNeeded.textContent)) {
 		trainButton.disabled = true;
@@ -393,7 +411,6 @@ function applySpecPoints() {
 			currentSpecLevel = document.getElementById(`${allSpecs[i].metaData.spec}SpecLevel`);
 			newValue = parseInt(document.getElementById(`${allSpecs[i].metaData.spec}Value`).textContent);
 			allSpecs[i].metaData.trainedValue = newValue;
-			console.log(allSpecs[i].metaData.trainedValue);
 			currentSpecLevel.textContent = newValue;
 		}
 		specPoints = parseInt(pointsRemaining.textContent);
@@ -407,10 +424,29 @@ function applySpecPoints() {
 }
 
 function respecAllPoints() {
-	let allSpecs = selectedClass.specializations;
+	resetTrainer();
+	let currentSpec, currentSpecName, currentSpecTrained, allSpecs, pointsRemaining, pointsAvailable;
+	allSpecs = selectedClass.specializations;
+	pointsRemaining = document.getElementById('totalSpecRemaining');
+	pointsAvailable = document.getElementById('totalSpecAvailable');
+	
 	for(spec in allSpecs) {
-		allSpecs[spec].metaData.trainedValue = 1;
+		currentSpec = allSpecs[spec];
+		currentSpecName = currentSpec.metaData.spec;
+		currentSpecTrained = currentSpec.metaData.trainedValue;
+		for(let i = currentSpecTrained; i > 1; i--) { 
+			pointsAvailable.innerHTML = parseInt(pointsAvailable.textContent) + i;
+		}
+		currentSpec.metaData.trainedValue = 1;
+		document.getElementById(`${currentSpecName}Value`).innerHTML = 1;
+		document.getElementById(`${currentSpecName}Slider`).value = 1;
+		document.getElementById(`${currentSpecName}SpecLevel`).innerHTML = 1;
 	}
+	pointsRemaining.innerHTML = parseInt(pointsAvailable.textContent);
+	specPoints = parseInt(pointsAvailable.textContent);
+	document.getElementById('specPoints').value = specPoints;
+	adjustMinLevel();
+	drawSkills();
 }
 
 //Changes the displayed minimum level on the trainer window according to all specializations trained values
@@ -432,7 +468,7 @@ function updateRaceDesc() {
 }
 
 function updateClassDesc() {
-	if(document.getElementById('classes').value == "") {
+	if(document.getElementById('classes') == null || document.getElementById('classes').value == "") {
 		document.getElementById('classDesc').innerHTML = "";
 	} else {
 		document.getElementById('classDesc').innerHTML = `<span id="raceName">${selectedClass.name}</span><br />`;
@@ -581,6 +617,25 @@ function resetSpecializations() {
 //Resets character abilities
 function resetAbilities() {
 	document.getElementById('abilityBox').innerHTML = "";
+}
+
+
+//Resets all character details
+function resetCharacterDetails(resets) {
+	respecAllPoints();
+	resetSpecializations();
+	resetLevel();
+	resetAbilities();
+	resetSkills();
+	
+	if(resets == "realm") {
+		resetAttributes();
+	} else if(resets == "race") {
+		resetAttributePrio();
+	} else if(resets == "class") {
+		resetAttributeBonus();
+	}
+	
 }
 
 //Highlights text of primary, secondary and tertiary character attribute priorities
@@ -844,11 +899,11 @@ function drawSkills() {
 				} else {
 					name = currentSpec.metaData.spec;
 				}
-				title = `<label id="${name}Title" class="specTitle">${name}</label>`;
+				title = `<label id="${name}CombatTitle" class="specTitle">${name}</label>`;
 				wrapperTarget = `${name}CombatWrapper`;
 				skillTarget = `${name}Styles`;
 				wrapper = `<div id="${wrapperTarget}" onclick="showTree(event, 'Styles')"></div><div id="${skillTarget}" class="dropdown-content"></div>`;
-				button = `<button class="dropbttn" id="${name}Button"></button>`;
+				button = `<button class="dropbttn" id="${name}CombatButton"></button>`;
 				document.getElementById("combat").innerHTML += wrapper;
 				document.getElementById(wrapperTarget).innerHTML = button + title;
 				fillSkills(skillTarget, currentSpec, "styles");
@@ -888,13 +943,13 @@ function fillSkills(targetElement, skill, type) {
 	for(let i = 0; i < skill[type].length; i++) {
 		if(type == "base") {
 			if(skill[type][i].level <= level && skill[type][i].class.includes(selectedClass.name)) {
-				skillName = `<span id="${skill[type][i].name}" class="abilityName2">${skill[type][i].name}</span>`;
+				skillName = `<span id="${skill[type][i].name}" class="abilityName2" onmouseover="tooltip(event)">${skill[type][i].name}</span>`;
 				skillLevel = `<span id="${skill[type][i].name}Level" class="abilityLevel">${skill[type][i].level}<span><br />`;
 				document.getElementById(targetElement).innerHTML += skillName + skillLevel;
 			}
 		} else if(type == "spells" || "styles") {
 			if(skill[type][i].class.includes(selectedClass.name) && skill[type][i].level <= skill.metaData.trainedValue) {
-				skillName = `<span id="${skill[type][i].name}" class="abilityName2">${skill[type][i].name}</span>`;
+				skillName = `<span id="${skill[type][i].name}" class="abilityName2" onmouseover="tooltip(event)">${skill[type][i].name}</span>`;
 				skillLevel = `<span id="${skill[type][i].name}Level" class="abilityLevel">${skill[type][i].level}<span><br />`;
 				document.getElementById(targetElement).innerHTML += skillName + skillLevel;
 			}
@@ -909,30 +964,125 @@ function resetSkills() {
 
 function showTree(event, type) {
 	let targetted = event.target.getAttribute("id");
-	let index, targettedStyle, targettedButton, buttonElement, stylesElement, bttnOff, bttnOn;
+	let index, targettedSkill, targettedButton, buttonElement, skillElement, bttnOff, bttnOn;
 	bttnOff = "dropbttn";
 	bttnOn = "dropbttn-clicked";
 	
-	
 	if(targetted.includes("Button")) {
+		if(targetted.includes("Combat")) {	
+			index = targetted.indexOf("CombatButton");
+			targettedButton = targetted.substring(0, index) + "CombatButton";
+		} else {
+			index = targetted.indexOf("Button");
+			targettedButton = targetted.substring(0, index) + "Button";
+		}
 		buttonElement = document.getElementById(targetted);
-		index = targetted.indexOf("Button");
-		targettedStyle = targetted.substring(0, index) + type;
-		stylesElement = document.getElementById(targettedStyle);
 	} else if(targetted.includes("Title")) {
-		index = targetted.indexOf("Title");
-		targettedButton = targetted.substring(0, index) + "Button";
+		if(targetted.includes("Combat")) {	
+			index = targetted.indexOf("CombatTitle");
+			targettedButton = targetted.substring(0, index) + "CombatButton";
+		} else {
+			index = targetted.indexOf("Title");
+			targettedButton = targetted.substring(0, index) + "Button";
+		}
 		buttonElement = document.getElementById(targettedButton);
-		targettedStyle = targetted.substring(0, index) + type;
-		stylesElement = document.getElementById(targettedStyle);
+	} else if(targetted.includes("Wrapper")) {
+		if(targetted.includes("Combat")) {	
+			index = targetted.indexOf("CombatWrapper");
+			targettedButton = targetted.substring(0, index) + "CombatButton";
+		} else {
+			index = targetted.indexOf("Wrapper");
+			targettedButton = targetted.substring(0, index) + "Button";
+		}
+		buttonElement = document.getElementById(targettedButton);
 	}
+	
+	targettedSkill = targetted.substring(0, index) + type;
+	skillElement = document.getElementById(targettedSkill);
+	
 	if(buttonElement.classList.contains(bttnOff)) {
 		buttonElement.classList.replace(bttnOff, bttnOn);
-		stylesElement.style.display = "block";
+		skillElement.style.display = "block";
 	} else {
 		buttonElement.classList.replace(bttnOn, bttnOff);
-		stylesElement.style.display = "none";
+		skillElement.style.display = "none";
 	}
+}
+
+function tooltip(event) {
+	let allSpecs, currentSpec, nameLabel, levelLabel, targetID, followup, targetElement, targetSkill, xPosition, yPosition, modal;
+	targetID = event.target.getAttribute('id');
+	targetElement = document.getElementById(`${targetID}`);
+	allSpecs = selectedClass.specializations;
+	for(spec in allSpecs) {
+		currentSpec = allSpecs[spec];
+		if(currentSpec.hasOwnProperty("styles")) {
+			for(style in currentSpec.styles) {
+				if(targetElement.textContent == currentSpec.styles[style].name) {
+					targetSkill = currentSpec.styles[style];
+					xPosition = document.getElementById('combatStyles').offsetLeft + 115;
+					yPosition = document.getElementById('combatStyles').offsetTop + 450;
+				}
+			}
+		}
+		if(currentSpec.hasOwnProperty("base")) {
+			for(spell in currentSpec.base) {
+				if(targetElement.textContent == currentSpec.base[spell].name) {
+					targetSkill = currentSpec.base[spell];
+					xPosition = document.getElementById('magicSpells').offsetLeft + 115;
+					yPosition = document.getElementById('magicSpells').offsetTop + 450;
+				}
+			}
+		}
+		if(currentSpec.hasOwnProperty("spells")) {
+			for(spell in currentSpec.spells) {
+				if(targetElement.textContent == currentSpec.spells[spell].name) {
+					targetSkill = currentSpec.spells[spell];
+					xPosition = document.getElementById('magicSpells').offsetLeft + 115;
+					yPosition = document.getElementById('magicSpells').offsetTop + 450;
+				}
+			}
+		}
+	}
+	
+	
+	modal = document.getElementById('hoverModal');
+	modal.style.display = "block";
+	modal.style.top = `${yPosition}px`;
+	modal.style.left = `${xPosition}px`;
+		
+	nameLabel = `<label style="font-weight: bold;" class="tooltipDetail">Name: </label>${targetSkill.name}<br /><br />`;
+	levelLabel = `<label class="tooltipDetail">Level: </label>${targetSkill.level}<br />`;
+	if(targetSkill.hasOwnProperty("open")) {
+		let opening, followup, endurance, damage, hit, def, effect, style;
+		opening = `<label class="tooltipDetail">Opening: </label>${targetSkill.open}<br />`;
+		if(targetSkill.followup != null) {
+			followup = `<label class="tooltipDetail">Follow-up(s): </label>${targetSkill.followup}<br />`
+		} else {
+			followup = "";
+		}
+		endurance = `<label class="tooltipDetail">Endurance: </label>`;
+		switch(targetSkill.end) {
+			case targetSkill.end == "Very Low":
+				style = "green";
+				break;
+			case targetSkill.end == "Low":
+				style = "blue";
+				break;
+			case targetSkill.end == "Medium":
+				style = "yellow";
+				break;
+			case targetSkill.end == "High":
+				style = "red";
+				break;
+			case targetSkill.end == "Very High":
+				style = "darkred";
+				break;
+		}
+		endurance.concat(`<label style="color: ${style};">${targetSkill.end}</label><br />`);
+		document.getElementById('hoverContent').innerHTML = nameLabel + levelLabel + opening + followup + endurance;
+	}
+	
 }
 
 //Function adjusts available specialization points on character level change
