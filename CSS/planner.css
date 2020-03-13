@@ -350,6 +350,26 @@ select {
 	outline-width: thin;
 	outline-offset: 1px;
 }
+.hoverModal {
+	display: none;
+	position: absolute;
+	padding: 2rem;
+	left: 0px;
+	top: 0px;
+	z-index: 1;
+	width: 180px;
+	background-image: radial-gradient(circle, #745C42 90%, #C8B79C 95%, #F0E4C8 100%);
+	background-color: #745C42;
+	padding: 2px;
+}
+.hoverContent {
+	background: #0A0A0A;
+	color: white;
+	padding: 2px;
+}
+.tooltipDetail {
+	color: gray;
+}
 #specPointDisp {
 	display: inline-block;
 	position: absolute;
