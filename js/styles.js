@@ -3225,7 +3225,7 @@ const SHIELD_SPEC_DATA = {
 	],
 	"styles": [
 		{
-			"class": ["Blademaster", "Champion", "Hero", "Warden"],
+			"class": ["Armsman", "Blademaster", "Champion", "Hero", "Warden"],
 			"name": "Smash",
 			"level": 1,
 			"open": "Any",
@@ -3237,7 +3237,7 @@ const SHIELD_SPEC_DATA = {
 			"effect": null
 		},
 		{
-			"class": ["Blademaster", "Champion", "Hero", "Warden"],
+			"class": ["Armsman", "Blademaster", "Champion", "Hero", "Warden"],
 			"name": "Numb",
 			"level": 3,
 			"open": "Any",
@@ -3249,7 +3249,7 @@ const SHIELD_SPEC_DATA = {
 			"effect": "Target cannot move or take any other action for 2 seconds."
 		},
 		{
-			"class": ["Blademaster", "Champion", "Hero", "Warden"],
+			"class": ["Armsman", "Blademaster", "Champion", "Hero", "Warden"],
 			"name": "Stun",
 			"level": 8,
 			"open": "You Block",
@@ -3261,7 +3261,7 @@ const SHIELD_SPEC_DATA = {
 			"effect": "Target cannot move or take any other action for 3 seconds."
 		},
 		{
-			"class": ["Blademaster", "Champion", "Hero", "Warden"],
+			"class": ["Armsman", "Blademaster", "Champion", "Hero", "Warden"],
 			"name": "Disable",
 			"level": 13,
 			"open": "To side of target",
@@ -3273,7 +3273,7 @@ const SHIELD_SPEC_DATA = {
 			"effect": "Target cannot move or take any other action for 4 seconds."
 		},
 		{
-			"class": ["Blademaster", "Champion", "Hero", "Warden"],
+			"class": ["Armsman", "Blademaster", "Champion", "Hero", "Warden"],
 			"name": "Incapacitate",
 			"level": 18,
 			"open": "You Block",
@@ -3285,7 +3285,7 @@ const SHIELD_SPEC_DATA = {
 			"effect": "Target cannot move or take any other action for 5 seconds."
 		},
 		{
-			"class": ["Blademaster", "Champion", "Hero", "Warden"],
+			"class": ["Armsman", "Blademaster", "Champion", "Hero", "Warden"],
 			"name": "Paralyze",
 			"level": 23,
 			"open": "Behind target",
@@ -3297,7 +3297,7 @@ const SHIELD_SPEC_DATA = {
 			"effect": "Target cannot move or take any other action for 6 seconds."
 		},
 		{
-			"class": ["Blademaster", "Champion", "Hero", "Warden"],
+			"class": ["Armsman", "Blademaster", "Champion", "Hero", "Warden"],
 			"name": "Bash",
 			"level": 29,
 			"open": "You Block",
@@ -3309,7 +3309,7 @@ const SHIELD_SPEC_DATA = {
 			"effect": "Target cannot move or take any other action for 7 seconds."
 		}, 
 		{
-			"class": ["Blademaster", "Champion", "Hero", "Warden"],
+			"class": ["Armsman", "Blademaster", "Champion", "Hero", "Warden"],
 			"name": "Mangle",
 			"level": 35,
 			"open": "To side of target",
@@ -3333,7 +3333,7 @@ const SHIELD_SPEC_DATA = {
 			"effect": "Target moves 70% slower for 6 seconds."
 		},
 		{
-			"class": ["Hero"],
+			"class": ["Armsman", "Hero"],
 			"name": "Shield Swipe",
 			"level": 41,
 			"open": "Any",
@@ -3357,7 +3357,7 @@ const SHIELD_SPEC_DATA = {
 			"effect": "Target cannot move or take any other action for 5 seconds."
 		},
 		{
-			"class": ["Hero"],
+			"class": ["Armsman", "Hero"],
 			"name": "Slam",
 			"level": 42,
 			"open": "Any",
@@ -3393,7 +3393,7 @@ const SHIELD_SPEC_DATA = {
 			"effect": "Target moves 40% slower for 23 seconds."
 		},
 		{
-			"class": ["Blademaster", "Champion", "Hero", "Warden"],
+			"class": ["Armsman", "Blademaster", "Champion", "Hero", "Warden"],
 			"name": "Brutalize",
 			"level": 50,
 			"open": "You Block",
