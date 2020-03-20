@@ -1237,6 +1237,2018 @@ const BODY_MAGIC_SPEC_DATA = {
 	]
 };
 
+const DEATHSIGHT_SPEC_DATA = {
+	"metaData": {
+		"spec": "Deathsight",
+		"specline": "Deathsight",
+		"baseline": "Deathsight Baseline",
+		"type": ["Magic"],
+		"weapon": null,
+		"trainedValue": 1
+	},
+	"base": [
+		{
+			"class": ["Necromancer"],
+			"name": "Decrepit Form",
+			"level": 1,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": "20%"
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "2 seconds",
+			"type": "null",
+			"maxTarget": null,
+			"effect": "Become a Decrepit Magus. Your magic damage is increased by 10%. Your ABS is slightly increased.\n\nMelee attackers become diseased when they strike you, and your rotted flesh regenerates, greatly increasing your in combat health regeneration.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Locust Flock",
+			"level": 2,
+			"duration": "10 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Target takes 2 matter damage every 2.0 sec.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Lifeforce Evacuation",
+			"level": 3,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target takes 17 spirit damage and the attacker is healed for 50% of the damage dealt.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Decrepit Ground",
+			"level": 6,
+			"duration": "15 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 20
+			},
+			"target": "Targeted area effect",
+			"range": 1000,
+			"radius": 250,
+			"cast": "Instant",
+			"recast": "1 minute 30 seconds",
+			"type": "Matter",
+			"maxTarget": 8,
+			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nInflicts a wasting disease on the target that slows target by 5%, reduces its strength by 5 and inhibits healing by 50%.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Spirit Evacuation",
+			"level": 9,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 5
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target takes 33 spirit damage and the attacker is healed for 50% of the damage dealt.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Locust Cloud",
+			"level": 12,
+			"duration": "10 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 15
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Target takes 7 matter damage every 2.0 sec.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Wretched Ground",
+			"level": 16,
+			"duration": "15 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 30
+			},
+			"target": "Targeted area effect",
+			"range": 1000,
+			"radius": 275,
+			"cast": "Instant",
+			"recast": "1 minute 30 seconds",
+			"type": "Matter",
+			"maxTarget": 8,
+			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nInflicts a wasting disease on the target that slows target by 5%, reduces its strength by 10 and inhibits healing by 50%.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Vitality Theft",
+			"level": 19,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 13
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target takes 73 spirit damage and the attacker is healed for 50% of the damage dealt.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Locust Mass",
+			"level": 22,
+			"duration": "10 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 28
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Target takes 21 matter damage every 2.0 sec.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Rotting Ground",
+			"level": 26,
+			"duration": "15 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 45
+			},
+			"target": "Targeted area effect",
+			"range": 1000,
+			"radius": 300,
+			"cast": "Instant",
+			"recast": "1 minute 30 seconds",
+			"type": "Matter",
+			"maxTarget": 8,
+			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nInflicts a wasting disease on the target that slows target by 5%, reduces its strength by 15 and inhibits healing by 50%.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Theft of Vigor",
+			"level": 29,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 18
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target takes 92 spirit damage and the attacker is healed by 50% of the damage dealt.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Locust Horde",
+			"level": 32,
+			"duration": "10 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 28
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Target takes 30 matter damage every 2.0 sec.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Desecrated Ground",
+			"level": 36,
+			"duration": "15 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 62
+			},
+			"target": "Targeted area effect",
+			"range": 1000,
+			"radius": 325,
+			"cast": "Instant",
+			"recast": "1 minute 30 seconds",
+			"type": "Matter",
+			"maxTarget": 8,
+			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nInflicts a wasting disease on the target that slows target by 10%, reduces its strength by 20 and inhibits healing by 50%.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Theft of Energy",
+			"level": 39,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 24
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target takes 126 spirit damage and the attacker is healed for 50% of the damage dealt.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Locust Swarm",
+			"level": 42,
+			"duration": "10 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 55
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Target takes 69 matter damage every 2.0 sec.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Unholy Ground",
+			"level": 46,
+			"duration": "15 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 75
+			},
+			"target": "Targeted area effect",
+			"range": 500,
+			"radius": 75,
+			"cast": "Instant",
+			"recast": "1 minute 30 seconds",
+			"type": "Matter",
+			"maxTarget": 8,
+			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nInflicts a wasting disease on the target that slows target by 15%, reduces its strength by 25 and inhibits healing by 50%.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Theft of Liveliness",
+			"level": 49,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 33
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target takes 179 spirit damage and the attacker is healed for 50% of the damage dealt.",
+			"hide": null
+		}
+	],
+	"spells": [
+		{
+			"class": ["Necromancer"],
+			"name": "Glimpse of the Inevitable",
+			"level": 3,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Reduces the target's armor factor (AF) by 25.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Channeled Anger",
+			"level": 5,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 22
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 300,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Does 52 spirit damage to the target.\n\nThis spell cannot be cast while in Chthonic Form.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Magic Empowerment",
+			"level": 6,
+			"duration": "6 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "24 (+5 per tick)"
+			},
+			"target": "Self",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": "5 seconds",
+			"type": null,
+			"maxTarget": null,
+			"effect": "Increase your group's critical hit chance with all spells by 1%.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Flowing Death",
+			"level": 7,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 18
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Target takes 17 spirit damage every 5.0 sec.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Minor Body Lock",
+			"level": 9,
+			"duration": "7 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 15
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Glimpse of Chaos",
+			"level": 13,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 17
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Reduces the target's armor factor (AF) by 55.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Channeled Hatred",
+			"level": 15,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 30
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 300,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Does 104 spirit damage to the target.\n\nThis spell cannot be cast while in Chthonic Form.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Evil Empowerment",
+			"level": 16,
+			"duration": "6 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "40 (+8 per tick)"
+			},
+			"target": "Self",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": null,
+			"maxTarget": null,
+			"effect": "Increases your group's critical hit chance with all spells by 2%.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Unending Death",
+			"level": 17,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 30
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Target takes 30 spirit damage every 4.0 sec.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Lesser Body Lock",
+			"level": 19,
+			"duration": "19 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 28
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Glimpse of the Grave",
+			"level": 23,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 25
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Reduces the target's armor factor (AF) by 100.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Death Bladeturn",
+			"level": 24,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": "8%"
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "4.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Creates a 'bubble' that absorbs the damage of a single melee hit.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Channeled Fury",
+			"level": 25,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 46
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 300,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Does 176 spirit damage to the target.\n\nThis spell cannot be cast while in Chthonic Form.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Dark Empowerment",
+			"level": 26,
+			"duration": "6 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "60 (+10 per tick)"
+			},
+			"target": "Self",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": null,
+			"maxTarget": null,
+			"effect": "Increases your group's critical hit chance with all spells by 3%.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Swelling Death",
+			"level": 27,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 42
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Target takes 60 spirit damage every 4.0 sec.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Body Lock",
+			"level": 29,
+			"duration": "48 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 48
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Glimpse of Nightmares",
+			"level": 33,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 36
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Reduces the target's armor factor (AF) by 165.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Channeled Wrath",
+			"level": 35,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 58
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 300,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Does 240 spirit damage to the target.\n\nThis spell cannot be cast while in Chthonic Form.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Deadly Empowerment",
+			"level": 36,
+			"duration": "6 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "80 (+15 per tick)"
+			},
+			"target": "Self",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": "5 seconds",
+			"type": null,
+			"maxTarget": null,
+			"effect": "Increases your group's critical hit chance with all spells by 4%.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Heightening Death",
+			"level": 37,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 50
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Target takes 88 spirit damage every 3.0 sec.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Greater Body Lock",
+			"level": 39,
+			"duration": "1 minute 1 second",
+			"cost": {
+				"type": "Power",
+				"value": 60
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Glimpse of Death",
+			"level": 43,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 50
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Reduces the target's armor factor (AF) by 250.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Channeled Frenzy",
+			"level": 45,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 70
+			},
+			"target": "Point-blank Area",
+			"range": null,
+			"radius": 300,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Does 305 spirit damage to the target.\n\nThis spell cannot be cast while in Chthonic Form.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Necrotic Empowerment",
+			"level": 46,
+			"duration": "6 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "100 (+22 per tick)"
+			},
+			"target": "Self",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": "5 seconds",
+			"type": null,
+			"maxTarget": null,
+			"effect": "Increases your group's critical hit chance with all spells by 5%.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Infinite Death",
+			"level": 47,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 64
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Target takes 121 hit damage every 2.5 sec.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Superior Body Lock",
+			"level": 49,
+			"duration": "1 minute 13 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 72
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Channeled Rage",
+			"level": 50,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 70
+			},
+			"target": "Enemy realm only area effect",
+			"range": null,
+			"radius": 300,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Does 345 spirit damage to the target.\n\nTargets enemy realm players, pets, and guards. Does not damage normal monsters.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Bringer of Death",
+			"level": 50,
+			"duration": "24 seconds",
+			"cost": null,
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "15 minutes",
+			"type": null,
+			"maxTarget": null,
+			"effect": "Become the Bringer of Death. Your casts are uninterruptable, but only reach 65% of their potency.\n\nYour movement speed is increased by 25%, even in speedwarps and while in combat.",
+			"hide": null
+		}
+	]
+};
+
+const DEATH_SERVANT_SPEC_DATA = {
+	"metaData": {
+		"spec": "Death Servant",
+		"specline": "Death Servant",
+		"baseline": "Death Servant Baseline",
+		"type": ["Magic"],
+		"weapon": null,
+		"trainedValue": 1
+	},
+	"base": [
+		{
+			"class": ["Necromancer"],
+			"name": "Regenerate Flesh",
+			"level": 1,
+			"duration": "15 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 2
+			},
+			"target": "Self",
+			"range": 2000,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "30 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "You regenerate 2 health every 3.0 sec.\n\n\nThe target regenerates 4 health every 3.0 sec.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Enchanted Ground",
+			"level": 4,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 20
+			},
+			"target": "Realm",
+			"range": 2000,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "1 minute 30 seconds",
+			"type": null,
+			"maxTarget": null,
+			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nThe target regains 5 power points.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Summon Aegis",
+			"level": 5,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": "40%"
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "6.0 seconds",
+			"recast": null,
+			"type": null,
+			"maxTarget": null,
+			"effect": "Summon an umbral aegis to serve you.\n\nThis is a bulky demon that specializes in tanking damage.\n\nYou can only control servants whine in human form, Decrepit Form, or Spirit Form.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Power Drain",
+			"level": 7,
+			"duration": null,
+			"cost": null,
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "20 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Damage the target for 5 hit points and the attacker gains 300% of that damage as power.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Regenerate Blood",
+			"level": 8,
+			"duration": "15 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Self",
+			"range": 2000,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "30 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "You regenerate 4 heath every 3.0 sec.\n\n\nThe target regenerates 9 health every 3.0 sec.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Animate Flesh",
+			"level": 13,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Controlled",
+			"range": 2000,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target regains 41 hit points.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Infused Ground",
+			"level": 14,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 44
+			},
+			"target": "Realm",
+			"range": 2000,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "1 minute 30 seconds",
+			"type": null,
+			"maxTarget": null,
+			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nThe target regains 11 power points.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Summon Soultorn",
+			"level": 15,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": "40%"
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "6.0 seconds",
+			"recast": null,
+			"type": null,
+			"maxTarget": null,
+			"effect": "Summon a fallen soultorn to serve you.\n\nThis servant uses matter magic to damage, snare, and weaken its foes for its master.\n\nYou can only control servants while in human form, Decrepit Form, or Spirit Form.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Power Vacuum",
+			"level": 17,
+			"duration": null,
+			"cost": null,
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "20 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Damages the target for 15 hit points and the attacker gains 300% of that damage as power.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Regenerate Muscle",
+			"level": 18,
+			"duration": "15 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "30 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "You regenerate 16 health every 3.0 sec.\n\n\nThe target regenerates 27 health every 3.0 sec.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Animate Blood",
+			"level": 23,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 17
+			},
+			"target": "Controlled",
+			"range": 2000,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target regains 88 hit points.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Majestic Ground",
+			"level": 24,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 65
+			},
+			"target": "Realm",
+			"range": 2000,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "1 minute 30 seconds",
+			"type": null,
+			"maxTarget": null,
+			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nThe target regains 20 power points.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Summon Fiend",
+			"level": 25,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": "40%"
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "6.0 seconds",
+			"recast": null,
+			"type": null,
+			"maxTarget": null,
+			"effect": "Summon a plated fiend to serve you.\n\nThis is a fast moving demon that specializes in physical offense.\n\nYou can only control servants while in human form, Decrepit Form, or Spirit Form.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Wake Servant",
+			"level": 26,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": "6%"
+			},
+			"target": "Controlled",
+			"range": 1000,
+			"radius": null,
+			"cast": "2.0 seconds",
+			"recast": null,
+			"type": null,
+			"maxTarget": null,
+			"effect": "All mesmerization effects are removed from the target.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Power Leech",
+			"level": 27,
+			"duration": null,
+			"cost": null,
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "20 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Damages the target for 25 hit points and the attacker gains 300% of that damage as power.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Regenerate Body",
+			"level": 28,
+			"duration": "15 seconds",
+			"cost": null,
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "30 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "You regenerate 39 health every 3.0 sec.\n\n\nThe target regenerates 51 health every 3.0 sec.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Spirit Form",
+			"level": 30,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": "20%"
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "2 seconds",
+			"type": null,
+			"maxTarget": null,
+			"effect": "Become a Ghostly Spirit. 10% of all damage you take instead heals your power, your power regeneration is greatly increased, and you see hidden opponents easier.\n\nAdditionally, your servants become highly resistant to damage and gain new abilities.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Animate Muscle",
+			"level": 33,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 22
+			},
+			"target": "Controlled",
+			"range": 2000,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Sppirit",
+			"maxTarget": null,
+			"effect": "The target regains 152 hit points.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Spellbound Ground",
+			"level": 34,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 65
+			},
+			"target": "Realm",
+			"range": 2000,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "1 minute 30 seconds",
+			"type": null,
+			"maxTarget": null,
+			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nThe target regains 28 power points.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Summon Priest",
+			"level": 35,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": "40%"
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "6.0 seconds",
+			"recast": null,
+			"type": null,
+			"maxTarget": null,
+			"effect": "Summon a loyal priest of Arawn to serve you.\n\nThis is a passive servant that supports its master's group.\n\nYou can only control servants in human form, Decrepit Form, or Spirit Form.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Power Siphon",
+			"level": 37,
+			"duration": null,
+			"cost": null,
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "20 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Damages the target for 35 hit points and the attacker gains 300% of that damage as power.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Dead Flesh Living",
+			"level": 38,
+			"duration": "15 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 92
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "30 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "You regenerate 51 health every 3.0 sec.\n\n\nThe target regenerates 61 health every 3.0 sec.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Animate Body",
+			"level": 43,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 28
+			},
+			"target": "Controlled",
+			"range": 2000,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target regains 244 hit points",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Mystic Ground",
+			"level": 44,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 65
+			},
+			"target": "Realm",
+			"range": 2000,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "1 minute 30 seconds",
+			"type": null,
+			"maxTarget": null,
+			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nThe target regains 35 power points.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Summon Succubus",
+			"level": 45,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": "40%"
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "6.0 seconds",
+			"recast": null,
+			"type": null,
+			"maxTarget": null,
+			"effect": "Summon a daemonic succubus to serve you.\n\nThe succubus will mesmerize its target.\n\nYou can only control servants while in human form, Decrepit Form, or Spirit Form.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Power Absorb",
+			"level": 47,
+			"duration": null,
+			"cost": null,
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "20 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Damages the target for 55 hit points and the attacker gains 300% of that damage as power.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Imbue the Abyss",
+			"level": 48,
+			"duration": "15 seconds",
+			"cost": null,
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "30 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "You regenerate 61 health every 3.0 sec.",
+			"hide": null
+		}
+	],
+	"spells": [
+		{
+			"class": ["Necromancer"],
+			"name": "Gift of Power",
+			"level": 1,
+			"duration": null,
+			"cost": null,
+			"target": "Realm",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Transfers 25 power from the caster to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Fear Servant",
+			"level": 2,
+			"duration": "5 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 6
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Send an enemy pet fleeing in terror.\n\nWhile feared, pets are unable to be controled or released by their master.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Crippling Exhaustion",
+			"level": 3,
+			"duration": "10 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "25%"
+			},
+			"target": "Targeted",
+			"range": 1000,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "10 minutes",
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Snares the target's movement speed by 10%. Ignores root immunity and does not provide an immunity.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Power Blast",
+			"level": 4,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 16
+			},
+			"target": "Targeted",
+			"range": 2000,
+			"radius": null,
+			"cast": "2.0 seconds",
+			"recast": "15 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 23 spirit damage. Can be blocked.\n\nThis spell cannot be cast while in Chthonic Form.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Ambition of Death",
+			"level": 8,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": "20%"
+			},
+			"target": "Realm",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": null,
+			"maxTarget": null,
+			"effect": "Increases target's melee absorption by 1.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Plague Burst",
+			"level": 9,
+			"duration": "5 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 6
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target takes 35 matter damage and the target is snared by 20%.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Gift of Essence",
+			"level": 11,
+			"duration": null,
+			"cost": null,
+			"target": "Realm",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Transfers 40 power from the caster to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Expel Servant",
+			"level": 12,
+			"duration": "9 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 15
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Send an enemy pet fleeing in terror.\n\nWhile feared, pets are unable to be controled or released by their master.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Constricting Exhaustion",
+			"level": 13,
+			"duration": "15 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "25%"
+			},
+			"target": "Targeted",
+			"range": 1000,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "7 minutes 30 seconds",
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Snares the target's movement speed by 15%. Ignores root immunity and does not provide an immunity.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Focus Blast",
+			"level": 14,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 30
+			},
+			"target": "Targeted",
+			"range": 2000,
+			"radius": null,
+			"cast": "2.0 seconds",
+			"recast": "15 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 50 spirit damage. Can be blocked.\n\nThis spell cannot be cast while in Chthonic Form.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Spirit Bladeturn",
+			"level": 15,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": "15%"
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Creates a 'bubble' that absorbs the damage of a single melee hit.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Hunger for Death",
+			"level": 18,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": "20%"
+			},
+			"target": "Realm",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": null,
+			"maxTarget": null,
+			"effect": "Increases target's melee absorption by 2.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Plague Trap",
+			"level": 19,
+			"duration": "10 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 14
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target takes 68 matter damage and the target is snared by 20%.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Gift of Force",
+			"level": 21,
+			"duration": null,
+			"cost": null,
+			"target": "Realm",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Transfers 70 power from the caster to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Intimidate Servant",
+			"level": 22,
+			"duration": "15 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 26
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Send an enemy pet fleeing in terror.\n\nWhile feared, pets are unable to be controlled or released by their master.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Disabling Exhaustion",
+			"level": 23,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "25%"
+			},
+			"target": "Targeted",
+			"range": 1000,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "2 minutes",
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Snares the target's movement speed by 20%. Ignores root immunity and does not provide an immunity.'",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Essence Blast",
+			"level": 24,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 44
+			},
+			"target": "Targeted",
+			"range": 2000,
+			"radius": null,
+			"cast": "2.0 seconds",
+			"recast": "15 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 156 spirit damage. Can be blocked.\n\nThis spell cannot be cast while in Chthonic Form.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Power Vortex",
+			"level": 25,
+			"duration": null,
+			"cost": null,
+			"target": "Self area effect",
+			"range": null,
+			"radius": 350,
+			"cast": "Instant",
+			"recast": "30 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Damage the target for 100 hit points and the attacker gains 100% of that damage as power.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Longing for Death",
+			"level": 28,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": "20%"
+			},
+			"target": "Realm",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": null,
+			"maxTarget": null,
+			"effect": "Increases target's melee absorption by 5.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Plague Torrent",
+			"level": 29,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 30
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target takes 122 matter damage and the target is snared by 20%.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Gift of Vim",
+			"level": 31,
+			"duration": null,
+			"cost": null,
+			"target": "Realm",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Transfers 105 power from the caster to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Daunt Servant",
+			"level": 32,
+			"duration": "22 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 35
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Send an enemy pet fleeing in terror.\n\nWhile feared, pets are unable to be controlled or released by their master.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Debilitating Exhaustion",
+			"level": 33,
+			"duration": "25 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "25%"
+			},
+			"target": "Targeted",
+			"range": 1000,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "1 minute",
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Snares the target's movement speed by 25%. Ignores root immunity and does not provide an immunity.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Death Blast",
+			"level": 34,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 70
+			},
+			"target": "Targeted",
+			"range": 2000,
+			"radius": null,
+			"cast": "2.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding for 250 spirit damage. Can be blocked.\n\nThis spell cannot be cast while in Chthonic Form.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Power Shield",
+			"level": 35,
+			"duration": "3 seconds",
+			"cost": null,
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "Instant",
+			"recast": null,
+			"type": null,
+			"maxTarget": null,
+			"effect": "If low on health, the target will convert 100% of their available power into health.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Communion with Death",
+			"level": 38,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": "20%"
+			},
+			"target": "Realm",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": null,
+			"maxTarget": null,
+			"effect": "Increases target's melee absorption by 7.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Plague Barrage",
+			"level": 39,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 46
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target takes 148 matter damage and the target is snared by 25%.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Gift of Arawn",
+			"level": 41,
+			"duration": null,
+			"cost": null,
+			"target": "Realm",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Transfers 150 power from the caster to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Terrify Servant",
+			"level": 42,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 35
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Send an enemy pet fleeing in terror.\n\nWhile feared, pets are unable to be controlled or released by their master.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Snaring Exhaustion",
+			"level": 43,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "25%"
+			},
+			"target": "Targeted",
+			"range": 1000,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "1 minute",
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Snares the target's movement speed by 30%. Ignores root immunity and does not provide an immunity.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Final Blast",
+			"level": 44,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 99
+			},
+			"target": "Targeted",
+			"range": 2000,
+			"radius": null,
+			"cast": "2.0 seconds",
+			"recast": "15 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 317 spirit damage. Can be blocked.\n\nThis spell cannot be cast while in Chthonic Form.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Power Lock",
+			"level": 45,
+			"duration": "10 seconds",
+			"cost": null,
+			"target": "Enemy realm players and controlled pets",
+			"range": 350,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "1 minute 30 seconds",
+			"type": "Essence",
+			"maxTarget": null,
+			"effect": "Locks you and your target in place, siphoning 15% base power from them every second for 10 seconds. While grappled, neither you nor your target can be damaged by melee attacks.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Intimacy with Death",
+			"level": 48,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": "20%"
+			},
+			"target": "Realm",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": null,
+			"maxTarget": null,
+			"effect": "Increases target's melee absorption by 10.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Plague Surge",
+			"level": 49,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 66
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target takes 179 matter damage and the target is snared by 35%.",
+			"hide": null
+		},
+		{
+			"class": ["Necromancer"],
+			"name": "Arawn's Legion'",
+			"level": 50,
+			"duration": "30 seconds",
+			"cost": null,
+			"target": "Slef area effect",
+			"range": 1500,
+			"radius": 2000,
+			"cast": "8.0 seconds",
+			"recast": "10 minutes",
+			"type": "Spirit",
+			"maxTarget": 8,
+			"effect": "Call upon Arawn to conjure his evil army upon the battlefield.\n\nThe legion attacks all enemy targets in range for 45 seconds.\n\nYou can only control servants while in human form, Decrepit Form, or Spirit Form.",
+			"hide": null
+		}
+	]
+};
+
 const MATTER_MAGIC_SPEC_DATA = {
 	"metaData": {
 		"spec": "Matter Magic",
@@ -3408,6 +5420,1235 @@ const PAINWORKING_SPEC_DATA = {
 	]
 };
 
+const SOULRENDING_SPEC_DATA = {
+	"metaData": {
+		"spec": "Soulrending",
+		"specline": "Soulrending",
+		"baseline": null,
+		"type": ["Magic"],
+		"weapon": null,
+		"trainedValue": 1
+	},
+	"spells": [
+		{
+			"class": ["Reaver"],
+			"name": "Soul Wench",
+			"level": 1,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Targeted",
+			"range": 1000,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "15 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 20 cold damage to the target.",
+			"hide": 12
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Vigor Siphon",
+			"level": 1,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 2
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "20 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target takes 5 spirit damage and the attacker is healed for 60% of the damage dealt.",
+			"hide": 4
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Bashing Aura",
+			"level": 2,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": "1 (+1 per tick)"
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 400,
+			"cast": "Instant",
+			"recast": "8 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Does 3 spirit damge to the target every 5.0 sec.",
+			"hide": 5
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Vigor Drain",
+			"level": 3,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "20 seconds",
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "The target takes 12 body damage and the attacker is healed for 80% of the damage dealt.",
+			"hide": 12
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Arthritic Curse",
+			"level": 3,
+			"duration": "25 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 350,
+			"cast": "2.0 seconds",
+			"recast": "30 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target does 6% less damage with melee attacks.",
+			"hide": 13
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Surge of Infliction",
+			"level": 4,
+			"duration": "15 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": "null",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Your melee attacks do 2.4 additional spirit damage.",
+			"hide": 9
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Puisance Siphon",
+			"level": 4,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "20 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target takes 15 spirit damage and the attacker is healed for 60% of the damage dealt.",
+			"hide": 8
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Wracking Aura",
+			"level": 5,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value":"2 (+2 per tick)" 
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 400,
+			"cast": "Instant",
+			"recast": "8 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Does 6 spirit damage to the target every 5.0 sec.",
+			"hide": 10
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Aura of Foreboding",
+			"level": 5,
+			"duration": "25 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 2
+			},
+			"target": "Point-blank Area",
+			"range": null,
+			"radius": 350,
+			"cast": "Instant",
+			"recast": "30 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Reduces the target's absorption (ABS) by 6%.",
+			"hide": 14
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Arawn's Minor Curse",
+			"level": 6,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 5
+			},
+			"target": "Targeted",
+			"range": 1000,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "20 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Target's acuity is reduced by 21.\n\n\nThe target regains 5% power points.",
+			"hide": 14
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Shout of Darkness",
+			"level": 6,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "8 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Reduces the target's absorption (ABS) by 7%.",
+			"hide": 16
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Enery Siphon",
+			"level": 8,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 5
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "20 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target takes 28 spirit damage and the attacker is healed for 60% of the damage dealt.",
+			"hide": 13
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Surge of Destruction",
+			"level": 9,
+			"duration": "15 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": "null",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Your melee attacks do 4.0 additional spirit damage.",
+			"hide": 15
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Annulling Aura",
+			"level": 10,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": "4 (+4 per tick)"
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 400,
+			"cast": "Instant",
+			"recast": "8 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Does 10 spirit damage to the target every 5.0 sec.",
+			"hide": 14
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Curse of Slowness",
+			"level": 11,
+			"duration": "49 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 7
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "20 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is slowed by 40%.",
+			"hide": 17
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Health Drain",
+			"level": 12,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "20 seconds",
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "The target takes 35 body damage and the attacker is healed for 80% of the damage dealt.",
+			"hide": 21
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Soul Rot",
+			"level": 12,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Targeted",
+			"range": 1000,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "15 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 28 cold damage to the target.",
+			"hide": 18
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Paralyzing Curse",
+			"level": 13,
+			"duration": "25 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 5
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 350,
+			"cast": "2.0 seconds",
+			"recast": "30 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target does 9% less damage with melee attacks.",
+			"hide": 20
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Health Siphon",
+			"level": 13,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "20 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target takes 43 spirit damage and the attacker is healed for 60% of the damage dealt.",
+			"hide": 19
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Aura of Destiny",
+			"level": 14,
+			"duration": "25 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 6
+			},
+			"target": "Targeted",
+			"range": null,
+			"radius": 350,
+			"cast": "Instant",
+			"recast": "20 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Reduces the target's absorption (ABS) by 9%.",
+			"hide": 25
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Crushing Aura",
+			"level": 14,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": "6 (+5 per tick)"
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 400,
+			"cast": "Instant",
+			"recast": "8 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Does 13 spirit damage to the target every 5.0 sec.",
+			"hide": 21
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Arawn's Lesser Curse",
+			"level": 14,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 11
+			},
+			"target": "Targeted",
+			"range": 1000,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "20 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Target's acuity is reduced by 33.\n\n\nThe target regains 5% power points.'",
+			"hide": 24
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Surge of mutilation",
+			"level": 15,
+			"duration": "15 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 14
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": "null",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Your melee attacks do 5.8 additional spirit damage.",
+			"hide": 22
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Shout of Destiny",
+			"level": 16,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 13
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "8 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Reduces the target's absorption (ABS) by 9%.'",
+			"hide": 26
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Curse of Languishing",
+			"level": 17,
+			"duration": "59 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "20 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is slowed by 40%.",
+			"hide": 22
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Soul Decay",
+			"level": 18,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 11
+			},
+			"target": "Targeted",
+			"range": 1000,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "15 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 40 cold damage to the target.",
+			"hide": 24
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Vitality Siphon",
+			"level": 19,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 12
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "20 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target takes 64 spirit damage and the attacker is healed for 60% of the damage dealt.",
+			"hide": 26
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Cramping Curse",
+			"level": 20,
+			"duration": "25 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 350,
+			"cast": "2.0 seconds",
+			"recast": "30 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target does 12% less damage with melee attacks.",
+			"hide": 27
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Vitality Drain",
+			"level": 21,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 13
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "20 seconds",
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "The target takes 55 body damage and the attacker is healed for 80% of the damage dealt.",
+			"hide": 31
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Demolishing Aura",
+			"level": 21,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": "8 (+8 per tick)"
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 400,
+			"cast": "Instant",
+			"recast": "8 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Does 19 spirit damage to the target every 5.0 sec.",
+			"hide": 26
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Surge of Maiming",
+			"level": 22,
+			"duration": "15 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 18
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": "null",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Your melee attacks do 8.1 additional spirit damage.",
+			"hide": 29
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Curse of Lumbering",
+			"level": 22,
+			"duration": "1 minute 8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 13
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "20 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is slowed by 40%.",
+			"hide": 33
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Arawn's Curse",
+			"level": 24,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 16
+			},
+			"target": "Targeted",
+			"range": 1000,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "20 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Target's acuity is reduced by 43.\n\n\nThe target regains 5% power points.",
+			"hide": 35
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Soul Toxin",
+			"level": 24,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 16
+			},
+			"target": "Targeted",
+			"range": 1000,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "15 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 62 cold damage to the target.",
+			"hide": 35
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Aura of Fate",
+			"level": 25,
+			"duration": "25 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 350,
+			"cast": "Instant",
+			"recast": "30 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Reduces the target's absorption (ABS) by 11%.",
+			"hide": 35
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Shout of Fate",
+			"level": 26,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 18
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "8 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Reduces the target's absorption (ABS) by 11%.",
+			"hide": 36
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Eradicating Aura",
+			"level": 26,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": "10 (+9 per tick)"
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 400,
+			"cast": "Instant",
+			"recast": "8 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Does 24 spirit damage to the target every 5.0 sec.",
+			"hide": 33
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Essence Siphon",
+			"level": 26,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 16
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "20 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target takes 85 spirit damage and the attacker is healed for 60% of the damage dealt.",
+			"hide": 32
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Shackling Curse",
+			"level": 27,
+			"duration": "25 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 11
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 350,
+			"cast": "2.0 seconds",
+			"recast": "30 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target does 15% less damage with melee attacks.",
+			"hide": 35
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Surge of Ruin",
+			"level": 29,
+			"duration": "15 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 23
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": "null",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Your melee attacks do 10.3 additional spirit damage.",
+			"hide": 36
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Spirit Drain",
+			"level": 31,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 23
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "20 seconds",
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "The target takes 81 body damage and the attacker is healed for 80% of the damage dealt.",
+			"hide": 45
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Spirit Siphon",
+			"level": 32,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 20
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "20 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target takes 104 spirit damage and the attacker is healed for 60% of the damage dealt.",
+			"hide": 42
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Curse of Sluggishness",
+			"level": 33,
+			"duration": "1 minute 29 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 21
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "20 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is slowed by 40%.",
+			"hide": 43
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Decimating Aura",
+			"level": 33,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": "14 (+12 per tick)"
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 400,
+			"cast": "Instant",
+			"recast": "8 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Does 29 spirit damage to the target every 5.0 sec.",
+			"hide": 40
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Arawn's Major Curse",
+			"level": 35,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 22
+			},
+			"target": "Targeted",
+			"range": 1000,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "20 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Target's acuity is reduced by 58.\n\n\nThe target regains 5% power points.",
+			"hide": 46
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Soul Venom",
+			"level": 35,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 21
+			},
+			"target": "Targeted",
+			"range": 1000,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "15 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 95 cold damage to the target.",
+			"hide": 49
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Confining Curse",
+			"level": 35,
+			"duration": "25 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 14
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 350,
+			"cast": "2.0 seconds",
+			"recast": "30 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target does 18% less damage with melee attacks.",
+			"hide": 45
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Aura of Death",
+			"level": 35,
+			"duration": "25 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 14
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 350,
+			"cast": "Instant",
+			"recast": "30 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Reduces the target's absorption (ABS) by 15%.",
+			"hide": 47
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Shout of Death",
+			"level": 36,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 23
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "8 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Reduces the target's absorption (ABS) by 13%.\n\n\nRecduces the target's absorption (ABS) by 18%.",
+			"hide": 46
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Surge of Wrecking",
+			"level": 36,
+			"duration": "15 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 27
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": "null",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Your melee attacks do 12.6 additional spirit damage.",
+			"hide": 44
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Malefic Horror",
+			"level": 39,
+			"duration": "15 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "5%"
+			},
+			"target": "Enemy realm players and controlled pets area effect",
+			"range": null,
+			"radius": 350,
+			"cast": "Instant",
+			"recast": "5 minutes",
+			"type": "Spirit",
+			"maxTarget": 16,
+			"effect": "Causes enemy monsters up to level 0 to flee in terror.\n\n\nCauses enemy monsters up to level 0 to flee in terror.\n\n\nRadius: 350",
+			"hide": null
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Shattering Aura",
+			"level": 40,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": "16 (+14 per tick)"
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 400,
+			"cast": "Instant",
+			"recast": "8 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Does 35 spirit damage to the target every 5.0 sec",
+			"hide": 50
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Circle of Despair",
+			"level": 41,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": "15%"
+			},
+			"target": "Self area effect",
+			"range": null,
+			"radius": 750,
+			"cast": "Instant",
+			"recast": "1 minute",
+			"type": "Spirit",
+			"maxTarget": 8,
+			"effect": "Does 25 spirit damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Life Siphon",
+			"level": 42,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 26
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "20 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target takes 133 spirit damage and the attacker is healed for 70% of the damage dealt.",
+			"hide": null
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Curse of Crawling",
+			"level": 43,
+			"duration": "1 minute 48 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 29
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "20 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is slowed by 40%.",
+			"hide": null
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Surge of Cataclysm",
+			"level": 44,
+			"duration": "15 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 34
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": "null",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Your melee attacks do 15.0 additional spirit damage.",
+			"hide": null
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Aching Curse",
+			"level": 45,
+			"duration": "25 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 19
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 350,
+			"cast": "2.0 seconds",
+			"recast": "30 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target does 21% less damage with melee attacks.",
+			"hide": null
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Soul Drain",
+			"level": 45,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 30
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "20 seconds",
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "The target takes 109 body damage and the attacker is healed for 80% of the damage dealt.",
+			"hide": null
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Shout of Inevitable",
+			"level": 46,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 28
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "8 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Reduces the target's absorption (ABS) by 15%.\n\n\nReduces the target's absorption (ABS) by 22%.",
+			"hide": null
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Arawn's Greater Curse'",
+			"level": 46,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 29
+			},
+			"target": "Targeted",
+			"range": 1000,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "20 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Target's acuity is reduced by 69.\n\n\nYou and all group members within 1000 radius gain 10% power.",
+			"hide": null
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Aura of the Inevitable",
+			"level": 47,
+			"duration": "25 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 20
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 350,
+			"cast": "Instant",
+			"recast": "30 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Reduces the target's absorption (ABS) by 20%.",
+			"hide": null
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Soul Bane",
+			"level": 49,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 30
+			},
+			"target": "Targeted",
+			"range": 1000,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "15 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 120 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Murder Aura",
+			"level": 50,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": "22 (+17 per tick)"
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 400,
+			"cast": "Instant",
+			"recast": "8 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Does 43 spirit damage to the target every 5.0 sec.",
+			"hide": null
+		},
+		{
+			"class": ["Reaver"],
+			"name": "Soul Siphon",
+			"level": 50,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 33
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "20 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target takes 160 spirit damage and the attacker is healed for 70% of the damage dealt.",
+			"hide": null
+		}
+	]
+};
+
 const SPIRIT_MAGIC_SPEC_DATA = {
 	"metaData": {
 		"spec": "Spirit Magic",
@@ -3944,3 +7185,61 @@ const SPIRIT_MAGIC_SPEC_DATA = {
 		}
 	]
 };
+
+/*
+
+/////spell object template
+const _SPEC_DATA = {
+	"metaData": {
+		"spec": "",
+		"specline": "",
+		"baseline": "",
+		"type": ["Magic"],
+		"weapon": null,
+		"trainedValue": 1
+	},
+	"base": [
+		{
+			"class": ["Necromancer"],
+			"name": "",
+			"level": ,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 
+			},
+			"target": "",
+			"range": ,
+			"radius": ,
+			"cast": "",
+			"recast": "",
+			"type": "",
+			"maxTarget": null,
+			"effect": "",
+			"hide": null
+		}
+	],
+	"spells": [
+		{
+			"class": [""],
+			"name": "",
+			"level": ,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 
+			},
+			"target": "",
+			"range": ,
+			"radius": ,
+			"cast": "",
+			"recast": "",
+			"type": "",
+			"maxTarget": null,
+			"effect": "",
+			"hide": 
+		}
+	]
+};
+
+*/
