@@ -1237,6 +1237,1484 @@ const BODY_MAGIC_SPEC_DATA = {
 	]
 };
 
+const COLD_MAGIC_SPEC_DATA = {
+	"metaData": {
+		"spec": "Cold Magic",
+		"specline": {
+			"Theurgist": "Refrigeration",
+			"Wizard": "Liquifaction"
+		},
+		"baseline": "Path of Ice",
+		"type": ["Magic"],
+		"weapon": null,
+		"trainedValue": 1
+	},
+	"base": [
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Ice Cloud (Minor)",
+			"level": 1,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 2
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": "null",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 5 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Ice Cloud",
+			"level": 2,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 2
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 9 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Ice Cloud (Greater)",
+			"level": 3,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 13 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Cold's Bitter Grip (Lesser)'",
+			"level": 5,
+			"duration": "13 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Ice Cloud (Potent)",
+			"level": 6,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 25 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Glittering Ice Cloud (Lesser)",
+			"level": 9,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 6
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 37 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Cold's Bitter Grip'",
+			"level": 10,
+			"duration": "18 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 6
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Glittering Ice Cloud",
+			"level": 13,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 49 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Cold's Bitter Grip (Greater)'",
+			"level": 16,
+			"duration": "24 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Glittering Ice Cloud (Major)",
+			"level": 17,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 64 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Fingers of Ice (Lesser)",
+			"level": 22,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 13
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Ice Blast (Minor)",
+			"level": 24,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 15
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 88 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Fingers of Ice",
+			"level": 30,
+			"duration": "39 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 19
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Ice Blast",
+			"level": 33,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 21
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 120 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Fingers of Ice (Greater)",
+			"level": 39,
+			"duration": "48 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 25
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Ice Blast (Potent)",
+			"level": 41,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 26
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 148 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Anchor of Ice",
+			"level": 49,
+			"duration": "58 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 32
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Ice Blast (Major)",
+			"level": 50,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 33
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 179 cold damage to the target.",
+			"hide": null
+		}
+	],
+	"spells": [
+		{
+			"class": ["Theurgist"],
+			"name": "Frost Blast",
+			"level": 1,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 2
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "The target takes 9 cold damage and the target is slowed by 35%.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Summon Minor Ice Spirit",
+			"level": 2,
+			"duration": "25 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "15%"
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": 12,
+			"effect": "Summons an elemental spirit to attack the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Searing Wind (Minor)",
+			"level": 3,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 18 cold damage and decreases the target's resistance to cold by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Field of Frost",
+			"level": 4,
+			"duration": "15 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Chilling Blast",
+			"level": 5,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "The target takes 21 cold damage and the target is slowed by 35%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Searing Wind (Lesser)",
+			"level": 6,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 29 cold damage and decreases the target's resistance to cold by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Summon Lesser Ice Spirit",
+			"level": 7,
+			"duration": "25 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "12%"
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": 12,
+			"effect": "Summons an elemental spirit to attack the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Burst of Steam (Minor)",
+			"level": 7,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 5
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 300,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 52 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Simmering Cloud",
+			"level": 8,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 7
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 25 cold damage and decreases the target's resistance to cold by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Frigid Blast",
+			"level": 9,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 6
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "The target takes 37 cold damage and the target is slwoed by 35%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Cooling Tendrils",
+			"level": 9,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 14
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "1 minute",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "The target is slowed by 50%.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Field of Slush",
+			"level": 10,
+			"duration": "23 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 6
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Burst of Steam",
+			"level": 11,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 7
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 300,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 74 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Snow Blast",
+			"level": 12,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "The target takes 45 cold damage and the target is slowed by 35%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Searing Wind",
+			"level": 12,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 56 cold damage and decreases the target's resistance to cold by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Summon Ice Spirit",
+			"level": 13,
+			"duration": "25 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "12%"
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": 12,
+			"effect": "Summons an elemental spirit to attack the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Chains of Frost",
+			"level": 13,
+			"duration": "26 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Broiling Cloud",
+			"level": 14,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 11
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 44 cold damage and decreases the target's resistance to cold by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Steaming Blast (Minor)",
+			"level": 15,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 9
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 300,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 104 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Field of Snow",
+			"level": 16,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Searing Gust (Minor)",
+			"level": 16,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 77 cold damage and decreases the target's resistance to cold by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Ice Blast",
+			"level": 17,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "The target takes 64 cold damage and the target is slowed by 35%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Mitigating Cold",
+			"level": 17,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 11
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 250,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Inflicts a wasting disease on the target that slows target by 15%, reduces its strength by 25 and inhibits healing by 50%.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Summon Aged Ice Spirit",
+			"level": 18,
+			"duration": "25 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "12%"
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": 12,
+			"effect": "Summons an elemental spirit to attack the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Chilling Tendrils",
+			"level": 19,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 20
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "The target is slowed by 50%.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Field of Ice",
+			"level": 20,
+			"duration": "36 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 12
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target is rooted",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Steaming Blast",
+			"level": 20,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 12
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 300,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 133 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Searing Gust",
+			"level": 21,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 13
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 99 cold damage and decreases the target's resistance to cold by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Sweltering Cloud",
+			"level": 22,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 18
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 68 cold damage and decreases the target's resistance to cold by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Winter Blast",
+			"level": 24,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 15
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "The target takes 88 cold damage and the target is slowed by 35%.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Summon Elder Ice Spirit",
+			"level": 25,
+			"duration": "25 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "12%"
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Summons an elemental spirit to attack the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Subduing Cold",
+			"level": 25,
+			"duration": "40 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 16
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 300,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Inflicts a wasting disease on the target that slows tharget by 15%, reduces its strength by 35 and inhibits healing by 50%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Streaming Blast (Major)",
+			"level": 26,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 16
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 300,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 176 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Searing Wave (Minor)",
+			"level": 27,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 17
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 127 cold damage and decreases the target's resistance to cold by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Burning Cloud",
+			"level": 29,
+			"duration": "* seconds",
+			"cost": {
+				"type": "Power",
+				"value": 24
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 89 cold damage and decreases the target's resistance to cold by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Floe of Snow",
+			"level": 30,
+			"duration": "49 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 19
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Frosting Tendrils",
+			"level": 30,
+			"duration": "40 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 27
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "2.5 seconds",
+			"recast": "1 minute",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "The target is slowed by 50%.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Summon Ice Elemental",
+			"level": 32,
+			"duration": "25 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "12%"
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": 12,
+			"effect": "Summons an elemental spirit to attack the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Steaming Wind (Minor)",
+			"level": 32,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 20
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 300,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 214 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Auroral Blast",
+			"level": 33,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 21
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "The target takes 120 cold damage and the target is slowed by 35%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Chains of Ice",
+			"level": 33,
+			"duration": "51 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 20
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Inhibiting Cold",
+			"level": 35,
+			"duration": "50 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 22
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Inflicts a wasting disease on the target that slows target by 15%, reduces its strength by 45 and inhibits healing by 50%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Torrid Cloud",
+			"level": 36,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 30
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 111 cold damage and decreases the target's resistance to cold by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Searing Wave",
+			"level": 37,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 23
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 168 cold damage and decreases the target's resistance to cold by 10%n.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Floe of Ice",
+			"level": 39,
+			"duration": "1 minute",
+			"cost": {
+				"type": "Power",
+				"value": 25
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The enemy is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Steaming Wind",
+			"level": 39,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 25
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 300,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 265 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Summon Aged Ice Elemental",
+			"level": 40,
+			"duration": "25 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "12%"
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": 12,
+			"effect": "Summons an elemental spirit to attack the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Numbing Tendrils",
+			"level": 40,
+			"duration": "50 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 34
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "2.5 seconds",
+			"recast": "1 minute",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "The target is slowed by 50%.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Hibernal Blast",
+			"level": 41,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 26
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "The target takes 148 cold damage and the target is slowed by 35%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Chains of Permafrost",
+			"level": 42,
+			"duration": "1 minute 4 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 27
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Ice Grip",
+			"level": 44,
+			"duration": "6 seconds",
+			"cost": null,
+			"target": "Enemy realm players and controled pets",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": "5 minutes",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Grapples the target. Target becomes immune to all damage, but may still perform melee attacks.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Debilitating Cold",
+			"level": 45,
+			"duration": "1 minute",
+			"cost": {
+				"type": "Power",
+				"value": 29
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 400,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Inflicts a wasting disease on the target that slows target by 15%, reduces its strength by 55 and inhibits healing by 50%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Boiling Cloud",
+			"level": 46,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 39
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 141 cold damage and decreases the target's resistance to cold by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Searing Blast",
+			"level": 47,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 30
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 209 cold damage and decreases the target's resistance to cold by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Summon Greater Ice Elemental",
+			"level": 48,
+			"duration": "25 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "12%"
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Summons an elemental spirit to attack the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Steaming Wind (Major)",
+			"level": 48,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 31
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 300,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 325 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Expanse of Ice",
+			"level": 49,
+			"duration": "1 minute 13 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 32
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Arctic Blast",
+			"level": 50,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 33
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "The target takes 179 cold damage and the target is slowed by 35%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Freezing Tendrils",
+			"level": 50,
+			"duration": "1 minute",
+			"cost": {
+				"type": "Power",
+				"value": 40
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "2.5 seconds",
+			"recast": "1 minute",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "The target is slowed by 50%.",
+			"hide": null
+		}
+	]
+};
+
 const DEATHSIGHT_SPEC_DATA = {
 	"metaData": {
 		"spec": "Deathsight",
@@ -3244,6 +4722,1981 @@ const DEATH_SERVANT_SPEC_DATA = {
 			"type": "Spirit",
 			"maxTarget": 8,
 			"effect": "Call upon Arawn to conjure his evil army upon the battlefield.\n\nThe legion attacks all enemy targets in range for 45 seconds.\n\nYou can only control servants while in human form, Decrepit Form, or Spirit Form.",
+			"hide": null
+		}
+	]
+};
+
+const EARTH_MAGIC_SPEC_DATA = {
+	"metaData": {
+		"spec": "Earth Magic",
+		"specline": {
+			"Theurgist": "Abrasion",
+			"Wizard": "Calefaction"
+			},
+		"baseline": "Path of Earth",
+		"type": ["Magic"],
+		"weapon": null,
+		"trainedValue": 1
+	},
+	"base": [
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Amethyst Shield",
+			"level": 1,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 2
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Increases your armor factor (AF) by 13.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Amethyst Shield (Enhanced)",
+			"level": 3,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Increases your armor factor (AF) by 22.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Minor Earthen Power",
+			"level": 4,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Realm",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target's melee attacks do 1.6 additional matter damage.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Ruby Shield",
+			"level": 5,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Increases your armor factor (AF) by 32.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Earthen Power",
+			"level": 8,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 5
+			},
+			"target": "Realm",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target's melee attacks do 2.5 additional matter damage.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Ruby Shield (Enhanced)",
+			"level": 9,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 6
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Increases your armor factor (AF) by 51.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Greater Earthen Power",
+			"level": 11,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 7
+			},
+			"target": "Realm",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target's melee attacks do 3.1 additional matter damage.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Cobalt Shield",
+			"level": 13,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Increases your armor factor (AF) by 71.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Minor Earthen Burst",
+			"level": 15,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 9
+			},
+			"target": "Realm",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target's melee attacks do 3.9 additional matter damage.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Cobalt Shield (Enhanced)",
+			"level": 18,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 11
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Increases your armor factor (AF) by 95.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Earthen Burst",
+			"level": 20,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 12
+			},
+			"target": "Realm",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target's melee attacks do 5.0 additional matter damage.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Emerald Shield",
+			"level": 24,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 15
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Increases your armor factor (AF) by 124.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Greater Earthen Burst",
+			"level": 26,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 16
+			},
+			"target": "Realm",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target's melee attacks do 6.3 additional matter damage.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Buffer of Earth",
+			"level": 30,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 19
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Increases your melee absorption by 5.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Emerald Shield (Enhanced)",
+			"level": 31,
+			"duration": "20 minutes)",
+			"cost": {
+				"type": "Power",
+				"value": 19
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Increases your armor factor (AF) by 158.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Earthen Fury",
+			"level": 34,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 21
+			},
+			"target": "Realm",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target's melee attacks do 7.9 additional matter damage.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Earthen Rage",
+			"level": 35,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 57
+			},
+			"target": "Group",
+			"range": 1000,
+			"radius": null,
+			"cast": "10.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target's melee attacks do 7.9 additional matter damage.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Diamond Shield",
+			"level": 40,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 25
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Increases your armor factor (AF) by 201.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Buffer of Stone",
+			"level": 41,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 26
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Increases your melee absorption by 10.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Greater Earthen Fury",
+			"level": 44,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 28
+			},
+			"target": "Realm",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target's melee attacks do 10.0 additional matter damage.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Greater Earthen Rage",
+			"level": 45,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 77
+			},
+			"target": "Group",
+			"range": 1000,
+			"radius": null,
+			"cast": "10.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target's melee attacks do 10.0 additional matter damage.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist", "Wizard"],
+			"name": "Diamond Shield (Enhanced)",
+			"level": 50,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 33
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Increases your armor factor (AF) by 250.",
+			"hide": null
+		}
+	],
+	"spells": [
+		{
+			"class": ["Theurgist"],
+			"name": "Skin of Dust",
+			"level": 1,
+			"duration": "466 minutes 40 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "8%"
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "4.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Creates a 'bubble' that absorbs the damage of a single melee hit.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Minor Shield of Magma",
+			"level": 1,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 2
+			},
+			"target": "Realm",
+			"range": 1000,
+			"radius": null,
+			"cast": "4.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target deals 0.7 matter damage to enemies that hit them with a melee attack.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Call Minor Earth Elemental",
+			"level": 2,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "15%"
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Summons an elemental spirit to attack the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Bolt of Lava",
+			"level": 2,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 2
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 15 matter damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Minor Friction",
+			"level": 3,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Target's attack speed reduced by 11%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Ensnaring Earth (Lesser)",
+			"level": 3,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target takes 21 matter damage and the target is slowed by 35%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Bolt of Lava (Enhanced)",
+			"level": 4,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 29 matter damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Rough Pebbles",
+			"level": 5,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Does 17 matter damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Shield of Magma",
+			"level": 5,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Realm",
+			"range": 1000,
+			"radius": null,
+			"cast": "4.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target deals 1.1 matter damage to enemies that hit them with a melee attack.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Lesser Sand Flurry",
+			"level": 6,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Does 19 matter damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Molten Wrap",
+			"level": 6,
+			"duration": "12 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Target takes 11 matter damage every 2.0 sec.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Call Lesser Earth Elemental",
+			"level": 7,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "12%"
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": 12,
+			"effect": "Summons an elemental spirit to attack the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Lava Strike",
+			"level": 7,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 5
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 52 matter damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Lesser Friction",
+			"level": 8,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 5
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Target's attack speed reduced by 14%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Molten Eart",
+			"level": 8,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 7
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target takes 25 matter damage and the target is slowed by 35%.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Scratching Pebbles",
+			"level": 9,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 7
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Does 35 matter damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Greater Shield of Magma",
+			"level": 9,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 6
+			},
+			"target": "Realm",
+			"range": 1000,
+			"radius": null,
+			"cast": "4.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target deals 1.4 matter damage to enemies that hit them with a melee attack.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Skin of Sand",
+			"level": 10,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": "8%"
+			},
+			"target": "Realm",
+			"range": 1250,
+			"radius": null,
+			"cast": "4.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Creates a 'bubble' that absorbs the damage of a single melee hit.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Greater Molten Wrap",
+			"level": 10,
+			"duration": "12 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 6
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Target takes 17 matter damage every 2.0 sec.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Sand Flurry",
+			"level": 11,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 7
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Does 34 matter damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Lava Field",
+			"level": 11,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 9
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target takes 31 matter damage and the target is slowed by 35%.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Call Earth Elemental",
+			"level": 12,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "12%"
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Summons an elemental spirit to attack the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Lava Strike (Enhanced)",
+			"level": 12,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 81 matter damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Ensnaring Earth (Greater)",
+			"level": 13,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target takes 49 matter damage and the target is slowed by 35%.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Friction",
+			"level": 14,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 9
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Target's attack speed reduced by 18%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Minor Shell of Magma",
+			"level": 14,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 9
+			},
+			"target": "Realm",
+			"range": 1000,
+			"radius": null,
+			"cast": "4.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target deals 1.9 matter damage to enemies that hit them with a melee attack.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Scuffing Pebbles",
+			"level": 15,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Does 53 matter damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Expanse of Magma",
+			"level": 15,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 12
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target takes 44 matter damage and the target is slowed by 35%.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Greater Sand Flurry",
+			"level": 16,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 11
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Does 50 matter damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Molten Blanket",
+			"level": 16,
+			"duration": "12 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Target takes 29 matter damage every 2.0 sec.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Lava Force",
+			"level": 17,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 118 matter damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Skin of Earth",
+			"level": 18,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": "12%"
+			},
+			"target": "Group",
+			"range": 1250,
+			"radius": null,
+			"cast": "4.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Creates a 'bubble' that absorbs the damage of a single melee hit.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Earth Eddies",
+			"level": 18,
+			"duration": "1 second",
+			"cost": {
+				"type": "Power",
+				"value": 11
+			},
+			"target": "Area area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": "6 seconds",
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nDoes 68 matter damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Scraping Rocks",
+			"level": 19,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 13
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Does 68 matter damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Dusted Vision",
+			"level": 19,
+			"duration": "1 minute",
+			"cost": {
+				"type": "Power",
+				"value": 9
+			},
+			"target": "Targeted",
+			"range": 2000,
+			"radius": null,
+			"cast": "2.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Target's effective range is reduced by 25% for ranged attacks (archer and magic).",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Call Potent Earth Elemental",
+			"level": 20,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "12%"
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Summons an elemental spirit to attack the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Molten Puddle",
+			"level": 20,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 16
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target takes 56 matter damage and the target is slowed by 35%.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Major Friction",
+			"level": 21,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 13
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Target's attack speed reduced by 22%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Ensnaring Earth (Potent)",
+			"level": 21,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target takes 64 matter damage and the target is slowed by 35%.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Lesser Gust of Sand",
+			"level": 22,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 15
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Does 69 matter damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Shell of Magma",
+			"level": 22,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 13
+			},
+			"target": "Realm",
+			"range": 1000,
+			"radius": null,
+			"cast": "4.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target deals 2.6 matter damage to enemeies that hit them with a melee attack.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Greater Molten Blanket",
+			"level": 23,
+			"duration": "12 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 14
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Target takes 41 matter damage every 2.0 sec.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Lava Force (Enhanced)",
+			"level": 24,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 15
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 162 matter damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Wearing Rocks",
+			"level": 25,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 17
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Does 89 matter damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Earth Splash",
+			"level": 25,
+			"duration": "1 second",
+			"cost": {
+				"type": "Power",
+				"value": 15
+			},
+			"target": "Area area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": "6 seconds",
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nDoes 92 matter damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Entangling Earth (Minor)",
+			"level": 26,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 15
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target takes 88 matter damage and the target is slowed by 35%.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Gust of Sand",
+			"level": 27,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 18
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Does 85 matter damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Encrusted Vision",
+			"level": 27,
+			"duration": "1 minute",
+			"cost": {
+				"type": "Power",
+				"value": 14
+			},
+			"target": "Targeted",
+			"range": 2100,
+			"radius": null,
+			"cast": "2.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Target's effective range is reduced by 35% for ranged attacks (archery and magic).\n\n\nDecreases the target's resistance to matter damage by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Greater Friction",
+			"level": 28,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 17
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Target's attack speed reduced by 26%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Molten Pool",
+			"level": 28,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 23
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target takes 81 matter damage and the target is slowed by 35%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Sheet of Lava",
+			"level": 29,
+			"duration": "12 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 18
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Target takes 53 matter damage every 2.0 sec.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Erosive Rocks",
+			"level": 30,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 20
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Does 107 matter damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Greater Gust of Sand",
+			"level": 31,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 20
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Does 98 matter damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Lava Streak",
+			"level": 31,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 19
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 206 matter damage. Can be blocked>",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Call Mighty Earth Elemental",
+			"level": 32,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "12%"
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": 12,
+			"effect": "Summons an elemental spirit to attack the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Entangling Earth",
+			"level": 32,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 21
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target takes 120 matter damage and the target is slowed by 35%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Greater Shell of Magma",
+			"level": 33,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 21
+			},
+			"target": "Realm",
+			"range": 1000,
+			"radius": null,
+			"cast": "4.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target deals 3.6 matter damage to enemies that hit them with a melee attack.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Abrasive Boulders",
+			"level": 34,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 22
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Does 121 matter damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Earth Ripple",
+			"level": 34,
+			"duration": "1 second",
+			"cost": {
+				"type": "Power",
+				"value": 21
+			},
+			"target": "Area area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": "6 seconds",
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nDoes 124 matter damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Greater Sheet of Lava",
+			"level": 35,
+			"duration": "12 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 22
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 150,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Target takes 63 matter damage every 2.0 sec.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Blast of Sand",
+			"level": 36,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 24
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Does 113 matter damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Molten Lake",
+			"level": 36,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 30
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target takes 102 matter damage and the target is slowed by 35%.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Superior Friction",
+			"level": 37,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 23
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Target's attack speed reduced by 32%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Mire Vision",
+			"level": 37,
+			"duration": "1 minute",
+			"cost": {
+				"type": "Power",
+				"value": 18
+			},
+			"target": "Targeted",
+			"range": 2200,
+			"radius": null,
+			"cast": "2.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Target's effective range is reduced by 45% for ranged attacks (archery and magic).\n\n\nDecreases the target's resistance to matter damage by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Lava Streak (Enhanced)",
+			"level": 38,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 24
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 258 matter damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Call Supreme Earth Elemental",
+			"level": 40,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "12%"
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": 12,
+			"effect": "Summons an elemental spirit to attack the target.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Grinding Boulders",
+			"level": 41,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 27
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Does 146 matter damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Sheet of Magma",
+			"level": 41,
+			"duration": "12 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 26
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 250,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Target takes 73 matter damage every 2.0 sec.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Tempest of Sand",
+			"level": 42,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 28
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Does 132 matter damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Entangling Earth (Greater)",
+			"level": 42,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 26
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target takes 148 matter damage and the target is slowed by 35%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Earth Wave",
+			"level": 43,
+			"duration": "1 second",
+			"cost": {
+				"type": "Power",
+				"value": 27
+			},
+			"target": "Area area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": "6 seconds",
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nDoes 155 matter damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Exalted Magma Shield",
+			"level": 44,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 28
+			},
+			"target": "Realm",
+			"range": 1000,
+			"radius": null,
+			"cast": "4.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target deals 4.6 matter damage to enemies that hit them with a melee attack.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Soil Vision",
+			"level": 45,
+			"duration": "1 minute",
+			"cost": {
+				"type": "Power",
+				"value": 22
+			},
+			"target": "Targeted",
+			"range": 2300,
+			"radius": null,
+			"cast": "2.0 seconds",
+			"recast": null,
+			"type": "Natter",
+			"maxTarget": null,
+			"effect": "Target's effective range is reduced by 55% for ranged attacks (archery and magic).\n\n\nDecreases the target's resistance to matter damage by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Lava's Fury'",
+			"level": 46,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 30
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 309 matter damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Paralyzing Friction",
+			"level": 47,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 30
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Target's attack speed reduced by 38%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Molten Ocean",
+			"level": 47,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 40
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target takes 134 matter damage and the target is slowed by 35%.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Call Earthlord",
+			"level": 48,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "12%"
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Summons an elemental spirit to attack the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Greater Sheet of Magma",
+			"level": 48,
+			"duration": "12 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 31
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Target takes 87 matter damage every 2.0 sec.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Demolishing Boulders",
+			"level": 49,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 32
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Does 179 matter damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Hurricane of Sand",
+			"level": 50,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 33
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "<atter",
+			"maxTarget": null,
+			"effect": "Does 158 matter damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Entangling Earth (Potent)",
+			"level": 50,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 33
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "The target takes 179 matter damage and the target is slowed by 35%.",
 			"hide": null
 		}
 	]
@@ -5420,6 +8873,930 @@ const PAINWORKING_SPEC_DATA = {
 	]
 };
 
+const FIRE_MAGIC_SPEC_DATA = {
+	"metaData": {
+		"spec": "Fire Magic",
+		"specline": "Pyromancy",
+		"baseline": "Path of Fire",
+		"type": ["Magic"],
+		"weapon": null,
+		"trainedValue": 1
+	},
+	"base": [
+		{
+			"class": ["Wizard"],
+			"name": "Fire Bolt",
+			"level": 2,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 2
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 13 heat damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Summon Fire",
+			"level": 3,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Deals 13 heat damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Fiery Bolt",
+			"level": 4,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 24 heat damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Fire Wind",
+			"level": 5,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 21 heat damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Fireball",
+			"level": 6,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 36 heat damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Circle of Flames",
+			"level": 7,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 5
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 29 heat damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Reign of Fire (Minor)",
+			"level": 9,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 6
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 53 heat damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Fiery Orbs",
+			"level": 10,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 6
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 37 heat damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Fire Storm (Minor)",
+			"level": 13,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 49 heat damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Reign of Fire",
+			"level": 14,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 9
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 75 heat damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Fire Storm",
+			"level": 17,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 64 heat damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Reign of Fire (Major)",
+			"level": 18,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 11
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 98 heat damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Aura of Incineration",
+			"level": 19,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": "8%"
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "4.0 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Creates a 'bubble' that absorbs the damage of a single melee hit.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Flaming Rocks (Minor)",
+			"level": 22,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 13
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 115 heat damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Fire Storm (Major)",
+			"level": 23,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 14
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 85 heat damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Flaming Rock",
+			"level": 28,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 17
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 149 heat damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Fiery Maelstrom (Minor)",
+			"level": 30,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 19
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 108 heat damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Flaming Rocks (Greater)",
+			"level": 36,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 23
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 188 heat damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Fiery Maelstrom",
+			"level": 37,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 23
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 136 heat damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Flame Cocoon",
+			"level": 45,
+			"duration": "7 seconds",
+			"cost": null,
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "5 minutes",
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Restores 200 health every 1.5 seconds and become immune to melee attacks. You may still be struck by magical damage in this state.\n\nYou cannot cast spells or move while under this effect. You may cancel the cocoon at any time.\n\nGrapples the target. Target becomes immune to all damage, but may still perform melee attacks.\nYou regenerate 200 health every 1.5 sec.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Flaming Rocks (Major)",
+			"level": 46,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 30
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 239 heat damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Fiery Maelstrom (Major)",
+			"level": 47,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 30
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 179 heat damage to the target.a",
+			"hide": null
+		}
+	],
+	"spells": [
+		{
+			"class": ["Wizard"],
+			"name": "Minor Combustion",
+			"level": 1,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 2
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 5 heat damage and decreases the target's resistance to heat by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Explosive Blast (Minor)",
+			"level": 2,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 2
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 8 heat damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Lesser Combustion",
+			"level": 3,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 16 heat damage and decreases the target's resistance to heat by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Minor Fire Streak",
+			"level": 4,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 29 heat damage.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Explosive Blast",
+			"level": 5,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 20 heat damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Combustion",
+			"level": 6,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 31 heat damage and decreases the target's resistance to heat by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Explosive Burst (Minor)",
+			"level": 7,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 5
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 28 heat damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Fire Streak",
+			"level": 8,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 5
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 59 heat damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Greater Combustion",
+			"level": 10,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 6
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 46 heat damage and decreases the target's resistance to heat by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Explosive Burst",
+			"level": 12,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 44 heat damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Major Combustion",
+			"level": 13,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 62 heat damage and decreases the target's resistance to heat by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Minor Flame Streak",
+			"level": 14,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 9
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 96 heat damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Minor Conflagration",
+			"level": 17,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 81 heat damage and decreases the target's resistance to heat by 10%.'",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Concussive Blast (Minor)",
+			"level": 18,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 11
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 67 heat daamge to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Flame Streak",
+			"level": 19,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 12
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 133 heat damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Lesser Conflagration",
+			"level": 23,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 14
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 108 heat damage and decreases the target's resistance to heat by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Concussive Blast",
+			"level": 24,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 15
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 87 heat damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Minor Incendiary Lance",
+			"level": 25,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 15
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 170 heat damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Conflagration",
+			"level": 30,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 19
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 137 heat damage and decreases the target's resistance to heat by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Ebullient Blast (Minor)",
+			"level": 32,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 20
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 115 heat damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Incendiary Lance",
+			"level": 33,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 21
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 221 heat damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Greater Conflagration",
+			"level": 37,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 23
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 173 heat damage and decreases the target's resistance to heat by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Minor Flame Spear",
+			"level": 41,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 26
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 273 heat damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Ebullient Blast",
+			"level": 44,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 28
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 158 heat damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Major Conflagration",
+			"level": 47,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 30
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 219 heat damage and decreases the target's resistance to heat by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Wizard"],
+			"name": "Flame Spear",
+			"level": 50,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 33
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 331 heat damage. Can be blocked.",
+			"hide": null
+		}
+	]
+};
+
 const SOULRENDING_SPEC_DATA = {
 	"metaData": {
 		"spec": "Soulrending",
@@ -7186,6 +11563,614 @@ const SPIRIT_MAGIC_SPEC_DATA = {
 	]
 };
 
+const WIND_MAGIC_SPEC_DATA = {
+	"metaData": {
+		"spec": "Wind Magic",
+		"specline": "Vapormancy",
+		"baseline": "Path of Air",
+		"type": ["Magic"],
+		"weapon": null,
+		"trainedValue": 1
+	},
+	"base": [
+		{
+			"class": ["Theurgist"],
+			"name": "Bolstering Gust (Minor)",
+			"level": 5,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Realm",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Increases the target's combat speed by 6%.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Brisk Wind (Minor)",
+			"level": 6,
+			"duration": "6 seconds",
+			"cost": null,
+			"target": "Group",
+			"range": 2000,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target's speed is increased to 126% of normal.'",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Bolstering Gust",
+			"level": 9,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 6
+			},
+			"target": "Realm",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Increases the target's combat speed by 7%.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Bolstering Gust (Major)",
+			"level": 14,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 9
+			},
+			"target": "Realm",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Increases the target's combat speed by 9%.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Brisk Wind",
+			"level": 16,
+			"duration": "6 seconds",
+			"cost": null,
+			"target": "Group",
+			"range": 2000,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target's speed is increased to 133% of normal.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Bolstering Storm (Minor)",
+			"level": 21,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 13
+			},
+			"target": "Realm",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Increases the target's combat speed by 11%.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Lissome Wind (Minor)",
+			"level": 26,
+			"duration": "6 seconds",
+			"cost": null,
+			"target": "Group",
+			"range": 2000,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target's speed is increased to 141% of normal.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Bolstering Storm",
+			"level": 28,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 17
+			},
+			"target": "Realm",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Increases the target's combat speed by 13%.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Lissome Wind",
+			"level": 36,
+			"duration": "6 seconds",
+			"cost": null,
+			"target": "Group",
+			"range": 2000,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target's speed is increased to 148% of normal.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Bolstering Storm (Major)",
+			"level": 38,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 24
+			},
+			"target": "Realm",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Increases the target's combat speed by 16%.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Lissome Wind (Major)",
+			"level": 46,
+			"duration": "6 seconds",
+			"cost": null,
+			"target": "Group",
+			"range": 2000,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target's speed is increased by 176% of normal.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Bolstering Storm (Greater)",
+			"level": 49,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 32
+			},
+			"target": "Realm",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Increases the target's combat speed by 19%.",
+			"hide": null
+		}
+	],
+	"spells": [
+		{
+			"class": ["Theurgist"],
+			"name": "Blasting Breeze",
+			"level": 1,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 2
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Does 10 spirit damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Call Lesser Air Sprite",
+			"level": 2,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "15%"
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": 12,
+			"effect": "Summons an elemental spirit to attack the target.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Confusing Gust (Minor)",
+			"level": 4,
+			"duration": "10 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is mesmerized and cannot take any actions.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Blasting Gust",
+			"level": 5,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Does 26 spirit damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Call Minor Air Sprite",
+			"level": 7,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "12%"
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": 12,
+			"effect": "Summons an elemental spirit to attack the target.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Blasting Winds",
+			"level": 8,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 5
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Does 41 spirit damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Blasting Gale",
+			"level": 11,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 7
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Does 51 spirit damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Call Air Sprite",
+			"level": 12,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "12%"
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": 12,
+			"effect": "Summons an elemental spirit to attack the target.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Confusing Gust",
+			"level": 13,
+			"duration": "14 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is mesmerized and cannot take any actions.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Blasting Squall",
+			"level": 16,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Does 77 spirit damage",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Call Potent Air Sprite",
+			"level": 20,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "12%"
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": 12,
+			"effect": "Summons an elemental spirit to attack the target.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Confusing Gust (Major)",
+			"level": 21,
+			"duration": "18 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 13
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is mesmerized and cannot take any actions.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Blasting Storm",
+			"level": 22,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 13
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Does 102 spirit damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Blasting Cyclone",
+			"level": 28,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 17
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Does 133 spirit damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Confjusing Wind (Minor)",
+			"level": 30,
+			"duration": "23 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 19
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is mesmerized and cannot take any actions.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Call Mighty Air Sprite",
+			"level": 32,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "12%"
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": 12,
+			"effect": "Summons an elemental spirit to attack the target.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Blasting Tempest",
+			"level": 35,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 22
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Does 163 spirit damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Confusing Wind",
+			"level": 39,
+			"duration": "27 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 25
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is mesmerized and cannot take any actions.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Blasting Maelstrom",
+			"level": 45,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 29
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Does 209 spirit damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Theurgist"],
+			"name": "Confusing Storm",
+			"level": 49,
+			"duration": "32 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 32
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is mesmerized and cannot take any actions.",
+			"hide": null
+		}
+	]
+};
+
 /*
 
 /////spell object template
@@ -7200,7 +12185,7 @@ const _SPEC_DATA = {
 	},
 	"base": [
 		{
-			"class": ["Necromancer"],
+			"class": [""],
 			"name": "",
 			"level": ,
 			"duration": null,
@@ -7237,7 +12222,7 @@ const _SPEC_DATA = {
 			"type": "",
 			"maxTarget": null,
 			"effect": "",
-			"hide": 
+			"hide": null
 		}
 	]
 };
