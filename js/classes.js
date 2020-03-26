@@ -23,7 +23,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[1], WEAPONRY_DATA[2], WEAPONRY_DATA[3], WEAPONRY_DATA[4], WEAPONRY_DATA[5], WEAPONRY_DATA[7]],
 						"armor" : ARMOR_ABILITY_DATA[4],
 						"shield" : SHIELD_ABILITY_DATA[2]
-					  },
+					  }
 	},
 	{
 		"name" : "Cabalist",
@@ -49,9 +49,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0]],
 						"armor" : ARMOR_ABILITY_DATA[0],
 						"shield" : null
-					  },
-		"combat" : null,
-		"magic" : ["Spirit Animation", "Matter Magic", "Body Destruction", "Essence Manipulation", "Matter Manipulation", "Vivification"]
+					  }
 	},
 	{
 		"name" : "Cleric",
@@ -77,9 +75,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[4]],
 						"armor" : ARMOR_ABILITY_DATA[3],
 						"shield" : SHIELD_ABILITY_DATA[1]
-					  },
-		"combat" : null,
-		"magic" : ["Rejuvenation", "Enhancements", "Smiting"]
+					  }
 	},
 	{
 		"name" : "Friar",
@@ -105,9 +101,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[4]],
 						"armor" : ARMOR_ABILITY_DATA[1],
 						"shield" : SHIELD_ABILITY_DATA[0]
-					  },
-		"combat" : ["Staves"],
-		"magic" : ["Rejuvenation", "Enhancements"]
+					  }
 	},
 	{
 		"name" : "Heretic",
@@ -133,9 +127,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[4], WEAPONRY_DATA[6]],
 						"armor" : ARMOR_ABILITY_DATA[0],
 						"shield" : SHIELD_ABILITY_DATA[0]
-					  },
-		"combat" : ["Shield", "Flex Weapons", "Crush"],
-		"magic" : ["Rejuvenation", "Enhancements"]
+					  }
 	},
 	{
 		"name" : "Infiltrator",
@@ -161,9 +153,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[3], WEAPONRY_DATA[5]],
 						"armor" : ARMOR_ABILITY_DATA[1],
 						"shield" : SHIELD_ABILITY_DATA[0]
-					  },
-		"combat" : ["Dual Wield", "Critical Strike", "Slash", "Thrust"],
-		"magic" : ["Stealth", "Envenom"]
+					  }
 	},
 	{
 		"name" : "Mercenary",
@@ -189,9 +179,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[8], WEAPONRY_DATA[3], WEAPONRY_DATA[4], WEAPONRY_DATA[5]],
 						"armor" : ARMOR_ABILITY_DATA[3],
 						"shield" : SHIELD_ABILITY_DATA[1]
-					  },
-		"combat" : ["Slash", "Crush", "Thrust", "Shield", "Dual Wield"],
-		"magic" : null
+					  }
 	},
 	{
 		"name" : "Minstrel",
@@ -217,9 +205,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[3], WEAPONRY_DATA[5]],
 						"armor" : ARMOR_ABILITY_DATA[3],
 						"shield" : SHIELD_ABILITY_DATA[0]
-					  },
-		"combat" : ["Slash", "Thrust"],
-		"magic" : ["Songs"]
+					  }
 	},
 	{
 		"name" : "Necromancer",
@@ -239,15 +225,13 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 1.0,
-		"specializations" : [/*"Death Servant", "Deathsight",*/ PAINWORKING_SPEC_DATA],
+		"specializations" : [DEATH_SERVANT_SPEC_DATA, DEATHSIGHT_SPEC_DATA, PAINWORKING_SPEC_DATA],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4], ABILITY_DATA[1]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0]],
 						"armor" : ARMOR_ABILITY_DATA[0],
 						"shield" : null
-					  },
-		"combat" : ["Painworking"],
-		"magic" : ["Death Servant", "Deathsight", "Painworking", "Deathsight Baseline", "Death Servant Baseline", "Painworking Baseline", "Abilities"]
+					  }
 	},
 	{
 		"name" : "Paladin",
@@ -273,9 +257,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[2], WEAPONRY_DATA[3], WEAPONRY_DATA[4], WEAPONRY_DATA[5]],
 						"armor" : ARMOR_ABILITY_DATA[4],
 						"shield" : SHIELD_ABILITY_DATA[2]
-					  },
-		"combat" : ["Two Handed", "Slash", "Crush", "Thrust", "Shield"],
-		"magic" : ["Chants"]
+					  }
 	},
 	{
 		"name" : "Reaver",
@@ -295,15 +277,13 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 2.0,
-		"specializations" : [SLASH_SPEC_DATA, CRUSH_SPEC_DATA, THRUST_SPEC_DATA, PARRY_SPEC_DATA, SHIELD_SPEC_DATA, "Soulrending", FLEXIBLE_SPEC_DATA],
+		"specializations" : [SLASH_SPEC_DATA, CRUSH_SPEC_DATA, THRUST_SPEC_DATA, PARRY_SPEC_DATA, SHIELD_SPEC_DATA, SOULRENDING_SPEC_DATA, FLEXIBLE_SPEC_DATA],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[3], WEAPONRY_DATA[4], WEAPONRY_DATA[5], WEAPONRY_DATA[6]],
 						"armor" : ARMOR_ABILITY_DATA[3],
 						"shield" : SHIELD_ABILITY_DATA[2]
-					  },
-		"combat" : ["Slash", "Crush", "Thrust", "Shield", "Flex Weapons"],
-		"magic" : ["Soulrending"]
+					  }
 	},
 	{
 		"name" : "Scout",
@@ -329,9 +309,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[3], WEAPONRY_DATA[5], WEAPONRY_DATA[9]],
 						"armor" : ARMOR_ABILITY_DATA[2],
 						"shield" : SHIELD_ABILITY_DATA[0]
-					  },
-		"combat" : ["Shield", "Slash", "Thrust"],
-		"magic" : ["Archery", "Stealth"]
+					  }
 	},
 	{
 		"name" : "Sorcerer",
@@ -357,9 +335,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0]],
 						"armor" : ARMOR_ABILITY_DATA[0],
 						"shield" : null
-					  },
-		"combat" : null,
-		"magic" : ["Mind Twisting", "Matter Magic", "Body Destruction", "Disorientation", "Telekinesis", "Domination"]
+					  }
 	},
 	{
 		"name" : "Theurgist",
@@ -379,15 +355,13 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 1.0,
-		"specializations" : ["Earth Magic", "Cold Magic", "Wind Magic"],
+		"specializations" : [EARTH_MAGIC_SPEC_DATA, COLD_MAGIC_SPEC_DATA, WIND_MAGIC_SPEC_DATA],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[1]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0]],
 						"armor" : ARMOR_ABILITY_DATA[0],
 						"shield" : null
-					  },
-		"combat" : null,
-		"magic" : ["Path of Air", "Path of Earth", "Path of Ice", "Abrasion", "Refrigeration", "Vapormancy"]
+					  }
 	},
 	{
 		"name" : "Wizard",
@@ -407,15 +381,13 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 1.0,
-		"specializations" : ["Earth Magic", "Cold Magic", "Fire Magic"],
+		"specializations" : [EARTH_MAGIC_SPEC_DATA, COLD_MAGIC_SPEC_DATA, FIRE_MAGIC_SPEC_DATA],
 		"abilities" : [ABILITY_DATA[0]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0]],
 						"armor" : ARMOR_ABILITY_DATA[0],
 						"shield" : null
-					  },
-		"combat" : null,
-		"magic" : ["Path of Fire", "Path of Earth", "Path of Ice", "Calefaction", "Liquification", "Pyromancy"]
+					  }
 	},
 	{
 		"name" : "Animist",
@@ -441,9 +413,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0]],
 						"armor" : ARMOR_ABILITY_DATA[0],
 						"shield" : null
-					  },
-		"combat" : null,
-		"magic" : ["Creeping Path", "Verdant Path", "Arboreal Path", "Undergrowth Mastery", "Verdant Mastery", "Arboreal Mastery"]
+					  }
 	},
 	{
 		"name" : "Bainshee",
