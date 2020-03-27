@@ -407,7 +407,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 1.0,
-		"specializations" : ["Creeping Path", "Verdant Path", "Arboreal Path"],
+		"specializations" : [CREEPING_PATH_SPEC_DATA, VERDANT_PATH_SPEC_DATA, ARBOREAL_PATH_SPEC_DATA],
 		"abilities" : [ABILITY_DATA[0]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0]],
@@ -573,7 +573,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 1.0,
-		"specializations" : ["Mana Magic", "Light Magic", "Void Magic"],
+		"specializations" : [MANA_MAGIC_SPEC_DATA, LIGHT_MAGIC_SPEC_DATA, VOID_MAGIC_SPEC_DATA],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[1]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0]],
