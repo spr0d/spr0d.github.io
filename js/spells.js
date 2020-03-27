@@ -1,3 +1,1177 @@
+const ARBOREAL_PATH_SPEC_DATA = {
+	"metaData": {
+		"spec": "Arboreal",
+		"specline": "Arboreal Mastery",
+		"baseline": "Arboreal Path",
+		"type": ["Magic"],
+		"weapon": null,
+		"trainedValue": 1
+	},
+	"base": [
+		{
+			"class": ["Animist"],
+			"name": "Grove's Protection'",
+			"level": 1,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 2
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Increases your armor factor (AF) by 13.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Threshing the Chaff",
+			"level": 2,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 2
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target takes 9 energy damage and the attacker is healed for 30% of the damage dealt.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Grove's Buffer'",
+			"level": 3,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Increases your armor factor (AF) by 22.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Natural Selection",
+			"level": 4,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target takes 17 energy damage and the attacker is healed for 30% of the damage dealt.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Grove's Defense",
+			"level": 5,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Increases your armor factor (AF) by 32.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Culling the WeaK",
+			"level": 6,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target takes 25 energy damage and the attacker is healed for 30% of the damage dealt.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Thorns of Retribution",
+			"level": 7,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 5
+			},
+			"target": "Realm",
+			"range": 1000,
+			"radius": null,
+			"cast": "4.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target deals 1.2 energy damage to enemies that hit them with a melee attack.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Survival of the Fittest",
+			"level": 8,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 5
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target takes 33 energy damage and the attacker is healed for 30% of the damage dealt.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Grove's Guard'",
+			"level": 9,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 6
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Increases your armor factor (AF) by 51.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Grove's Anguish'",
+			"level": 10,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 6
+			},
+			"target": "Realm",
+			"range": 1000,
+			"radius": null,
+			"cast": "4.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target deals 1.5 energy damage to enemies that hit them with a melee attack.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Strength of the Defender",
+			"level": 12,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target takes 45 energy damage and the attacker is healed for 30% of the damage dealt.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Grove's Shield",
+			"level": 13,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Increases your armor factor (AF) by 71.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Wood's Vengeance'",
+			"level": 14,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 9
+			},
+			"target": "Realm",
+			"range": 1000,
+			"radius": null,
+			"cast": "4.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target deals 1.9 energy damage to enemies that hit them with a melee attack.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Right of Life",
+			"level": 16,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target takes 61 energy damage and the attacker is healed for 30% of the damage dealt.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Grove's Refuge",
+			"level": 18,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 11
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Increases the armor factor (AF) by 95.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Forest's Revenge",
+			"level": 21,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 13
+			},
+			"target": "Realm",
+			"range": 1000,
+			"radius": null,
+			"cast": "4.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target deals 2.5 energy damage to enemies that hit them with a melee attack.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Enemy's Debt",
+			"level": 22,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 13
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target takes 80 energy damage and the attacker is healed for 30% of the damage dealt.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Grove's Armor",
+			"level": 24,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 15
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Increases your armor factor (AF) by 124.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Force of Nature",
+			"level": 28,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 17
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target takes 104 energy damage and the attacker is healed for 40% of the damage dealt.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Earthspirit's Ire",
+			"level": 30,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 19
+			},
+			"target": "Realm",
+			"range": 1000,
+			"radius": null,
+			"cast": "4.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target deals 3.3 energy damage to enemies that hit them with a melee attack.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Grove's Ward",
+			"level": 31,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 19
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Increases your armor factor (AF) by 158.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Cycle of Life",
+			"level": 35,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 22
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target takes 128 energy damage and the attacker is healed for 40% of the damage dealt.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Nature's Retaliation",
+			"level": 39,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 25
+			},
+			"target": "Realm",
+			"range": 1000,
+			"radius": null,
+			"cast": "4.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target deals 4.1 energy damage to enemies that hit them with a melee attack.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Grove's Sanctuary",
+			"level": 40,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 25
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Increases your armor factor (AF) by 201.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Cycle of Death",
+			"level": 45,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 29
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target takes 179 energy damage and the attacker is healed for 50% of the damage dealt.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Nature's Heart of Wrath",
+			"level": 48,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 31
+			},
+			"target": "Realm",
+			"range": 1000,
+			"radius": null,
+			"cast": "4.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target deals 4.9 energy damage to enemies that hit them with a melee attack.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Grove's Aegis",
+			"level": 50,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 33
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Increases your armor factor (AF) by 250.",
+			"hide": null
+		}
+	],
+	"spells": [
+		{
+			"class": ["Animist"],
+			"name": "Spirit of Anger",
+			"level": 1,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 2
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 5 body damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Spirit of Ire",
+			"level": 3,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 16 body damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Forest's Servant",
+			"level": 5,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons a pet to serve the caster.\nPet spell: Does 26 body damage to the target.\n\nAffects monsters up to 88% of your level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Spirit of Outrage",
+			"level": 6,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 31 body damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Tangler Sapling",
+			"level": 7,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 13
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons a turret to serve the caster.\nTurrent spell: The target is rooted in place.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Spirit of Aggravation",
+			"level": 8,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 5
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 41 body damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Forest's Companion",
+			"level": 9,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 16
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons a pet to serve the caster.\nPet spell: Does 46 body damage to the target.\n\nAffects monsters up to 88% of your level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turrent will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Forest's Compatriot'",
+			"level": 11,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 20
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons a pet to serve the caster.\nPet spell: Does 51 body damage to the target.\n\nAffects monsters up to 88% of your level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Spirit of Enmity",
+			"level": 12,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 56 body damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Heavy Spirit",
+			"level": 13,
+			"duration": "5 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 50
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": "2 minutes",
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 134 body damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Circle of Anger",
+			"level": 14,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 9
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 51 body damage to the target.\n\n\nRadius: 350",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Spirit of Rage",
+			"level": 16,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 77 body damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Forest's Aid",
+			"level": 18,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 30
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons a pet to serve the caster.\nPet spell: Does 87 body damage to the target.\n\nAffects monsters up to 88% of your level. to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Circle of Enmity",
+			"level": 20,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 12
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 72 body damage to the target.\n\n\nRadius: 350",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Tangler Youngling",
+			"level": 22,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 35
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": 8,
+			"effect": "Summons a turret to serve the caster.\nTurret spell: The target is rooted in place\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Spirit of Wrath",
+			"level": 22,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 13
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 102 body damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Plump Spirit",
+			"level": 23,
+			"duration": "5 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 50
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": "2 minutes",
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 199 body damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Forest's Sentry'",
+			"level": 24,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 37
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons a pet to serve the caster.\nPet spell: Does 112 body damage to the target.\n\nAffects monsters up to 88% of your level. to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turrent will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Circle of Fury",
+			"level": 27,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 17
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 99 body damage to the target.\n\nRadius: 350",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Tangler Youth",
+			"level": 29,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 43
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": 8,
+			"effect": "Summons a turret to serve the caster.\nTurret spell: The target is rooted in place.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Spirit of Fury",
+			"level": 30,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 19
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 137 body damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Inflated Spirit",
+			"level": 33,
+			"duration": "5 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 50
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": "2 minutes",
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 269 body damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Circle of Wrath",
+			"level": 34,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 21
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 123 body damage to the target.\n\n\nRadius: 350",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Forest's Bulwark'",
+			"level": 35,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 50
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons a pet to serve the caster.\nPet spell: Does 163 body damage to the target.\n\nAffects monsters up to 88% of  your level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Tangler",
+			"level": 36,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 51
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": 8,
+			"effect": "Summons a turret to serve the caster.\nTurret spell: The target is rooted in place.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Spirit of Vengeance",
+			"level": 39,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 25
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 183 body damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Guardian of the Forest",
+			"level": 40,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 60
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Summons a pet to serve the caster.\nAffects monsters up to your level, to a maximum of level 50.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Circle of Rage",
+			"level": 42,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 27
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 151 body damage to the target.\n\n\nRadius: 350",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Aged Tangler",
+			"level": 43,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 58
+			},
+			"target": "ARea",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": 8,
+			"effect": "Summons a turret to serve the caster.\nTurret spell: The target is rooted in place.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Forest's Protector'",
+			"level": 44,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 59
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons a pet to serve the caster.\nPet spell: Does 204 body damage to the target.\n\nAffects monsters up to 88% of your level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Bulging Spirit",
+			"level": 45,
+			"duration": "5 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 50
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": "2 minutes",
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 449 body damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Circle of Vengeance",
+			"level": 47,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 33
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 178 body damage to the target.\n\n\nRadius: 350",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Spirit of Hatred",
+			"level": 48,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 31
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 225 body damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Elder Tangler",
+			"level": 49,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 64
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons a turrent to serve the caster.\nTurrent spell: The target is rooted in place.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		}
+	]
+};
+
 const BODY_MAGIC_SPEC_DATA = {
 	"metaData": {
 		"spec": "Body Magic",
@@ -2710,6 +3884,1234 @@ const COLD_MAGIC_SPEC_DATA = {
 			"type": "Cold",
 			"maxTarget": null,
 			"effect": "The target is slowed by 50%.",
+			"hide": null
+		}
+	]
+};
+
+const CREEPING_PATH_SPEC_DATA = {
+	"metaData": {
+		"spec": "Creeping Path",
+		"specline": "Undergrowth Master",
+		"baseline": "Creeping Path",
+		"type": ["Magic"],
+		"weapon": null,
+		"trainedValue": 1
+	},
+	"base": [
+		{
+			"class": ["Animist"],
+			"name": "Wisp Heat",
+			"level": 1,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 2
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Does 5 body damage and decreases the target's resistance to body by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Wisp Glow",
+			"level": 3,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Does 13 body damage and decreases the target's resistance to body by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Release Clump",
+			"level": 4,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Controled area effect",
+			"range": 4000,
+			"radius": 500,
+			"cast": "Instant",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": 20,
+			"effect": "Releases the target and all other turrets you have summoned from the area.\nAnimist turrets only.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Forest's Advocate",
+			"level": 5,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": 8,
+			"effect": "Summons a turret to serve the caster.\nTurret spell: Does 21 body damage to the target.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Wisp Spark",
+			"level": 7,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 5
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Does 29 body damage and decreases the target's resistance to body by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Spreading Vines",
+			"level": 8,
+			"duration": "16 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Forest's Emissary",
+			"level": 9,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 16
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": 8,
+			"effect": "Summons a turret to serve the caster.\nTurret spell: Does 37 body damage to the target.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Wisp Fire",
+			"level": 10,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 6
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Does 37 body damage and decreases the target's resistance to body by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Sap Strength",
+			"level": 12,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 6
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Decreases the target's constitution by 19.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Ripening Vines",
+			"level": 13,
+			"duration": "23 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 6
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Wisp Flame",
+			"level": 15,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 9
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Does 57 body damage and decreases the target's resistance to body by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Forest's Essence",
+			"level": 16,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 27
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons a turret to serve the caster.\nTurret spell: Does 61 body damage to the target.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Bleed Strength",
+			"level": 18,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 9
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Decreases the target's constitution by 24.'",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Expanding Vines]",
+			"level": 19,
+			"duration": "31 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 9
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Wisp Blaze",
+			"level": 20,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 12
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "DOes 73 body damage and decreases the target's resistance to body by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Forest's Spirit",
+			"level": 21,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 34
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": 8,
+			"effect": "Summons a turrent to serve the caster.\nTurret spell: Does 76 body damage to the target.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Subvert Strength",
+			"level": 23,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 11
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Decreases the target's constitution by 28.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Branching Vines",
+			"level": 26,
+			"duration": "41 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 12
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Wisp Flare",
+			"level": 27,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 17
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Does 100 body damage and decreases the target's resistance to body by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Forest's Heart",
+			"level": 28,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 42
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": 8,
+			"effect": "Summons a turret to serve the caster.\nTurret spell: Does 104 body damage to the target.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Fungal Potency",
+			"level": 29,
+			"duration": "1 minute",
+			"cost": null,
+			"target": "Controled area effect",
+			"range": 2000,
+			"radius": 350,
+			"cast": "2.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target's spells are 15% more effective.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Exhaust Strength",
+			"level": 30,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 14
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Decreases the target's constitution by 34.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Growing Vines",
+			"level": 31,
+			"duration": "48 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 15
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Wisp Pyre",
+			"level": 34,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 21
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Does 124 body damage and decreases the target's resistance to body by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Forest's Soul",
+			"level": 35,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 50
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": 8,
+			"effect": "Summons a turret to serve the caster.\nTurret spell: Does 128 body damage to the target.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Sap Might",
+			"level": 37,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 18
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Decreases the target's constitution by 39.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Shooting Vines",
+			"level": 40,
+			"duration": "1 minute 1 second",
+			"cost": {
+				"type": "Power",
+				"value": 20
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Forest's Incarnation",
+			"level": 43,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 58
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": 8,
+			"effect": "Summons a turret to serve the caster.\nTurret spell: Does 155 body damage to the target.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Wisp Inferno",
+			"level": 44,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 28
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Does 159 body damage and decreases the target's resistance to body by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Bleed Might",
+			"level": 46,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 22
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Decreases the target's consitution by 46.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Wisp Conflagration",
+			"level": 48,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 33
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Does 179 body damage and decreases the target's resistance to body by 10%.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Rampant Vines",
+			"level": 49,
+			"duration": "1 minute 13 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 25
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Forest's Core",
+			"level": 50,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 65
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": 8,
+			"effect": "Summons a turret to serve the caster.\nTurret spell: Does 179 body damage to the target.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		}
+	],
+	"spells": [
+		{
+			"class": ["Animist"],
+			"name": "Grove's Assailant",
+			"level": 2,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 5
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons a pet to serve the caster.\nPet spell: the target takes 9 body damage and the target is slowed by 40%.\n\nAffects monsters up to 88% of your level, to a maximum of level 50\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Forest's Blight'",
+			"level": 5,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": 8,
+			"effect": "Summons a turret to serve the caster.\nTurret spell: Inflicts a wasting disease on the target that slows target by 6%, reduces its strength by 10 and inhibits healing by 50%.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Grove's Hunter",
+			"level": 6,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 12
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons a pet to serve the castern.\nPet spell: The target takes 25 body damage and the target is slowed by 40%.\n\nAffects monsters up to 88% of your level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Spirit of Deceit",
+			"level": 7,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 5
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 34 matter damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Grove Sibyl",
+			"level": 9,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 16
+			},
+			"target": "Area",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": 8,
+			"effect": "Summons a turret to serve the castern\nTurret spell: The target regains 20 hit points.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Grove's Eliminator'",
+			"level": 11,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 20
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons a pet to serve the caster.\nPet spell: The target takes 40 body damage and the target is slowed by 40%.\n\nAffects monsters up to 88% of your level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Constraining Spirit",
+			"level": 12,
+			"duration": "32 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Forest's Curse",
+			"level": 14,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 16
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": 8,
+			"effect": "Summons a turret to serve the caster.\nTurret spell: Inflicts a wasting disease on the target that slows target by 6%, reduces its strength by 10 and inhibits healing by 50%.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Spirit of Cunning",
+			"level": 16,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 68 matter damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Entangling Spirit",
+			"level": 18,
+			"duration": "41 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 11
+			},
+			"target": "Targeted area effect",
+			"range": 1575,
+			"radius": 350,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Forest's Scourge",
+			"level": 20,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 34
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": 8,
+			"effect": "Summons a turret to serve the caster.\nTurret spell: Inflicts a wasting disease on the target that slows target by 8%, reduces its strength by 15 and inhibits healing by 50%.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Grove Augur",
+			"level": 21,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 38
+			},
+			"target": "Area",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Summons a turret to save the caster.\nTurret spell: The target regains 55 hit points\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Grove's Agent",
+			"level": 22,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 35
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons a pet to serve the caster.\nPet spell: The target takes 80 body damage and the target is slowed by 40%.\n\nAffects monsters up to 88% of your level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Grasping Spirit",
+			"level": 26,
+			"duration": "52 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 16
+			},
+			"target": "Targeted area effect",
+			"range": 1655,
+			"radius":350 ,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Spirit of Trickery",
+			"level": 27,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 13
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 122 matter damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Grove's Inquisitor",
+			"level": 29,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 43
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons a pet to serve the caster.\nPet spell: the target takes 108 body damage and the target is slowed by 40%.\n\nAffects monsters up to 88% of your level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Spoil Armor",
+			"level": 30,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 19
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Reduces the target's armor factor (AF) by 100.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Forest's Torment",
+			"level": 31,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 50
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": 8,
+			"effect": "Summons a turret to serve the caster.\nTurret spell: Inflicts a wasting disease on the target that slows target by 12%, reduces its strength by 20 and inhibits healing by 50%.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Grove Oracle",
+			"level": 32,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 50
+			},
+			"target": "Area",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": 8,
+			"effect": "Summons a turret to serve the caster.\nTurret spell: The target regains 100 hit points",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Constricting Spirit",
+			"level": 34,
+			"duration": "1 minute 3 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 21
+			},
+			"target": "Targeted area effect",
+			"range": 1765,
+			"radius": 350,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Grove's Executioner",
+			"level": 36,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 51
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons a pet to serve the caster\nPet sepll: The target takes 131 body damage and the target is slowed by 40%.\n\nAffects monsters up to 88% of your level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Spirit of Deception",
+			"level": 38,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 25
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Summons ane elemental spirit to attack the target.\nBomber spell: Does 153 matter damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Decompose Armor",
+			"level": 39,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 25
+			},
+			"target": "Targetd",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Reduces the target's armor factor (AF) by 165.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Heart of the Grove",
+			"level": 40,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 60
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Summons a pet to serve the caster.\nAffects monsters up to your level, to a maximum of level 50.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Forest's Menace'",
+			"level": 41,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 65
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": 8,
+			"effect": "Summons a turret to serve the caster.\nTurret spell: Inflicts a wasting disease on the target that slows target by 15%, reduces its strength by 25 and inhibits healing by 50%.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Grove Druid",
+			"level": 42,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 65
+			},
+			"target": "Area",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": 8,
+			"effect": "Summons a turret to serve the caster.\nTurret spell: The target regains 215 hit points.\n\n\n\n\nAnimits must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Binding Spirit",
+			"level": 44,
+			"duration": "1 minute 15 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 28
+			},
+			"target": "Targeted area effect",
+			"range": 1875,
+			"radius": 350,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Grove's Assassin",
+			"level": 45,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 60
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Summons a pet to serve the caster.\nPet spell: the target takes 164 body damage and the target is slowed by 40%.\n\nAffects monsters up to 88% of your level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Spirit of Guile",
+			"level": 47,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 31
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 199 matter damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Decay Armor",
+			"level": 49,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 33
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Reduces the target's armor factor (AF) by 250.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Shroom of Life",
+			"level": 50,
+			"duration": "10 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "255"
+			},
+			"target": "Realm",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "5 minutes",
+			"type": null,
+			"maxTarget": null,
+			"effect": "Summonns a turret to serve the caster.\nTurret spell: the target regains 400 hit points.\n\n\nRadius: 350",
 			"hide": null
 		}
 	]
@@ -6697,6 +9099,2525 @@ const EARTH_MAGIC_SPEC_DATA = {
 			"type": "Matter",
 			"maxTarget": null,
 			"effect": "The target takes 179 matter damage and the target is slowed by 35%.",
+			"hide": null
+		}
+	]
+};
+
+const LIGHT_MAGIC_SPEC_DATA = {
+	"metaData": {
+		"spec": "Light Magic",
+		"specline": "Shadow Control",
+		"baseline": "Way of Light",
+		"type": ["Magic"],
+		"weapon": null,
+		"trainedValue": 1
+	},
+	"base": [
+		{
+			"class": ["Eldritch"],
+			"name": "Gleam Ray",
+			"level": 1,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 2
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 5 heat damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Gleam Streak",
+			"level": 2,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 2
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 9 heat damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Gleam Blast",
+			"level": 3,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 13 heat damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Prismatic Flare",
+			"level": 5,
+			"duration": "3 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "The target is stunned and cannot take any actions.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Moon Ray",
+			"level": 6,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 25 heat damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Moon Streak",
+			"level": 9,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 6
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 37 heat damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Heat Snare",
+			"level": 11,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 7
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Decreases the target's dexterity by 18.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Moon Blast",
+			"level": 13,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 49 heat damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Prismatic Flash",
+			"level": 15,
+			"duration": "5 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 9
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "The target is stunned and cannot take any actions.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Sun Ray",
+			"level": 17,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 64 heat damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Heat Net",
+			"level": 19,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 12
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Decreases the target's dexterity by 25.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Sun Streak",
+			"level": 24,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 15
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 88 heat damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Heat Web",
+			"level": 25,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 15
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Decreases the target's dexterity by 30.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Prismatic Shimmer",
+			"level": 26,
+			"duration": "6 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 16
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "The target is stunned and cannot take any actions.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Heat Clamp",
+			"level": 32,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 21
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Decreases the target's dexterity bhy 35.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Sun Blast",
+			"level": 33,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 21
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 120 heat damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Prismatic Sheen",
+			"level": 36,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 23
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "The target is stunned and cannot take any actions.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Heat Lock",
+			"level": 40,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 25
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Decreases the target's dexterity by 42.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Aurora Ray",
+			"level": 41,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 26
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 148 heat damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Prismatic Strobe",
+			"level": 46,
+			"duration": "9 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 30
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "The target is stunned and cannot take any actions.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Heat Chains",
+			"level": 48,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 31
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Decreases the target's dexterity by 48.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Aurora Blast",
+			"level": 50,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 33
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Heat",
+			"maxTarget": null,
+			"effect": "Does 179 heat damage to the target.",
+			"hide": null
+		}
+	],
+	"spells": [
+		{
+			"class": ["Eldritch"],
+			"name": "Shadowburst",
+			"level": 1,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 2
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 5 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Negate Coordination",
+			"level": 3,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 2
+			},
+			"target": "Targeted area effect1",
+			"range": 1500,
+			"radius": 350,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Target's dexterity and quickness are reduced by 18.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Paralyzing Wind",
+			"level": 4,
+			"duration": "10 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is mesmerized and cannot take any actions.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Shadowblast",
+			"level": 5,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 26 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Nullify Coordination",
+			"level": 6,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Target's dexterity and quickness are reduced by 21.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Shadowcharge",
+			"level": 8,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 5
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 41 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Obliviate Coordination",
+			"level": 9,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Target's dexterity and quickness are reduced by 25.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Negate Sight",
+			"level": 10,
+			"duration": "1 minute",
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Targeted",
+			"range": 2300,
+			"radius": null,
+			"cast": "2.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Target's effective range is reduced by 25% for ranged attacks (archery and magic).",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Shadowshock",
+			"level": 12,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 56 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Destory Coordination",
+			"level": 13,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 6
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Target's dexterity and quickness are reduced by 30.\n\n\nRadius: 350",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Paralyzing Veil",
+			"level": 15,
+			"duration": "15 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 9
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is mesmerized and cannot take any actions.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Shadowsmash",
+			"level": 16,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 77 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Abrogate Coordination",
+			"level": 18,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Target's dexterity and quickness are reduced by 36.\n\n\nRadius: 350",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Nullify Sight",
+			"level": 19,
+			"duration": "1 minute",
+			"cost": {
+				"type": "Power",
+				"value": 9
+			},
+			"target": "Targeted",
+			"range": 2300,
+			"radius": null,
+			"cast": "2.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Target's effective range is reduced by 35% for ranged attacks (archery and magic).",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Shadowcrash",
+			"level": 21,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 13
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 102 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Dissipate Soul",
+			"level": 22,
+			"duration": "15 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "5 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Decreases the target's resistance to spirit damage by 15%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Obliviate Sight",
+			"level": 24,
+			"duration": "1 minute",
+			"cost": {
+				"type": "Power",
+				"value": 12
+			},
+			"target": "Targeted",
+			"range": 2300,
+			"radius": null,
+			"cast": "2.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Target's effective range is reduced by 45% for ranged attacks (archery and magic).",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Blank Coordination",
+			"level": 25,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 12
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Target's dexterity and quickness are reduced by 45.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Paralyzing Cloak",
+			"level": 26,
+			"duration": "21 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 16
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is mesmerized and cannot take any actions.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Shadowforce",
+			"level": 28,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 17
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 133 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Destroy Sight",
+			"level": 32,
+			"duration": "1 minute",
+			"cost": {
+				"type": "Power",
+				"value": 16
+			},
+			"target": "Targeted",
+			"range": 2300,
+			"radius": null,
+			"cast": "2.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Target's effective range is reduced by 55% for ranged attacks (archery and magic).",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Extinguish Soul",
+			"level": 34,
+			"duration": "15 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 16
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "5 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Decreases the target's resistance to spirit damage by 30%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Shadowcrush",
+			"level": 35,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 22
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "DOes 163 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Obliterate Coordination",
+			"level": 36,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 18
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Target's dexterity and quickness are reduced by 57.\n\n\nRadius: 350",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Paralyzing Sphere",
+			"level": 37,
+			"duration": "26 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 23
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is mesmerized and cannot take any actions.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Abrogate Sight",
+			"level": 40,
+			"duration": "1 minute",
+			"cost": {
+				"type": "Power",
+				"value": 20
+			},
+			"target": "Targeted",
+			"range": 2300,
+			"radius": null,
+			"cast": "2.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Target's effective range is reduced by 65% for ranged attacks (archery and magic).",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Extinguish Coordination",
+			"level": 44,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 24
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Target's dexterity and quickness are reduced by 69.\n\n\nRadius: 350",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Shadowdoom",
+			"level": 45,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 29
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 209 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Annihilate Soul",
+			"level": 46,
+			"duration": "15 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 24
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "5 seconds",
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "Decreases the target's resistance to spirit damage by 50%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Paralyzing Cloud",
+			"level": 47,
+			"duration": "31 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 30
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is mesmerized and cannot take any actions.",
+			"hide": null
+		}
+	]
+};
+
+const MANA_MAGIC_SPEC_DATA = {
+	"metaData": {
+		"spec": "Mana Magic",
+		"specline": "Vacuumancy",
+		"baseline": "Way of Mana",
+		"type": ["Magic"],
+		"weapon": null,
+		"trainedValue": 1
+	},
+	"base": [
+		{
+			"class": ["Eldritch"],
+			"name": "Lesser Powerward",
+			"level": 1,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 2
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Increases your armor factor (AF) by 13.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Aura of Turning",
+			"level": 2,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 2
+			},
+			"target": "Realm",
+			"range": 1000,
+			"radius": null,
+			"cast": "4.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target deals 0.8 energy damage to enemeis that hit them with a melee attack.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Powerward",
+			"level": 3,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Increases your armor factor (AF) by 22.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Greater Aura of Turning",
+			"level": 4,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Realm",
+			"range": 1000,
+			"radius": null,
+			"cast": "4.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target deals 1.0 energy damage to enemies that hit them with a melee attack.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Lesser Powerbarrier",
+			"level": 5,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Increases your armor factor (AF) by 32.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Lesser Mana Burst",
+			"level": 6,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 5
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Does 23 energy damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Cancel Strength",
+			"level": 7,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Decreases the target's strength by 15.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Aura of Redirection",
+			"level": 8,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 5
+			},
+			"target": "Realm",
+			"range": 1000,
+			"radius": null,
+			"cast": "4.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target deals 1.3 energy damage to enemies that hit him with a melee attack.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Powerbarrier",
+			"level": 9,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 6
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Increases your armor factor (AF) by 51.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Mana Burst",
+			"level": 11,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 7
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Does 40 energy damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Lesser Powerfield",
+			"level": 13,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Increases your armor factor (AF) by 71.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Greater Aura of Redirection",
+			"level": 14,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 9
+			},
+			"target": "Realm",
+			"range": 1000,
+			"radius": null,
+			"cast": "4.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target deals 1.9 energy damage to enemies that hit them with a melee attack.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Negate Strength",
+			"level": 15,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 7
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Decreases the target's strength by 22.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Greater Mana Burst",
+			"level": 17,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Does 61 energy damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Powerfield",
+			"level": 18,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 11
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Increases your armor factor (AF) by 95.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Barrier of Negation",
+			"level": 19,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": "8%"
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "4.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Creates a 'bubble' that absorbs the damage of a single melee hit.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Unmake Strength",
+			"level": 21,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Decreases the target's strength by 26.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Aura of Reflection",
+			"level": 22,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 13
+			},
+			"target": "Realm",
+			"range": 1000,
+			"radius": null,
+			"cast": "4.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target deals 2.6 energy damage to enemies that hit them with a melee attack.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Lesser Mana Blast",
+			"level": 23,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 14
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Does 83 energy damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Powershield",
+			"level": 24,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 15
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Increases your armor factor (AF) by 124.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Mana Blast",
+			"level": 28,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 18
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Does 102 energy damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "AbAbrogate Strength",
+			"level": 29,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 14 
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Decreases the target's strength by 33.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Ward of Power",
+			"level": 30,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 19
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Increases your melee absorption by 5.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Greater Powershield",
+			"level": 31,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 19
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Increases your armor factor (AF) by 158.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Greater Mana Blast",
+			"level": 32,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 20
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Does 118 energy damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Greater Aura of Reflection",
+			"level": 33,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 21
+			},
+			"target": "Realm",
+			"range": 1000,
+			"radius": null,
+			"cast": "4.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target deals 3.6 energy damage to enemies that hit them with a melee attack.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Void Strength",
+			"level": 35,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 17
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Decreases the target's strength by 38.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Lesser Mana Annihilation",
+			"level": 37,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 24
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Does 137 energy damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Greater Powerguard",
+			"level": 40,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 25
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Increases your armor factor (AF) by 201.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Barrier of Power",
+			"level": 41,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 26
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Increases your melee absorption by 10.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Mana Annihilation",
+			"level": 42,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 27
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Does 154 energy damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Vitiate Strength",
+			"level": 43,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 21
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Decreases the target's strength by 44.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Aura of Global Feedback",
+			"level": 44,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 28
+			},
+			"target": "Realm",
+			"range": 1000,
+			"radius": null,
+			"cast": "4.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target deals 4.6 energy damage to enemies that hit them with a melee attack.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Greater Mana Annihilation",
+			"level": 48,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 33
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Does 179 energy damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Null Strength",
+			"level": 49,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 26
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Decreases the target's strength by 49.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Supreme Powerguard",
+			"level": 50,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 33
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Increases your armor factor (AF) by 250.",
+			"hide": null
+		}
+	],
+	"spells": [
+		{
+			"class": ["Eldritch"],
+			"name": "Lesser Ensnaring Blast",
+			"level": 1,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 2
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target takes 5 energy damage and the target is slowed by 40%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Soul Grasp",
+			"level": 2,
+			"duration": "15 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Lesser Strength Dispersal",
+			"level": 3,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Target's strength and constitution are reduced by 18.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Ensnaring Blast",
+			"level": 5,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target takes 21 energy damage and the target is slowed by 40%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Entropic Affliction",
+			"level": 6,
+			"duration": "20 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Inflicts a wasting disease on the target that slows target by 15%, reduces its strength by 15 and inhibits healing by 50%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Mana Ripple",
+			"level": 7,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 5
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 300,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Does 52 energy damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Lesser Vigor Dispersal",
+			"level": 8,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Target's strength and constitution are reduced by 28.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Greater Ensnaring Blast",
+			"level": 9,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 6
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target takes 37 energy damage and the target is slowed by 40%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Lesser Kinetic Dispersal",
+			"level": 10,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target takes 28 energy damage and the target is slowed by 40%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Mana Eddy",
+			"level": 11,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 7
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 300,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Does 74 energy damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Soul Clutch",
+			"level": 12,
+			"duration": "23 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 7
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Engangling Blast",
+			"level": 13,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Targetd",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target takes 49 energy damage and the target is slowed by 40%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Kinetic Dispersal",
+			"level": 14,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 11
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target takes 40 energy damage and the target is slowed by 40%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Mana Splash",
+			"level": 15,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 9
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 300,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Does 104 energy damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Entropic Sickness",
+			"level": 16,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 250,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Inflicts a wasting disease on the target that slows target by 15%, reduces its strength by 25 and inhibits healing by 50%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Greater Entangling Blast",
+			"level": 17,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target takes 64 energy damage and the target is slowed by 40%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Disperse Vigor",
+			"level": 18,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 11
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Target's strength and constitution are reduced by 36.\n\n\nRadius: 350",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Lesser Kinetic Dampening",
+			"level": 19,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 15
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target takes 56 energy damage and the target is slowed by 40%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Mana Burst",
+			"level": 20,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 12
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 300,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Does 133 energy damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Enervating Affliction",
+			"level": 21,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 12
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Inflicts a wasting disease on the target that slows target by 15%, reduces its strength by 15 and inhibits healing by 50%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Soul Hold",
+			"level": 22,
+			"duration": "44 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 17
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Webbing Blast",
+			"level": 23,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 14
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Emergy",
+			"maxTarget": null,
+			"effect": "The target takes 85 energy damage and the target is slowed by 40%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Kinetic Dampening",
+			"level": 25,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 20
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target takes 72 energy damage and the target is slowed by 40%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Mana Flux",
+			"level": 26,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 16
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 300,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Does 176 energy damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Entropic Illness",
+			"level": 27,
+			"duration": "40 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 17
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 300,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Inflicts a wasting disease on the target that slows target by 15%, reduces its strength by 35 and inhibits healing by 50%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Lesser Health Dispersal",
+			"level": 28,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 17
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Target's strength and constitution are reduced by 48.\n\n\nRadius: 350",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Enfeebling Affliction",
+			"level": 29,
+			"duration": "40 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 19
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "3.0 seconds",
+			"maxTarget": null,
+			"effect": "Inflicts a wasting disease on the target that slows target by 15%, reduces its trength by 15 and inhibits healing by 50%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Mana Billow",
+			"level": 31,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 20
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 300,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Does 214 energy damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Soul Embrace",
+			"level": 32,
+			"duration": "57 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 23
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Greater Webbing Blast",
+			"level": 33,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 21
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target takes 120 energy damage and the target is slowed by 40%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Lesser Kinetic Siphon",
+			"level": 34,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 28
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target takes 96 energy damage and the target is slowed by 40%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Langouring Affliction",
+			"level": 35,
+			"duration": "50 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 23
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Inflicts a wasting disease on the target that slows target by 15%, reduces its strength by 15 and inhibits healing by 50%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Entropic Disease",
+			"level": 37,
+			"duration": "50 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 23
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Inflicts a wasting disease on the target that slows target by 15%, reduces its strength by 45 and inhibits healing by 50%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Disperse Health",
+			"level": 38,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 24
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Target's strength and constitution are reduced by 60.\n\n\nRadius: 350",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Mana Surge",
+			"level": 39,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 25
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 300,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "DOes 265 energy damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Demobilizing Blast",
+			"level": 41,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 26
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target takes 148 energy damage and the target is slowed by 40%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Soul Restraint",
+			"level": 42,
+			"duration": "1 minute 9 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 29
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Spirit",
+			"maxTarget": null,
+			"effect": "The target is rooted in place.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Kinetic Siphon",
+			"level": 44,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 37
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target takes 124 energy damage and the target is slowed by 40%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Debilitating Affliction",
+			"level": 45,
+			"duration": "1 minute",
+			"cost": {
+				"type": "Power",
+				"value": 29
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Inflicts a wasting disease on the target that slows target by 15%, reduces its strength by 15 and inhibits healing by 50%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Entropic Pestilence",
+			"level": 47,
+			"duration": "1 minute",
+			"cost": {
+				"type": "Power",
+				"value": 30
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 400,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Inflicts a wasting disease on the target that slows target by 15%, reduces its strength by 55 and inhibits healing by 50%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Mana Flood",
+			"level": 48,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 31
+			},
+			"target": "Point-blank area",
+			"range": null,
+			"radius": 300,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Does 325 energy damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Greater Vitality Dispersal",
+			"level": 49,
+			"duration": "45 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 32
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "Instant",
+			"recast": "7 seconds",
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Target's strength and constitution are reduced by 73.\n\n\nRadius: 350",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Greater Demobilizing Blast",
+			"level": 50,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 33
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.8 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "The target takes 179 energy damage and the target is slowed by 40%.",
 			"hide": null
 		}
 	]
@@ -11559,6 +16480,2221 @@ const SPIRIT_MAGIC_SPEC_DATA = {
 			"type": "Energy",
 			"maxTarget": null,
 			"effect": "Decreases the target's resistance to energy damage by 50%."
+		}
+	]
+};
+
+const VERDANT_PATH_SPEC_DATA = {
+	"metaData": {
+		"spec": "Verdant Path",
+		"specline": "Verdant Mastery",
+		"baseline": "Verdant Path",
+		"type": ["Magic"],
+		"weapon": null,
+		"trainedValue": 1
+	},
+	"base": [
+		{
+			"class": ["Animist"],
+			"name": "Healing Spirit",
+			"level": 1,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 2
+			},
+			"target": "Controlled",
+			"range": 2000,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "The target regains 11 hit points.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Vent of ELemental Resistance",
+			"level": 2,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 5
+			},
+			"target": "Area",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": 8,
+			"effect": "Summons a turret to serve the caster.\nTurret spell: increases the target's resistance to heat, cold and matter damage by 3.\n\nRadius: 350\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Mending Spirit",
+			"level": 3,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Controlled",
+			"range": 2000,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "The target regains 21 hit points.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Spirit of Remedy",
+			"level": 4,
+			"duration": "1 minute",
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Controlled area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Target regenerates 5 extra health.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Vent of Physical Resistance",
+			"level": 5,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Area",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": 8,
+			"effect": "Summons a turret to serve the caster.\nTurret spell: Increases the target's resistance to body, spirit and energy damage by 3.\n\nRadius: 350\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Reviving Spirit",
+			"level": 7,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 5
+			},
+			"target": "Controlled",
+			"range": 2000,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "3.0 seconds",
+			"maxTarget": null,
+			"effect": "The target regains 41 hit points.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Spirit of Betterment",
+			"level": 9,
+			"duration": "1 minute",
+			"cost": {
+				"type": "Power",
+				"value": 6
+			},
+			"target": "Controlled area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Target regenerates 6 extra health.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Vent of Elemental Protection",
+			"level": 10,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 18
+			},
+			"target": "Area",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": 8,
+			"effect": "Summons a turret to serve the caster.\nTurret spell: increases the target's resistance to heat, cold and matter damage by 6.\n\nRadius: 350\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Soothing Spirit",
+			"level": 12,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Controlled",
+			"range": 2000,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "The target regains 66 hit points.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Spirit of Relief",
+			"level": 16,
+			"duration": "1 minute",
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Controlled area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Target regenerates 7 health points.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Vent of Physical Protection",
+			"level": 17,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 28
+			},
+			"target": "Area",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": 8,
+			"effect": "Summons a turret to serve the caster.\nTurret spell: Increases the target's resistance to body, spirit and energy damage by 6.\n\nRadius: 350\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Meliorating Spirit",
+			"level": 18,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 11
+			},
+			"target": "Controlled",
+			"range": 2000,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "The target regains 96 hit points.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Shield of Wood",
+			"level": 19,
+			"duration": "466 minutes 40 seconds",
+			"cost": {
+				"type": "Power",
+				"value": "8%"
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "4.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Creates a 'bubble' that absorbs the damage of a single melee hit.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Purifying Rain",
+			"level": 27,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": "6%"
+			},
+			"target": "Controlled area effect",
+			"range": 1000,
+			"radius": 350,
+			"cast": "5.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "All mesmerization effects are removed from the target.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Vent of Elemental Guarding",
+			"level": 24,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 37
+			},
+			"target": "Area",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": 8,
+			"effect": "Summons a turret to serve the caster.\nTurret spell: Increases the target's resistance to heat, cold and matter damage by 9.\n\nRadius: 350\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Restorative Spirit",
+			"level": 25,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 15
+			},
+			"target": "Controlled",
+			"range": 2000,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "The target regains 131 hit points.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Spirit of Regeneration",
+			"level": 28,
+			"duration": "1 minute",
+			"cost": {
+				"type": "Power",
+				"value": 17
+			},
+			"target": "Controlled area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Target regenerates 8 extra health.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Protecting Spirit",
+			"level": 30,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 19
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Increases your melee absorption by 5.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Vent of Physical Guarding",
+			"level": 32,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 47
+			},
+			"target": "Area",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": 8,
+			"effect": "Summons a turret to serve the caster.\nTurret spell: Increases the target's resistance to body, spirit and energy damage by 9.\n\nRadius: 350\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Ministering Spirit",
+			"level": 33,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 21
+			},
+			"target": "Controlled",
+			"range": 2000,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "The target regains 171 hit points.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Spirit of Replenishing",
+			"level": 37,
+			"duration": "1 minute",
+			"cost": {
+				"type": "Power",
+				"value": 23
+			},
+			"target": "Controlled area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Target regenerates 9 extra health.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Guardian Spirit",
+			"level": 41,
+			"duration": "20 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 26
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Increases your melee absorption by 10.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Vent of Elemental Shielding",
+			"level": 42,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 57
+			},
+			"target": "Area",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": 8,
+			"effect": "Summons a turret to serve the caster.\nTurret spell: Increases the target's resistance to heat, cold and matter damage by 12.\n\nRadius: 350\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Rejuvenating Spirit",
+			"level": 43,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 27
+			},
+			"target": "Controlled",
+			"range": 2000,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "The target regains 221 hit points.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Spirit of Nourishing",
+			"level": 47,
+			"duration": "1 minute",
+			"cost": {
+				"type": "Power",
+				"value": 30
+			},
+			"target": "Controlled area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": null,
+			"effect": "Target regenerates 10 extra health.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Vent of Physical Shielding",
+			"level": 50,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 65
+			},
+			"target": "Area",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Body",
+			"maxTarget": 8,
+			"effect": "Summons a turret to serve the caster.\nTurret spell: Increases the target's resistance to body, spirit and energy damage by 12.\n\nRadius: 350\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		}
+	],
+	"spells": [
+		{
+			"class": ["Animist"],
+			"name": "Briar Burst",
+			"level": 1,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 2
+			},
+			"target": "Controlled",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Pet command:\nDoes 5 matter damage to the target.\n\nRadius: 350",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Briar Salvo",
+			"level": 3,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Controlled",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Pet command:\nDoes 16 matter damage to the target.\n\nRadius: 350",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Battle Messenger",
+			"level": 5,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Summons a pet to serve the caster.\nPet spell: Taunts target, increasing your threat against it by 52.\n\nAffects monsters up to 88% of your level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Briar Shower",
+			"level": 6,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Controlled",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Pet command:\nDoes 31 matter damage to the target.\n\nRadius: 350",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Woodspirit Sheath",
+			"level": 7,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 5
+			},
+			"target": "Realm area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": 3,
+			"effect": "Creates a 'bubble' that absorbs the damage of a single melee hit.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Briar Cloud",
+			"level": 9,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 6
+			},
+			"target": "Controlled",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Pet command:\nDoes 46 matter damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Battle Crier",
+			"level": 10,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 18
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Summons a pet to serve the caster.\nPet spell: Taunts target, increasing your threat against it by 109.\n\nAffects monsters up to 88% of your level, to a maximum of level 50.\n\n\nAnimist must bee within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Ligneous Sheath",
+			"level": 12,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 21
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": 8,
+			"effect": "Summons a turret to serve the caster.\nTurret spell: Target gains a temporary health buffer that absorbs 25% of the physical damage dealt, up to a maximum of 10 damage.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Briar Discharge",
+			"level": 13,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Controlled",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Pet command:\nDoes 62 matter damage to the target.\n\nRadius: 350",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Woodspirit Shield",
+			"level": 14,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 9
+			},
+			"target": "Realm area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": 4,
+			"effect": "Creates a 'bubble' that absorbs the damage of a single melee hit.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Guardian Emsissary",
+			"level": 15,
+			"duration": "15 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 9
+			},
+			"target": "Realm",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Increases target's melee absorption by 5.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Battle Herald",
+			"level": 16,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 27
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Summons a pet to serve the caster.\nPet spell: Taunts target, increasing your threat against it by 184.\n\nAffects monsters by 88% of your level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Briar Eruption",
+			"level": 17,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Controlled",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Pet command\nDoes 81 matter damage to the target.\n\nRadius: 350",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Ligneous Shield",
+			"level": 18,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 30
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": 8,
+			"effect": "Summons a turret to serve the caster.\nTurret spell: Target gains a temporary health buffer that absorbs 25% of the physical damage dealt, up to a maximum of 20 damage.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Protector Emissary",
+			"level": 20,
+			"duration": "15 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 12
+			},
+			"target": "Realm",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Increases target's melee absorption by 9.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Woodspirit Barrier",
+			"level": 21,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 13
+			},
+			"target": "Realm area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": 5,
+			"effect": "Creates a 'bubble' that absorbs the damage of a single melee hit.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Briar Barrage",
+			"level": 22,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 13
+			},
+			"target": "Controlled",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Pet command:\nDoes 102 matter damage to the target.\n\nRadius: 350",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Battle Harbinger",
+			"level": 23,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 36
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Summons a pet to serve the caster.\nPet spell: Taunts target, increasing your threat against it by 280.\n\nAffects monsters up to 88% of your level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Ligneous Barrier",
+			"level": 25,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 39
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": 8,
+			"effect": "Summons a turret to serve the caster.\nTurret spell: Target gains a temporary health buffer that absorbs 25% of the physical damage dealt, up to a maximum of 30 damage.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Shielding Emissary",
+			"level": 26,
+			"duration": "15 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 16
+			},
+			"target": "Realm",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Increases the target's melee absorption by 13.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Woodspirit Guard",
+			"level": 28,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 17
+			},
+			"target": "Realm area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "3.0 seconds",
+			"maxTarget": 6,
+			"effect": "Creates a 'bubble' that absorbs the damage of a single melee hit.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Briar Explosion",
+			"level": 29,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 18
+			},
+			"target": "Controlled",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Pet command:\nDoes 137 matter damage to the target.\n\nRadius: 350",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "War Messenger",
+			"level": 30,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 45
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Summons a pet to serve the caster.\nPet spell: Taunts target, increasing your threat against it by 387.\n\nAffects monsters up to 88% of level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Essnece of the Tree",
+			"level": 32,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 20
+			},
+			"target": "Realm",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Increases target's melee absorption by 3.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Ligneious Guard",
+			"level": 34,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 49
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": 8,
+			"effect": "Summons a turret to serve the caster.\nTurret spell: Target gains a temporary health buffer that absorbs 25% of the physical damage dealt, up to a maximum of 40 damage.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Buffering Emissary",
+			"level": 35,
+			"duration": "15 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 22
+			},
+			"target": "Realm",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Increases target's melee absorption by 17.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Woodspirit Wall",
+			"level": 36,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 23
+			},
+			"target": "Realm area effect",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": 7,
+			"effect": "Creates a 'bubble that absorbs the damage of a single melee hit.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "War Crier",
+			"level": 37,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 52
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Summons a pet to serve the caster.\nPet spell: Taunts target. increasing your threat against it by 503.\n\nAffects monsters up to 88% of your level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Essence of the Grove",
+			"level": 38,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 24
+			},
+			"target": "Realm",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Increases target's melee absorption by 6.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Briar Detonation",
+			"level": 39,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 25
+			},
+			"target": "Controlled",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Pet command:\nDoes 183 matter damage to the target.\n\nRadius: 350",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Harbinger of War",
+			"level": 40,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 60
+			},
+			"target": "Self",
+			"range": null,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": null,
+			"type": null,
+			"maxTarget": null,
+			"effect": "Summons a pet to serve the caster.\nAffects monsters up to your level, to a maximum of level 50.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Defending Emissary",
+			"level": 41,
+			"duration": "15 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 25
+			},
+			"target": "Realm",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Increases target's melee absorption by 21.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Woodspirit Seal",
+			"level": 42,
+			"duration": "30 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 27
+			},
+			"target": "Realm area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "3.0 seconds",
+			"maxTarget": 8,
+			"effect": "Creates a 'bubble' that absorbs the damage of a single melee hit.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Ligneous Wall",
+			"level": 43,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 58
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": 8,
+			"effect": "Summons a turret to serve the caster.\nTurret spell: Target gains a temporary health buffer that absorbs 25% of the physical damage dealt, up to a maximum of 50 damage.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Fortifying Emissary",
+			"level": 45,
+			"duration": "15 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 29
+			},
+			"target": "Realm",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Increases the target's melee absorption by 25.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Essence of the Forest",
+			"level": 46,
+			"duration": "10 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 30
+			},
+			"target": "Realm",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Increases target's melee absorption by 9.'",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Briar Storm",
+			"level": 48,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 31
+			},
+			"target": "Controlled",
+			"range": 1500,
+			"radius": null,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Pet command:\nDoes 225 matter damage to the target.\n\nRadius: 350",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "War Herald",
+			"level": 49,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 64
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "5.0 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": null,
+			"effect": "Summons a pet to serve the caster.\nPet spell: Taunts target, increasing your threat against it by 725.\n\nAffects monsters up to 88% of your level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		},
+		{
+			"class": ["Animist"],
+			"name": "Ligneous",
+			"level": 50,
+			"duration": "2 minutes",
+			"cost": {
+				"type": "Power",
+				"value": 65
+			},
+			"target": "Area",
+			"range": 1000,
+			"radius": null,
+			"cast": "3.5 seconds",
+			"recast": null,
+			"type": "Matter",
+			"maxTarget": 8,
+			"effect": "Summons a turret to serve the caster.\nTurret spell: Target gains a temporary health buffer that absorbs 25% of the physical damage dealt, up to a maximum of 60 damage.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"hide": null
+		}
+	]
+};
+
+const _SPEC_DATA = {
+	"metaData": {
+		"spec": "Void Magic",
+		"specline": "Void Mastery",
+		"baseline": "Way of the Void",
+		"type": ["Magic"],
+		"weapon": null,
+		"trainedValue": 1
+	},
+	"base": [
+		{
+			"class": ["Eldritch"],
+			"name": "Void Slit",
+			"level": 2,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 2
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 13 cold damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Ethereal Concussion",
+			"level": 3,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 13 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Void Gap",
+			"level": 4,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 24 cold damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Major Ethereal Concussion",
+			"level": 5,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 21 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Void Break",
+			"level": 6,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 36 cold damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Ethereal Blast",
+			"level": 7,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 5
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "DOes 29 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Void Cleave",
+			"level": 9,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 6
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 53 cold damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Major Ethereal Blast",
+			"level": 10,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 6
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 37 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Ethereal Detonation",
+			"level": 13,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 49 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Void Rent",
+			"level": 14,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 9
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 75 cold damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Major Ethereal Detonation",
+			"level": 17,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 64 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Void Rift",
+			"level": 18,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 11
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 98 cold damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Void Fissure",
+			"level": 22,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 13
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 115 cold damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Ethereal Explosion",
+			"level": 23,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 14
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 85 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Void Gulf",
+			"level": 28,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 17
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 149 cold damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Major Ethereal Explosion",
+			"level": 30,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 19
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 108 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Void Chasm",
+			"level": 36,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 23
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 188 cold damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Ethereal Devastation",
+			"level": 37,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 23
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 136 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Void Abyss",
+			"level": 46,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 30
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 239 cold damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Major Ethereal Devastation",
+			"level": 47,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 30
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.6 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 179 cold damage to the target.",
+			"hide": null
+		}
+	],
+	"spells": [
+		{
+			"class": ["Eldritch"],
+			"name": "Nil Bolt",
+			"level": 1,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 2
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding in impact for 7 cold damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Lesser Null Squall",
+			"level": 3,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 12 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Void Bolt",
+			"level": 4,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 3
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 29 cold damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Null Squall",
+			"level": 5,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 4
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 20 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Negative Bolt",
+			"level": 7,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 5
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 52 cold damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Lesser Null Storm",
+			"level": 8,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 5
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 32 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Abrogation Bolt",
+			"level": 12,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value":8
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 81 cold damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Null Storm",
+			"level": 13,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 8
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 48 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Sphere of Negation",
+			"level": 16,
+			"duration": "1 second",
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Area area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": "6 seconds",
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nDoes 61 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Null Bolt",
+			"level": 17,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 118 cold damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Lesser Null Ebullition",
+			"level": 18,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 11
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 67 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Nullify Hardiness",
+			"level": 22,
+			"duration": "15 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 10
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Decreases the target's resistance to body damage by 15%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Sphere of Oblivion",
+			"level": 23,
+			"duration": "1 second",
+			"cost": {
+				"type": "Power",
+				"value": 14
+			},
+			"target": "Area area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": "6 seconds",
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nDOes 85 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Oblivion Bolt",
+			"level": 24,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 15
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 162 cold damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Null Ebullition",
+			"level": 25,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 15
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 91 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Nullify Spirit",
+			"level": 26,
+			"duration": "15 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 12
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Decreases the target's resistance to spirit damage by 15%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Nullify Dissipation",
+			"level": 27,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 13
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Decreases the target's resistance to energy damage by 15%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Annihilation Bolt",
+			"level": 31,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 19
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 206 cold damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Lesser Null Tempest",
+			"level": 32,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 20
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 115 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Negate Hardiness",
+			"level": 33,
+			"duration": "15 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 16
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Decreases the target's resistance to body damage by 30%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Sphere of Annihilation",
+			"level": 34,
+			"duration": "1 second",
+			"cost": {
+				"type": "Power",
+				"value": 21
+			},
+			"target": "Area area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": "6 seconds",
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell: Does 124 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Negate Dissipation",
+			"level": 35,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 20
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Decreases the target's resistance to energy damage by 30%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Negate Spirit",
+			"level": 36,
+			"duration": "15 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 17
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Decreases the target's resistance to spirit damage by 30%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Obliteration Bolt",
+			"level": 38,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 24
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 258 cold damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Sphere of Unmaking",
+			"level": 43,
+			"duration": "1 second",
+			"cost": {
+				"type": "Power",
+				"value": 27
+			},
+			"target": "Area area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": "6 seconds",
+			"type": "Energy",
+			"maxTarget": null,
+			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nDoes 155 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Null Tempest",
+			"level": 44,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 28
+			},
+			"target": "Targeted area effect",
+			"range": 1500,
+			"radius": 350,
+			"cast": "3.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Does 158 cold damage to the target.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Void Hardiness",
+			"level": 45,
+			"duration": "15 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 23
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Decreases the target's resistance to body damage by 50%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Void Dissipation",
+			"level": 46,
+			"duration": "8 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 25
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Decreases the target's resistance to energy damage by 50%.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Bolt of Uncreation",
+			"level": 47,
+			"duration": null,
+			"cost": {
+				"type": "Power",
+				"value": 30
+			},
+			"target": "Targeted",
+			"range": 1875,
+			"radius": null,
+			"cast": "2.5 seconds",
+			"recast": "20 seconds",
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 317 cold damage. Can be blocked.",
+			"hide": null
+		},
+		{
+			"class": ["Eldritch"],
+			"name": "Void Spirit",
+			"level": 48,
+			"duration": "15 seconds",
+			"cost": {
+				"type": "Power",
+				"value": 24
+			},
+			"target": "Targeted",
+			"range": 1500,
+			"radius": null,
+			"cast": "2.0 seconds",
+			"recast": null,
+			"type": "Cold",
+			"maxTarget": null,
+			"effect": "Decreases the target's resistance to spirit damage by 50%.",
+			"hide": null
 		}
 	]
 };
