@@ -943,16 +943,16 @@ function fillSkills(targetElement, skill, type) {
 	for(let i = 0; i < skill[type].length; i++) {
 		if(type == "base") {
 			if(skill[type][i].level <= level && skill[type][i].class.includes(selectedClass.name)) {
-				skillName = `<span id="${skill[type][i].name}" class="abilityName2" onmouseenter="tooltip(event)">${skill[type][i].name}</span>`;
+				skillName = `<span id="${skill[type][i].name}" class="abilityName2" onmouseenter="showTooltip(&quot;on&quot;), tooltip(event)" onmouseleave="showTooltip(&quot;off&quot;)">${skill[type][i].name}</span>`;
 				skillLevel = `<span id="${skill[type][i].name}Level" class="abilityLevel">${skill[type][i].level}<span><br />`;
 				document.getElementById(targetElement).innerHTML += skillName + skillLevel;
-			}// showTooltip("on"),    onmouseleave="showTooltip("off")"
+			}
 		} else if(type == "spells" || "styles") {
 			if(skill[type][i].class.includes(selectedClass.name) && skill[type][i].level <= skill.metaData.trainedValue) {
-				skillName = `<span id="${skill[type][i].name}" class="abilityName2" onmouseenter="tooltip(event)">${skill[type][i].name}</span>`;
+				skillName = `<span id="${skill[type][i].name}" class="abilityName2" onmouseenter="showTooltip(&quot;on&quot;), tooltip(event)" onmouseleave="showTooltip(&quot;off&quot;)">${skill[type][i].name}</span>`;
 				skillLevel = `<span id="${skill[type][i].name}Level" class="abilityLevel">${skill[type][i].level}<span><br />`;
 				document.getElementById(targetElement).innerHTML += skillName + skillLevel;
-			}// showTooltip("on"),  onmouseleave="showTooltip("off")"
+			}
 		}
 	}
 }
@@ -1009,86 +1009,8 @@ function showTree(event, type) {
 	}
 }
 
-//function from previous version
-function tooltip(event) {
-	let allSpecs, currentSpec, nameLabel, levelLabel, targetID, followup, targetElement, targetSkill, xPosition, yPosition, modal;
-	targetID = event.target.getAttribute('id');
-	targetElement = document.getElementById(`${targetID}`);
-	allSpecs = selectedClass.specializations;
-	for(spec in allSpecs) {
-		currentSpec = allSpecs[spec];
-		if(currentSpec.hasOwnProperty("styles")) {
-			for(style in currentSpec.styles) {
-				if(targetElement.textContent == currentSpec.styles[style].name) {
-					targetSkill = currentSpec.styles[style];
-					xPosition = document.getElementById('combatStyles').offsetLeft + 115;
-					yPosition = document.getElementById('combatStyles').offsetTop + 450;
-				}
-			}
-		}
-		if(currentSpec.hasOwnProperty("base")) {
-			for(spell in currentSpec.base) {
-				if(targetElement.textContent == currentSpec.base[spell].name) {
-					targetSkill = currentSpec.base[spell];
-					xPosition = document.getElementById('magicSpells').offsetLeft + 115;
-					yPosition = document.getElementById('magicSpells').offsetTop + 450;
-				}
-			}
-		}
-		if(currentSpec.hasOwnProperty("spells")) {
-			for(spell in currentSpec.spells) {
-				if(targetElement.textContent == currentSpec.spells[spell].name) {
-					targetSkill = currentSpec.spells[spell];
-					xPosition = document.getElementById('magicSpells').offsetLeft + 115;
-					yPosition = document.getElementById('magicSpells').offsetTop + 450;
-				}
-			}
-		}
-	}
-	
-	
-	modal = document.getElementById('hoverModal');
-	modal.style.display = "block";
-	modal.style.top = `${yPosition}px`;
-	modal.style.left = `${xPosition}px`;
-		
-	nameLabel = `<label style="font-weight: bold;" class="tooltipDetail">Name: </label>${targetSkill.name}<br /><br />`;
-	levelLabel = `<label class="tooltipDetail">Level: </label>${targetSkill.level}<br />`;
-	if(targetSkill.hasOwnProperty("open")) {
-		let opening, followup, endurance, damage, hit, def, effect, style;
-		opening = `<label class="tooltipDetail">Opening: </label>${targetSkill.open}<br />`;
-		if(targetSkill.followup != null) {
-			followup = `<label class="tooltipDetail">Follow-up(s): </label>${targetSkill.followup}<br />`
-		} else {
-			followup = "";
-		}
-		endurance = `<label class="tooltipDetail">Endurance: </label>`;
-		/*switch(targetSkill.end) {
-			case targetSkill.end == "Very Low":
-				style = "green";
-				break;
-			case targetSkill.end == "Low":
-				style = "blue";
-				break;
-			case targetSkill.end == "Medium":
-				style = "yellow";
-				break;
-			case targetSkill.end == "High":
-				style = "red";
-				break;
-			case targetSkill.end == "Very High":
-				style = "darkred";
-				break;
-		}*/
-		style = getCssStyle("end", targetSkill.end);
-		endurance += `<label style="color: ${style};">${targetSkill.end}</label><br />`;
-		document.getElementById('hoverContent').innerHTML = nameLabel + levelLabel + opening + followup + endurance;
-	}
-	
-}
-
 //Gets skill that was moused over and provides object details
-/*function tooltip(event) {
+function tooltip(event) {
 	let allSpecs, currentSpec, nameLabel, levelLabel, targetElement, targetSkill, xPosition, yPosition, modal;
 	//combat styles variables
 	let opening, followup, endurance, damage, hit, def, effect, style;
@@ -1174,7 +1096,7 @@ function showTooltip(disp) {
 	} else if(disp == "off") {
 		tooltipElem.style.display = "none";
 	}
-}*/
+}
 
 function getCssStyle(type, amount) {
 
