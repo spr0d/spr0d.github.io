@@ -17734,7 +17734,7 @@ const VERDANT_PATH_SPEC_DATA = {
 	]
 };
 
-const _SPEC_DATA = {
+const VOID_MAGIC_SPEC_DATA = {
 	"metaData": {
 		"spec": "Void Magic",
 		"specline": "Void Mastery",
