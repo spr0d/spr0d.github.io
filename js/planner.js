@@ -943,16 +943,16 @@ function fillSkills(targetElement, skill, type) {
 	for(let i = 0; i < skill[type].length; i++) {
 		if(type == "base") {
 			if(skill[type][i].level <= level && skill[type][i].class.includes(selectedClass.name)) {
-				skillName = `<span id="${skill[type][i].name}" class="abilityName2" onmouseover="tooltip(event)">${skill[type][i].name}</span>`;
+				skillName = `<span id="${skill[type][i].name}" class="abilityName2" onmouseenter="tooltip(event)">${skill[type][i].name}</span>`;
 				skillLevel = `<span id="${skill[type][i].name}Level" class="abilityLevel">${skill[type][i].level}<span><br />`;
 				document.getElementById(targetElement).innerHTML += skillName + skillLevel;
-			}
+			}// showTooltip("on"),    onmouseleave="showTooltip("off")"
 		} else if(type == "spells" || "styles") {
 			if(skill[type][i].class.includes(selectedClass.name) && skill[type][i].level <= skill.metaData.trainedValue) {
-				skillName = `<span id="${skill[type][i].name}" class="abilityName2" onmouseover="tooltip(event)">${skill[type][i].name}</span>`;
+				skillName = `<span id="${skill[type][i].name}" class="abilityName2" onmouseenter="tooltip(event)">${skill[type][i].name}</span>`;
 				skillLevel = `<span id="${skill[type][i].name}Level" class="abilityLevel">${skill[type][i].level}<span><br />`;
 				document.getElementById(targetElement).innerHTML += skillName + skillLevel;
-			}
+			}// showTooltip("on"),  onmouseleave="showTooltip("off")"
 		}
 	}
 }
@@ -1009,6 +1009,7 @@ function showTree(event, type) {
 	}
 }
 
+//function from previous version
 function tooltip(event) {
 	let allSpecs, currentSpec, nameLabel, levelLabel, targetID, followup, targetElement, targetSkill, xPosition, yPosition, modal;
 	targetID = event.target.getAttribute('id');
@@ -1062,7 +1063,7 @@ function tooltip(event) {
 			followup = "";
 		}
 		endurance = `<label class="tooltipDetail">Endurance: </label>`;
-		switch(targetSkill.end) {
+		/*switch(targetSkill.end) {
 			case targetSkill.end == "Very Low":
 				style = "green";
 				break;
@@ -1078,11 +1079,142 @@ function tooltip(event) {
 			case targetSkill.end == "Very High":
 				style = "darkred";
 				break;
-		}
-		endurance.concat(`<label style="color: ${style};">${targetSkill.end}</label><br />`);
+		}*/
+		style = getCssStyle("end", targetSkill.end);
+		endurance += `<label style="color: ${style};">${targetSkill.end}</label><br />`;
 		document.getElementById('hoverContent').innerHTML = nameLabel + levelLabel + opening + followup + endurance;
 	}
 	
+}
+
+//Gets skill that was moused over and provides object details
+/*function tooltip(event) {
+	let allSpecs, currentSpec, nameLabel, levelLabel, targetElement, targetSkill, xPosition, yPosition, modal;
+	//combat styles variables
+	let opening, followup, endurance, damage, hit, def, effect, style;
+	//baseline/spells variables
+	//let ...
+	targetElement = document.getElementById(`${event.target.getAttribute('id')}`);
+	allSpecs = selectedClass.specializations;
+	//Find the skill that was moused over
+	for(spec in allSpecs) {
+		currentSpec = allSpecs[spec];
+		if(currentSpec.hasOwnProperty("styles")) {
+			for(style in currentSpec.styles) {
+				if(targetElement.textContent == currentSpec.styles[style].name) {
+					targetSkill = currentSpec.styles[style];
+					xPosition = document.getElementById('combatStyles').offsetLeft + 115;
+					yPosition = document.getElementById('combatStyles').offsetTop + 450;
+				}
+			}
+		} else if(currentSpec.hasOwnProperty("base")) {
+			for(spell in currentSpec.base) {
+				if(targetElement.textContent == currentSpec.base[spell].name) {
+					targetSkill = currentSpec.base[spell];
+					xPosition = document.getElementById('magicSpells').offsetLeft + 115;
+					yPosition = document.getElementById('magicSpells').offsetTop + 450;
+				}
+			}
+		} else if(currentSpec.hasOwnProperty("spells")) {
+			for(spell in currentSpec.spells) {
+				if(targetElement.textContent == currentSpec.spells[spell].name) {
+					targetSkill = currentSpec.spells[spell];
+					xPosition = document.getElementById('magicSpells').offsetLeft + 115;
+					yPosition = document.getElementById('magicSpells').offsetTop + 450;
+				}
+			}
+		}
+	}
+	
+	//Set position of modal
+	modal = document.getElementById('hoverModal');
+	modal.style.top = `${yPosition}px`;
+	modal.style.left = `${xPosition}px`;
+	//combat styles
+	levelLabel = `<label class="tooltipDetail">Level: </label>${targetSkill.level}<br />`;
+	if(targetSkill.hasOwnProperty("open")) {
+		nameLabel = `<label>Name: ${targetSkill.name}</label><br /><br />`;
+		opening = `<label class="tooltipDetail">Opening: </label>${targetSkill.open}<br />`;
+		if(targetSkill.followup != null) {
+			followup = `<label class="tooltipDetail">Follow-up(s): </label>${targetSkill.followup}<br />`
+		} else {
+			followup = null;
+		}
+		style = getCssStyle("end", targetSkill.end);
+		endurance = `<label class="tooltipDetail">Endurance: </label><label style="color: ${style};">${targetSkill.end}</label><br />`;
+		style = getCssStyle("dmg", targetSkill.dmg);
+		damage = `<label class="tooltipDetail">Damage: </label><label style="color: ${style};">${targetSkill.dmg}</label><br />`;
+		style = getCssStyle("hit", targetSkill.hit);
+		hit = `<label class="tooltipDetail">Hit: </label><label style="color: ${style};">${targetSkill.hit}</label><br />`;
+		style = getCssStyle("def", targetSkill.def);
+		def = `<label class="tooltipDetail">Defense: </label><label style="color: ${style};">${targetSkill.def}</label><br /><br />`;
+		if(targetSkill.effect != null) {
+			effect = `<label style="color: #e0dd28;">${targetSkill.effect}</label><br /><br /><br /><br />`;
+		} else {
+			effect = "<br /><br /><br />";
+		}
+		if(followup != null) {
+			document.getElementById('hoverContent').innerHTML = nameLabel + levelLabel + opening + followup + endurance + damage + hit + def + effect;
+		} else {
+			document.getElementById('hoverContent').innerHTML = nameLabel + levelLabel + opening + endurance + damage + hit + def + effect;
+		}
+	//baseline/spells
+	} else if(target.Skill.hasOwnProperty("duration")) {
+		nameLabel = `<label>${targetSkill.name}</label><br /><br />`;
+		
+	}
+}
+
+
+function showTooltip(disp) {
+	let tooltipElem = document.getElementById('hoverModal');
+	
+	if(disp == "on") {
+		tooltipElem.style.display = "block";
+	} else if(disp == "off") {
+		tooltipElem.style.display = "none";
+	}
+}*/
+
+function getCssStyle(type, amount) {
+
+	if(type == "end" || type == "dmg") {
+		switch(amount) {
+			case "None":
+				return "#ffffff";
+			case "Very Low":
+				return "#3ede69";
+			case "Low":
+				return "#2440d1";
+			case "Medium":
+				return "#e0dd28";
+			case "High":
+				return "#e39c0e";
+			case "Very High":
+				return "#de1912";
+			case "Devastating":
+				return "#8e0ec4";
+		}
+	} else if(type == "hit" || type == "def") {
+		switch (amount) {
+			case "No Bonus":
+				return "#ffffff";
+			case "Low Bonus":
+				return "#2440d1";
+			case "Medium Bonus":
+				return "#74d92b";
+			case "High Bonus":
+				return "#3ede69";
+			case "Very High Bonus":
+				return "#3ede69"
+			case "Low Penalty":
+				return "#e39c0e";
+			case "Medium Penalty":
+				return "#e39c0e";
+			case "High Penalty":
+				return "#de1912";
+		}
+	}
 }
 
 //Function adjusts available specialization points on character level change
