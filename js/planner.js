@@ -1057,7 +1057,7 @@ function tooltip(event) {
 			yPosition = document.getElementById('spec').offsetTop + 450;
 		}
 	}
-	if(!found) {
+	if(!found && selectedClass.equipment.shield != null) {
 		allAbilities = selectedClass.equipment.shield;
 		if(targetElement.textContent.includes(allAbilities.name) && !found) {
 			targetSkill = allAbilities;
