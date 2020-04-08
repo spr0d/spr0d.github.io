@@ -873,16 +873,16 @@ function setAbilities() {
 		resetAbilities();
 	} else {	
 		for(let ability of selectedClass.abilities) {
-			document.getElementById('abilityBox').innerHTML += `<span id="${ability.name}AbilityImage" class="specImage"></span><span id="${ability.name}Ability" class="abilityName">${ability.name}</span><br />`;
+			document.getElementById('abilityBox').innerHTML += `<span id="${ability.name}AbilityImage" class="specImage"></span><span id="${ability.name}Ability" class="abilityName" onmouseenter="showTooltip(&quot;on&quot;), tooltip(event)" onmouseleave="showTooltip(&quot;off&quot;)">${ability.name}</span><br />`;
 		}
 		
 		for(let weapon of selectedClass.equipment.weapons) {
-			document.getElementById('abilityBox').innerHTML += `<span id="${weapon.name}AbilityImage" class="specImage"></span><span id="${weapon.name}Ability" class="abilityName">Weaponry: ${weapon.name}</span><br />`;
+			document.getElementById('abilityBox').innerHTML += `<span id="${weapon.name}AbilityImage" class="specImage"></span><label id="${weapon.name}Ability" class="abilityName" onmouseenter="showTooltip(&quot;on&quot;), tooltip(event)" onmouseleave="showTooltip(&quot;off&quot;)">Weaponry: ${weapon.name}</span><br />`;
 		}
 		
-		document.getElementById('abilityBox').innerHTML += `<span id="${selectedClass.equipment.armor.name}AbilityImage" class="specImage"></span><span id="${selectedClass.equipment.armor.name}Ability" class="abilityName">Armor Ability: ${selectedClass.equipment.armor.name}</span><br />`;
+		document.getElementById('abilityBox').innerHTML += `<span id="${selectedClass.equipment.armor.name}AbilityImage" class="specImage"></span><span id="${selectedClass.equipment.armor.name}Ability" class="abilityName" onmouseenter="showTooltip(&quot;on&quot;), tooltip(event)" onmouseleave="showTooltip(&quot;off&quot;)">Armor Ability: ${selectedClass.equipment.armor.name}</span><br />`;
 		if(selectedClass.equipment.shield != null) {
-			document.getElementById('abilityBox').innerHTML += `<span id="${selectedClass.equipment.shield.name}AbilityImage" class="specImage"></span><span id="${selectedClass.equipment.shield.name}Ability" class="abilityName">Shield Ability: ${selectedClass.equipment.shield.name}</span><br />`;
+			document.getElementById('abilityBox').innerHTML += `<span id="${selectedClass.equipment.shield.name}AbilityImage" class="specImage"></span><span id="${selectedClass.equipment.shield.name}Ability" class="abilityName" onmouseenter="showTooltip(&quot;on&quot;), tooltip(event)" onmouseleave="showTooltip(&quot;off&quot;)">Shield Ability: ${selectedClass.equipment.shield.name}</span><br />`;
 		}
 	}
 }
@@ -1011,56 +1011,116 @@ function showTree(event, type) {
 
 //Gets skill that was moused over and provides object details
 function tooltip(event) {
-	let allSpecs, currentSpec, nameLabel, levelLabel, targetElement, targetSkill, xPosition, yPosition, modal;
+	let allSpecs, allAbilities, currentSpec, currentAbility, nameLabel, levelLabel, targetElement, targetSkill, xPosition, yPosition, modal, content;
+	let found = false;
 	//combat styles variables
 	let opening, followup, endurance, damage, hit, def, effect, style;
 	//baseline/spells variables
-	//let ...
+	let duration, cost, target, range, radius, cast, recast, dmgType, maxTarget;
+	//ability variables
+	let  desc, abilityTpe;
 	targetElement = document.getElementById(`${event.target.getAttribute('id')}`);
 	allSpecs = selectedClass.specializations;
-	//Find the skill that was moused over
-	for(spec in allSpecs) {
-		currentSpec = allSpecs[spec];
-		if(currentSpec.hasOwnProperty("styles")) {
-			for(style in currentSpec.styles) {
-				if(targetElement.textContent == currentSpec.styles[style].name) {
-					targetSkill = currentSpec.styles[style];
-					xPosition = document.getElementById('combatStyles').offsetLeft + 115;
-					yPosition = document.getElementById('combatStyles').offsetTop + 450;
-				}
+	allAbilities = selectedClass.abilities;
+	//Find the ability/skill that was moused over
+	for(ability in allAbilities) {
+		currentAbility = allAbilities[ability];
+		if(targetElement.textContent.includes(currentAbility.name)) {
+			targetSkill = currentAbility;
+			found = true;
+			abilityType = null;
+			xPosition = document.getElementById('spec').offsetLeft + 115;
+			yPosition = document.getElementById('spec').offsetTop + 450;
+			break;
+		}
+	}
+	if(!found) {
+		allAbilities = selectedClass.equipment.weapons;
+		for(weapon in allAbilities) {
+			currentAbility = allAbilities[weapon];
+			if(targetElement.textContent.includes(currentAbility.name)) {
+				targetSkill = currentAbility;
+				found = true;
+				abilityType = "weapon";
+				xPosition = document.getElementById('spec').offsetLeft + 115;
+				yPosition = document.getElementById('spec').offsetTop + 450;
 			}
-		} else if(currentSpec.hasOwnProperty("base")) {
-			for(spell in currentSpec.base) {
-				if(targetElement.textContent == currentSpec.base[spell].name) {
-					targetSkill = currentSpec.base[spell];
-					xPosition = document.getElementById('magicSpells').offsetLeft + 115;
-					yPosition = document.getElementById('magicSpells').offsetTop + 450;
+		}
+	}
+	if(!found) {
+		allAbilities = selectedClass.equipment.armor;
+		if(targetElement.textContent.includes(allAbilities.name)) {
+			targetSkill = allAbilities;
+			found = true;
+			abilityType = "armor";
+			xPosition = document.getElementById('spec').offsetLeft + 115;
+			yPosition = document.getElementById('spec').offsetTop + 450;
+		}
+	}
+	if(!found) {
+		allAbilities = selectedClass.equipment.shield;
+		if(targetElement.textContent.includes(allAbilities.name) && !found) {
+			targetSkill = allAbilities;
+			found = true;
+			abilityType = "shield";
+			xPosition = document.getElementById('spec').offsetLeft + 115;
+			yPosition = document.getElementById('spec').offsetTop + 450;
+		}
+	}
+	if(!found) {
+		for(spec in allSpecs) {
+			currentSpec = allSpecs[spec];
+			if(currentSpec.hasOwnProperty("styles") && !found) {
+				for(style in currentSpec.styles) {
+					if(targetElement.textContent == currentSpec.styles[style].name) {
+						targetSkill = currentSpec.styles[style];
+						found = true;
+						xPosition = document.getElementById('combatStyles').offsetLeft + 115;
+						yPosition = document.getElementById('combatStyles').offsetTop + 450;
+						break;
+					}
 				}
-			}
-		} else if(currentSpec.hasOwnProperty("spells")) {
-			for(spell in currentSpec.spells) {
-				if(targetElement.textContent == currentSpec.spells[spell].name) {
-					targetSkill = currentSpec.spells[spell];
-					xPosition = document.getElementById('magicSpells').offsetLeft + 115;
-					yPosition = document.getElementById('magicSpells').offsetTop + 450;
+			} 
+			if(currentSpec.hasOwnProperty("base") && !found) {
+				for(spell in currentSpec.base) {
+					if(targetElement.textContent == currentSpec.base[spell].name) {
+						targetSkill = currentSpec.base[spell];
+						found = true;
+						xPosition = document.getElementById('magicSpells').offsetLeft + 115;
+						yPosition = document.getElementById('magicSpells').offsetTop + 450;
+						break;
+					}
+				}
+			} 
+			if(currentSpec.hasOwnProperty("spells") && !found) {
+				for(spell in currentSpec.spells) {
+					if(targetElement.textContent == currentSpec.spells[spell].name) {
+						targetSkill = currentSpec.spells[spell];
+						found = true;
+						xPosition = document.getElementById('magicSpells').offsetLeft + 115;
+						yPosition = document.getElementById('magicSpells').offsetTop + 450;
+						break;
+					}
 				}
 			}
 		}
 	}
-	
 	//Set position of modal
 	modal = document.getElementById('hoverModal');
 	modal.style.top = `${yPosition}px`;
 	modal.style.left = `${xPosition}px`;
 	//combat styles
-	levelLabel = `<label class="tooltipDetail">Level: </label>${targetSkill.level}<br />`;
+	
 	if(targetSkill.hasOwnProperty("open")) {
+		levelLabel = `<label class="tooltipDetail">Level: </label>${targetSkill.level}<br />`;
 		nameLabel = `<label>Name: ${targetSkill.name}</label><br /><br />`;
 		opening = `<label class="tooltipDetail">Opening: </label>${targetSkill.open}<br />`;
 		if(targetSkill.followup != null) {
-			followup = `<label class="tooltipDetail">Follow-up(s): </label>${targetSkill.followup}<br />`
+			followup = `<label class="tooltipDetail">Follow-up(s): </label>${targetSkill.followup}<br />`;
+			content = nameLabel + levelLabel + opening + followup;
 		} else {
 			followup = null;
+			content = nameLabel + levelLabel + opening;
 		}
 		style = getCssStyle("end", targetSkill.end);
 		endurance = `<label class="tooltipDetail">Endurance: </label><label style="color: ${style};">${targetSkill.end}</label><br />`;
@@ -1073,18 +1133,67 @@ function tooltip(event) {
 		if(targetSkill.effect != null) {
 			effect = `<label style="color: #e0dd28;">${targetSkill.effect}</label><br /><br /><br /><br />`;
 		} else {
-			effect = "<br /><br /><br />";
+			effect = "<br /><br />";
 		}
-		if(followup != null) {
-			document.getElementById('hoverContent').innerHTML = nameLabel + levelLabel + opening + followup + endurance + damage + hit + def + effect;
-		} else {
-			document.getElementById('hoverContent').innerHTML = nameLabel + levelLabel + opening + endurance + damage + hit + def + effect;
-		}
+		content += endurance + damage + hit + def + effect;
 	//baseline/spells
-	} else if(target.Skill.hasOwnProperty("duration")) {
+	} else if(targetSkill.hasOwnProperty("duration")) {
+		levelLabel = `<label class="tooltipDetail">Level: </label>${targetSkill.level}<br />`;
 		nameLabel = `<label>${targetSkill.name}</label><br /><br />`;
-		
+		if(targetSkill.duration != null) {
+			duration = `<label class="tooltipDetail">Duration: </label>${targetSkill.duration}<br />`;
+			content = nameLabel + levelLabel + duration;
+		} else {
+			duration = null;
+			content = nameLabel + levelLabel;
+		}
+		if(targetSkill.cost != null) {
+			cost = `<label class="tooltipDetail">${targetSkill.cost.type}: </label>${targetSkill.cost.value}<br />`;
+			content += cost;
+		} 
+		target = `<label class="tooltipDetail">Target: </label>${targetSkill.target}<br />`;
+		if(targetSkill.range != null) {
+			range = `<label class="tooltipDetail">Range: </label>${targetSkill.range}<br />`;
+			content += target + range;
+		} else {
+			content += target;
+		}
+		if(targetSkill.radius != null) {
+			radius = `<label class="tooltipDetail">Radius: </label>${targetSkill.radius}<br />`;
+			content += radius;
+		}
+		cast = `<label class="tooltipDetail">Casting time: </label>${targetSkill.cast}<br />`;
+		if(targetSkill.recast != null) {
+			recast = `<label class="tooltipDetail">Recast: </label>${targetSkill.recast}<br />`;
+			content += cast + recast;
+		} else {
+			content += cast;
+		}
+		if(targetSkill.type != null) {
+			dmgType = `<label class="tooltipDetail">Magic Type: </label>${targetSkill.type}<br />`;
+			content += dmgType;
+		}
+		if(targetSkill.maxTarget != null) {
+			maxTarget = `<label class="tooltipDetail">Maximum Affected Targets: </label>${targetSkill.maxTarget}<br />`;
+			content += maxTarget;
+		}
+		effect = `<br /><label style="color: #e0dd28;">${targetSkill.effect}<br /><br /><br />`;
+		content += effect;
+	//abilities 
+	} else if(targetSkill.hasOwnProperty("desc")) {
+		if(abilityType == "weapon"){
+			nameLabel = `Weaponry<br /><br />`;
+		}else if(abilityType == "armor") {
+			nameLabel = `Armor<br /><br />`;
+		}else if(abilityType == "shield") {
+			nameLabel = `Shields<br /><br />`;
+		}else if(abilityType == null) {
+			nameLabel = `${targetSkill.name}<br /><br />`;
+		}
+		desc = `<label style="color: #e0dd28;">${targetSkill.desc}</label>`;
+		content = nameLabel + desc;
 	}
+	document.getElementById('hoverContent').innerHTML = content;
 }
 
 
