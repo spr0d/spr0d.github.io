@@ -539,7 +539,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 5 body damage to the target.",
+			"effect": "Summons an elemental spirit to attack the target.<br />Bomber spell: Does 5 body damage to the target.",
 			"hide": null
 		},
 		{
@@ -558,7 +558,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 16 body damage to the target.",
+			"effect": "Summons an elemental spirit to attack the target.<br />Bomber spell: Does 16 body damage to the target.",
 			"hide": null
 		},
 		{
@@ -577,7 +577,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons a pet to serve the caster.\nPet spell: Does 26 body damage to the target.\n\nAffects monsters up to 88% of your level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a pet to serve the caster.<br />Pet spell: Does 26 body damage to the target.<br /><br />Affects monsters up to 88% of your level, to a maximum of level 50.<br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -596,7 +596,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Energy",
 			"maxTarget": null,
-			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 31 body damage to the target.",
+			"effect": "Summons an elemental spirit to attack the target.<br />Bomber spell: Does 31 body damage to the target.",
 			"hide": null
 		},
 		{
@@ -615,7 +615,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons a turret to serve the caster.\nTurrent spell: The target is rooted in place.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the caster.<br />Turrent spell: The target is rooted in place.<br /><br /><br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -634,7 +634,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 41 body damage to the target.",
+			"effect": "Summons an elemental spirit to attack the target.<br />Bomber spell: Does 41 body damage to the target.",
 			"hide": null
 		},
 		{
@@ -653,7 +653,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons a pet to serve the caster.\nPet spell: Does 46 body damage to the target.\n\nAffects monsters up to 88% of your level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turrent will die.",
+			"effect": "Summons a pet to serve the caster.<br />Pet spell: Does 46 body damage to the target.<br /><br />Affects monsters up to 88% of your level, to a maximum of level 50.<br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turrent will die.",
 			"hide": null
 		},
 		{
@@ -672,7 +672,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons a pet to serve the caster.\nPet spell: Does 51 body damage to the target.\n\nAffects monsters up to 88% of your level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a pet to serve the caster.<br />Pet spell: Does 51 body damage to the target.<br /><br />Affects monsters up to 88% of your level, to a maximum of level 50.<br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -691,7 +691,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 56 body damage to the target.",
+			"effect": "Summons an elemental spirit to attack the target.<br />Bomber spell: Does 56 body damage to the target.",
 			"hide": null
 		},
 		{
@@ -710,7 +710,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": "2 minutes",
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 134 body damage to the target.",
+			"effect": "Summons an elemental spirit to attack the target.<br />Bomber spell: Does 134 body damage to the target.",
 			"hide": null
 		},
 		{
@@ -729,7 +729,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 51 body damage to the target.\n\n\nRadius: 350",
+			"effect": "Summons an elemental spirit to attack the target.<br />Bomber spell: Does 51 body damage to the target.<br /><br /><br />Radius: 350",
 			"hide": null
 		},
 		{
@@ -748,7 +748,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 77 body damage to the target.",
+			"effect": "Summons an elemental spirit to attack the target.<br />Bomber spell: Does 77 body damage to the target.",
 			"hide": null
 		},
 		{
@@ -767,7 +767,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons a pet to serve the caster.\nPet spell: Does 87 body damage to the target.\n\nAffects monsters up to 88% of your level. to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a pet to serve the caster.<br />Pet spell: Does 87 body damage to the target.<br /><br />Affects monsters up to 88% of your level. to a maximum of level 50.<br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -786,7 +786,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 72 body damage to the target.\n\n\nRadius: 350",
+			"effect": "Summons an elemental spirit to attack the target.<br />Bomber spell: Does 72 body damage to the target.<br /><br /><br />Radius: 350",
 			"hide": null
 		},
 		{
@@ -805,7 +805,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": 8,
-			"effect": "Summons a turret to serve the caster.\nTurret spell: The target is rooted in place\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the caster.<br />Turret spell: The target is rooted in place<br /><br /><br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -824,7 +824,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 102 body damage to the target.",
+			"effect": "Summons an elemental spirit to attack the target.<br />Bomber spell: Does 102 body damage to the target.",
 			"hide": null
 		},
 		{
@@ -843,7 +843,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": "2 minutes",
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 199 body damage to the target.",
+			"effect": "Summons an elemental spirit to attack the target.<br />Bomber spell: Does 199 body damage to the target.",
 			"hide": null
 		},
 		{
@@ -862,7 +862,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons a pet to serve the caster.\nPet spell: Does 112 body damage to the target.\n\nAffects monsters up to 88% of your level. to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turrent will die.",
+			"effect": "Summons a pet to serve the caster.<br />Pet spell: Does 112 body damage to the target.<br /><br />Affects monsters up to 88% of your level. to a maximum of level 50.<br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turrent will die.",
 			"hide": null
 		},
 		{
@@ -881,7 +881,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 99 body damage to the target.\n\nRadius: 350",
+			"effect": "Summons an elemental spirit to attack the target.<br />Bomber spell: Does 99 body damage to the target.<br /><br />Radius: 350",
 			"hide": null
 		},
 		{
@@ -900,7 +900,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": 8,
-			"effect": "Summons a turret to serve the caster.\nTurret spell: The target is rooted in place.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the caster.<br />Turret spell: The target is rooted in place.<br /><br /><br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -919,7 +919,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 137 body damage to the target.",
+			"effect": "Summons an elemental spirit to attack the target.<br />Bomber spell: Does 137 body damage to the target.",
 			"hide": null
 		},
 		{
@@ -938,7 +938,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": "2 minutes",
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 269 body damage to the target.",
+			"effect": "Summons an elemental spirit to attack the target.<br />Bomber spell: Does 269 body damage to the target.",
 			"hide": null
 		},
 		{
@@ -957,7 +957,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 123 body damage to the target.\n\n\nRadius: 350",
+			"effect": "Summons an elemental spirit to attack the target.<br />Bomber spell: Does 123 body damage to the target.<br /><br /><br />Radius: 350",
 			"hide": null
 		},
 		{
@@ -976,7 +976,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons a pet to serve the caster.\nPet spell: Does 163 body damage to the target.\n\nAffects monsters up to 88% of  your level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a pet to serve the caster.<br />Pet spell: Does 163 body damage to the target.<br /><br />Affects monsters up to 88% of  your level, to a maximum of level 50.<br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -995,7 +995,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": 8,
-			"effect": "Summons a turret to serve the caster.\nTurret spell: The target is rooted in place.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the caster.<br />Turret spell: The target is rooted in place.<br /><br /><br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -1014,7 +1014,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 183 body damage to the target.",
+			"effect": "Summons an elemental spirit to attack the target.<br />Bomber spell: Does 183 body damage to the target.",
 			"hide": null
 		},
 		{
@@ -1033,7 +1033,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Energy",
 			"maxTarget": null,
-			"effect": "Summons a pet to serve the caster.\nAffects monsters up to your level, to a maximum of level 50.",
+			"effect": "Summons a pet to serve the caster.<br />Affects monsters up to your level, to a maximum of level 50.",
 			"hide": null
 		},
 		{
@@ -1052,7 +1052,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 151 body damage to the target.\n\n\nRadius: 350",
+			"effect": "Summons an elemental spirit to attack the target.<br />Bomber spell: Does 151 body damage to the target.<br /><br /><br />Radius: 350",
 			"hide": null
 		},
 		{
@@ -1071,7 +1071,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": 8,
-			"effect": "Summons a turret to serve the caster.\nTurret spell: The target is rooted in place.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the caster.<br />Turret spell: The target is rooted in place.<br /><br /><br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -1090,7 +1090,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons a pet to serve the caster.\nPet spell: Does 204 body damage to the target.\n\nAffects monsters up to 88% of your level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a pet to serve the caster.<br />Pet spell: Does 204 body damage to the target.<br /><br />Affects monsters up to 88% of your level, to a maximum of level 50.<br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -1109,7 +1109,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": "2 minutes",
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 449 body damage to the target.",
+			"effect": "Summons an elemental spirit to attack the target.<br />Bomber spell: Does 449 body damage to the target.",
 			"hide": null
 		},
 		{
@@ -1128,7 +1128,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 178 body damage to the target.\n\n\nRadius: 350",
+			"effect": "Summons an elemental spirit to attack the target.<br />Bomber spell: Does 178 body damage to the target.<br /><br /><br />Radius: 350",
 			"hide": null
 		},
 		{
@@ -1147,7 +1147,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 225 body damage to the target.",
+			"effect": "Summons an elemental spirit to attack the target.<br />Bomber spell: Does 225 body damage to the target.",
 			"hide": null
 		},
 		{
@@ -1166,7 +1166,7 @@ const ARBOREAL_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons a turrent to serve the caster.\nTurrent spell: The target is rooted in place.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turrent to serve the caster.<br />Turrent spell: The target is rooted in place.<br /><br /><br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		}
 	]
@@ -3953,7 +3953,7 @@ const CREEPING_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": 20,
-			"effect": "Releases the target and all other turrets you have summoned from the area.\nAnimist turrets only.",
+			"effect": "Releases the target and all other turrets you have summoned from the area.<br />Animist turrets only.",
 			"hide": null
 		},
 		{
@@ -3972,7 +3972,7 @@ const CREEPING_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": 8,
-			"effect": "Summons a turret to serve the caster.\nTurret spell: Does 21 body damage to the target.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the caster.<br />Turret spell: Does 21 body damage to the target.<br /><br /><br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -4029,7 +4029,7 @@ const CREEPING_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": 8,
-			"effect": "Summons a turret to serve the caster.\nTurret spell: Does 37 body damage to the target.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the caster.<br />Turret spell: Does 37 body damage to the target.<br /><br /><br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -4124,7 +4124,7 @@ const CREEPING_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons a turret to serve the caster.\nTurret spell: Does 61 body damage to the target.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the caster.<br />Turret spell: Does 61 body damage to the target.<br /><br /><br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -4200,7 +4200,7 @@ const CREEPING_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": 8,
-			"effect": "Summons a turrent to serve the caster.\nTurret spell: Does 76 body damage to the target.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turrent to serve the caster.<br />Turret spell: Does 76 body damage to the target.<br /><br /><br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -4276,7 +4276,7 @@ const CREEPING_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": 8,
-			"effect": "Summons a turret to serve the caster.\nTurret spell: Does 104 body damage to the target.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the caster.<br />Turret spell: Does 104 body damage to the target.<br /><br /><br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -4368,7 +4368,7 @@ const CREEPING_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": 8,
-			"effect": "Summons a turret to serve the caster.\nTurret spell: Does 128 body damage to the target.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the caster.<br />Turret spell: Does 128 body damage to the target.<br /><br /><br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -4425,7 +4425,7 @@ const CREEPING_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": 8,
-			"effect": "Summons a turret to serve the caster.\nTurret spell: Does 155 body damage to the target.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the caster.<br />Turret spell: Does 155 body damage to the target.<br /><br /><br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -4520,7 +4520,7 @@ const CREEPING_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": 8,
-			"effect": "Summons a turret to serve the caster.\nTurret spell: Does 179 body damage to the target.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the caster.<br />Turret spell: Does 179 body damage to the target.<br /><br /><br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		}
 	],
@@ -4541,7 +4541,7 @@ const CREEPING_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons a pet to serve the caster.\nPet spell: the target takes 9 body damage and the target is slowed by 40%.\n\nAffects monsters up to 88% of your level, to a maximum of level 50\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a pet to serve the caster.<br />Pet spell: the target takes 9 body damage and the target is slowed by 40%.<br /><br />Affects monsters up to 88% of your level, to a maximum of level 50<br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -4560,7 +4560,7 @@ const CREEPING_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": 8,
-			"effect": "Summons a turret to serve the caster.\nTurret spell: Inflicts a wasting disease on the target that slows target by 6%, reduces its strength by 10 and inhibits healing by 50%.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the caster.<br />Turret spell: Inflicts a wasting disease on the target that slows target by 6%, reduces its strength by 10 and inhibits healing by 50%.<br /><br /><br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -4579,7 +4579,7 @@ const CREEPING_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons a pet to serve the castern.\nPet spell: The target takes 25 body damage and the target is slowed by 40%.\n\nAffects monsters up to 88% of your level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a pet to serve the castern.<br />Pet spell: The target takes 25 body damage and the target is slowed by 40%.<br /><br />Affects monsters up to 88% of your level, to a maximum of level 50.<br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -4598,7 +4598,7 @@ const CREEPING_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": null,
-			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 34 matter damage to the target.",
+			"effect": "Summons an elemental spirit to attack the target.<br />Bomber spell: Does 34 matter damage to the target.",
 			"hide": null
 		},
 		{
@@ -4617,7 +4617,7 @@ const CREEPING_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": 8,
-			"effect": "Summons a turret to serve the castern\nTurret spell: The target regains 20 hit points.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the castern<br />Turret spell: The target regains 20 hit points.<br /><br /><br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -4636,7 +4636,7 @@ const CREEPING_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons a pet to serve the caster.\nPet spell: The target takes 40 body damage and the target is slowed by 40%.\n\nAffects monsters up to 88% of your level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a pet to serve the caster.<br />Pet spell: The target takes 40 body damage and the target is slowed by 40%.<br /><br />Affects monsters up to 88% of your level, to a maximum of level 50.<br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -4674,7 +4674,7 @@ const CREEPING_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": 8,
-			"effect": "Summons a turret to serve the caster.\nTurret spell: Inflicts a wasting disease on the target that slows target by 6%, reduces its strength by 10 and inhibits healing by 50%.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the caster.<br />Turret spell: Inflicts a wasting disease on the target that slows target by 6%, reduces its strength by 10 and inhibits healing by 50%.<br /><br /><br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -4693,7 +4693,7 @@ const CREEPING_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": null,
-			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 68 matter damage to the target.",
+			"effect": "Summons an elemental spirit to attack the target.<br />Bomber spell: Does 68 matter damage to the target.",
 			"hide": null
 		},
 		{
@@ -4731,7 +4731,7 @@ const CREEPING_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": 8,
-			"effect": "Summons a turret to serve the caster.\nTurret spell: Inflicts a wasting disease on the target that slows target by 8%, reduces its strength by 15 and inhibits healing by 50%.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the caster.<br />Turret spell: Inflicts a wasting disease on the target that slows target by 8%, reduces its strength by 15 and inhibits healing by 50%.<br /><br /><br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -4750,7 +4750,7 @@ const CREEPING_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": null,
-			"effect": "Summons a turret to save the caster.\nTurret spell: The target regains 55 hit points\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to save the caster.<br />Turret spell: The target regains 55 hit points<br /><br /><br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -4769,7 +4769,7 @@ const CREEPING_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons a pet to serve the caster.\nPet spell: The target takes 80 body damage and the target is slowed by 40%.\n\nAffects monsters up to 88% of your level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a pet to serve the caster.<br />Pet spell: The target takes 80 body damage and the target is slowed by 40%.<br /><br />Affects monsters up to 88% of your level, to a maximum of level 50.<br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -4807,7 +4807,7 @@ const CREEPING_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": null,
-			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 122 matter damage to the target.",
+			"effect": "Summons an elemental spirit to attack the target.<br />Bomber spell: Does 122 matter damage to the target.",
 			"hide": null
 		},
 		{
@@ -4826,7 +4826,7 @@ const CREEPING_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons a pet to serve the caster.\nPet spell: the target takes 108 body damage and the target is slowed by 40%.\n\nAffects monsters up to 88% of your level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a pet to serve the caster.<br />Pet spell: the target takes 108 body damage and the target is slowed by 40%.<br /><br />Affects monsters up to 88% of your level, to a maximum of level 50.<br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -4864,7 +4864,7 @@ const CREEPING_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": 8,
-			"effect": "Summons a turret to serve the caster.\nTurret spell: Inflicts a wasting disease on the target that slows target by 12%, reduces its strength by 20 and inhibits healing by 50%.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the caster.<br />Turret spell: Inflicts a wasting disease on the target that slows target by 12%, reduces its strength by 20 and inhibits healing by 50%.<br /><br /><br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -4883,7 +4883,7 @@ const CREEPING_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": 8,
-			"effect": "Summons a turret to serve the caster.\nTurret spell: The target regains 100 hit points",
+			"effect": "Summons a turret to serve the caster.<br />Turret spell: The target regains 100 hit points",
 			"hide": null
 		},
 		{
@@ -4921,7 +4921,7 @@ const CREEPING_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons a pet to serve the caster\nPet sepll: The target takes 131 body damage and the target is slowed by 40%.\n\nAffects monsters up to 88% of your level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a pet to serve the caster<br />Pet sepll: The target takes 131 body damage and the target is slowed by 40%.<br /><br />Affects monsters up to 88% of your level, to a maximum of level 50.<br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -4940,7 +4940,7 @@ const CREEPING_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": null,
-			"effect": "Summons ane elemental spirit to attack the target.\nBomber spell: Does 153 matter damage to the target.",
+			"effect": "Summons ane elemental spirit to attack the target.<br />Bomber spell: Does 153 matter damage to the target.",
 			"hide": null
 		},
 		{
@@ -4978,7 +4978,7 @@ const CREEPING_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Energy",
 			"maxTarget": null,
-			"effect": "Summons a pet to serve the caster.\nAffects monsters up to your level, to a maximum of level 50.",
+			"effect": "Summons a pet to serve the caster.<br />Affects monsters up to your level, to a maximum of level 50.",
 			"hide": null
 		},
 		{
@@ -4997,7 +4997,7 @@ const CREEPING_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": 8,
-			"effect": "Summons a turret to serve the caster.\nTurret spell: Inflicts a wasting disease on the target that slows target by 15%, reduces its strength by 25 and inhibits healing by 50%.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the caster.<br />Turret spell: Inflicts a wasting disease on the target that slows target by 15%, reduces its strength by 25 and inhibits healing by 50%.<br /><br /><br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -5016,7 +5016,7 @@ const CREEPING_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": 8,
-			"effect": "Summons a turret to serve the caster.\nTurret spell: The target regains 215 hit points.\n\n\n\n\nAnimits must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the caster.<br />Turret spell: The target regains 215 hit points.<br /><br /><br /><br /><br />Animits must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -5054,7 +5054,7 @@ const CREEPING_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": null,
-			"effect": "Summons a pet to serve the caster.\nPet spell: the target takes 164 body damage and the target is slowed by 40%.\n\nAffects monsters up to 88% of your level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a pet to serve the caster.<br />Pet spell: the target takes 164 body damage and the target is slowed by 40%.<br /><br />Affects monsters up to 88% of your level, to a maximum of level 50.<br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -5073,7 +5073,7 @@ const CREEPING_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": null,
-			"effect": "Summons an elemental spirit to attack the target.\nBomber spell: Does 199 matter damage to the target.",
+			"effect": "Summons an elemental spirit to attack the target.<br />Bomber spell: Does 199 matter damage to the target.",
 			"hide": null
 		},
 		{
@@ -5111,7 +5111,7 @@ const CREEPING_PATH_SPEC_DATA = {
 			"recast": "5 minutes",
 			"type": null,
 			"maxTarget": null,
-			"effect": "Summonns a turret to serve the caster.\nTurret spell: the target regains 400 hit points.\n\n\nRadius: 350",
+			"effect": "Summonns a turret to serve the caster.<br />Turret spell: the target regains 400 hit points.<br /><br /><br />Radius: 350",
 			"hide": null
 		}
 	]
@@ -5143,7 +5143,7 @@ const DEATHSIGHT_SPEC_DATA = {
 			"recast": "2 seconds",
 			"type": "null",
 			"maxTarget": null,
-			"effect": "Become a Decrepit Magus. Your magic damage is increased by 10%. Your ABS is slightly increased.\n\nMelee attackers become diseased when they strike you, and your rotted flesh regenerates, greatly increasing your in combat health regeneration.",
+			"effect": "Become a Decrepit Magus. Your magic damage is increased by 10%. Your ABS is slightly increased.<br /><br />Melee attackers become diseased when they strike you, and your rotted flesh regenerates, greatly increasing your in combat health regeneration.",
 			"hide": null
 		},
 		{
@@ -5200,7 +5200,7 @@ const DEATHSIGHT_SPEC_DATA = {
 			"recast": "1 minute 30 seconds",
 			"type": "Matter",
 			"maxTarget": 8,
-			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nInflicts a wasting disease on the target that slows target by 5%, reduces its strength by 5 and inhibits healing by 50%.",
+			"effect": "Creates a cloud that affects everyone in the area.<br /><br />Cloud spell:<br />Inflicts a wasting disease on the target that slows target by 5%, reduces its strength by 5 and inhibits healing by 50%.",
 			"hide": null
 		},
 		{
@@ -5257,7 +5257,7 @@ const DEATHSIGHT_SPEC_DATA = {
 			"recast": "1 minute 30 seconds",
 			"type": "Matter",
 			"maxTarget": 8,
-			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nInflicts a wasting disease on the target that slows target by 5%, reduces its strength by 10 and inhibits healing by 50%.",
+			"effect": "Creates a cloud that affects everyone in the area.<br /><br />Cloud spell:<br />Inflicts a wasting disease on the target that slows target by 5%, reduces its strength by 10 and inhibits healing by 50%.",
 			"hide": null
 		},
 		{
@@ -5314,7 +5314,7 @@ const DEATHSIGHT_SPEC_DATA = {
 			"recast": "1 minute 30 seconds",
 			"type": "Matter",
 			"maxTarget": 8,
-			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nInflicts a wasting disease on the target that slows target by 5%, reduces its strength by 15 and inhibits healing by 50%.",
+			"effect": "Creates a cloud that affects everyone in the area.<br /><br />Cloud spell:<br />Inflicts a wasting disease on the target that slows target by 5%, reduces its strength by 15 and inhibits healing by 50%.",
 			"hide": null
 		},
 		{
@@ -5371,7 +5371,7 @@ const DEATHSIGHT_SPEC_DATA = {
 			"recast": "1 minute 30 seconds",
 			"type": "Matter",
 			"maxTarget": 8,
-			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nInflicts a wasting disease on the target that slows target by 10%, reduces its strength by 20 and inhibits healing by 50%.",
+			"effect": "Creates a cloud that affects everyone in the area.<br /><br />Cloud spell:<br />Inflicts a wasting disease on the target that slows target by 10%, reduces its strength by 20 and inhibits healing by 50%.",
 			"hide": null
 		},
 		{
@@ -5428,7 +5428,7 @@ const DEATHSIGHT_SPEC_DATA = {
 			"recast": "1 minute 30 seconds",
 			"type": "Matter",
 			"maxTarget": 8,
-			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nInflicts a wasting disease on the target that slows target by 15%, reduces its strength by 25 and inhibits healing by 50%.",
+			"effect": "Creates a cloud that affects everyone in the area.<br /><br />Cloud spell:<br />Inflicts a wasting disease on the target that slows target by 15%, reduces its strength by 25 and inhibits healing by 50%.",
 			"hide": null
 		},
 		{
@@ -5487,7 +5487,7 @@ const DEATHSIGHT_SPEC_DATA = {
 			"recast": null,
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "Does 52 spirit damage to the target.\n\nThis spell cannot be cast while in Chthonic Form.",
+			"effect": "Does 52 spirit damage to the target.<br /><br />This spell cannot be cast while in Chthonic Form.",
 			"hide": null
 		},
 		{
@@ -5582,7 +5582,7 @@ const DEATHSIGHT_SPEC_DATA = {
 			"recast": null,
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "Does 104 spirit damage to the target.\n\nThis spell cannot be cast while in Chthonic Form.",
+			"effect": "Does 104 spirit damage to the target.<br /><br />This spell cannot be cast while in Chthonic Form.",
 			"hide": null
 		},
 		{
@@ -5696,7 +5696,7 @@ const DEATHSIGHT_SPEC_DATA = {
 			"recast": null,
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "Does 176 spirit damage to the target.\n\nThis spell cannot be cast while in Chthonic Form.",
+			"effect": "Does 176 spirit damage to the target.<br /><br />This spell cannot be cast while in Chthonic Form.",
 			"hide": null
 		},
 		{
@@ -5791,7 +5791,7 @@ const DEATHSIGHT_SPEC_DATA = {
 			"recast": null,
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "Does 240 spirit damage to the target.\n\nThis spell cannot be cast while in Chthonic Form.",
+			"effect": "Does 240 spirit damage to the target.<br /><br />This spell cannot be cast while in Chthonic Form.",
 			"hide": null
 		},
 		{
@@ -5886,7 +5886,7 @@ const DEATHSIGHT_SPEC_DATA = {
 			"recast": null,
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "Does 305 spirit damage to the target.\n\nThis spell cannot be cast while in Chthonic Form.",
+			"effect": "Does 305 spirit damage to the target.<br /><br />This spell cannot be cast while in Chthonic Form.",
 			"hide": null
 		},
 		{
@@ -5962,7 +5962,7 @@ const DEATHSIGHT_SPEC_DATA = {
 			"recast": null,
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "Does 345 spirit damage to the target.\n\nTargets enemy realm players, pets, and guards. Does not damage normal monsters.",
+			"effect": "Does 345 spirit damage to the target.<br /><br />Targets enemy realm players, pets, and guards. Does not damage normal monsters.",
 			"hide": null
 		},
 		{
@@ -5978,7 +5978,7 @@ const DEATHSIGHT_SPEC_DATA = {
 			"recast": "15 minutes",
 			"type": null,
 			"maxTarget": null,
-			"effect": "Become the Bringer of Death. Your casts are uninterruptable, but only reach 65% of their potency.\n\nYour movement speed is increased by 25%, even in speedwarps and while in combat.",
+			"effect": "Become the Bringer of Death. Your casts are uninterruptable, but only reach 65% of their potency.<br /><br />Your movement speed is increased by 25%, even in speedwarps and while in combat.",
 			"hide": null
 		}
 	]
@@ -6010,7 +6010,7 @@ const DEATH_SERVANT_SPEC_DATA = {
 			"recast": "30 seconds",
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "You regenerate 2 health every 3.0 sec.\n\n\nThe target regenerates 4 health every 3.0 sec.",
+			"effect": "You regenerate 2 health every 3.0 sec.<br /><br /><br />The target regenerates 4 health every 3.0 sec.",
 			"hide": null
 		},
 		{
@@ -6029,7 +6029,7 @@ const DEATH_SERVANT_SPEC_DATA = {
 			"recast": "1 minute 30 seconds",
 			"type": null,
 			"maxTarget": null,
-			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nThe target regains 5 power points.",
+			"effect": "Creates a cloud that affects everyone in the area.<br /><br />Cloud spell:<br />The target regains 5 power points.",
 			"hide": null
 		},
 		{
@@ -6048,7 +6048,7 @@ const DEATH_SERVANT_SPEC_DATA = {
 			"recast": null,
 			"type": null,
 			"maxTarget": null,
-			"effect": "Summon an umbral aegis to serve you.\n\nThis is a bulky demon that specializes in tanking damage.\n\nYou can only control servants whine in human form, Decrepit Form, or Spirit Form.",
+			"effect": "Summon an umbral aegis to serve you.<br /><br />This is a bulky demon that specializes in tanking damage.<br /><br />You can only control servants whine in human form, Decrepit Form, or Spirit Form.",
 			"hide": null
 		},
 		{
@@ -6083,7 +6083,7 @@ const DEATH_SERVANT_SPEC_DATA = {
 			"recast": "30 seconds",
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "You regenerate 4 heath every 3.0 sec.\n\n\nThe target regenerates 9 health every 3.0 sec.",
+			"effect": "You regenerate 4 heath every 3.0 sec.<br /><br /><br />The target regenerates 9 health every 3.0 sec.",
 			"hide": null
 		},
 		{
@@ -6121,7 +6121,7 @@ const DEATH_SERVANT_SPEC_DATA = {
 			"recast": "1 minute 30 seconds",
 			"type": null,
 			"maxTarget": null,
-			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nThe target regains 11 power points.",
+			"effect": "Creates a cloud that affects everyone in the area.<br /><br />Cloud spell:<br />The target regains 11 power points.",
 			"hide": null
 		},
 		{
@@ -6140,7 +6140,7 @@ const DEATH_SERVANT_SPEC_DATA = {
 			"recast": null,
 			"type": null,
 			"maxTarget": null,
-			"effect": "Summon a fallen soultorn to serve you.\n\nThis servant uses matter magic to damage, snare, and weaken its foes for its master.\n\nYou can only control servants while in human form, Decrepit Form, or Spirit Form.",
+			"effect": "Summon a fallen soultorn to serve you.<br /><br />This servant uses matter magic to damage, snare, and weaken its foes for its master.<br /><br />You can only control servants while in human form, Decrepit Form, or Spirit Form.",
 			"hide": null
 		},
 		{
@@ -6175,7 +6175,7 @@ const DEATH_SERVANT_SPEC_DATA = {
 			"recast": "30 seconds",
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "You regenerate 16 health every 3.0 sec.\n\n\nThe target regenerates 27 health every 3.0 sec.",
+			"effect": "You regenerate 16 health every 3.0 sec.<br /><br /><br />The target regenerates 27 health every 3.0 sec.",
 			"hide": null
 		},
 		{
@@ -6213,7 +6213,7 @@ const DEATH_SERVANT_SPEC_DATA = {
 			"recast": "1 minute 30 seconds",
 			"type": null,
 			"maxTarget": null,
-			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nThe target regains 20 power points.",
+			"effect": "Creates a cloud that affects everyone in the area.<br /><br />Cloud spell:<br />The target regains 20 power points.",
 			"hide": null
 		},
 		{
@@ -6232,7 +6232,7 @@ const DEATH_SERVANT_SPEC_DATA = {
 			"recast": null,
 			"type": null,
 			"maxTarget": null,
-			"effect": "Summon a plated fiend to serve you.\n\nThis is a fast moving demon that specializes in physical offense.\n\nYou can only control servants while in human form, Decrepit Form, or Spirit Form.",
+			"effect": "Summon a plated fiend to serve you.<br /><br />This is a fast moving demon that specializes in physical offense.<br /><br />You can only control servants while in human form, Decrepit Form, or Spirit Form.",
 			"hide": null
 		},
 		{
@@ -6283,7 +6283,7 @@ const DEATH_SERVANT_SPEC_DATA = {
 			"recast": "30 seconds",
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "You regenerate 39 health every 3.0 sec.\n\n\nThe target regenerates 51 health every 3.0 sec.",
+			"effect": "You regenerate 39 health every 3.0 sec.<br /><br /><br />The target regenerates 51 health every 3.0 sec.",
 			"hide": null
 		},
 		{
@@ -6302,7 +6302,7 @@ const DEATH_SERVANT_SPEC_DATA = {
 			"recast": "2 seconds",
 			"type": null,
 			"maxTarget": null,
-			"effect": "Become a Ghostly Spirit. 10% of all damage you take instead heals your power, your power regeneration is greatly increased, and you see hidden opponents easier.\n\nAdditionally, your servants become highly resistant to damage and gain new abilities.",
+			"effect": "Become a Ghostly Spirit. 10% of all damage you take instead heals your power, your power regeneration is greatly increased, and you see hidden opponents easier.<br /><br />Additionally, your servants become highly resistant to damage and gain new abilities.",
 			"hide": null
 		},
 		{
@@ -6340,7 +6340,7 @@ const DEATH_SERVANT_SPEC_DATA = {
 			"recast": "1 minute 30 seconds",
 			"type": null,
 			"maxTarget": null,
-			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nThe target regains 28 power points.",
+			"effect": "Creates a cloud that affects everyone in the area.<br /><br />Cloud spell:<br />The target regains 28 power points.",
 			"hide": null
 		},
 		{
@@ -6359,7 +6359,7 @@ const DEATH_SERVANT_SPEC_DATA = {
 			"recast": null,
 			"type": null,
 			"maxTarget": null,
-			"effect": "Summon a loyal priest of Arawn to serve you.\n\nThis is a passive servant that supports its master's group.\n\nYou can only control servants in human form, Decrepit Form, or Spirit Form.",
+			"effect": "Summon a loyal priest of Arawn to serve you.<br /><br />This is a passive servant that supports its master's group.<br /><br />You can only control servants in human form, Decrepit Form, or Spirit Form.",
 			"hide": null
 		},
 		{
@@ -6394,7 +6394,7 @@ const DEATH_SERVANT_SPEC_DATA = {
 			"recast": "30 seconds",
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "You regenerate 51 health every 3.0 sec.\n\n\nThe target regenerates 61 health every 3.0 sec.",
+			"effect": "You regenerate 51 health every 3.0 sec.<br /><br /><br />The target regenerates 61 health every 3.0 sec.",
 			"hide": null
 		},
 		{
@@ -6432,7 +6432,7 @@ const DEATH_SERVANT_SPEC_DATA = {
 			"recast": "1 minute 30 seconds",
 			"type": null,
 			"maxTarget": null,
-			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nThe target regains 35 power points.",
+			"effect": "Creates a cloud that affects everyone in the area.<br /><br />Cloud spell:<br />The target regains 35 power points.",
 			"hide": null
 		},
 		{
@@ -6451,7 +6451,7 @@ const DEATH_SERVANT_SPEC_DATA = {
 			"recast": null,
 			"type": null,
 			"maxTarget": null,
-			"effect": "Summon a daemonic succubus to serve you.\n\nThe succubus will mesmerize its target.\n\nYou can only control servants while in human form, Decrepit Form, or Spirit Form.",
+			"effect": "Summon a daemonic succubus to serve you.<br /><br />The succubus will mesmerize its target.<br /><br />You can only control servants while in human form, Decrepit Form, or Spirit Form.",
 			"hide": null
 		},
 		{
@@ -6520,7 +6520,7 @@ const DEATH_SERVANT_SPEC_DATA = {
 			"recast": null,
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "Send an enemy pet fleeing in terror.\n\nWhile feared, pets are unable to be controled or released by their master.",
+			"effect": "Send an enemy pet fleeing in terror.<br /><br />While feared, pets are unable to be controled or released by their master.",
 			"hide": null
 		},
 		{
@@ -6558,7 +6558,7 @@ const DEATH_SERVANT_SPEC_DATA = {
 			"recast": "15 seconds",
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "A magical bolt shoots toward the target, exploding on impact for 23 spirit damage. Can be blocked.\n\nThis spell cannot be cast while in Chthonic Form.",
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 23 spirit damage. Can be blocked.<br /><br />This spell cannot be cast while in Chthonic Form.",
 			"hide": null
 		},
 		{
@@ -6631,7 +6631,7 @@ const DEATH_SERVANT_SPEC_DATA = {
 			"recast": null,
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "Send an enemy pet fleeing in terror.\n\nWhile feared, pets are unable to be controled or released by their master.",
+			"effect": "Send an enemy pet fleeing in terror.<br /><br />While feared, pets are unable to be controled or released by their master.",
 			"hide": null
 		},
 		{
@@ -6669,7 +6669,7 @@ const DEATH_SERVANT_SPEC_DATA = {
 			"recast": "15 seconds",
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "A magical bolt shoots toward the target, exploding on impact for 50 spirit damage. Can be blocked.\n\nThis spell cannot be cast while in Chthonic Form.",
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 50 spirit damage. Can be blocked.<br /><br />This spell cannot be cast while in Chthonic Form.",
 			"hide": null
 		},
 		{
@@ -6761,7 +6761,7 @@ const DEATH_SERVANT_SPEC_DATA = {
 			"recast": null,
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "Send an enemy pet fleeing in terror.\n\nWhile feared, pets are unable to be controlled or released by their master.",
+			"effect": "Send an enemy pet fleeing in terror.<br /><br />While feared, pets are unable to be controlled or released by their master.",
 			"hide": null
 		},
 		{
@@ -6799,7 +6799,7 @@ const DEATH_SERVANT_SPEC_DATA = {
 			"recast": "15 seconds",
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "A magical bolt shoots toward the target, exploding on impact for 156 spirit damage. Can be blocked.\n\nThis spell cannot be cast while in Chthonic Form.",
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 156 spirit damage. Can be blocked.<br /><br />This spell cannot be cast while in Chthonic Form.",
 			"hide": null
 		},
 		{
@@ -6888,7 +6888,7 @@ const DEATH_SERVANT_SPEC_DATA = {
 			"recast": null,
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "Send an enemy pet fleeing in terror.\n\nWhile feared, pets are unable to be controlled or released by their master.",
+			"effect": "Send an enemy pet fleeing in terror.<br /><br />While feared, pets are unable to be controlled or released by their master.",
 			"hide": null
 		},
 		{
@@ -6926,7 +6926,7 @@ const DEATH_SERVANT_SPEC_DATA = {
 			"recast": null,
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "A magical bolt shoots toward the target, exploding for 250 spirit damage. Can be blocked.\n\nThis spell cannot be cast while in Chthonic Form.",
+			"effect": "A magical bolt shoots toward the target, exploding for 250 spirit damage. Can be blocked.<br /><br />This spell cannot be cast while in Chthonic Form.",
 			"hide": null
 		},
 		{
@@ -7015,7 +7015,7 @@ const DEATH_SERVANT_SPEC_DATA = {
 			"recast": null,
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "Send an enemy pet fleeing in terror.\n\nWhile feared, pets are unable to be controlled or released by their master.",
+			"effect": "Send an enemy pet fleeing in terror.<br /><br />While feared, pets are unable to be controlled or released by their master.",
 			"hide": null
 		},
 		{
@@ -7053,7 +7053,7 @@ const DEATH_SERVANT_SPEC_DATA = {
 			"recast": "15 seconds",
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "A magical bolt shoots toward the target, exploding on impact for 317 spirit damage. Can be blocked.\n\nThis spell cannot be cast while in Chthonic Form.",
+			"effect": "A magical bolt shoots toward the target, exploding on impact for 317 spirit damage. Can be blocked.<br /><br />This spell cannot be cast while in Chthonic Form.",
 			"hide": null
 		},
 		{
@@ -7123,7 +7123,7 @@ const DEATH_SERVANT_SPEC_DATA = {
 			"recast": "10 minutes",
 			"type": "Spirit",
 			"maxTarget": 8,
-			"effect": "Call upon Arawn to conjure his evil army upon the battlefield.\n\nThe legion attacks all enemy targets in range for 45 seconds.\n\nYou can only control servants while in human form, Decrepit Form, or Spirit Form.",
+			"effect": "Call upon Arawn to conjure his evil army upon the battlefield.<br /><br />The legion attacks all enemy targets in range for 45 seconds.<br /><br />You can only control servants while in human form, Decrepit Form, or Spirit Form.",
 			"hide": null
 		}
 	]
@@ -8186,7 +8186,7 @@ const EARTH_MAGIC_SPEC_DATA = {
 			"recast": "6 seconds",
 			"type": "Matter",
 			"maxTarget": null,
-			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nDoes 68 matter damage to the target.",
+			"effect": "Creates a cloud that affects everyone in the area.<br /><br />Cloud spell:<br />Does 68 matter damage to the target.",
 			"hide": null
 		},
 		{
@@ -8414,7 +8414,7 @@ const EARTH_MAGIC_SPEC_DATA = {
 			"recast": "6 seconds",
 			"type": "Matter",
 			"maxTarget": null,
-			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nDoes 92 matter damage to the target.",
+			"effect": "Creates a cloud that affects everyone in the area.<br /><br />Cloud spell:<br />Does 92 matter damage to the target.",
 			"hide": null
 		},
 		{
@@ -8471,7 +8471,7 @@ const EARTH_MAGIC_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": null,
-			"effect": "Target's effective range is reduced by 35% for ranged attacks (archery and magic).\n\n\nDecreases the target's resistance to matter damage by 10%.",
+			"effect": "Target's effective range is reduced by 35% for ranged attacks (archery and magic).<br /><br /><br />Decreases the target's resistance to matter damage by 10%.",
 			"hide": null
 		},
 		{
@@ -8680,7 +8680,7 @@ const EARTH_MAGIC_SPEC_DATA = {
 			"recast": "6 seconds",
 			"type": "Matter",
 			"maxTarget": null,
-			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nDoes 124 matter damage to the target.",
+			"effect": "Creates a cloud that affects everyone in the area.<br /><br />Cloud spell:<br />Does 124 matter damage to the target.",
 			"hide": null
 		},
 		{
@@ -8775,7 +8775,7 @@ const EARTH_MAGIC_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": null,
-			"effect": "Target's effective range is reduced by 45% for ranged attacks (archery and magic).\n\n\nDecreases the target's resistance to matter damage by 10%.",
+			"effect": "Target's effective range is reduced by 45% for ranged attacks (archery and magic).<br /><br /><br />Decreases the target's resistance to matter damage by 10%.",
 			"hide": null
 		},
 		{
@@ -8908,7 +8908,7 @@ const EARTH_MAGIC_SPEC_DATA = {
 			"recast": "6 seconds",
 			"type": "Matter",
 			"maxTarget": null,
-			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nDoes 155 matter damage to the target.",
+			"effect": "Creates a cloud that affects everyone in the area.<br /><br />Cloud spell:<br />Does 155 matter damage to the target.",
 			"hide": null
 		},
 		{
@@ -8946,7 +8946,7 @@ const EARTH_MAGIC_SPEC_DATA = {
 			"recast": null,
 			"type": "Natter",
 			"maxTarget": null,
-			"effect": "Target's effective range is reduced by 55% for ranged attacks (archery and magic).\n\n\nDecreases the target's resistance to matter damage by 10%.",
+			"effect": "Target's effective range is reduced by 55% for ranged attacks (archery and magic).<br /><br /><br />Decreases the target's resistance to matter damage by 10%.",
 			"hide": null
 		},
 		{
@@ -9721,7 +9721,7 @@ const LIGHT_MAGIC_SPEC_DATA = {
 			"recast": "7 seconds",
 			"type": "Cold",
 			"maxTarget": null,
-			"effect": "Target's dexterity and quickness are reduced by 30.\n\n\nRadius: 350",
+			"effect": "Target's dexterity and quickness are reduced by 30.<br /><br /><br />Radius: 350",
 			"hide": null
 		},
 		{
@@ -9778,7 +9778,7 @@ const LIGHT_MAGIC_SPEC_DATA = {
 			"recast": "7 seconds",
 			"type": "Cold",
 			"maxTarget": null,
-			"effect": "Target's dexterity and quickness are reduced by 36.\n\n\nRadius: 350",
+			"effect": "Target's dexterity and quickness are reduced by 36.<br /><br /><br />Radius: 350",
 			"hide": null
 		},
 		{
@@ -9987,7 +9987,7 @@ const LIGHT_MAGIC_SPEC_DATA = {
 			"recast": "7 seconds",
 			"type": "Cold",
 			"maxTarget": null,
-			"effect": "Target's dexterity and quickness are reduced by 57.\n\n\nRadius: 350",
+			"effect": "Target's dexterity and quickness are reduced by 57.<br /><br /><br />Radius: 350",
 			"hide": null
 		},
 		{
@@ -10044,7 +10044,7 @@ const LIGHT_MAGIC_SPEC_DATA = {
 			"recast": "7 seconds",
 			"type": "Cold",
 			"maxTarget": null,
-			"effect": "Target's dexterity and quickness are reduced by 69.\n\n\nRadius: 350",
+			"effect": "Target's dexterity and quickness are reduced by 69.<br /><br /><br />Radius: 350",
 			"hide": null
 		},
 		{
@@ -11123,7 +11123,7 @@ const MANA_MAGIC_SPEC_DATA = {
 			"recast": "7 seconds",
 			"type": "Energy",
 			"maxTarget": null,
-			"effect": "Target's strength and constitution are reduced by 36.\n\n\nRadius: 350",
+			"effect": "Target's strength and constitution are reduced by 36.<br /><br /><br />Radius: 350",
 			"hide": null
 		},
 		{
@@ -11294,7 +11294,7 @@ const MANA_MAGIC_SPEC_DATA = {
 			"recast": "7 seconds",
 			"type": "Energy",
 			"maxTarget": null,
-			"effect": "Target's strength and constitution are reduced by 48.\n\n\nRadius: 350",
+			"effect": "Target's strength and constitution are reduced by 48.<br /><br /><br />Radius: 350",
 			"hide": null
 		},
 		{
@@ -11446,7 +11446,7 @@ const MANA_MAGIC_SPEC_DATA = {
 			"recast": "7 seconds",
 			"type": "Energy",
 			"maxTarget": null,
-			"effect": "Target's strength and constitution are reduced by 60.\n\n\nRadius: 350",
+			"effect": "Target's strength and constitution are reduced by 60.<br /><br /><br />Radius: 350",
 			"hide": null
 		},
 		{
@@ -11598,7 +11598,7 @@ const MANA_MAGIC_SPEC_DATA = {
 			"recast": "7 seconds",
 			"type": "Energy",
 			"maxTarget": null,
-			"effect": "Target's strength and constitution are reduced by 73.\n\n\nRadius: 350",
+			"effect": "Target's strength and constitution are reduced by 73.<br /><br /><br />Radius: 350",
 			"hide": null
 		},
 		{
@@ -12960,7 +12960,7 @@ const PAINWORKING_SPEC_DATA = {
 			"recast": "1 minute 30 seconds",
 			"type": "Cold",
 			"maxTarget": 16,
-			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nDoes 4 cold damage to the target.\n\n\nRadius: 200"
+			"effect": "Creates a cloud that affects everyone in the area.<br /><br />Cloud spell:<br />Does 4 cold damage to the target.<br /><br /><br />Radius: 200"
 		},
 		{
 			"class": ["Necromancer"],
@@ -13014,7 +13014,7 @@ const PAINWORKING_SPEC_DATA = {
 			"recast": "2 seconds",
 			"type": null,
 			"maxTarget": null,
-			"effect": "Become a Chthonic Knight. Your health is increased by 30%, your melee absorbtion by 20, secondary magic resistances by 15%, and you gain the ability to parry attacks.\n\nAdditionally, your armor factor and weaponskill are both greatly increased"
+			"effect": "Become a Chthonic Knight. Your health is increased by 30%, your melee absorbtion by 20, secondary magic resistances by 15%, and you gain the ability to parry attacks.<br /><br />Additionally, your armor factor and weaponskill are both greatly increased"
 		},
 		{
 			"class": ["Necromancer"],
@@ -13032,7 +13032,7 @@ const PAINWORKING_SPEC_DATA = {
 			"recast": "1 minute 30 seconds",
 			"type": "Cold",
 			"maxTarget": 16,
-			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nDoes 18 cold damage to the target.\n\n\nRadius: 200"
+			"effect": "Creates a cloud that affects everyone in the area.<br /><br />Cloud spell:<br />Does 18 cold damage to the target.<br /><br /><br />Radius: 200"
 		},
 		{
 			"class": ["Necromancer"],
@@ -13086,7 +13086,7 @@ const PAINWORKING_SPEC_DATA = {
 			"recast": "1 minute 30 seconds",
 			"type": "Cold",
 			"maxTarget": 16,
-			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nDoes 27 cold damage to the target.\n\n\nRadius: 200"
+			"effect": "Creates a cloud that affects everyone in the area.<br /><br />Cloud spell:<br />Does 27 cold damage to the target.<br /><br /><br />Radius: 200"
 		},
 		{
 			"class": ["Necromancer"],
@@ -13140,7 +13140,7 @@ const PAINWORKING_SPEC_DATA = {
 			"recast": "1 minute 30 seconds",
 			"type": "Cold",
 			"maxTarget": 16,
-			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nDoes 72 cold damage to the target.\n\n\nRadius: 200"
+			"effect": "Creates a cloud that affects everyone in the area.<br /><br />Cloud spell:<br />Does 72 cold damage to the target.<br /><br /><br />Radius: 200"
 		},
 		{
 			"class": ["Necromancer"],
@@ -13194,7 +13194,7 @@ const PAINWORKING_SPEC_DATA = {
 			"recast": "1 minute 30 seconds",
 			"type": "Cold",
 			"maxTarget": 16,
-			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nDoes 112 cold damage to the target.\n\n\nRadius: 200"
+			"effect": "Creates a cloud that affects everyone in the area.<br /><br />Cloud spell:<br />Does 112 cold damage to the target.<br /><br /><br />Radius: 200"
 		},
 		{
 			"class": ["Necromancer"],
@@ -13250,7 +13250,7 @@ const PAINWORKING_SPEC_DATA = {
 			"recast": null,
 			"type": "Cold",
 			"maxTarget": null,
-			"effect": "Summon a Chthonic blade of an appropriate level. The damage type of this weapon is Cold.\n\nThis spell will summon a blade to match your level."
+			"effect": "Summon a Chthonic blade of an appropriate level. The damage type of this weapon is Cold.<br /><br />This spell will summon a blade to match your level."
 		},
 		{
 			"class": ["Necromancer"],
@@ -13301,7 +13301,7 @@ const PAINWORKING_SPEC_DATA = {
 			"recast": "1 minute",
 			"type": "Cold",
 			"maxTarget": null,
-			"effect": "Target takes 2 cold damage every 2.0 sec.\n\n\nRadius: 250"
+			"effect": "Target takes 2 cold damage every 2.0 sec.<br /><br /><br />Radius: 250"
 		},
 		{
 			"class": ["Necromancer"],
@@ -13334,7 +13334,7 @@ const PAINWORKING_SPEC_DATA = {
 			"recast": "1 minute",
 			"type": "Cold",
 			"maxTarget": null,
-			"effect": "Snares the target by 90%\n\nIgnores root immunity and does not provide an immunity."
+			"effect": "Snares the target by 90%<br /><br />Ignores root immunity and does not provide an immunity."
 		},
 		{
 			"class": ["Necromancer"],
@@ -13385,7 +13385,7 @@ const PAINWORKING_SPEC_DATA = {
 			"recast": "1 minute",
 			"type": "Cold",
 			"maxTarget": null,
-			"effect": "Target takes 7 cold damage every 2.0 sec.\n\nYou must be in Chthonic Form to use this spell.\n\nTarget's movement speed is slowed by 5%. Stacks with snares and does not provide an immunity.\nRadius: 250\n\n\nRadius: 250"
+			"effect": "Target takes 7 cold damage every 2.0 sec.<br /><br />You must be in Chthonic Form to use this spell.<br /><br />Target's movement speed is slowed by 5%. Stacks with snares and does not provide an immunity.<br />Radius: 250<br /><br /><br />Radius: 250"
 		},
 		{
 			"class": ["Necromancer"],
@@ -13418,7 +13418,7 @@ const PAINWORKING_SPEC_DATA = {
 			"recast": "1 minute",
 			"type": "Cold",
 			"maxTarget": null,
-			"effect": "Snares the target by 90%.\n\nIgnores root immunity and does not provide an immunity."
+			"effect": "Snares the target by 90%.<br /><br />Ignores root immunity and does not provide an immunity."
 		},
 		{
 			"class": ["Necromancer"],
@@ -13466,7 +13466,7 @@ const PAINWORKING_SPEC_DATA = {
 			"recast": "30 seconds",
 			"type": "Cold",
 			"maxTarget": null,
-			"effect": "Target takes 12 cold damage every 2.0 sec.\n\nYou must be in Chthonic Form to use this spell.\n\nTarget's movement speed is slowed by 10%. Stacks with snares and does not provide an immunity.\nRadius: 250\n\n\nRadius: 250"
+			"effect": "Target takes 12 cold damage every 2.0 sec.<br /><br />You must be in Chthonic Form to use this spell.<br /><br />Target's movement speed is slowed by 10%. Stacks with snares and does not provide an immunity.<br />Radius: 250<br /><br /><br />Radius: 250"
 		},
 		{
 			"class": ["Necromancer"],
@@ -13499,7 +13499,7 @@ const PAINWORKING_SPEC_DATA = {
 			"recast": "1 minute",
 			"type": "Cold",
 			"maxTarget": null,
-			"effect": "Snares the target by 90%.\n\nIgnores root immunity and does not provide an immunity."
+			"effect": "Snares the target by 90%.<br /><br />Ignores root immunity and does not provide an immunity."
 		},
 		{
 			"class": ["Necromancer"],
@@ -13547,7 +13547,7 @@ const PAINWORKING_SPEC_DATA = {
 			"recast": "30 seconds",
 			"type": "Cold",
 			"maxTarget": null,
-			"effect": "Target takes 20 cold damage every 2.0 sec.\n\nYou must be in Chthonic Form to use this spell.\n\nTarget's movement speed is slowed by 15%. Stacks with snares and does not provide an immunity.\nRadius: 250\n\n\nRadius: 250"
+			"effect": "Target takes 20 cold damage every 2.0 sec.<br /><br />You must be in Chthonic Form to use this spell.<br /><br />Target's movement speed is slowed by 15%. Stacks with snares and does not provide an immunity.<br />Radius: 250<br /><br /><br />Radius: 250"
 		},
 		{
 			"class": ["Necromancer"],
@@ -13580,7 +13580,7 @@ const PAINWORKING_SPEC_DATA = {
 			"recast": "1 minute",
 			"type": "Cold",
 			"maxTarget": null,
-			"effect": "Snares the target by 90%.\n\nIgnores root immunity and does not provide an immunity."
+			"effect": "Snares the target by 90%.<br /><br />Ignores root immunity and does not provide an immunity."
 		},
 		{
 			"class": ["Necromancer"],
@@ -13631,7 +13631,7 @@ const PAINWORKING_SPEC_DATA = {
 			"recast": "20 seconds",
 			"type": "Cold",
 			"maxTarget": null,
-			"effect": "Target takes 43 cold damage every 1.5 sec.\n\nYou must be in Chthonic Form to use this spell.\n\nTarget's movement speed is slowed by 25%. Stacks with snares and does not provide an immunity.\nRadius: 250\n\n\nRadius: 250"
+			"effect": "Target takes 43 cold damage every 1.5 sec.<br /><br />You must be in Chthonic Form to use this spell.<br /><br />Target's movement speed is slowed by 25%. Stacks with snares and does not provide an immunity.<br />Radius: 250<br /><br /><br />Radius: 250"
 		},
 		{
 			"class": ["Necromancer"],
@@ -13667,7 +13667,7 @@ const PAINWORKING_SPEC_DATA = {
 			"recast": null,
 			"type": "Cold",
 			"maxTarget": null,
-			"effect": "Summon Nethersbane, the evil blade used by Arawn.\n\nThe damage type of Nethersbane is Cold."
+			"effect": "Summon Nethersbane, the evil blade used by Arawn.<br /><br />The damage type of Nethersbane is Cold."
 		}
 	],
 	"styles": [
@@ -13753,7 +13753,7 @@ const PAINWORKING_SPEC_DATA = {
 			"dmg": "Medium",
 			"hit": "No Bonus",
 			"def": "Medium Bonus",
-			"effect": "Strikes all enemies in front of you for 12 cold damage.\nRadius: 125"
+			"effect": "Strikes all enemies in front of you for 12 cold damage.<br />Radius: 125"
 		},
 		{
 			"class": ["Necromancer"],
@@ -14178,7 +14178,7 @@ const FIRE_MAGIC_SPEC_DATA = {
 			"recast": "5 minutes",
 			"type": "Heat",
 			"maxTarget": null,
-			"effect": "Restores 200 health every 1.5 seconds and become immune to melee attacks. You may still be struck by magical damage in this state.\n\nYou cannot cast spells or move while under this effect. You may cancel the cocoon at any time.\n\nGrapples the target. Target becomes immune to all damage, but may still perform melee attacks.\nYou regenerate 200 health every 1.5 sec.",
+			"effect": "Restores 200 health every 1.5 seconds and become immune to melee attacks. You may still be struck by magical damage in this state.<br /><br />You cannot cast spells or move while under this effect. You may cancel the cocoon at any time.<br /><br />Grapples the target. Target becomes immune to all damage, but may still perform melee attacks.<br />You regenerate 200 health every 1.5 sec.",
 			"hide": null
 		},
 		{
@@ -14915,7 +14915,7 @@ const SOULRENDING_SPEC_DATA = {
 			"recast": "20 seconds",
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "Target's acuity is reduced by 21.\n\n\nThe target regains 5% power points.",
+			"effect": "Target's acuity is reduced by 21.<br /><br /><br />The target regains 5% power points.",
 			"hide": 14
 		},
 		{
@@ -15143,7 +15143,7 @@ const SOULRENDING_SPEC_DATA = {
 			"recast": "20 seconds",
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "Target's acuity is reduced by 33.\n\n\nThe target regains 5% power points.'",
+			"effect": "Target's acuity is reduced by 33.<br /><br /><br />The target regains 5% power points.'",
 			"hide": 24
 		},
 		{
@@ -15352,7 +15352,7 @@ const SOULRENDING_SPEC_DATA = {
 			"recast": "20 seconds",
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "Target's acuity is reduced by 43.\n\n\nThe target regains 5% power points.",
+			"effect": "Target's acuity is reduced by 43.<br /><br /><br />The target regains 5% power points.",
 			"hide": 35
 		},
 		{
@@ -15580,7 +15580,7 @@ const SOULRENDING_SPEC_DATA = {
 			"recast": "20 seconds",
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "Target's acuity is reduced by 58.\n\n\nThe target regains 5% power points.",
+			"effect": "Target's acuity is reduced by 58.<br /><br /><br />The target regains 5% power points.",
 			"hide": 46
 		},
 		{
@@ -15656,7 +15656,7 @@ const SOULRENDING_SPEC_DATA = {
 			"recast": "8 seconds",
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "Reduces the target's absorption (ABS) by 13%.\n\n\nRecduces the target's absorption (ABS) by 18%.",
+			"effect": "Reduces the target's absorption (ABS) by 13%.<br /><br /><br />Recduces the target's absorption (ABS) by 18%.",
 			"hide": 46
 		},
 		{
@@ -15694,7 +15694,7 @@ const SOULRENDING_SPEC_DATA = {
 			"recast": "5 minutes",
 			"type": "Spirit",
 			"maxTarget": 16,
-			"effect": "Causes enemy monsters up to level 0 to flee in terror.\n\n\nCauses enemy monsters up to level 0 to flee in terror.\n\n\nRadius: 350",
+			"effect": "Causes enemy monsters up to level 0 to flee in terror.<br /><br /><br />Causes enemy monsters up to level 0 to flee in terror.<br /><br /><br />Radius: 350",
 			"hide": null
 		},
 		{
@@ -15846,7 +15846,7 @@ const SOULRENDING_SPEC_DATA = {
 			"recast": "8 seconds",
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "Reduces the target's absorption (ABS) by 15%.\n\n\nReduces the target's absorption (ABS) by 22%.",
+			"effect": "Reduces the target's absorption (ABS) by 15%.<br /><br /><br />Reduces the target's absorption (ABS) by 22%.",
 			"hide": null
 		},
 		{
@@ -15865,7 +15865,7 @@ const SOULRENDING_SPEC_DATA = {
 			"recast": "20 seconds",
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "Target's acuity is reduced by 69.\n\n\nYou and all group members within 1000 radius gain 10% power.",
+			"effect": "Target's acuity is reduced by 69.<br /><br /><br />You and all group members within 1000 radius gain 10% power.",
 			"hide": null
 		},
 		{
@@ -15973,7 +15973,7 @@ const SPIRIT_MAGIC_SPEC_DATA = {
 			"recast": null,
 			"type": null,
 			"maxTarget": null,
-			"effect": "Summon a magical simulacrum to serve you.\n\nThis simulacrum specializes in physical offense and causes high physical damage.\n\nHowever, it is weak to both physical and magical attacks."
+			"effect": "Summon a magical simulacrum to serve you.<br /><br />This simulacrum specializes in physical offense and causes high physical damage.<br /><br />However, it is weak to both physical and magical attacks."
 		},
 		{
 			"class": ["Cabalist"],
@@ -16009,7 +16009,7 @@ const SPIRIT_MAGIC_SPEC_DATA = {
 			"recast": null,
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "Summon a magical simulacrum to serve you.\n\nThis simulacrum specializes in magical attacks. It will weaken its target's body resistances.\n\nThis simulacrum's frailty causes it to take high damage."
+			"effect": "Summon a magical simulacrum to serve you.<br /><br />This simulacrum specializes in magical attacks. It will weaken its target's body resistances.<br /><br />This simulacrum's frailty causes it to take high damage."
 		},
 		{
 			"class": ["Cabalist"],
@@ -16045,7 +16045,7 @@ const SPIRIT_MAGIC_SPEC_DATA = {
 			"recast": null,
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "Summon a magical simulacrum to serve you.\n\nThis simulacrum specializes in group support and will restore the group's health and endurance.\n\nAdditionally, this simulacrum will increase the group's health regeneration."
+			"effect": "Summon a magical simulacrum to serve you.<br /><br />This simulacrum specializes in group support and will restore the group's health and endurance.<br /><br />Additionally, this simulacrum will increase the group's health regeneration."
 		},
 		{
 			"class": ["Cabalist"],
@@ -16099,7 +16099,7 @@ const SPIRIT_MAGIC_SPEC_DATA = {
 			"recast": null,
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "Summon a magical simulacrum to serve you.\n\nThis simulacrum specializes in enemy harrassment and will disease and snare its target.\n\nAdditionally, this simulacrum has a small chance to double strike."
+			"effect": "Summon a magical simulacrum to serve you.<br /><br />This simulacrum specializes in enemy harrassment and will disease and snare its target.<br /><br />Additionally, this simulacrum has a small chance to double strike."
 		},
 		{
 			"class": ["Cabalist"],
@@ -16135,7 +16135,7 @@ const SPIRIT_MAGIC_SPEC_DATA = {
 			"recast": null,
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "Summon a magical simulacrum to serve you.\n\nThis simulacrum specializes in tanking damage.\n\nAdditionally, this siumlacrum will reduce the physical damage of its enemies."
+			"effect": "Summon a magical simulacrum to serve you.<br /><br />This simulacrum specializes in tanking damage.<br /><br />Additionally, this siumlacrum will reduce the physical damage of its enemies."
 		},
 		{
 			"class": ["Cabalist"],
@@ -16170,7 +16170,7 @@ const SPIRIT_MAGIC_SPEC_DATA = {
 			"recast": null,
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "Releases the target and all other turrets you have summoned from the area.\n\n10% of the power used in summoning the pet is returned to the caster."
+			"effect": "Releases the target and all other turrets you have summoned from the area.<br /><br />10% of the power used in summoning the pet is returned to the caster."
 		},
 		{
 			"class": ["Cabalist"],
@@ -16188,7 +16188,7 @@ const SPIRIT_MAGIC_SPEC_DATA = {
 			"recast": null,
 			"type": null,
 			"maxTarget": null,
-			"effect": "Sacrifices your simulacrum, reducing all damage taken by 10%.\n\nYou cannot summon a simulacrum while absorbing its power."
+			"effect": "Sacrifices your simulacrum, reducing all damage taken by 10%.<br /><br />You cannot summon a simulacrum while absorbing its power."
 		},
 		{
 			"class": ["Cabalist"],
@@ -16203,7 +16203,7 @@ const SPIRIT_MAGIC_SPEC_DATA = {
 			"recast": null,
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "Releases the target and all other turrest you have summoned from the area.\n\n25% of the power used in summoning the pet is returned."
+			"effect": "Releases the target and all other turrest you have summoned from the area.<br /><br />25% of the power used in summoning the pet is returned."
 		},
 		{
 			"class": ["Cabalist"],
@@ -16221,7 +16221,7 @@ const SPIRIT_MAGIC_SPEC_DATA = {
 			"recast": null,
 			"type": null,
 			"maxTarget": null,
-			"effect": "Sacrifices your simulacrum, reducing all damage taken by 10% in addition to increasing your health and armor by 10%.\n\nYou cannot summon a simulacrum while absorbing its power."
+			"effect": "Sacrifices your simulacrum, reducing all damage taken by 10% in addition to increasing your health and armor by 10%.<br /><br />You cannot summon a simulacrum while absorbing its power."
 		},
 		{
 			"class": ["Cabalist"],
@@ -16236,7 +16236,7 @@ const SPIRIT_MAGIC_SPEC_DATA = {
 			"recast": null,
 			"type": "Spirit",
 			"maxTarget": null,
-			"effect": "Releases the target and all other turrets you have summoned from the area.\n\n50% of the power used in summoning the pet is returned to the caster."
+			"effect": "Releases the target and all other turrets you have summoned from the area.<br /><br />50% of the power used in summoning the pet is returned to the caster."
 		},
 		{
 			"class": ["Cabalist"],
@@ -16251,7 +16251,7 @@ const SPIRIT_MAGIC_SPEC_DATA = {
 			"recast": null,
 			"type": null,
 			"maxTarget": null,
-			"effect": "Sacrifices your simulacrum, reducing all damage taken by 10%, increases your health and armor by 10%, and reduce root effects by 25%.\n\nYou cannot summon a simulacrum while absorbing its power."
+			"effect": "Sacrifices your simulacrum, reducing all damage taken by 10%, increases your health and armor by 10%, and reduce root effects by 25%.<br /><br />You cannot summon a simulacrum while absorbing its power."
 		},
 		{
 			"class": ["Cabalist"],
@@ -16338,7 +16338,7 @@ const SPIRIT_MAGIC_SPEC_DATA = {
 			"recast": null,
 			"type": null,
 			"maxTarget": null,
-			"effect": "Sacrifices your simulacrum, reducing all damage taken by 10%, increase your health and armor by 10%, reduced root effects by 25%, and slow melee attackers by 10%.\n\nYou cannot summon a simulacrum while absorbing its power."
+			"effect": "Sacrifices your simulacrum, reducing all damage taken by 10%, increase your health and armor by 10%, reduced root effects by 25%, and slow melee attackers by 10%.<br /><br />You cannot summon a simulacrum while absorbing its power."
 		},
 		{
 			"class": ["Cabalist"],
@@ -16407,7 +16407,7 @@ const SPIRIT_MAGIC_SPEC_DATA = {
 			"recast": null,
 			"type": null,
 			"maxTarget": null,
-			"effect": "Releases the target and all other turrets you have summoned from the area.\n\n150% of the power used in summoning the pet is returned to the caster."
+			"effect": "Releases the target and all other turrets you have summoned from the area.<br /><br />150% of the power used in summoning the pet is returned to the caster."
 		},
 		{
 			"class": ["Cabalist"],
@@ -16425,7 +16425,7 @@ const SPIRIT_MAGIC_SPEC_DATA = {
 			"recast": null,
 			"type": null,
 			"maxTarget": null,
-			"effect": "Sacrfices your simulacrum, reducing all damage taken by 10%, increase your health and AF by 10%, reduce root effects by 25%, slow melee attackers by 10%, and increase your magic damage by 15%.\n\nYou cannot summon a simulacrum while absorbing its power."
+			"effect": "Sacrfices your simulacrum, reducing all damage taken by 10%, increase your health and AF by 10%, reduce root effects by 25%, slow melee attackers by 10%, and increase your magic damage by 15%.<br /><br />You cannot summon a simulacrum while absorbing its power."
 		},
 		{
 			"class": ["Cabalist"],
@@ -16529,7 +16529,7 @@ const VERDANT_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": 8,
-			"effect": "Summons a turret to serve the caster.\nTurret spell: increases the target's resistance to heat, cold and matter damage by 3.\n\nRadius: 350\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the caster.<br />Turret spell: increases the target's resistance to heat, cold and matter damage by 3.<br /><br />Radius: 350<br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -16586,7 +16586,7 @@ const VERDANT_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": 8,
-			"effect": "Summons a turret to serve the caster.\nTurret spell: Increases the target's resistance to body, spirit and energy damage by 3.\n\nRadius: 350\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the caster.<br />Turret spell: Increases the target's resistance to body, spirit and energy damage by 3.<br /><br />Radius: 350<br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -16643,7 +16643,7 @@ const VERDANT_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": 8,
-			"effect": "Summons a turret to serve the caster.\nTurret spell: increases the target's resistance to heat, cold and matter damage by 6.\n\nRadius: 350\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the caster.<br />Turret spell: increases the target's resistance to heat, cold and matter damage by 6.<br /><br />Radius: 350<br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -16700,7 +16700,7 @@ const VERDANT_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": 8,
-			"effect": "Summons a turret to serve the caster.\nTurret spell: Increases the target's resistance to body, spirit and energy damage by 6.\n\nRadius: 350\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the caster.<br />Turret spell: Increases the target's resistance to body, spirit and energy damage by 6.<br /><br />Radius: 350<br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -16776,7 +16776,7 @@ const VERDANT_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": 8,
-			"effect": "Summons a turret to serve the caster.\nTurret spell: Increases the target's resistance to heat, cold and matter damage by 9.\n\nRadius: 350\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the caster.<br />Turret spell: Increases the target's resistance to heat, cold and matter damage by 9.<br /><br />Radius: 350<br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -16852,7 +16852,7 @@ const VERDANT_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": 8,
-			"effect": "Summons a turret to serve the caster.\nTurret spell: Increases the target's resistance to body, spirit and energy damage by 9.\n\nRadius: 350\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the caster.<br />Turret spell: Increases the target's resistance to body, spirit and energy damage by 9.<br /><br />Radius: 350<br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -16928,7 +16928,7 @@ const VERDANT_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": 8,
-			"effect": "Summons a turret to serve the caster.\nTurret spell: Increases the target's resistance to heat, cold and matter damage by 12.\n\nRadius: 350\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the caster.<br />Turret spell: Increases the target's resistance to heat, cold and matter damage by 12.<br /><br />Radius: 350<br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -16985,7 +16985,7 @@ const VERDANT_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Body",
 			"maxTarget": 8,
-			"effect": "Summons a turret to serve the caster.\nTurret spell: Increases the target's resistance to body, spirit and energy damage by 12.\n\nRadius: 350\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the caster.<br />Turret spell: Increases the target's resistance to body, spirit and energy damage by 12.<br /><br />Radius: 350<br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		}
 	],
@@ -17006,7 +17006,7 @@ const VERDANT_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": null,
-			"effect": "Pet command:\nDoes 5 matter damage to the target.\n\nRadius: 350",
+			"effect": "Pet command:<br />Does 5 matter damage to the target.<br /><br />Radius: 350",
 			"hide": null
 		},
 		{
@@ -17025,7 +17025,7 @@ const VERDANT_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": null,
-			"effect": "Pet command:\nDoes 16 matter damage to the target.\n\nRadius: 350",
+			"effect": "Pet command:<br />Does 16 matter damage to the target.<br /><br />Radius: 350",
 			"hide": null
 		},
 		{
@@ -17044,7 +17044,7 @@ const VERDANT_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": null,
-			"effect": "Summons a pet to serve the caster.\nPet spell: Taunts target, increasing your threat against it by 52.\n\nAffects monsters up to 88% of your level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a pet to serve the caster.<br />Pet spell: Taunts target, increasing your threat against it by 52.<br /><br />Affects monsters up to 88% of your level, to a maximum of level 50.<br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -17063,7 +17063,7 @@ const VERDANT_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": null,
-			"effect": "Pet command:\nDoes 31 matter damage to the target.\n\nRadius: 350",
+			"effect": "Pet command:<br />Does 31 matter damage to the target.<br /><br />Radius: 350",
 			"hide": null
 		},
 		{
@@ -17101,7 +17101,7 @@ const VERDANT_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": null,
-			"effect": "Pet command:\nDoes 46 matter damage to the target.",
+			"effect": "Pet command:<br />Does 46 matter damage to the target.",
 			"hide": null
 		},
 		{
@@ -17120,7 +17120,7 @@ const VERDANT_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": null,
-			"effect": "Summons a pet to serve the caster.\nPet spell: Taunts target, increasing your threat against it by 109.\n\nAffects monsters up to 88% of your level, to a maximum of level 50.\n\n\nAnimist must bee within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a pet to serve the caster.<br />Pet spell: Taunts target, increasing your threat against it by 109.<br /><br />Affects monsters up to 88% of your level, to a maximum of level 50.<br /><br /><br />Animist must bee within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -17139,7 +17139,7 @@ const VERDANT_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": 8,
-			"effect": "Summons a turret to serve the caster.\nTurret spell: Target gains a temporary health buffer that absorbs 25% of the physical damage dealt, up to a maximum of 10 damage.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the caster.<br />Turret spell: Target gains a temporary health buffer that absorbs 25% of the physical damage dealt, up to a maximum of 10 damage.<br /><br /><br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -17158,7 +17158,7 @@ const VERDANT_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": null,
-			"effect": "Pet command:\nDoes 62 matter damage to the target.\n\nRadius: 350",
+			"effect": "Pet command:<br />Does 62 matter damage to the target.<br /><br />Radius: 350",
 			"hide": null
 		},
 		{
@@ -17215,7 +17215,7 @@ const VERDANT_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": null,
-			"effect": "Summons a pet to serve the caster.\nPet spell: Taunts target, increasing your threat against it by 184.\n\nAffects monsters by 88% of your level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a pet to serve the caster.<br />Pet spell: Taunts target, increasing your threat against it by 184.<br /><br />Affects monsters by 88% of your level, to a maximum of level 50.<br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -17234,7 +17234,7 @@ const VERDANT_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": null,
-			"effect": "Pet command\nDoes 81 matter damage to the target.\n\nRadius: 350",
+			"effect": "Pet command<br />Does 81 matter damage to the target.<br /><br />Radius: 350",
 			"hide": null
 		},
 		{
@@ -17253,7 +17253,7 @@ const VERDANT_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": 8,
-			"effect": "Summons a turret to serve the caster.\nTurret spell: Target gains a temporary health buffer that absorbs 25% of the physical damage dealt, up to a maximum of 20 damage.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the caster.<br />Turret spell: Target gains a temporary health buffer that absorbs 25% of the physical damage dealt, up to a maximum of 20 damage.<br /><br /><br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -17310,7 +17310,7 @@ const VERDANT_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": null,
-			"effect": "Pet command:\nDoes 102 matter damage to the target.\n\nRadius: 350",
+			"effect": "Pet command:<br />Does 102 matter damage to the target.<br /><br />Radius: 350",
 			"hide": null
 		},
 		{
@@ -17329,7 +17329,7 @@ const VERDANT_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": null,
-			"effect": "Summons a pet to serve the caster.\nPet spell: Taunts target, increasing your threat against it by 280.\n\nAffects monsters up to 88% of your level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a pet to serve the caster.<br />Pet spell: Taunts target, increasing your threat against it by 280.<br /><br />Affects monsters up to 88% of your level, to a maximum of level 50.<br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -17348,7 +17348,7 @@ const VERDANT_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": 8,
-			"effect": "Summons a turret to serve the caster.\nTurret spell: Target gains a temporary health buffer that absorbs 25% of the physical damage dealt, up to a maximum of 30 damage.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the caster.<br />Turret spell: Target gains a temporary health buffer that absorbs 25% of the physical damage dealt, up to a maximum of 30 damage.<br /><br /><br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -17405,7 +17405,7 @@ const VERDANT_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": null,
-			"effect": "Pet command:\nDoes 137 matter damage to the target.\n\nRadius: 350",
+			"effect": "Pet command:<br />Does 137 matter damage to the target.<br /><br />Radius: 350",
 			"hide": null
 		},
 		{
@@ -17424,7 +17424,7 @@ const VERDANT_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": null,
-			"effect": "Summons a pet to serve the caster.\nPet spell: Taunts target, increasing your threat against it by 387.\n\nAffects monsters up to 88% of level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a pet to serve the caster.<br />Pet spell: Taunts target, increasing your threat against it by 387.<br /><br />Affects monsters up to 88% of level, to a maximum of level 50.<br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -17462,7 +17462,7 @@ const VERDANT_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": 8,
-			"effect": "Summons a turret to serve the caster.\nTurret spell: Target gains a temporary health buffer that absorbs 25% of the physical damage dealt, up to a maximum of 40 damage.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the caster.<br />Turret spell: Target gains a temporary health buffer that absorbs 25% of the physical damage dealt, up to a maximum of 40 damage.<br /><br /><br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -17519,7 +17519,7 @@ const VERDANT_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": null,
-			"effect": "Summons a pet to serve the caster.\nPet spell: Taunts target. increasing your threat against it by 503.\n\nAffects monsters up to 88% of your level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a pet to serve the caster.<br />Pet spell: Taunts target. increasing your threat against it by 503.<br /><br />Affects monsters up to 88% of your level, to a maximum of level 50.<br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -17557,7 +17557,7 @@ const VERDANT_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": null,
-			"effect": "Pet command:\nDoes 183 matter damage to the target.\n\nRadius: 350",
+			"effect": "Pet command:<br />Does 183 matter damage to the target.<br /><br />Radius: 350",
 			"hide": null
 		},
 		{
@@ -17576,7 +17576,7 @@ const VERDANT_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": null,
 			"maxTarget": null,
-			"effect": "Summons a pet to serve the caster.\nAffects monsters up to your level, to a maximum of level 50.",
+			"effect": "Summons a pet to serve the caster.<br />Affects monsters up to your level, to a maximum of level 50.",
 			"hide": null
 		},
 		{
@@ -17633,7 +17633,7 @@ const VERDANT_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": 8,
-			"effect": "Summons a turret to serve the caster.\nTurret spell: Target gains a temporary health buffer that absorbs 25% of the physical damage dealt, up to a maximum of 50 damage.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the caster.<br />Turret spell: Target gains a temporary health buffer that absorbs 25% of the physical damage dealt, up to a maximum of 50 damage.<br /><br /><br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -17690,7 +17690,7 @@ const VERDANT_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": null,
-			"effect": "Pet command:\nDoes 225 matter damage to the target.\n\nRadius: 350",
+			"effect": "Pet command:<br />Does 225 matter damage to the target.<br /><br />Radius: 350",
 			"hide": null
 		},
 		{
@@ -17709,7 +17709,7 @@ const VERDANT_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": null,
-			"effect": "Summons a pet to serve the caster.\nPet spell: Taunts target, increasing your threat against it by 725.\n\nAffects monsters up to 88% of your level, to a maximum of level 50.\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a pet to serve the caster.<br />Pet spell: Taunts target, increasing your threat against it by 725.<br /><br />Affects monsters up to 88% of your level, to a maximum of level 50.<br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		},
 		{
@@ -17728,7 +17728,7 @@ const VERDANT_PATH_SPEC_DATA = {
 			"recast": null,
 			"type": "Matter",
 			"maxTarget": 8,
-			"effect": "Summons a turret to serve the caster.\nTurret spell: Target gains a temporary health buffer that absorbs 25% of the physical damage dealt, up to a maximum of 60 damage.\n\n\n\n\nAnimist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
+			"effect": "Summons a turret to serve the caster.<br />Turret spell: Target gains a temporary health buffer that absorbs 25% of the physical damage dealt, up to a maximum of 60 damage.<br /><br /><br /><br /><br />Animist must be within 300 units of the ground-target when initially summoned on a keep roof or the turret will die.",
 			"hide": null
 		}
 	]
@@ -18294,7 +18294,7 @@ const VOID_MAGIC_SPEC_DATA = {
 			"recast": "6 seconds",
 			"type": "Energy",
 			"maxTarget": null,
-			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nDoes 61 cold damage to the target.",
+			"effect": "Creates a cloud that affects everyone in the area.<br /><br />Cloud spell:<br />Does 61 cold damage to the target.",
 			"hide": null
 		},
 		{
@@ -18370,7 +18370,7 @@ const VOID_MAGIC_SPEC_DATA = {
 			"recast": "6 seconds",
 			"type": "Energy",
 			"maxTarget": null,
-			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nDOes 85 cold damage to the target.",
+			"effect": "Creates a cloud that affects everyone in the area.<br /><br />Cloud spell:<br />DOes 85 cold damage to the target.",
 			"hide": null
 		},
 		{
@@ -18522,7 +18522,7 @@ const VOID_MAGIC_SPEC_DATA = {
 			"recast": "6 seconds",
 			"type": "Energy",
 			"maxTarget": null,
-			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell: Does 124 cold damage to the target.",
+			"effect": "Creates a cloud that affects everyone in the area.<br /><br />Cloud spell: Does 124 cold damage to the target.",
 			"hide": null
 		},
 		{
@@ -18598,7 +18598,7 @@ const VOID_MAGIC_SPEC_DATA = {
 			"recast": "6 seconds",
 			"type": "Energy",
 			"maxTarget": null,
-			"effect": "Creates a cloud that affects everyone in the area.\n\nCloud spell:\nDoes 155 cold damage to the target.",
+			"effect": "Creates a cloud that affects everyone in the area.<br /><br />Cloud spell:<br />Does 155 cold damage to the target.",
 			"hide": null
 		},
 		{
