@@ -4231,6 +4231,209 @@ const SLASH_SPEC_DATA = {
 	]
 };
 
+const SPEAR_SPEC_DATA = {
+	"metaData": {
+		"spec": "Spear",
+		"type": "Combat",
+		"weapon": "Spear",
+		"trainedValue": 1
+	},
+	"styles": [	
+		{
+			"class": ["Hunter"],
+			"name": "Thrusting Spear",
+			"level": 1,
+			"open": "Any",
+			"followup": null,
+			"end": "Low",
+			"dmg": "Very Low",
+			"hit": "Low Bonus",
+			"def": "No Bonus",
+			"effect": null
+		},
+		{
+			"class": ["Hunter"],
+			"name": "Dazzling Spear",
+			"level": 2,
+			"open": "Any",
+			"followup": null,
+			"end": "Low",
+			"dmg": "Very Low",
+			"hit": "No Bonus",
+			"def": "No Bonus",
+			"effect": null
+		},
+		{
+			"class": ["Hunter"],
+			"name": "Return Thrust",
+			"level": 4,
+			"open": "You Evade",
+			"followup": "Extend Reach",
+			"end": "Low",
+			"dmg": "High",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": "8 damage every 4.0 sec for 20 seconds."
+		},
+		{
+			"class": ["Hunter"],
+			"name": "Engage",
+			"level": 6,
+			"open": "Any",
+			"followup": "Wounding Thrust",
+			"end": "Low",
+			"dmg": "Medium",
+			"hit": "Medium Bonus",
+			"def": "Medium Penalty",
+			"effect": "Increases your threat to monster targets by 275 damage."
+		},
+		{
+			"class": ["Hunter"],
+			"name": "Extended Reach",
+			"level": 8,
+			"open": "Return Thrust",
+			"followup": null,
+			"end": "Low",
+			"dmg": "High",
+			"hit": "Low Bonus",
+			"def": "No Bonus",
+			"effect": "Target's attack speed reduced by 18% for 20 seconds."
+		},
+		{
+			"class": ["Hunter"],
+			"name": "Lancer",
+			"level": 10,
+			"open": "Any",
+			"followup": "Lunging Thrust",
+			"end": "Medium",
+			"dmg": "Low",
+			"hit": "Medium Bonus",
+			"def": "Low Penalty",
+			"effect": null
+		},
+		{
+			"class": ["Hunter"],
+			"name": "Dismissal",
+			"level": 12,
+			"open": "Any",
+			"followup": null,
+			"end": "Low",
+			"dmg": "None",
+			"hit": "No Bonus",
+			"def": "High Bonus",
+			"effect": "Increases your threat to monster targets by 0 damage."
+		},
+		{
+			"class": ["Hunter"],
+			"name": "Wounding Thrust",
+			"level": 15,
+			"open": "Engage",
+			"followup": null,
+			"end": "Medium",
+			"dmg": "High",
+			"hit": "Low Bonus",
+			"def": "No Bonus",
+			"effect": "Target moves 40% slower for 14 seconds."
+		},
+		{
+			"class": ["Hunter"],
+			"name": "Stab",
+			"level": 18,
+			"open": "You Evade",
+			"followup": "Raze",
+			"end": "Low",
+			"dmg": "Medium",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": "Target's attack speed reduced by 21% for 20 seconds."
+		},
+		{
+			"class": ["Hunter"],
+			"name": "Perforate",
+			"level": 21,
+			"open": "To side of target",
+			"followup": ["Gungnir's Fury", "Odin's Madness"],
+			"end": "Medium",
+			"dmg": "Medium",
+			"hit": "Low Bonus",
+			"def": "Medium Penalty",
+			"effect": "Target moves 40% slower for 19 seconds."
+		},
+		{
+			"class": ["Hunter"],
+			"name": "Lunging Thrust",
+			"level": 25,
+			"open": "Lancer",
+			"followup": null,
+			"end": "Medium",
+			"dmg": "Medium",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": "Target's attack speed reduced by 21% for 20 seconds."
+		},
+		{
+			"class": ["Hunter"],
+			"name": "Raze",
+			"level": 29,
+			"open": "Stab",
+			"followup": null,
+			"end": "Low",
+			"dmg": "Medium",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": "20 damge every 4.0 sec for 20 seconds."
+		},
+		{
+			"class": ["Hunter"],
+			"name": "Whirling Spear",
+			"level": 34,
+			"open": "Any",
+			"followup": null,
+			"end": "Medium",
+			"dmg": "High",
+			"hit": "Medium Bonus",
+			"def": "Low Penalty",
+			"effect": null
+		},
+		{
+			"class": ["Hunter"],
+			"name": "Razor Edge",
+			"level": 39,
+			"open": "Behind target",
+			"followup": "Odin's Wrath",
+			"end": "High",
+			"dmg": "Medium",
+			"hit": "Medium Bonus",
+			"def": "Low Penalty",
+			"effect": "Target cannot move or take any other action for 7 seconds."
+		},
+		{
+			"class": ["Hunter"],
+			"name": "Odin's Wrath",
+			"level": 44,
+			"open": "Razor Edge",
+			"followup": null,
+			"end": "Low",
+			"dmg": "High",
+			"hit": "High Bonus",
+			"def": "Low Bonus",
+			"effect": "26 damage every 4.0 sec for 20 seconds."
+		},
+		{
+			"class": ["Hunter"],
+			"name": "Gungnir's Fury",
+			"level": 50,
+			"open": "Perforate",
+			"followup": null,
+			"end": "Medium",
+			"dmg": "High",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": "50 damage every 5.0 sec for 30 seconds."
+		}
+	]
+};
+
 const STAFF_SPEC_DATA = {
 	"metaData": {
 		"spec": "Staff",
