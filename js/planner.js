@@ -1018,7 +1018,7 @@ function tooltip(event) {
 	//baseline/spells variables
 	let duration, cost, target, range, radius, cast, recast, dmgType, maxTarget;
 	//ability variables
-	let  desc, abilityTpe;
+	let  desc, abilityType;
 	targetElement = document.getElementById(`${event.target.getAttribute('id')}`);
 	allSpecs = selectedClass.specializations;
 	allAbilities = selectedClass.abilities;
@@ -1072,7 +1072,7 @@ function tooltip(event) {
 			currentSpec = allSpecs[spec];
 			if(currentSpec.hasOwnProperty("styles") && !found) {
 				for(style in currentSpec.styles) {
-					if(targetElement.textContent == currentSpec.styles[style].name) {
+					if(targetElement.textContent == currentSpec.styles[style].name && currentSpec.styles[style].class.includes(selectedClass.name)) {
 						targetSkill = currentSpec.styles[style];
 						found = true;
 						xPosition = document.getElementById('combatStyles').offsetLeft + 115;
