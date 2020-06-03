@@ -3777,6 +3777,209 @@ const STAFF_SPEC_DATA = {
 	]
 };
 
+const SWORD_SPEC_DATA = {
+	"metaData": {
+		"spec": "Sword",
+		"type": "Combat",
+		"weapon": "Sword",
+		"trainedValue": 1
+	},
+	"styles": [
+		{
+			"class": ["Berserker"],
+			"name": "Whirling Blade",
+			"level": 1,
+			"open": "Any",
+			"followup": "Stabbing Blade",
+			"end": "Low",
+			"dmg": "Very Low",
+			"hit": "No Bonus",
+			"def": "No Bonus",
+			"effect": null
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Stabbing Blade",
+			"level": 2,
+			"open": "Whirling Blade",
+			"followup": null,
+			"end": "Low",
+			"dmg": "Low",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": "8 damage every 4.0 sec for 20 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Frost Cut",
+			"level": 4,
+			"open": "You Block",
+			"followup": ["Niord's Fury", "Assault"],
+			"end": "Low",
+			"dmg": "High",
+			"hit": "Low Bonus",
+			"def": "No Bonus",
+			"effect": "Target's attack speed reduced by 16% for 20 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Draw Out",
+			"level": 6,
+			"open": "Any",
+			"followup": null,
+			"end": "Low",
+			"dmg": "Medium",
+			"hit": "High Bonus",
+			"def": "Medium Penalty",
+			"effect": "Increases your threat to monster targets by 275 damage."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Northern Lights",
+			"level": 8,
+			"open": "In front of target",
+			"followup": "Aurora",
+			"end": "Medium",
+			"dmg": "Medium",
+			"hit": "Low Bonus",
+			"def": "No Bonus",
+			"effect": "Target's attack speed reduced by 20% for 20 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Assault",
+			"level": 10,
+			"open": "You Parry",
+			"followup": "Baldur's Fury",
+			"end": "Medium",
+			"dmg": "Low",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": null
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Temper",
+			"level": 12,
+			"open": "Any",
+			"followup": null,
+			"end": "Low",
+			"dmg": "None",
+			"hit": "No Bonus",
+			"def": "Medium Bonus",
+			"effect": "Increases your threat to monster targets by 0 damage."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Aurora",
+			"level": 15,
+			"open": "Norther Lights",
+			"followup": null,
+			"end": "Medium",
+			"dmg": "High",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": "13 damage every 4.0 sec for 20 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Baldur's Fury",
+			"level": 18,
+			"open": "Assault",
+			"followup": null,
+			"end": "High",
+			"dmg": "Medium",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": "Target cannot move or take any other action for 5 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Reinforcement",
+			"level": 21,
+			"open": "You Parry",
+			"followup": "Rush",
+			"end": "Low",
+			"dmg": "High",
+			"hit": "Medium Bonus",
+			"def": "Low Penalty",
+			"effect": "13 damage every 4.0 sec for 20 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Ice Storm",
+			"level": 25,
+			"open": "You Evade",
+			"followup": "Sif's Revenge",
+			"end": "Medium",
+			"dmg": "High",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": null
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Rush",
+			"level": 29,
+			"open": "To side of target",
+			"followup": null,
+			"end": "Low",
+			"dmg": "High",
+			"hit": "No Bonus",
+			"def": "Medium Penalty",
+			"effect": "Target moves 40% slower for 15 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Polar Rift",
+			"level": 34,
+			"open": "Any",
+			"followup": null,
+			"end": "Medium",
+			"dmg": "Medium",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": null
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Niord's Fury",
+			"level": 39,
+			"open": "Frost Cut",
+			"followup": null,
+			"end": "Low",
+			"dmg": "High",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": "Target cannot move or take any other action for 8 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Sif's Revenge",
+			"level": 44,
+			"open": "Ice Storm",
+			"followup": null,
+			"end": "Medium",
+			"dmg": "High",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": "32 damage every 4.0 sec for 20 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Ragnarok",
+			"level": 50,
+			"open": "Behind target",
+			"followup": null,
+			"end": "Medium",
+			"dmg": "Very High",
+			"hit": "Medium Bonus",
+			"def": "Low Penalty",
+			"effect": null
+		}
+	]
+}
+
 const THRUST_SPEC_DATA = {
 	"metaData": {
 		"spec": "Thrust",
