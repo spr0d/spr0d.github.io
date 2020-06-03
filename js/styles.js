@@ -4407,7 +4407,7 @@ const SWORD_SPEC_DATA = {
 	},
 	"styles": [
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Hunter"],
 			"name": "Whirling Blade",
 			"level": 1,
 			"open": "Any",
@@ -4431,6 +4431,18 @@ const SWORD_SPEC_DATA = {
 			"effect": "8 damage every 4.0 sec for 20 seconds."
 		},
 		{
+			"class": ["Hunter"],
+			"name": "Wildblade",
+			"level": 3,
+			"open": "Any, must be stealthed.",
+			"followup": null,
+			"end": "Low",
+			"dmg": "High",
+			"hit": "High Bonus",
+			"def": "Low Penalty",
+			"effect": null
+		},
+		{
 			"class": ["Berserker"],
 			"name": "Frost Cut",
 			"level": 4,
@@ -4443,7 +4455,19 @@ const SWORD_SPEC_DATA = {
 			"effect": "Target's attack speed reduced by 16% for 20 seconds."
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Hunter"],
+			"name": "Frost Cut",
+			"level": 4,
+			"open": "You Evade",
+			"followup": "Niord's Fury",
+			"end": "Low",
+			"dmg": "High",
+			"hit": "Low Bonus",
+			"def": "No Bonus",
+			"effect": "Target's attack speed reduced by 16% for 20 seconds."
+		},
+		{
+			"class": ["Berserker", "Hunter"],
 			"name": "Draw Out",
 			"level": 6,
 			"open": "Any",
@@ -4455,7 +4479,7 @@ const SWORD_SPEC_DATA = {
 			"effect": "Increases your threat to monster targets by 275 damage."
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Hunter"],
 			"name": "Northern Lights",
 			"level": 8,
 			"open": "In front of target",
@@ -4479,7 +4503,19 @@ const SWORD_SPEC_DATA = {
 			"effect": null
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Hunter"],
+			"name": "Assault",
+			"level": 10,
+			"open": "You Evade",
+			"followup": "Baldur's Fury",
+			"end": "Medium",
+			"dmg": "Low",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": null
+		},
+		{
+			"class": ["Berserker", "Hunter"],
 			"name": "Temper",
 			"level": 12,
 			"open": "Any",
@@ -4491,7 +4527,7 @@ const SWORD_SPEC_DATA = {
 			"effect": "Increases your threat to monster targets by 0 damage."
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Hunter"],
 			"name": "Aurora",
 			"level": 15,
 			"open": "Norther Lights",
@@ -4503,7 +4539,7 @@ const SWORD_SPEC_DATA = {
 			"effect": "13 damage every 4.0 sec for 20 seconds."
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Hunter"],
 			"name": "Baldur's Fury",
 			"level": 18,
 			"open": "Assault",
@@ -4527,7 +4563,19 @@ const SWORD_SPEC_DATA = {
 			"effect": "13 damage every 4.0 sec for 20 seconds."
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Hunter"],
+			"name": "Reinforcement",
+			"level": 21,
+			"open": "You Evade",
+			"followup": null,
+			"end": "Low",
+			"dmg": "High",
+			"hit": "Medium Bonus",
+			"def": "Low Penalty",
+			"effect": "13 damage every 4.0 sec for 20 seconds."
+		},
+		{
+			"class": ["Berserker", "Hunter"],
 			"name": "Ice Storm",
 			"level": 25,
 			"open": "You Evade",
@@ -4539,7 +4587,7 @@ const SWORD_SPEC_DATA = {
 			"effect": null
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Hunter"],
 			"name": "Rush",
 			"level": 29,
 			"open": "To side of target",
@@ -4551,7 +4599,7 @@ const SWORD_SPEC_DATA = {
 			"effect": "Target moves 40% slower for 15 seconds."
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Hunter"],
 			"name": "Polar Rift",
 			"level": 34,
 			"open": "Any",
@@ -4575,7 +4623,19 @@ const SWORD_SPEC_DATA = {
 			"effect": "Target cannot move or take any other action for 8 seconds."
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Hunter"],
+			"name": "Niord's Fury",
+			"level": 39,
+			"open": "Frost Cut",
+			"followup": null,
+			"end": "Low",
+			"dmg": "High",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": "Target cannot move or take any other action for 7 seconds."
+		},
+		{
+			"class": ["Berserker", "Hunter"],
 			"name": "Sif's Revenge",
 			"level": 44,
 			"open": "Ice Storm",
@@ -4597,6 +4657,18 @@ const SWORD_SPEC_DATA = {
 			"hit": "Medium Bonus",
 			"def": "Low Penalty",
 			"effect": null
+		},
+		{
+			"class": ["Hunter"],
+			"name": "Ragnarok",
+			"level": 50,
+			"open": "Behind target",
+			"followup": null,
+			"end": "Medium",
+			"dmg": "Very High",
+			"hit": "Medium Bonus",
+			"def": "Low Penalty",
+			"effect": "Target moves 40% slower for 23 seconds."
 		}
 	]
 };
