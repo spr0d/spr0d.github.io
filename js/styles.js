@@ -1,3 +1,206 @@
+const AXE_SPEC_DATA = {
+	"metaData": {
+		"spec": "Axe",
+		"type": "Combat",
+		"weapon": "Axe",
+		"trainedValue": 1
+	},
+	"styles": [	
+		{
+			"class": ["Berserker"],
+			"name": "Splitter",
+			"level": 1,
+			"open": "Any",
+			"followup": "Splitfrost",
+			"end": "Low",
+			"dmg": "Very Low",
+			"hit": "No Bonus",
+			"def": "No Bonus",
+			"effect": null
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Splitfrost",
+			"level": 2,
+			"open": "Splitter",
+			"followup": null,
+			"end": "Low",
+			"dmg": "Low",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": "8 damage every 4.0 sec for 20 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Cleave",
+			"level": 4,
+			"open": "You Parry",
+			"followup": "Thrym's Strength",
+			"end": "Low",
+			"dmg": "High",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": "Target's attack speed reduced by 16% for 20 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Plague",
+			"level": 6,
+			"open": "Any",
+			"followup": null,
+			"end": "Low",
+			"dmg": "Medium",
+			"hit": "Medium Bonus",
+			"def": "Medium Penalty",
+			"effect": "Increases your threat to monster targets by 275 damage."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Thrym's Strength",
+			"level": 8,
+			"open": "Cleave",
+			"followup": null,
+			"end": "Medium",
+			"dmg": "High",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": null
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Pillager",
+			"level": 10,
+			"open": "Any",
+			"followup": "Plunderer",
+			"end": "High",
+			"dmg": "Low",
+			"hit": "Low Bonus",
+			"def": "No Bonus",
+			"effect": "Target's attack speed reduced by 21% for 20 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Hoarfrost",
+			"level": 12,
+			"open": "Any",
+			"followup": null,
+			"end": "Low",
+			"dmg": "None",
+			"hit": "Low Bonus",
+			"def": "Medium Bonus",
+			"effect": "Increases your threat to monster targets by 0 damage."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Evernight",
+			"level": 15,
+			"open": "Behind target",
+			"followup": "Arctic Rift",
+			"end": "Low",
+			"dmg": "High",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": null
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Plunderer",
+			"level": 18,
+			"open": "Pillager",
+			"followup": null,
+			"end": "Medium",
+			"dmg": "Medium",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": "13 damage every 4.0 sec for 20 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Valkyrie's Shield'",
+			"level": 21,
+			"open": "You Evade",
+			"followup": "Midnight Sun",
+			"end": "Low",
+			"dmg": "High",
+			"hit": "No Bonus",
+			"def": "Medium Bonus",
+			"effect": "Target's attack speed reduced by 22% for 20 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Raider",
+			"level": 25,
+			"open": "You Evade",
+			"followup": null,
+			"end": "Low",
+			"dmg": "High",
+			"hit": "No Bonus",
+			"def": "No Bonus",
+			"effect": "20 damage every 4.0 sec for 20 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Havoc",
+			"level": 29,
+			"open": "Any",
+			"followup": "Tyr's Fang",
+			"end": "Medium",
+			"dmg": "Medium",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": null
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Midnight Sun",
+			"level": 34,
+			"open": "Valkyrie's Shield",
+			"followup": null,
+			"end": "Medium",
+			"dmg": "High",
+			"hit": "High Bonus",
+			"def": "No Bonus",
+			"effect": "Target canont move or take any other action for 6 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Glacial Movement",
+			"level": 39,
+			"open": "To side of target",
+			"followup": "Tyr's Fang",
+			"end": "Medium",
+			"dmg": "High",
+			"hit": "Medium Bonus",
+			"def": "Low Penalty",
+			"effect": "Target moves 40% slower for 19 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Arctic Rift",
+			"level": 44,
+			"open": "Evernight",
+			"followup": null,
+			"end": "Medium",
+			"dmg": "Very High",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": "Target cannot move or take any other action for 5 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Tyr's Fang",
+			"level": 50,
+			"open": ["Havoc", "Glacial Movement"], /*??Glacial Movement listed in-game but not Havoc, test and update??*/
+			"followup": null,
+			"end": "Low",
+			"dmg": "Very High",
+			"hit": "High Bonus",
+			"def": "No Bonus",
+			"effect": "Target's attack speed reduced by 30% for 20 seconds."
+		}
+	]
+};
+
 const BLADES_SPEC_DATA = {
 	"metaData": {
 		"spec": "Blades",
@@ -3978,7 +4181,7 @@ const SWORD_SPEC_DATA = {
 			"effect": null
 		}
 	]
-}
+};
 
 const THRUST_SPEC_DATA = {
 	"metaData": {
@@ -4401,6 +4604,14 @@ const TWO_HANDED_SPEC_DATA = {
 
 
 /*  style template
+const NAME_SPEC_DATA = {
+	"metaData": {
+		"spec": "",
+		"type": "Combat",
+		"weapon": "",
+		"trainedValue": 1
+	},
+	"styles": [	
 		{
 			"class": [""],
 			"name": "",
@@ -4413,4 +4624,6 @@ const TWO_HANDED_SPEC_DATA = {
 			"def": "",
 			"effect":
 		}
+	]
+};
 */
