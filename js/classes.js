@@ -825,7 +825,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 2.0,
-		"specializations" : [SWORD_SPEC_DATA, /*"Axe",*/ PARRY_SPEC_DATA/*, "Hammer", "Left Axe"*/],
+		"specializations" : [SWORD_SPEC_DATA, AXE_SPEC_DATA, PARRY_SPEC_DATA/*, "Hammer", "Left Axe"*/],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4], ABILITY_DATA[2], ABILITY_DATA[5]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[16], WEAPONRY_DATA[17], WEAPONRY_DATA[18], WEAPONRY_DATA[20]],
