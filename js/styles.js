@@ -2223,6 +2223,221 @@ const FLEXIBLE_SPEC_DATA = {
 	]
 };
 
+const HAMMER_SPEC_DATA = {
+	"metaData": {
+		"spec": "Hammer",
+		"type": "Combat",
+		"weapon": "Hammer",
+		"trainedValue": 1
+	},
+	"styles": [	
+		{
+			"class": ["Berserker"],
+			"name": "Thor's Anvil",
+			"level": 1,
+			"open": "Any",
+			"followup": "Thor's Hammer",
+			"end": "Low",
+			"dmg": "Very Low",
+			"hit": "No Bonus",
+			"def": "No Bonus",
+			"effect": null
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Thor's Hammer",
+			"level": 2,
+			"open": "Thor's Anvil",
+			"followup": null,
+			"end": "Low",
+			"dmg": "Low",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": "8 damage every 4.0 sec for 20 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Crushing Blow",
+			"level": 4,
+			"open": "You Parry",
+			"followup": "Slam",
+			"end": "Low",
+			"dmg": "High",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": "Target's attack speed reduced by 16% for 20 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Placate",
+			"level": 6,
+			"open": "Any",
+			"followup": null,
+			"end": "Low",
+			"dmg": "None",
+			"hit": "No Bonus",
+			"def": "Medium Bonus",
+			"effect": "Increases your threat to monster targets by 0 damage."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Slam",
+			"level": 8,
+			"open": "Crushing Blow",
+			"followup": null,
+			"end": "Medium",
+			"dmg": "High",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": "Target cannot move or take any other action for 4 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Ruiner",
+			"level": 10,
+			"open": "Any",
+			"followup": "Crumble",
+			"end": "Medium",
+			"dmg": "Low",
+			"hit": "Low Bonus",
+			"def": "No Bonus",
+			"effect": null
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Frost Hammer",
+			"level": 12,
+			"open": "To side of target",
+			"followup": ["Demonlish", "Grand Finale"],
+			"end": "Medium",
+			"dmg": "Medium",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": "Target moves 40% slower for 15 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Provoke",
+			"level": 15,
+			"open": "Any",
+			"followup": null,
+			"end": "Low",
+			"dmg": "Medium",
+			"hit": "Medium Bonus",
+			"def": "Medium Penalty",
+			"effect": "Increases your threat to monster targets by 275 damage."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Demonlish",
+			"level": 18,
+			"open": "Frost Hammer",
+			"followup": null,
+			"end": "Medium",
+			"dmg": "High",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": "Target cannot move or take any other action for 5 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Revenge",
+			"level": 21,
+			"open": "You Parry",
+			"followup": "Thor's Answer",
+			"end": "Low",
+			"dmg": "High",
+			"hit": "Medium Bonus",
+			"def": "Low Penalty",
+			"effect": "Target's attack speed reduced by 21% for 20 seconds"
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Crumble",
+			"level": 25,
+			"open": "Ruiner",
+			"followup": null,
+			"end": "Medium",
+			"dmg": "Medium",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": "Target's attack speed reduced by 26% for 20 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Conquer",
+			"level": 29,
+			"open": "Behind target",
+			"followup": "Sledgehammer",
+			"end": "Low",
+			"dmg": "High",
+			"hit": "Medium Bonus",
+			"def": "High Peanlty",
+			"effect": null
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Comminute",
+			"level": 32,
+			"open": "Any",
+			"followup": null,
+			"end": "Medium",
+			"dmg": "Medium",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": null
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Thor's Answer",
+			"level": 34,
+			"open": "Revenge",
+			"followup": null,
+			"end": "Medium",
+			"dmg": "High",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": "Target cannot move or take any other action for 7 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Lambast",
+			"level": 39,
+			"open": "You Parry",
+			"followup": "Mjolnir's Fury",
+			"end": "Low",
+			"dmg": "High",
+			"hit": "Medium Bonus",
+			"def": "Low Bonus",
+			"effect": "Target's attack speed reduced by 30% for 20 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Sledgehammer",
+			"level": 44,
+			"open": "Conquer",
+			"followup": null,
+			"end": "Medium",
+			"dmg": "Very High",
+			"hit": "High Bonus",
+			"def": "No Bonus",
+			"effect": null
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Mjolnir's Fury",
+			"level": 50,
+			"open": "Lambast",
+			"followup": null,
+			"end": "Medium",
+			"dmg": "High",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": "32 damage every 4.0 sec for 20 seconds."
+		}
+	]
+};
+
 const LARGE_WEAPONRY_SPEC_DATA = {
 	"metaData": {
 		"spec": "Large Weaponry",
