@@ -2654,6 +2654,209 @@ const LARGE_WEAPONRY_SPEC_DATA = {
 	]
 };
 
+const LEFT_AXE_SPEC_DATA = {
+	"metaData": {
+		"spec": "Left Axe",
+		"type": "Combat",
+		"weapon": "Left Axe",
+		"trainedValue": 1
+	},
+	"styles": [	
+		{
+			"class": ["Berserker"],
+			"name": "Frost Blade",
+			"level": 1,
+			"open": "Any",
+			"followup": null,
+			"end": "Low",
+			"dmg": "Very Low",
+			"hit": "Low Bonus",
+			"def": "No Bonus",
+			"effect": null
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Counter Slash",
+			"level": 2,
+			"open": "Any",
+			"followup": null,
+			"end": "Low",
+			"dmg": "Very Low",
+			"hit": "No Bonus",
+			"def": "No Bonus",
+			"effect": null
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Doubler",
+			"level": 4,
+			"open": "In front of target",
+			"followup": "Scathing Blade",
+			"end": "Low",
+			"dmg": "Medium",
+			"hit": "Low Bonus",
+			"def": "Low Penalty",
+			"effect": "Target's attack speed reduced by 16% for 20 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Ravager",
+			"level": 6,
+			"open": "Any",
+			"followup": "Atrophy",
+			"end": "Medium",
+			"dmg": "Low",
+			"hit": "Low Bonus",
+			"def": "No Bonus",
+			"effect": null
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Polar Light",
+			"level": 8,
+			"open": "You Evade",
+			"followup": "Frost Shadow",
+			"end": "Low",
+			"dmg": "High",
+			"hit": "High Bonus",
+			"def": "Low Bonus",
+			"effect": "Target's attack speed reduced by 20% for 20 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Snowblind",
+			"level": 10,
+			"open": "Any",
+			"followup": null,
+			"end": "Low",
+			"dmg": "Medium",
+			"hit": "Low Bonus",
+			"def": "Medium Penalty",
+			"effect": "Increases your threat to monster targets by 275 damage."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Atrophy",
+			"level": 12,
+			"open": "Ravager",
+			"followup": null,
+			"end": "Medium",
+			"dmg": "Medium",
+			"hit": "Low Bonus",
+			"def": "No Bonus",
+			"effect": "Target's attack speed reduced by 21% for 20 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Frost Shadow",
+			"level": 15,
+			"open": "Polar Light",
+			"followup": null,
+			"end": "Medium",
+			"dmg": "High",
+			"hit": "Medium Bonus",
+			"def": "Low Bonus",
+			"effect": "13 damage every 4.0 sec for 20 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Comeback",
+			"level": 18,
+			"open": "You Parry",
+			"followup": "Frosty Gaze",
+			"end": "Low",
+			"dmg": "High",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": "Reduces the target's armor factor (AF) by 100 for 15 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Scathing Blade",
+			"level": 21,
+			"open": "Doubler",
+			"followup": null,
+			"end": "Medium",
+			"dmg": "High",
+			"hit": "Medium Bonus",
+			"def": "Medium Penalty",
+			"effect": "Target moves 40% slower for 19 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Decaying Rage",
+			"level": 25,
+			"open": "To side of target",
+			"followup": "Aurora Borealis",
+			"end": "Low",
+			"dmg": "High",
+			"hit": "Medium Bonus",
+			"def": "High Bonus",
+			"effect": "Target cannot move or take any other action for 5 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Snowsquall",
+			"level": 29,
+			"open": "Behind target",
+			"followup": "Icy Brilliance",
+			"end": "Medium",
+			"dmg": "High",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": null
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Doublefrost",
+			"level": 34,
+			"open": "Any",
+			"followup": null,
+			"end": "Medium",
+			"dmg": "Medium",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": null
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Frosty Gaze",
+			"level": 39,
+			"open": "Comeback",
+			"followup": null,
+			"end": "Medium",
+			"dmg": "Very High",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": "Target cannot move or take any other action for 7 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Icy Brilliance",
+			"level": 44,
+			"open": "Snowsquall",
+			"followup": null,
+			"end": "Medium",
+			"dmg": "Very High",
+			"hit": "High Bonus",
+			"def": "No Bonus",
+			"effect": "Target cannot move for take any other action for 7 seconds."
+		},
+		{
+			"class": ["Berserker"],
+			"name": "Aurora Borealis",
+			"level": 50,
+			"open": "Decaying Rage",
+			"followup": null,
+			"end": "Low",
+			"dmg": "Very High",
+			"hit": "High Bonus",
+			"def": "No Bonus",
+			"effect": "Does 95 cold damage to the target."
+		}
+	]
+};
+
 const PAINWORKING_STYLE_DATA = {
 	"metaData": {
 		"spec": "Painworking",
