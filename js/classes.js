@@ -909,7 +909,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 2.0,
-		"specializations" : [SWORD_SPEC_DATA/*, "Stealth", "Spear", "Beastcraft", "Archery"*/],
+		"specializations" : [SWORD_SPEC_DATA, /*"Stealth",*/ SPEAR_SPEC_DATA/*, "Beastcraft", "Archery"*/],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[2], ABILITY_DATA[4]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[16], WEAPONRY_DATA[22]],
