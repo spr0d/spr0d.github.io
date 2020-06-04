@@ -1025,7 +1025,7 @@ function tooltip(event) {
 	//Find the ability/skill that was moused over
 	for(ability in allAbilities) {
 		currentAbility = allAbilities[ability];
-		if(targetElement.textContent.includes(currentAbility.name)) {
+		if(targetElement.textContent == currentAbility.name) {
 			targetSkill = currentAbility;
 			found = true;
 			abilityType = null;
@@ -1038,7 +1038,7 @@ function tooltip(event) {
 		allAbilities = selectedClass.equipment.weapons;
 		for(weapon in allAbilities) {
 			currentAbility = allAbilities[weapon];
-			if(targetElement.textContent.includes(currentAbility.name)) {
+			if(targetElement.textContent == currentAbility.name) {
 				targetSkill = currentAbility;
 				found = true;
 				abilityType = "weapon";
@@ -1049,7 +1049,7 @@ function tooltip(event) {
 	}
 	if(!found) {
 		allAbilities = selectedClass.equipment.armor;
-		if(targetElement.textContent.includes(allAbilities.name)) {
+		if(targetElement.textContent == allAbilities.name) {
 			targetSkill = allAbilities;
 			found = true;
 			abilityType = "armor";
@@ -1059,7 +1059,7 @@ function tooltip(event) {
 	}
 	if(!found && selectedClass.equipment.shield != null) {
 		allAbilities = selectedClass.equipment.shield;
-		if(targetElement.textContent.includes(allAbilities.name) && !found) {
+		if(targetElement.textContent == allAbilities.name && !found) {
 			targetSkill = allAbilities;
 			found = true;
 			abilityType = "shield";
