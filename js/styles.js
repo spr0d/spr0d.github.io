@@ -2232,7 +2232,7 @@ const HAMMER_SPEC_DATA = {
 	},
 	"styles": [	
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Thor's Anvil",
 			"level": 1,
 			"open": "Any",
@@ -2244,7 +2244,7 @@ const HAMMER_SPEC_DATA = {
 			"effect": null
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Thor's Hammer",
 			"level": 2,
 			"open": "Thor's Anvil",
@@ -2256,7 +2256,7 @@ const HAMMER_SPEC_DATA = {
 			"effect": "8 damage every 4.0 sec for 20 seconds."
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Crushing Blow",
 			"level": 4,
 			"open": "You Parry",
@@ -2268,7 +2268,7 @@ const HAMMER_SPEC_DATA = {
 			"effect": "Target's attack speed reduced by 16% for 20 seconds."
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Placate",
 			"level": 6,
 			"open": "Any",
@@ -2280,7 +2280,7 @@ const HAMMER_SPEC_DATA = {
 			"effect": "Increases your threat to monster targets by 0 damage."
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Slam",
 			"level": 8,
 			"open": "Crushing Blow",
@@ -2292,7 +2292,7 @@ const HAMMER_SPEC_DATA = {
 			"effect": "Target cannot move or take any other action for 4 seconds."
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Ruiner",
 			"level": 10,
 			"open": "Any",
@@ -2304,7 +2304,7 @@ const HAMMER_SPEC_DATA = {
 			"effect": null
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Frost Hammer",
 			"level": 12,
 			"open": "To side of target",
@@ -2316,7 +2316,7 @@ const HAMMER_SPEC_DATA = {
 			"effect": "Target moves 40% slower for 15 seconds."
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Provoke",
 			"level": 15,
 			"open": "Any",
@@ -2328,7 +2328,7 @@ const HAMMER_SPEC_DATA = {
 			"effect": "Increases your threat to monster targets by 275 damage."
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Demonlish",
 			"level": 18,
 			"open": "Frost Hammer",
@@ -2352,7 +2352,19 @@ const HAMMER_SPEC_DATA = {
 			"effect": "Target's attack speed reduced by 21% for 20 seconds"
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Savage"],
+			"name": "Revenge",
+			"level": 21,
+			"open": "You Evade",
+			"followup": "Thor's Answer'",
+			"end": "Low",
+			"dmg": "High",
+			"hit": "Medium Bonus",
+			"def": "Low Penalty",
+			"effect": "Target's attack speed reduced by 21% for 20 seconds."
+		},
+		{
+			"class": ["Berserker", "Savage"],
 			"name": "Crumble",
 			"level": 25,
 			"open": "Ruiner",
@@ -2364,7 +2376,7 @@ const HAMMER_SPEC_DATA = {
 			"effect": "Target's attack speed reduced by 26% for 20 seconds."
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Conquer",
 			"level": 29,
 			"open": "Behind target",
@@ -2376,7 +2388,7 @@ const HAMMER_SPEC_DATA = {
 			"effect": null
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Comminute",
 			"level": 32,
 			"open": "Any",
@@ -2388,7 +2400,7 @@ const HAMMER_SPEC_DATA = {
 			"effect": null
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Thor's Answer",
 			"level": 34,
 			"open": "Revenge",
@@ -2400,7 +2412,7 @@ const HAMMER_SPEC_DATA = {
 			"effect": "Target cannot move or take any other action for 7 seconds."
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Lambast",
 			"level": 39,
 			"open": "You Parry",
@@ -2412,7 +2424,7 @@ const HAMMER_SPEC_DATA = {
 			"effect": "Target's attack speed reduced by 30% for 20 seconds."
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Sledgehammer",
 			"level": 44,
 			"open": "Conquer",
@@ -2424,7 +2436,7 @@ const HAMMER_SPEC_DATA = {
 			"effect": null
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Mjolnir's Fury",
 			"level": 50,
 			"open": "Lambast",
