@@ -2450,6 +2450,209 @@ const HAMMER_SPEC_DATA = {
 	]
 };
 
+const HANDTOHAND_SPEC_DATA = {
+	"metaData": {
+		"spec": "Hand to Hand",
+		"type": "Combat",
+		"weapon": "Hand to Hand",
+		"trainedValue": 1
+	},
+	"styles": [	
+		{
+			"class": ["Savage"],
+			"name": "Tribal Might",
+			"level": 1,
+			"open": "Any",
+			"followup": null,
+			"end": "Low",
+			"dmg": "Very Low",
+			"hit": "Low Bonus",
+			"def": "No Bonus",
+			"effect": null
+		},
+		{
+			"class": ["Savage"],
+			"name": "Kelgor's Bane",
+			"level": 2,
+			"open": "Any",
+			"followup": null,
+			"end": "Low",
+			"dmg": "Very Low",
+			"hit": "No Bonus",
+			"def": "No Bonus",
+			"effect": "Increases your chance to parry by 7%"
+		},
+		{
+			"class": ["Savage"],
+			"name": "Tribal Rage",
+			"level": 4,
+			"open": "You Parry",
+			"followup": "Tribal Assault",
+			"end": "Low",
+			"dmg": "Very High",
+			"hit": "Low Bonus",
+			"def": "No Bonus",
+			"effect": null
+		},
+		{
+			"class": ["Savage"],
+			"name": "Wild Call",
+			"level": 6,
+			"open": "Any",
+			"followup": null,
+			"end": "Low",
+			"dmg": "Medium",
+			"hit": "No Bonus",
+			"def": "Medium Penalty",
+			"effect": "Increases your threat to monster targets by 275 damage."
+		},
+		{
+			"class": ["Savage"],
+			"name": "Clan's Call",
+			"level": 8,
+			"open": "Behind target",
+			"followup": "Clan's Might'",
+			"end": "Low",
+			"dmg": "Very High",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": "Target cannot move or take any other action for 4 seconds."
+		},
+		{
+			"class": ["Savage"],
+			"name": "Tribal Assault",
+			"level": 10,
+			"open": "Tribal Rage",
+			"followup": "Tribal Wrath",
+			"end": "Low",
+			"dmg": "Very High",
+			"hit": "Low Bonus",
+			"def": "Low Penalty",
+			"effect": "Hits up to 1 additional targets within melee range."
+		},
+		{
+			"class": ["Savage"],
+			"name": "Kelgor's Might",
+			"level": 12,
+			"open": "Any",
+			"followup": null,
+			"end": "High",
+			"dmg": "None",
+			"hit": "No Bonus",
+			"def": "No Bonus",
+			"effect": "Target's attack speed reduced by 24% for 20 seconds.\n\nRadius: 350"
+		},
+		{
+			"class": ["Savage"],
+			"name": "Taunting Call",
+			"level": 15,
+			"open": "Any",
+			"followup": null,
+			"end": "Low",
+			"dmg": "Very Low",
+			"hit": "No Bonus",
+			"def": "High Bonus",
+			"effect": "Increases your threat to monster targets by 0 damage."
+		},
+		{
+			"class": ["Savage"],
+			"name": "Clan's Might",
+			"level": 18,
+			"open": "Clan's Call",
+			"followup": null,
+			"end": "Low",
+			"dmg": "Very High",
+			"hit": "No Bonus",
+			"def": "No Bonus",
+			"effect": null
+		},
+		{
+			"class": ["Savage"],
+			"name": "Totemic Fear",
+			"level": 21,
+			"open": "You Evade",
+			"followup": ["Totemic Wrath", "Pictish Totemic Wrath"],
+			"end": "Low",
+			"dmg": "Very High",
+			"hit": "High Bonus",
+			"def": "No Bonus",
+			"effect": "Reduces the target's armor factor (AF) by 90 for 15 seconds."
+		},
+		{
+			"class": ["Savage"],
+			"name": "Totemic Wrath",
+			"level": 25,
+			"open": "Totemic Fear",
+			"followup": "Totemic Sacrifice",
+			"end": "Low",
+			"dmg": "Very High",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": "Hits up to 4 additional targets within melee range."
+		},
+		{
+			"class": ["Savage"],
+			"name": "Kelgor's Claw",
+			"level": 29,
+			"open": "Any",
+			"followup": null,
+			"end": "Medium",
+			"dmg": "None",
+			"hit": "No Bonus",
+			"def": "No Bonus",
+			"effect": "Increases your chance to evade by 15%"
+		},
+		{
+			"class": ["Savage"],
+			"name": "Tribal Wrath",
+			"level": 34,
+			"open": "Tribal Assault",
+			"followup": null,
+			"end": "Low",
+			"dmg": "Very High",
+			"hit": "High Bonus",
+			"def": "Medium Bonus",
+			"effect": "Increases your chance to parry by 25%"
+		},
+		{
+			"class": ["Savage"],
+			"name": "Kelgor's Fist",
+			"level": 39,
+			"open": "To side of target",
+			"followup": "Kelgor's Wrath",
+			"end": "Low",
+			"dmg": "Very High",
+			"hit": "Medium Bonus",
+			"def": "No Bonus",
+			"effect": "Target moves 40% slower for 15 seconds."
+		},
+		{
+			"class": ["Savage"],
+			"name": "Kelgor's Wrath",
+			"level": 44,
+			"open": "Kelgor's Fist",
+			"followup": null,
+			"end": "Low",
+			"dmg": "Very High",
+			"hit": "High Bonus",
+			"def": "No Bonus",
+			"effect": "Target cannot move or take any other action for 9 seconds."
+		},
+		{
+			"class": ["Savage"],
+			"name": "Totemic Sacrifice",
+			"level": 50,
+			"open": "Totemic Wrath",
+			"followup": null,
+			"end": "None",
+			"dmg": "Very High",
+			"hit": "Very High Bonus",
+			"def": "No Bonus",
+			"effect": "Hits up to 5 additional targets within melee range."
+		}
+	]
+};
+
 const LARGE_WEAPONRY_SPEC_DATA = {
 	"metaData": {
 		"spec": "Large Weaponry",
