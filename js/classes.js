@@ -69,7 +69,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 1.0,
-		"specializations" : ["Rejuvenation", "Enhancements", "Smiting"],
+		"specializations" : [/*"Rejuvenation", "Enhancements", "Smiting"*/],
 		"abilities" : [ABILITY_DATA[0]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[4]],
@@ -95,7 +95,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 1.8,
-		"specializations" : ["Rejuvenation", "Enhancements", STAFF_SPEC_DATA, PARRY_SPEC_DATA],
+		"specializations" : [/*"Rejuvenation", "Enhancements",*/ STAFF_SPEC_DATA, PARRY_SPEC_DATA],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4], ABILITY_DATA[2]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[4]],
@@ -121,7 +121,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 2.0,
-		"specializations" : ["Rejuvenation", "Enhancements", SHIELD_SPEC_DATA, FLEXIBLE_SPEC_DATA, CRUSH_SPEC_DATA],
+		"specializations" : [/*"Rejuvenation", "Enhancements",*/ SHIELD_SPEC_DATA, FLEXIBLE_SPEC_DATA, CRUSH_SPEC_DATA],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[4], WEAPONRY_DATA[6]],
@@ -147,7 +147,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 2.9,
-		"specializations" : [DUAL_WIELD_SPEC_DATA, "Envenom", CRITICAL_STRIKE_SPEC_DATA, "Stealth", SLASH_SPEC_DATA, THRUST_SPEC_DATA],
+		"specializations" : [DUAL_WIELD_SPEC_DATA, /*"Envenom",*/ CRITICAL_STRIKE_SPEC_DATA, /*"Stealth",*/ SLASH_SPEC_DATA, THRUST_SPEC_DATA],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4], ABILITY_DATA[2]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[3], WEAPONRY_DATA[5]],
@@ -199,7 +199,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 1.5,
-		"specializations" : ["Stealth", SLASH_SPEC_DATA, THRUST_SPEC_DATA, "Instruments"],
+		"specializations" : [/*"Stealth",*/ SLASH_SPEC_DATA, THRUST_SPEC_DATA/*, "Instruments"*/],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4], ABILITY_DATA[2]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[3], WEAPONRY_DATA[5]],
@@ -251,7 +251,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 2.0,
-		"specializations" : [TWO_HANDED_SPEC_DATA, PARRY_SPEC_DATA, SLASH_SPEC_DATA, CRUSH_SPEC_DATA, THRUST_SPEC_DATA, SHIELD_SPEC_DATA, "Chants"],
+		"specializations" : [TWO_HANDED_SPEC_DATA, PARRY_SPEC_DATA, SLASH_SPEC_DATA, CRUSH_SPEC_DATA, THRUST_SPEC_DATA, SHIELD_SPEC_DATA/*, "Chants"*/],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[2], WEAPONRY_DATA[3], WEAPONRY_DATA[4], WEAPONRY_DATA[5]],
@@ -303,7 +303,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 2.0,
-		"specializations" : [SHIELD_SPEC_DATA, "Stealth", SLASH_SPEC_DATA, THRUST_SPEC_DATA, "Archery"],
+		"specializations" : [SHIELD_SPEC_DATA, /*"Stealth",*/ SLASH_SPEC_DATA, THRUST_SPEC_DATA/*, "Archery"*/],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4], ABILITY_DATA[2]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[3], WEAPONRY_DATA[5], WEAPONRY_DATA[9]],
@@ -329,7 +329,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 1.0,
-		"specializations" : ["Body Magic", "Matter Magic", "Mind Magic"],
+		"specializations" : [/*"Body Magic", "Matter Magic", "Mind Magic"*/],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[1]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0]],
@@ -433,7 +433,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 1.0,
-		"specializations" : ["Phantasmal Wail", "Etheral Shriek", "Spectral Guard"],
+		"specializations" : [/*"Phantasmal Wail", "Etheral Shriek", "Spectral Guard"*/],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[1]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0]],
@@ -461,7 +461,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 1.5,
-		"specializations" : ["Nature", "Regrowth", BLADES_SPEC_DATA, BLUNT_SPEC_DATA, "Music"],
+		"specializations" : [/*"Nature", "Regrowth",*/ BLADES_SPEC_DATA, BLUNT_SPEC_DATA/*, "Music"*/],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[11], WEAPONRY_DATA[10]],
@@ -517,7 +517,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 2.0,
-		"specializations" : [BLADES_SPEC_DATA, BLUNT_SPEC_DATA, PIERCING_SPEC_DATA, PARRY_SPEC_DATA, LARGE_WEAPONRY_SPEC_DATA, "Valor", SHIELD_SPEC_DATA],
+		"specializations" : [BLADES_SPEC_DATA, BLUNT_SPEC_DATA, PIERCING_SPEC_DATA, PARRY_SPEC_DATA, LARGE_WEAPONRY_SPEC_DATA, /*"Valor",*/ SHIELD_SPEC_DATA],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4], ABILITY_DATA[2]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[10], WEAPONRY_DATA[11], WEAPONRY_DATA[12], WEAPONRY_DATA[8]],
@@ -545,7 +545,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 1.0,
-		"specializations" : ["Nurture", "Regrowth", "Nature Affinity"],
+		"specializations" : [/*"Nurture", "Regrowth", "Nature Affinity"*/],
 		"abilities" : [ABILITY_DATA[0]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[11], WEAPONRY_DATA[10]],
@@ -601,7 +601,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 1.0,
-		"specializations" : ["Mana Magic", "Light Magic", "Enchantments"],
+		"specializations" : [/*"Mana Magic", "Light Magic", "Enchantments"*/],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[1]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0]],
@@ -657,7 +657,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 1.0,
-		"specializations" : ["Mana Magic", "Light Magic", "Mentalism"],
+		"specializations" : [/*"Mana Magic", "Light Magic", "Mentalism"*/],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[1]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0]],
@@ -685,7 +685,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 2.8,
-		"specializations" : ["Stealth", PIERCING_SPEC_DATA, BLADES_SPEC_DATA, "Envenom", CRITICAL_STRIKE_SPEC_DATA, CELTIC_DUAL_SPEC_DATA],
+		"specializations" : [/*"Stealth",*/ PIERCING_SPEC_DATA, BLADES_SPEC_DATA, /*"Envenom",*/ CRITICAL_STRIKE_SPEC_DATA, CELTIC_DUAL_SPEC_DATA],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4], ABILITY_DATA[3]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[10], WEAPONRY_DATA[12]],
@@ -713,7 +713,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 2.0,
-		"specializations" : ["Stealth", PIERCING_SPEC_DATA, BLADES_SPEC_DATA, CELTIC_DUAL_SPEC_DATA, "Archery"],
+		"specializations" : [/*"Stealth",*/ PIERCING_SPEC_DATA, BLADES_SPEC_DATA, CELTIC_DUAL_SPEC_DATA/*, "Archery"*/],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4], ABILITY_DATA[2]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[10], WEAPONRY_DATA[12], WEAPONRY_DATA[9]],
@@ -741,7 +741,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 1.5,
-		"specializations" : [SCYTHE_SPEC_DATA, PARRY_SPEC_DATA, "Arboreal Path"],
+		"specializations" : [SCYTHE_SPEC_DATA, PARRY_SPEC_DATA/*, "Arboreal Path"*/],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4], ABILITY_DATA[2]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[15]],
@@ -769,7 +769,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 1.5,
-		"specializations" : ["Shadow Mastery", "Vampiiric Embrace", "Dementia", PIERCING_SPEC_DATA],
+		"specializations" : [/*"Shadow Mastery", "Vampiiric Embrace", "Dementia",*/ PIERCING_SPEC_DATA],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4] /*, Leeching Bolt spell*/],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[12]],
@@ -797,7 +797,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 1.8,
-		"specializations" : ["Nurture", "Regrowth", PARRY_SPEC_DATA, BLADES_SPEC_DATA, BLUNT_SPEC_DATA, SHIELD_SPEC_DATA],
+		"specializations" : [/*"Nurture", "Regrowth",*/ PARRY_SPEC_DATA, BLADES_SPEC_DATA, BLUNT_SPEC_DATA, SHIELD_SPEC_DATA],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[8], WEAPONRY_DATA[11], WEAPONRY_DATA[12]],
@@ -853,7 +853,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 1.0,
-		"specializations" : ["Darkness", "Suppression", "Bone Army"],
+		"specializations" : [/*"Darkness", "Suppression", "Bone Army"*/],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[1]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0]],
@@ -881,7 +881,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 1.0,
-		"specializations" : ["Mending", "Augmentation", "Pacification"],
+		"specializations" : [/*"Mending", "Augmentation", "Pacification"*/],
 		"abilities" : [ABILITY_DATA[0]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[18]],
@@ -937,7 +937,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 1.0,
-		"specializations" : ["Darkness", "Suppression", "Runecarving"],
+		"specializations" : [/*"Darkness", "Suppression", "Runecarving"*/],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[1]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0]],
@@ -965,7 +965,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 1.5,
-		"specializations" : [SWORD_SPEC_DATA, /*"Axe",*/ PARRY_SPEC_DATA, /*"Hammer", "Savagery", "Hand to Hand"*/],
+		"specializations" : [SWORD_SPEC_DATA, AXE_SPEC_DATA, PARRY_SPEC_DATA, /*"Hammer", "Savagery", "Hand to Hand"*/],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[2], ABILITY_DATA[4]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[16], WEAPONRY_DATA[18], WEAPONRY_DATA[17], WEAPONRY_DATA[21]],
@@ -993,7 +993,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 2.8,
-		"specializations" : ["Sword", "Stealth", "Left Axe", "Axe", CRITICAL_STRIKE_SPEC_DATA, "Envenom"],
+		"specializations" : [/*"Sword", "Stealth", "Left Axe", "Axe",*/ CRITICAL_STRIKE_SPEC_DATA/*, "Envenom"*/],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[3], ABILITY_DATA[4]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[16], WEAPONRY_DATA[19], WEAPONRY_DATA[17], WEAPONRY_DATA[20]],
@@ -1021,7 +1021,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 1.0,
-		"specializations" : ["Mending", "Augmentation", "Cave Magic"],
+		"specializations" : [/*"Mending", "Augmentation", "Cave Magic"*/],
 		"abilities" : [ABILITY_DATA[0]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[18]],
@@ -1049,7 +1049,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 1.5,
-		"specializations" : ["Sword", "Axe", PARRY_SPEC_DATA, "Hammer", "Battlesongs"],
+		"specializations" : [/*"Sword", "Axe",*/ PARRY_SPEC_DATA/*, "Hammer", "Battlesongs"*/],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[16], WEAPONRY_DATA[17], WEAPONRY_DATA[18]],
@@ -1077,7 +1077,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 1.0,
-		"specializations" : ["Darkness", "Suppression", "Summoning"],
+		"specializations" : [/*"Darkness", "Suppression", "Summoning"*/],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[1]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0]],
@@ -1105,7 +1105,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 2.0,
-		"specializations" : ["Sword", "Axe", PARRY_SPEC_DATA, "Hammer", SHIELD_SPEC_DATA, "Stormcalling"],
+		"specializations" : [/*"Sword", "Axe",*/ PARRY_SPEC_DATA, /*"Hammer",*/ SHIELD_SPEC_DATA/*, "Stormcalling"*/],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4], ABILITY_DATA[6]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[16], WEAPONRY_DATA[17], WEAPONRY_DATA[18]],
@@ -1133,7 +1133,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 2.0,
-		"specializations" : ["Sword", PARRY_SPEC_DATA, SHIELD_SPEC_DATA, "Odin's Will", "Spear", "Mending"],
+		"specializations" : [/*"Sword",*/ PARRY_SPEC_DATA, SHIELD_SPEC_DATA/*, "Odin's Will", "Spear", "Mending"*/],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[16], WEAPONRY_DATA[22]],
@@ -1161,7 +1161,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 1.0,
-		"specializations" : ["Witchcraft", "Cursing", "Hexing"],
+		"specializations" : [/*"Witchcraft", "Cursing", "Hexing"*/],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[1]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0]],
@@ -1189,7 +1189,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 2.0,
-		"specializations" : ["Sword", "Axe", PARRY_SPEC_DATA, "Hammer", SHIELD_SPEC_DATA, "Thrown"],
+		"specializations" : [/*"Sword", "Axe",*/ PARRY_SPEC_DATA, /*"Hammer",*/ SHIELD_SPEC_DATA/*, "Thrown"*/],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[16], WEAPONRY_DATA[17], WEAPONRY_DATA[18], WEAPONRY_DATA[19]],
@@ -1217,7 +1217,7 @@ const CLASS_DATA = [
 			}
 		],
 		"pointModifier" : 1.8,
-		"specializations" : ["Power Strikes", "Magnetism", "Aura Manipulation", "Fist Wraps", "Mauler Staff"],
+		"specializations" : [/*"Power Strikes", "Magnetism", "Aura Manipulation", "Fist Wraps", "Mauler Staff"*/],
 		"abilities" : [ABILITY_DATA[0], ABILITY_DATA[4], ABILITY_DATA[2]],
 		"equipment" : {
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[23], WEAPONRY_DATA[24]],
