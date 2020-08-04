@@ -7,7 +7,7 @@ const AXE_SPEC_DATA = {
 	},
 	"styles": [	
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Splitter",
 			"level": 1,
 			"open": "Any",
@@ -19,7 +19,7 @@ const AXE_SPEC_DATA = {
 			"effect": null
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Splitfrost",
 			"level": 2,
 			"open": "Splitter",
@@ -31,7 +31,7 @@ const AXE_SPEC_DATA = {
 			"effect": "8 damage every 4.0 sec for 20 seconds."
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Cleave",
 			"level": 4,
 			"open": "You Parry",
@@ -43,7 +43,7 @@ const AXE_SPEC_DATA = {
 			"effect": "Target's attack speed reduced by 16% for 20 seconds."
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Plague",
 			"level": 6,
 			"open": "Any",
@@ -55,7 +55,7 @@ const AXE_SPEC_DATA = {
 			"effect": "Increases your threat to monster targets by 275 damage."
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Thrym's Strength",
 			"level": 8,
 			"open": "Cleave",
@@ -67,7 +67,7 @@ const AXE_SPEC_DATA = {
 			"effect": null
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Pillager",
 			"level": 10,
 			"open": "Any",
@@ -79,7 +79,7 @@ const AXE_SPEC_DATA = {
 			"effect": "Target's attack speed reduced by 21% for 20 seconds."
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Hoarfrost",
 			"level": 12,
 			"open": "Any",
@@ -91,7 +91,7 @@ const AXE_SPEC_DATA = {
 			"effect": "Increases your threat to monster targets by 0 damage."
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Evernight",
 			"level": 15,
 			"open": "Behind target",
@@ -103,7 +103,7 @@ const AXE_SPEC_DATA = {
 			"effect": null
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Plunderer",
 			"level": 18,
 			"open": "Pillager",
@@ -115,7 +115,7 @@ const AXE_SPEC_DATA = {
 			"effect": "13 damage every 4.0 sec for 20 seconds."
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Valkyrie's Shield'",
 			"level": 21,
 			"open": "You Evade",
@@ -127,7 +127,7 @@ const AXE_SPEC_DATA = {
 			"effect": "Target's attack speed reduced by 22% for 20 seconds."
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Raider",
 			"level": 25,
 			"open": "You Evade",
@@ -139,7 +139,7 @@ const AXE_SPEC_DATA = {
 			"effect": "20 damage every 4.0 sec for 20 seconds."
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Havoc",
 			"level": 29,
 			"open": "Any",
@@ -151,7 +151,7 @@ const AXE_SPEC_DATA = {
 			"effect": null
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Midnight Sun",
 			"level": 34,
 			"open": "Valkyrie's Shield",
@@ -163,7 +163,7 @@ const AXE_SPEC_DATA = {
 			"effect": "Target canont move or take any other action for 6 seconds."
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Glacial Movement",
 			"level": 39,
 			"open": "To side of target",
@@ -175,7 +175,7 @@ const AXE_SPEC_DATA = {
 			"effect": "Target moves 40% slower for 19 seconds."
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Arctic Rift",
 			"level": 44,
 			"open": "Evernight",
@@ -187,10 +187,10 @@ const AXE_SPEC_DATA = {
 			"effect": "Target cannot move or take any other action for 5 seconds."
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Tyr's Fang",
 			"level": 50,
-			"open": ["Havoc", "Glacial Movement"], /*??Glacial Movement listed in-game but not Havoc, test and update??*/
+			"open": "Glacial Movement",
 			"followup": null,
 			"end": "Low",
 			"dmg": "Very High",
