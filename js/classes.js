@@ -439,9 +439,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0]],
 						"armor" : ARMOR_ABILITY_DATA[0],
 						"shield" : null
-					  },
-		"combat" : null,
-		"magic" : ["Phantasmal Wail", "Spectral Force", "Ethereal Shriek", "Spectral Guard"]
+					  }
 	},
 	{
 		"name" : "Bard",
@@ -467,9 +465,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[11], WEAPONRY_DATA[10]],
 						"armor" : ARMOR_ABILITY_DATA[5],
 						"shield" : SHIELD_ABILITY_DATA[0]
-					  },
-		"combat" : ["Blades", "Blunt"],
-		"magic" : ["Regrowth", "Nature", "Music"]
+					  }
 	},
 	{
 		"name" : "Blademaster",
@@ -495,9 +491,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[10], WEAPONRY_DATA[11], WEAPONRY_DATA[12], WEAPONRY_DATA[8]],
 						"armor" : ARMOR_ABILITY_DATA[5],
 						"shield" : SHIELD_ABILITY_DATA[1]
-					  },
-		"combat" : ["Blades", "Blunt", "Piercing", "Celtic Dual", "Shield"],
-		"magic" : null
+					  }
 	},
 	{
 		"name" : "Champion",
@@ -523,9 +517,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[10], WEAPONRY_DATA[11], WEAPONRY_DATA[12], WEAPONRY_DATA[8]],
 						"armor" : ARMOR_ABILITY_DATA[6],
 						"shield" : SHIELD_ABILITY_DATA[2]
-					  },
-		"combat" : ["Blades", "Blunt", "Piercing", "Large Weapons", "Shield"],
-		"magic" : ["Valor"]
+					  }
 	},
 	{
 		"name" : "Druid",
@@ -551,9 +543,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[11], WEAPONRY_DATA[10]],
 						"armor" : ARMOR_ABILITY_DATA[6],
 						"shield" : SHIELD_ABILITY_DATA[0]
-					  },
-		"combat" : null,
-		"magic" : ["Regrowth", "Nurture", "Nature Affinity"]
+					  }
 	},
 	{
 		"name" : "Eldritch",
@@ -579,9 +569,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0]],
 						"armor" : ARMOR_ABILITY_DATA[0],
 						"shield" : null
-					  },
-		"combat" : null,
-		"magic" : ["Way of the Void", "Way of the Light", "Way of Mana", "Vacuumancy", "Shadow Control", "Void Mastery"]
+					  }
 	},
 	{
 		"name" : "Enchanter",
@@ -607,9 +595,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0]],
 						"armor" : ARMOR_ABILITY_DATA[0],
 						"shield" : null
-					  },
-		"combat" : null,
-		"magic" : ["Enchantment", "Way of the Light", "Way of Mana", "Empowering", "Bedazzling", "Enchanting"]
+					  }
 	},
 	{
 		"name" : "Hero",
@@ -635,9 +621,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[8], WEAPONRY_DATA[10], WEAPONRY_DATA[11], WEAPONRY_DATA[12], WEAPONRY_DATA[14], WEAPONRY_DATA[13]],
 						"armor" : ARMOR_ABILITY_DATA[6],
 						"shield" : SHIELD_ABILITY_DATA[2]
-					  },
-		"combat" : ["Blades", "Blunt", "Piercing", "Shield", "Celtic Spear", "Large Weapons"],
-		"magic" : null
+					  }
 	},
 	{
 		"name" : "Mentalist",
@@ -663,9 +647,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0]],
 						"armor" : ARMOR_ABILITY_DATA[0],
 						"shield" : null
-					  },
-		"combat" : null,
-		"magic" : ["Mentalism", "Way of Light", "Way of Mana", "Holism", "Illusions", "Mind Mastery"]
+					  }
 	},
 	{
 		"name" : "Nightshade",
@@ -691,9 +673,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[10], WEAPONRY_DATA[12]],
 						"armor" : ARMOR_ABILITY_DATA[1],
 						"shield" : SHIELD_ABILITY_DATA[0]
-					  },
-		"combat" : ["Piercing", "Blades", "Critical Strike", "Celtic Dual"],
-		"magic" : ["Stealth", "Envenom"]
+					  }
 	},
 	{
 		"name" : "Ranger",
@@ -719,9 +699,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[10], WEAPONRY_DATA[12], WEAPONRY_DATA[9]],
 						"armor" : ARMOR_ABILITY_DATA[5],
 						"shield" : SHIELD_ABILITY_DATA[0]
-					  },
-		"combat" : ["Piercing", "Blades", "Celtic Dual"],
-		"magic" : ["Archery","Stealth"]
+					  }
 	},
 	{
 		"name" : "Valewalker",
@@ -747,9 +725,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[15]],
 						"armor" : ARMOR_ABILITY_DATA[0],
 						"shield" : null
-					  },
-		"combat" : ["Scythe"],
-		"magic" : ["Arboreal Path", "Valewalking"]
+					  }
 	},
 	{
 		"name" : "Vampiir",
@@ -775,9 +751,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[12]],
 						"armor" : ARMOR_ABILITY_DATA[1],
 						"shield" : null
-					  },
-		"combat" : ["Piercing"],
-		"magic" : ["Shadow Mastery", "Vampiiric Embrace", "Dementia"]
+					  }
 	},
 	{
 		"name" : "Warden",
@@ -803,9 +777,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[8], WEAPONRY_DATA[11], WEAPONRY_DATA[12]],
 						"armor" : ARMOR_ABILITY_DATA[6],
 						"shield" : SHIELD_ABILITY_DATA[2]
-					  },
-		"combat" : ["Blades", "Blunt", "Shield"],
-		"magic" : ["Regrowth", "Nurture"]
+					  }
 	},
 	{
 		"name" : "Berserker",
@@ -831,9 +803,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[16], WEAPONRY_DATA[17], WEAPONRY_DATA[18], WEAPONRY_DATA[20]],
 						"armor" : ARMOR_ABILITY_DATA[2],
 						"shield" : SHIELD_ABILITY_DATA[0]
-					  },
-		"combat" : ["Sword", "Axe", "Hammer", "Left Axe"],
-		"magic" : null
+					  }
 	},
 	{
 		"name" : "Bonedancer",
@@ -859,9 +829,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0]],
 						"armor" : ARMOR_ABILITY_DATA[0],
 						"shield" : null
-					  },
-		"combat" : null,
-		"magic" : ["Bone Army", "Darkness", "Suppression", "Bone Darkness", "Bone Protection", "Bone Legion"]
+					  }
 	},
 	{
 		"name" : "Healer",
@@ -887,9 +855,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[18]],
 						"armor" : ARMOR_ABILITY_DATA[3],
 						"shield" : SHIELD_ABILITY_DATA[0]
-					  },
-		"combat" : null,
-		"magic" : ["Mending", "Augmentation", "Pacification"]
+					  }
 	},
 	{
 		"name" : "Hunter",
@@ -915,9 +881,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[16], WEAPONRY_DATA[22]],
 						"armor" : ARMOR_ABILITY_DATA[3],
 						"shield" : SHIELD_ABILITY_DATA[0]
-					  },
-		"combat" : ["Sword", "Spear"],
-		"magic" : ["Beastcraft", "Archery", "Stealth"]
+					  }
 	},
 	{
 		"name" : "Runemaster",
@@ -943,9 +907,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0]],
 						"armor" : ARMOR_ABILITY_DATA[0],
 						"shield" : null
-					  },
-		"combat" : null,
-		"magic" : ["Runecarving", "Darkness", "Suppression", "Runes of Darkness", "Runes of Suppression", "Runes of Destruction"]
+					  }
 	},
 	{
 		"name" : "Savage",
@@ -971,9 +933,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[16], WEAPONRY_DATA[18], WEAPONRY_DATA[17], WEAPONRY_DATA[21]],
 						"armor" : ARMOR_ABILITY_DATA[2],
 						"shield" : null
-					  },
-		"combat" : ["Sword", "Axe", "Hammer", "Hand to Hand"],
-		"magic" : ["Savagery"]
+					  }
 	},
 	{
 		"name" : "Shadowblade",
@@ -999,9 +959,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[16], WEAPONRY_DATA[19], WEAPONRY_DATA[17], WEAPONRY_DATA[20]],
 						"armor" : ARMOR_ABILITY_DATA[1],
 						"shield" : SHIELD_ABILITY_DATA[0]
-					  },
-		"combat" : ["Sword", "Left Axe", "Axe", "Critical Strike"],
-		"magic" : ["Envenom", "Stealth"]
+					  }
 	},
 	{
 		"name" : "Shaman",
@@ -1027,9 +985,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[18]],
 						"armor" : ARMOR_ABILITY_DATA[3],
 						"shield" : SHIELD_ABILITY_DATA[0]
-					  },
-		"combat" : null,
-		"magic" : ["Mending", "Augmentation", "Cave Magic"]
+					  }
 	},
 	{
 		"name" : "Skald",
@@ -1055,9 +1011,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[16], WEAPONRY_DATA[17], WEAPONRY_DATA[18]],
 						"armor" : ARMOR_ABILITY_DATA[3],
 						"shield" : SHIELD_ABILITY_DATA[2]
-					  },
-		"combat" : ["Sword", "Axe", "Hammer"],
-		"magic" : ["Battlesongs"]
+					  }
 	},
 	{
 		"name" : "Spiritmaster",
@@ -1083,9 +1037,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0]],
 						"armor" : ARMOR_ABILITY_DATA[0],
 						"shield" : null
-					  },
-		"combat" : null,
-		"magic" : ["Summoning", "Darkness", "Suppression", "Spirit Dimming", "Spirit Suppression", "Spirit Manipulation"]
+					  }
 	},
 	{
 		"name" : "Thane",
@@ -1111,9 +1063,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[16], WEAPONRY_DATA[17], WEAPONRY_DATA[18]],
 						"armor" : ARMOR_ABILITY_DATA[3],
 						"shield" : SHIELD_ABILITY_DATA[2]
-					  },
-		"combat" : ["Sword", "Axe", "Hammer", "Shield"],
-		"magic" : ["Stormcalling"]
+					  }
 	},
 	{
 		"name" : "Valkyrie",
@@ -1139,9 +1089,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[16], WEAPONRY_DATA[22]],
 						"armor" : ARMOR_ABILITY_DATA[3],
 						"shield" : SHIELD_ABILITY_DATA[2]
-					  },
-		"combat" : ["Sword", "Shield", "Spear"],
-		"magic" : ["Mending", "Odin's Will"]
+					  }
 	},
 	{
 		"name" : "Warlock",
@@ -1167,9 +1115,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0]],
 						"armor" : ARMOR_ABILITY_DATA[0],
 						"shield" : null
-					  },
-		"combat" : null,
-		"magic" : ["Base Cursing", "Witchcraft", "Cursing", "Hexing"]
+					  }
 	},
 	{
 		"name" : "Warrior",
@@ -1195,9 +1141,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[16], WEAPONRY_DATA[17], WEAPONRY_DATA[18], WEAPONRY_DATA[19]],
 						"armor" : ARMOR_ABILITY_DATA[3],
 						"shield" : SHIELD_ABILITY_DATA[2]
-					  },
-		"combat" : ["Sword", "Axe", "Hammer", "Shield"],
-		"magic" : ["Thrown"]
+					  }
 	},
 	{
 		"name" : "Mauler",
@@ -1223,9 +1167,7 @@ const CLASS_DATA = [
 						"weapons" : [WEAPONRY_DATA[0], WEAPONRY_DATA[23], WEAPONRY_DATA[24]],
 						"armor" : ARMOR_ABILITY_DATA[1],
 						"shield" : null
-					  },
-		"combat" : ["Fist Wraps", "Mauler Staffs"],
-		"magic" : ["Power Strikes", "Aura Manipulation", "Abilities"]
+					  }
 	}
 ]
 
