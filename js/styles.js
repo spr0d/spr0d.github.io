@@ -4610,7 +4610,7 @@ const SWORD_SPEC_DATA = {
 	},
 	"styles": [
 		{
-			"class": ["Berserker", "Hunter"],
+			"class": ["Berserker", "Hunter", "Savage"],
 			"name": "Whirling Blade",
 			"level": 1,
 			"open": "Any",
@@ -4622,7 +4622,7 @@ const SWORD_SPEC_DATA = {
 			"effect": null
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Stabbing Blade",
 			"level": 2,
 			"open": "Whirling Blade",
@@ -4658,7 +4658,7 @@ const SWORD_SPEC_DATA = {
 			"effect": "Target's attack speed reduced by 16% for 20 seconds."
 		},
 		{
-			"class": ["Hunter"],
+			"class": ["Hunter", "Savage"],
 			"name": "Frost Cut",
 			"level": 4,
 			"open": "You Evade",
@@ -4670,7 +4670,7 @@ const SWORD_SPEC_DATA = {
 			"effect": "Target's attack speed reduced by 16% for 20 seconds."
 		},
 		{
-			"class": ["Berserker", "Hunter"],
+			"class": ["Berserker", "Hunter", "Savage"],
 			"name": "Draw Out",
 			"level": 6,
 			"open": "Any",
@@ -4682,7 +4682,7 @@ const SWORD_SPEC_DATA = {
 			"effect": "Increases your threat to monster targets by 275 damage."
 		},
 		{
-			"class": ["Berserker", "Hunter"],
+			"class": ["Berserker", "Hunter", "Savage"],
 			"name": "Northern Lights",
 			"level": 8,
 			"open": "In front of target",
@@ -4694,7 +4694,7 @@ const SWORD_SPEC_DATA = {
 			"effect": "Target's attack speed reduced by 20% for 20 seconds."
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Assault",
 			"level": 10,
 			"open": "You Parry",
@@ -4718,7 +4718,7 @@ const SWORD_SPEC_DATA = {
 			"effect": null
 		},
 		{
-			"class": ["Berserker", "Hunter"],
+			"class": ["Berserker", "Hunter", "Savage"],
 			"name": "Temper",
 			"level": 12,
 			"open": "Any",
@@ -4730,7 +4730,7 @@ const SWORD_SPEC_DATA = {
 			"effect": "Increases your threat to monster targets by 0 damage."
 		},
 		{
-			"class": ["Berserker", "Hunter"],
+			"class": ["Berserker", "Hunter", "Savage"],
 			"name": "Aurora",
 			"level": 15,
 			"open": "Norther Lights",
@@ -4742,7 +4742,7 @@ const SWORD_SPEC_DATA = {
 			"effect": "13 damage every 4.0 sec for 20 seconds."
 		},
 		{
-			"class": ["Berserker", "Hunter"],
+			"class": ["Berserker", "Hunter", "Savage"],
 			"name": "Baldur's Fury",
 			"level": 18,
 			"open": "Assault",
@@ -4754,7 +4754,7 @@ const SWORD_SPEC_DATA = {
 			"effect": "Target cannot move or take any other action for 5 seconds."
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Reinforcement",
 			"level": 21,
 			"open": "You Parry",
@@ -4778,7 +4778,7 @@ const SWORD_SPEC_DATA = {
 			"effect": "13 damage every 4.0 sec for 20 seconds."
 		},
 		{
-			"class": ["Berserker", "Hunter"],
+			"class": ["Berserker", "Hunter", "Savage"],
 			"name": "Ice Storm",
 			"level": 25,
 			"open": "You Evade",
@@ -4790,7 +4790,7 @@ const SWORD_SPEC_DATA = {
 			"effect": null
 		},
 		{
-			"class": ["Berserker", "Hunter"],
+			"class": ["Berserker", "Hunter", "Savage"],
 			"name": "Rush",
 			"level": 29,
 			"open": "To side of target",
@@ -4802,7 +4802,7 @@ const SWORD_SPEC_DATA = {
 			"effect": "Target moves 40% slower for 15 seconds."
 		},
 		{
-			"class": ["Berserker", "Hunter"],
+			"class": ["Berserker", "Hunter", "Savage"],
 			"name": "Polar Rift",
 			"level": 34,
 			"open": "Any",
@@ -4814,7 +4814,7 @@ const SWORD_SPEC_DATA = {
 			"effect": null
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Niord's Fury",
 			"level": 39,
 			"open": "Frost Cut",
@@ -4838,7 +4838,7 @@ const SWORD_SPEC_DATA = {
 			"effect": "Target cannot move or take any other action for 7 seconds."
 		},
 		{
-			"class": ["Berserker", "Hunter"],
+			"class": ["Berserker", "Hunter", "Savage"],
 			"name": "Sif's Revenge",
 			"level": 44,
 			"open": "Ice Storm",
@@ -4850,7 +4850,7 @@ const SWORD_SPEC_DATA = {
 			"effect": "32 damage every 4.0 sec for 20 seconds."
 		},
 		{
-			"class": ["Berserker"],
+			"class": ["Berserker", "Savage"],
 			"name": "Ragnarok",
 			"level": 50,
 			"open": "Behind target",
